@@ -3,7 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { initDarkMode } from "./utils/darkMode";
-localStorage.setItem("darkMode", "true");
+
+// ✅ Only set default darkMode if not already set
+if (localStorage.getItem("darkMode") === null) {
+  localStorage.setItem("darkMode", "true"); // Default mode only on first load
+}
+
 initDarkMode();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -13,19 +18,7 @@ root.render(
   </React.StrictMode>
 );
 
-// ✅ Register service worker here
-// if ("serviceWorker" in navigator) {
-//   window.addEventListener("load", () => {
-//     navigator.serviceWorker
-//       .register("/service-worker.js")
-//       .then((reg) => console.log("✅ Service Worker registered:", reg))
-//       .catch((err) =>
-//         console.log("❌ Service Worker registration failed:", err)
-//       );
-//   });
-// }
-
-// 🧹 Also manually unregister any existing service workers
+// 🧹 Unregister any existing service workers
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.getRegistrations().then((registrations) => {
     registrations.forEach((reg) => reg.unregister());

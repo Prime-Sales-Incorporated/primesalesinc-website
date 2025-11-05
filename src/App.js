@@ -100,10 +100,9 @@ function App() {
 
       <Routes>
         {/* <Route path="/3d" element={<ThreeDScene />} /> */}
-        <Route path="/" element={<UnderConstruction />} />
+        <Route path="/" element={<WebsiteMain />} />
         <Route path="/solutions/:tab?" element={<SolutionsPage />} />
         <Route path="/sa" element={<Timeline />} />
-        <Route path="/main" element={<WebsiteMain />} />
       </Routes>
 
       {/* Floating Buttons */}

@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
       {/* Background Video */}
-
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
         autoPlay
@@ -15,10 +14,8 @@ export default function Home() {
       >
         <source src="/bg1.mp4" type="video/mp4" />
       </video>
-
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/20 z-0" />
-
       {/* Navigation Bar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/10 backdrop-blur-sm py-4 px-6">
         <div className="flex justify-between items-center">
@@ -55,7 +52,6 @@ export default function Home() {
           </div> */}
         </div>
       </nav>
-
       {/* Hero Section */}
       {/* Hero Section */}
       <div className="relative z-10 flex items-center h-screen">
@@ -79,7 +75,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {/* Footer */}
       <div className="absolute bottom-6 left-0 right-0 z-10">
         <div className="max-w-7xl mx-auto px-6">

@@ -35,7 +35,7 @@ function HeaderHome({ dark, setDark }) {
     <nav className="absolute top-0 left-0 right-0 z-50 bg-black/10 backdrop-blur-sm py-4 px-6">
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <Link to="/main">
+        <Link to="/">
           <div className="text-white font-serif text-xl flex items-center">
             <img src="/logo1.png" alt="Prime Sales Logo" className="h-8 w-16" />
           </div>

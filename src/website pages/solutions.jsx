@@ -57,7 +57,7 @@ const OurSolutions = () => {
 
     {
       title: "Commercial Solutions",
-      img: "https://image.made-in-china.com/2f0j00oCkqIPMrhhbt/China-Wholesale-Steel-Office-Desk-Leg-System-Modern-Workstation-Business-Office-Furniture.jpg",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd2ohA0l7JjkFtGBBUZNnuYBCFf0GbvKi78Q&s",
       desc: "Boost productivity and precision with our cutting-edge automated systems and robotics.",
       video: "/brunzyeel.mp4",
       tab: "Commercial Solutions",

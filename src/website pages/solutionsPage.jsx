@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "../config/header";
 import Footer from "../config/footer";
 import { useParams, useNavigate } from "react-router-dom";
@@ -10,6 +10,9 @@ const SolutionsPage = () => {
     }
     return false;
   });
+
+  const tabsContainerRef = useRef(null);
+  const tabRefs = useRef({});
 
   useEffect(() => {
     localStorage.setItem("darkMode", dark);
@@ -252,7 +255,7 @@ const SolutionsPage = () => {
     {
       title: "Eco Pallets",
       desc: "Sustainable and lightweight pallets made from recycled or eco-friendly materials.",
-      img: "https://www.connerindustries.com/wp-content/uploads/2021/03/recycled-plastic-pallets.jpg",
+      img: "https://ecopallets.com.au/wp-content/uploads/2023/03/Slider-eco-1160L.png",
       applications: [
         "Environmentally friendly alternative to traditional pallets.",
         "Reusable and recyclable for cost efficiency.",
@@ -263,7 +266,7 @@ const SolutionsPage = () => {
     {
       title: "Warehouse Pallets",
       desc: "Standard industrial pallets for general warehouse operations.",
-      img: "https://www.exporthub.com/blog/wp-content/uploads/2020/03/Wooden-Pallets.jpg",
+      img: "https://www.rajapack.co.uk/blog-uk/wp-content/uploads/2019/07/pallets-guide.jpg",
       applications: [
         "Used for material handling and product storage.",
         "Compatible with forklifts and pallet jacks.",
@@ -274,7 +277,7 @@ const SolutionsPage = () => {
     {
       title: "Hygiene Pallets",
       desc: "Plastic pallets designed for environments with high hygiene standards.",
-      img: "https://www.goplasticpallets.com/media/wysiwyg/Blog/hygiene-pallets.jpg",
+      img: "https://zdn.nz/ic/copacksales/1993947642/Hygiene%20Pallet%20with%20Rim-148-365.jpg",
       applications: [
         "Ideal for food, pharmaceutical, and cleanroom industries.",
         "Easy to wash and disinfect.",
@@ -282,21 +285,11 @@ const SolutionsPage = () => {
         "Complies with international hygiene regulations.",
       ],
     },
-    {
-      title: "Automatic Storage Retrieval System (AS/RS)",
-      desc: "Computer-controlled system for automatic placement and retrieval of goods.",
-      img: "https://www.daifuku.com/us/en/solution/warehouse/images/asrs_overview.jpg",
-      applications: [
-        "Used in smart warehouses and manufacturing plants.",
-        "Increases storage density and accuracy.",
-        "Reduces labor costs and handling time.",
-        "Integrates with WMS and ERP systems.",
-      ],
-    },
+
     {
       title: "Metal Reinforced Pallets",
       desc: "Heavy-duty pallets strengthened with steel or metal reinforcements.",
-      img: "https://www.mrstacker.com.au/wp-content/uploads/2020/03/metal-reinforced-plastic-pallet.jpg",
+      img: "https://m.industrialwirecontainer.com/photo/pl25282747-steel_reinforced_plastic_pallets_for_warehouse_6_t_static_load_1000x1000mm.jpg",
       applications: [
         "Used for heavy or high-load applications.",
         "Provides added durability and longevity.",
@@ -307,7 +300,7 @@ const SolutionsPage = () => {
     {
       title: "Spill Containment Pallets",
       desc: "Pallets with built-in sump to contain leaks or spills from drums and containers.",
-      img: "https://cdn11.bigcommerce.com/s-hh7ybqv45m/images/stencil/original/products/2363/4934/BLPSPILLPALLET4__73893.1643272611.jpg",
+      img: "https://media.rs-online.com/image/upload/bo_1.5px_solid_white,b_auto,c_pad,dpr_2,f_auto,h_399,q_auto,w_710/c_pad,h_399,w_710/R1772742-01?pgw=1",
       applications: [
         "Used for safe storage of hazardous materials.",
         "Prevents environmental contamination.",
@@ -599,6 +592,16 @@ const SolutionsPage = () => {
   };
 
   const currentSolutions = solutionsData[activeTab] || [];
+  useEffect(() => {
+    const activeTabEl = tabRefs.current[activeTab];
+    if (activeTabEl && tabsContainerRef.current) {
+      activeTabEl.scrollIntoView({
+        behavior: "smooth",
+        inline: "center", // scrolls horizontally
+        block: "nearest",
+      });
+    }
+  }, [activeTab]);
 
   return (
     <div className="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 min-h-screen flex flex-col">
@@ -616,10 +619,14 @@ const SolutionsPage = () => {
         </div>
 
         <div className="overflow-x-auto">
-          <div className="flex justify-start md:justify-center border-b border-primary/30 w-full mb-10 min-w-max">
+          <div
+            ref={tabsContainerRef}
+            className="flex justify-start md:justify-center border-b border-primary/30 w-full mb-10 min-w-max"
+          >
             {tabs.map((tab) => (
               <button
                 key={tab}
+                ref={(el) => (tabRefs.current[tab] = el)}
                 onClick={() => handleTabClick(tab)}
                 className={`px-4 sm:px-6 pb-3 text-sm md:text-base font-semibold whitespace-nowrap transition-all duration-300 ${
                   activeTab === tab

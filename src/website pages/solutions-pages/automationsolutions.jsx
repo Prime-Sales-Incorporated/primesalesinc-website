@@ -38,6 +38,16 @@ const automationSolutions = [
 
 const AutomationSolutions = () => (
   <div className="flex flex-col gap-12">
+    <div className="text-center mb-12">
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+        Automation Solutions – Boost Warehouse Productivity
+      </h1>
+      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
+        Automated conveyors, storage, and retrieval systems designed to improve
+        efficiency, accuracy, and warehouse operations.
+      </p>
+    </div>
+
     {automationSolutions.map((solution, index) => (
       <div
         key={index}

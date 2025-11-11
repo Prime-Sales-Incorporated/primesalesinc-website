@@ -38,6 +38,16 @@ const batteriesChargersSolutions = [
 
 const BatteriesChargers = () => (
   <div className="flex flex-col gap-12">
+    <div className="text-center mb-12">
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+        Industrial Batteries & Chargers – High-Performance Forklift Power
+      </h1>
+      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
+        Discover reliable forklift batteries, chargers, and battery management
+        systems for uninterrupted warehouse operations.
+      </p>
+    </div>
+
     {batteriesChargersSolutions.map((solution, index) => (
       <div
         key={index}

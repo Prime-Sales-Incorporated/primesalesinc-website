@@ -38,6 +38,16 @@ const commercialSolutions = [
 
 const CommercialSolutions = () => (
   <div className="flex flex-col gap-12">
+    <div className="text-center mb-12">
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+        Commercial Solutions – Retail Shelving & Rolling Shutters
+      </h1>
+      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
+        Explore retail shelving, barriers, and commercial rolling shutters
+        designed for efficiency, security, and presentation.
+      </p>
+    </div>
+
     {commercialSolutions.map((solution, index) => (
       <div
         key={index}

@@ -60,6 +60,16 @@ const plasticPallets = [
 
 const PlasticPallets = () => (
   <div className="flex flex-col gap-12">
+    <div className="text-center mb-12">
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+        Plastic Pallets, Bins & Crates – Durable & Hygienic Storage Solutions
+      </h1>
+      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
+        High-quality plastic pallets, bins, and crates designed for logistics
+        efficiency, hygiene, and long-term durability.
+      </p>
+    </div>
+
     {plasticPallets.map((solution, index) => (
       <div
         key={index}

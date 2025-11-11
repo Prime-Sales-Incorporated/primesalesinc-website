@@ -115,6 +115,16 @@ const docksDoorsSolutions = [
 
 const DocksDoors = () => (
   <div className="flex flex-col gap-12">
+    <div className="text-center mb-12">
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+        Docks & Doors – Efficient Loading & Industrial Access Systems
+      </h1>
+      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
+        Explore dock levelers, industrial doors, and loading systems for safe,
+        fast, and efficient warehouse operations.
+      </p>
+    </div>
+
     {docksDoorsSolutions.map((solution, index) => (
       <div
         key={index}

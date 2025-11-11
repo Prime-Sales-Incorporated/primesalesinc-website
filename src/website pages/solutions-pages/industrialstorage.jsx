@@ -82,6 +82,15 @@ const industrialStorageSolutions = [
 
 const IndustrialStorage = () => (
   <div className="flex flex-col gap-12">
+    <div className="text-center mb-12">
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+        Industrial Storage Solutions – Maximize Warehouse Efficiency
+      </h1>
+      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
+        Explore a wide range of pallet racking systems and storage solutions
+        designed for safety, efficiency, and high-density warehouse management.
+      </p>
+    </div>
     {industrialStorageSolutions.map((solution, index) => (
       <div
         key={index}

@@ -10,7 +10,6 @@ const OurSolutions = () => {
       video: "/cold.mp4",
       tab: "Cold Chain",
     },
-
     {
       title: "Industrial Storage Solutions",
       img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCNW_nVSRhCGbRNUmfJjMf_qqbetLTR1MfkYTjlbN1bxowIFGpPc_pqjlkz57tkrqzGzTxPq8PwzE9ipVXNDdZIAcKiVL5N4Mz3E6P2z-We6QhbdIFbA831k-Xr4BLA58iwOx551cKoYW8PmuSg3HT7CMPJIcIoL7cn-HQRpWWzfpZg00nFAVOORvBeAQvR4Qd0YnaiVZIF0cIvTnm6Dvi1xXQ9nfy5pWpChb4G6UiUZD4aVnHtb8QUacEPEQZG-H8IW_1JI0spUF4",
@@ -28,9 +27,9 @@ const OurSolutions = () => {
     {
       title: "Plastic Pallets, Bins and Crates",
       img: "/pallets.png",
-      desc: "High-performance forklifts designed for reliability and efficiency in various industrial applications.",
-      video: "/mhe.mp4",
-      tab: "MHE",
+      desc: "Durable and hygienic pallets, bins, and crates for logistics and warehousing.",
+      video: "/pallets.mp4",
+      tab: "Plastic Pallets, Bins and Crates",
     },
     {
       title: "Automation Solutions",
@@ -39,38 +38,43 @@ const OurSolutions = () => {
       video: "/automationvid.mp4",
       tab: "Automation Solutions",
     },
-
     {
       title: "Docks & Doors",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQZi1mz4AVCxzDP_KgpTcu9rfEVAkWAMxLWw&s",
-      desc: "Boost productivity and precision with our cutting-edge automated systems and robotics.",
+      desc: "Efficient dock and door solutions for warehouses and logistics facilities.",
       video: "/hormann.mp4",
       tab: "Docks & Doors",
     },
     {
       title: "Industrial Batteries and Chargers",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTedKd_YgLpG2K8vHBxekSlDwjX6qcwvX3RFw&s",
-      desc: "Boost productivity and precision with our cutting-edge automated systems and robotics.",
-      video: "/automationvid.mp4",
+      desc: "High-performance batteries and chargers for material handling equipment.",
+      video: "/batteries.mp4",
       tab: "Industrial Batteries and Chargers",
     },
-
     {
       title: "Commercial Solutions",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd2ohA0l7JjkFtGBBUZNnuYBCFf0GbvKi78Q&s",
-      desc: "Boost productivity and precision with our cutting-edge automated systems and robotics.",
+      desc: "Retail shelving, barriers, and rolling shutters for commercial applications.",
       video: "/brunzyeel.mp4",
       tab: "Commercial Solutions",
     },
   ];
 
   const tabSlug = (str) => str.trim().toLowerCase().replace(/\s+/g, "-");
-
-  // Create a ref array for all videos
   const videoRefs = useRef([]);
 
   return (
-    <div className="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white font-display relative">
+    <div className="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white font-display relative min-h-screen">
+      {/* Hidden links for SEO / prerendering */}
+      <div style={{ display: "none" }}>
+        {solutions.map((s, i) => (
+          <a key={i} href={`/solutions/${tabSlug(s.tab)}`}>
+            {s.title}
+          </a>
+        ))}
+      </div>
+
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark">
@@ -82,10 +86,9 @@ const OurSolutions = () => {
           </p>
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((solution, i) => (
-            <Link to={`/solutions/${tabSlug(solution.tab)}`} key={i}>
+            <Link key={i} to={`/solutions/${tabSlug(solution.tab)}`}>
               <div
                 className="bg-background-light dark:bg-background-dark rounded-lg shadow-lg shadow-gray-400 dark:shadow-gray-800 overflow-hidden transform hover:scale-105 transition-transform duration-300 group"
                 onMouseEnter={() => {
@@ -106,7 +109,6 @@ const OurSolutions = () => {
                     alt={`${solution.title} solutions in the Philippines | Prime Sales Inc.`}
                     className="h-full w-full object-cover absolute inset-0 transition-opacity duration-300 group-hover:opacity-0"
                   />
-
                   {solution.video && (
                     <video
                       ref={(el) => (videoRefs.current[i] = el)}

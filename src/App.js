@@ -13,6 +13,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import UnderConstruction from "./website pages/UnderConstruction";
 import { HelmetProvider } from "react-helmet-async";
+import MHESolutions from "./website pages/solutions-pages/mhe";
+import SolutionsWrapper from "./config/solutionswrapper";
 
 // 🌟 Floating Chat Button
 function FloatingChatButton() {
@@ -103,7 +105,11 @@ function App() {
         <Routes>
           {/* <Route path="/3d" element={<ThreeDScene />} /> */}
           <Route path="/" element={<WebsiteMain />} />
-          <Route path="/solutions/:tab?" element={<SolutionsPage />} />
+          <Route
+            path="/solutions/:solutionSlug"
+            element={<SolutionsWrapper />}
+          />
+
           <Route path="/sa" element={<Timeline />} />
         </Routes>
 

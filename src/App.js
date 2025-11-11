@@ -12,6 +12,7 @@ import ScrollToTop from "./hooks/scrolltoTop";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import UnderConstruction from "./website pages/UnderConstruction";
+import { HelmetProvider } from "react-helmet-async";
 
 // 🌟 Floating Chat Button
 function FloatingChatButton() {
@@ -94,24 +95,26 @@ function ScrollUpButton() {
 
 function App() {
   return (
-    <Router>
-      <Toaster position="top-right" />
-      <ScrollToTop />
+    <HelmetProvider>
+      <Router>
+        <Toaster position="top-right" />
+        <ScrollToTop />
 
-      <Routes>
-        {/* <Route path="/3d" element={<ThreeDScene />} /> */}
-        <Route path="/" element={<WebsiteMain />} />
-        <Route path="/solutions/:tab?" element={<SolutionsPage />} />
-        <Route path="/sa" element={<Timeline />} />
-      </Routes>
+        <Routes>
+          {/* <Route path="/3d" element={<ThreeDScene />} /> */}
+          <Route path="/" element={<WebsiteMain />} />
+          <Route path="/solutions/:tab?" element={<SolutionsPage />} />
+          <Route path="/sa" element={<Timeline />} />
+        </Routes>
 
-      {/* Floating Buttons */}
-      <FloatingChatButton />
-      <ScrollUpButton />
+        {/* Floating Buttons */}
+        <FloatingChatButton />
+        <ScrollUpButton />
 
-      <Analytics />
-      <SpeedInsights />
-    </Router>
+        <Analytics />
+        <SpeedInsights />
+      </Router>
+    </HelmetProvider>
   );
 }
 

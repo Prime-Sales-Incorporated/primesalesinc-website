@@ -103,9 +103,10 @@ const OurSolutions = () => {
                 <div className="relative h-56 w-full">
                   <img
                     src={solution.img}
-                    alt={solution.title}
+                    alt={`${solution.title} solutions in the Philippines | Prime Sales Inc.`}
                     className="h-full w-full object-cover absolute inset-0 transition-opacity duration-300 group-hover:opacity-0"
                   />
+
                   {solution.video && (
                     <video
                       ref={(el) => (videoRefs.current[i] = el)}

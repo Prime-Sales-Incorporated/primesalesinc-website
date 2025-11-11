@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Header from "../config/header";
 import Footer from "../config/footer";
 import { useParams, useNavigate } from "react-router-dom";
-
+import { Helmet } from "react-helmet-async";
 const SolutionsPage = () => {
   const [dark, setDark] = useState(() => {
     if (typeof window !== "undefined") {
@@ -16,8 +16,14 @@ const SolutionsPage = () => {
 
   useEffect(() => {
     localStorage.setItem("darkMode", dark);
-    if (dark) document.documentElement.classList.add("dark");
-    else document.documentElement.classList.remove("dark");
+
+    if (typeof document !== "undefined") {
+      if (dark) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    }
   }, [dark]);
 
   const { tab } = useParams();
@@ -36,7 +42,13 @@ const SolutionsPage = () => {
   ];
 
   // ✅ Slug converter
-  const tabSlug = (str) => str.trim().toLowerCase().replace(/\s+/g, "-");
+  const tabSlug = (str) =>
+    str
+      .trim()
+      .toLowerCase()
+      .replace(/&/g, "and") // replace & with 'and'
+      .replace(/[^a-z0-9]+/g, "-") // replace anything else (spaces, commas) with dash
+      .replace(/^-+|-+$/g, ""); // remove leading/trailing dashes
 
   // ✅ Slug -> Label mapping
   const tabMapping = {};
@@ -52,6 +64,13 @@ const SolutionsPage = () => {
     if (tab) {
       const normalized = tabMapping[tabSlug(tab)];
       if (normalized) setActiveTab(normalized);
+    }
+  }, [tab]);
+
+  useEffect(() => {
+    const normalized = tabMapping[tabSlug(tab)];
+    if (normalized) {
+      setActiveTab(normalized);
     }
   }, [tab]);
 
@@ -580,6 +599,85 @@ const SolutionsPage = () => {
     },
   ];
 
+  const metaData = {
+    mhe: {
+      title: "Forklift Philippines | Material Handling Equipment | Prime Sales",
+      description:
+        "Discover electric forklifts, pallet stackers, and reach trucks in the Philippines. Prime Sales provides reliable material handling solutions for warehouses and industries.",
+      keywords:
+        "forklift philippines, electric forklift, material handling equipment, warehouse equipment, reach trucks, pallet trucks",
+      canonical: "https://primegroup.com.ph/solutions/mhe",
+    },
+    "cold-chain": {
+      title: "Cold Chain Solutions Philippines | Prime Sales",
+      description:
+        "Prime Sales provides high-quality cold storage and refrigeration systems in the Philippines. Ideal for food, logistics, and pharmaceutical industries.",
+      keywords:
+        "cold chain philippines, cold storage, refrigeration systems, insulated panels, cold room doors",
+      canonical: "https://primegroup.com.ph/solutions/cold-chain",
+    },
+    "automation-solutions": {
+      title: "Automation Solutions Philippines | Prime Sales",
+      description:
+        "Boost your warehouse efficiency with automated conveyors, storage, and retrieval systems in the Philippines. Modern automation by Prime  Sales Incorporated.",
+      keywords:
+        "automation philippines, warehouse automation, conveyor systems, as/rs, robotics, Prime Sales",
+      canonical: "https://primegroup.com.ph/solutions/automation-solutions",
+    },
+    "industrial-storage": {
+      title: "Industrial Storage Solutions Philippines | Prime Sales",
+      description:
+        "Optimize your warehouse space with racking systems, drive-in racks, and mobile storage from Prime Sales Philippines.",
+      keywords:
+        "racking philippines, industrial storage, pallet racking, warehouse storage, drive-in racking, Prime Sales",
+      canonical: "https://primegroup.com.ph/solutions/industrial-storage",
+    },
+    "industrial-batteries-and-chargers": {
+      title: "Forklift Batteries and Chargers Philippines | Prime Sales",
+      description:
+        "High-performance forklift batteries, chargers, and battery management systems in the Philippines byPrime Sales.",
+      keywords:
+        "forklift battery philippines, battery chargers, lithium-ion battery, traction battery, Prime Sales",
+      canonical:
+        "https://primegroup.com.ph/solutions/industrial-batteries-and-chargers",
+    },
+    "plastic-pallets-bins-and-crates": {
+      title: "Plastic Pallets, Bins & Crates Philippines | Prime Sales",
+      description:
+        "Durable and hygienic plastic pallets, bins, and crates for industrial and logistics use in the Philippines.",
+      keywords:
+        "plastic pallets philippines, crates, bins, eco pallets, warehouse pallets, Prime Sales",
+      canonical:
+        "https://primegroup.com.ph/solutions/plastic-pallets-bins-and-crates",
+    },
+    "docks-and-doors": {
+      title: "Dock & Door Systems Philippines | Prime Sales",
+      description:
+        "Reliable dock levelers, shelters, and industrial doors for warehouses and logistics centers in the Philippines.",
+      keywords:
+        "dock leveler philippines, industrial doors, dock shelters, sectional doors, high-speed doors, Prime Sales",
+      canonical: "https://primegroup.com.ph/solutions/docks-&-doors",
+    },
+    "commercial-solutions": {
+      title: "Commercial Solutions Philippines | Prime Sales",
+      description:
+        "Prime Sales Incorporated offers retail shelving, barriers, and rolling shutters for commercial and industrial applications in the Philippines.",
+      keywords:
+        "retail shelving philippines, commercial doors, parking barriers, rolling shutters, Prime Sales",
+      canonical: "https://primegroup.com.ph/solutions/commercial-solutions",
+    },
+  };
+
+  const currentSlug = tabSlug(activeTab);
+  const meta = metaData[currentSlug] || {
+    title:
+      "Prime Sales Incorporated | Warehouse & Industrial Systems Philippines",
+    description:
+      "Explore Prime Sales Incorporated full range of warehouse, cold chain, and automation solutions in the Philippines.",
+    keywords:
+      "forklift philippines, warehouse solutions, automation philippines, cold chain philippines, prime sales",
+    canonical: "https://primegroup.com.ph/solutions",
+  };
   const solutionsData = {
     MHE: mheSolutions,
     "Cold Chain": coldChainSolutions,
@@ -605,6 +703,13 @@ const SolutionsPage = () => {
 
   return (
     <div className="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 min-h-screen flex flex-col">
+      <Helmet>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
+        <meta name="keywords" content={meta.keywords} />
+        <link rel="canonical" href={meta.canonical} />
+      </Helmet>
+
       <Header dark={dark} setDark={setDark} />
 
       <main className="flex-1 px-6 justify-center md:px-20 lg:px-16 py-20 w-full mx-auto transition-all duration-700 ease-out">
@@ -639,6 +744,7 @@ const SolutionsPage = () => {
             ))}
           </div>
         </div>
+
         <div className="flex flex-col gap-12">
           {currentSolutions.map((solution, index) => (
             <div
@@ -647,13 +753,11 @@ const SolutionsPage = () => {
         bg-background-light dark:bg-background-dark shadow-md hover:shadow-lg 
         ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
             >
-              {/* Image Section */}
               <div
                 className="w-full md:w-1/2 h-56 sm:h-64 md:h-[32em] bg-center bg-cover"
                 style={{ backgroundImage: `url(${solution.img})` }}
               ></div>
 
-              {/* Details Section */}
               <div className="w-full md:w-1/2 p-6 sm:p-8 text-center md:text-left">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                   {solution.title}
@@ -662,7 +766,6 @@ const SolutionsPage = () => {
                   {solution.desc}
                 </p>
 
-                {/* Applications Section */}
                 {solution.applications && (
                   <div className="mt-4">
                     <h4 className="text-lg font-semibold text-green-500 mb-2">

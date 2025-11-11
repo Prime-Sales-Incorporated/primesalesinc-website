@@ -7,19 +7,19 @@ const WhyChooseUs = () => {
         <div className="flex flex-col lg:flex-row gap-12 items-center justify-center ">
           {/* Image Section */}
           {/* Image Section */}
-          <div className="lg:w-1/2 h-[24em] flex">
+          <div className="lg:w-1/2 h-[10em] md:h-[24em] flex">
             {/* Light mode image */}
             <img
               src="/logo2.png"
               alt="Light mode warehouse"
-              className="rounded-lg w-full h-auto object-cover dark:hidden"
+              className="rounded-lg w-full h-auto object-cover dark:hidden animate-float"
             />
 
             {/* Dark mode image */}
             <img
               src="/logo1.png"
               alt="Dark mode warehouse"
-              className="rounded-lg h-[18em] object-cover hidden dark:block animate-float"
+              className="rounded-lg h-[8em] md:h-[18em] object-cover hidden dark:block animate-float"
             />
           </div>
 

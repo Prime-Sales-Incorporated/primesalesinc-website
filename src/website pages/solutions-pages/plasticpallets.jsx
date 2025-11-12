@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const plasticPallets = [
   {
@@ -60,6 +61,17 @@ const plasticPallets = [
 
 const PlasticPallets = () => (
   <div className="flex flex-col gap-12">
+    <Helmet>
+      <title>Plastic Pallets, Bins & Crates | Prime Sales Incorporated</title>
+      <meta
+        name="description"
+        content="Prime Sales Incorporated provides durable and hygienic plastic pallets, bins, and crates for logistics, warehousing, and industrial storage solutions in the Philippines."
+      />
+      <link
+        rel="canonical"
+        href="https://www.primesalesincorporated.com/plastic-pallets-bins-crates"
+      />
+    </Helmet>
     <div className="text-center mb-12">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
         Plastic Pallets, Bins & Crates – Durable & Hygienic Storage Solutions

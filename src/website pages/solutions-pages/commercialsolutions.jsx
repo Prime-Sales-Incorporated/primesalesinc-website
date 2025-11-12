@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const commercialSolutions = [
   {
@@ -38,6 +39,14 @@ const commercialSolutions = [
 
 const CommercialSolutions = () => (
   <div className="flex flex-col gap-12">
+    <Helmet>
+      <title>Commercial Solutions | Prime Sales Inc.</title>
+      <meta
+        name="description"
+        content="Explore Prime Sales Inc.’s commercial solutions — from warehouse storage and material handling systems to customized racking and cold chain equipment designed for retail, logistics, and industrial operations in the Philippines."
+      />
+    </Helmet>
+
     <div className="text-center mb-12">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
         Commercial Solutions – Retail Shelving & Rolling Shutters

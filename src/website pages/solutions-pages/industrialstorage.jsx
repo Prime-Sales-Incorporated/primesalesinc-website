@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const industrialStorageSolutions = [
   {
@@ -83,6 +84,17 @@ const industrialStorageSolutions = [
 const IndustrialStorage = () => (
   <div className="flex flex-col gap-12">
     <div className="text-center mb-12">
+      <Helmet>
+        <title>Industrial Storage Solutions | Prime Sales Incorporated</title>
+        <meta
+          name="description"
+          content="Prime Sales Incorporated offers a wide range of industrial storage solutions, including pallet racking systems, warehouse shelving, and high-density storage options to maximize efficiency and safety."
+        />
+        <link
+          rel="canonical"
+          href="https://www.primesalesincorporated.com/industrial-storage"
+        />
+      </Helmet>
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
         Industrial Storage Solutions – Maximize Warehouse Efficiency
       </h1>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const mheSolutions = [
   {
@@ -82,6 +83,18 @@ const mheSolutions = [
 
 const MHESolutions = () => (
   <div className="flex flex-col gap-12">
+    <Helmet>
+      <title>Material Handling Equipment | Prime Sales Incorporated</title>
+      <meta
+        name="description"
+        content="Prime Sales Incorporated offers electric forklifts, reach trucks, pallet stackers, and other material handling equipment to improve warehouse efficiency, safety, and productivity in the Philippines."
+      />
+      <link
+        rel="canonical"
+        href="https://www.primesalesincorporated.com/material-handling"
+      />
+    </Helmet>
+
     <div className="text-center mb-12">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
         Material Handling Equipment – Efficient Forklifts & Warehouse Tools

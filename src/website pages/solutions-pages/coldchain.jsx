@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const coldChainSolutions = [
   {
@@ -38,6 +39,17 @@ const coldChainSolutions = [
 
 const ColdChain = () => (
   <div className="flex flex-col gap-12">
+    <Helmet>
+      <title>Cold Chain Solutions | Prime Sales Incorporated</title>
+      <meta
+        name="description"
+        content="Reliable temperature-controlled storage solutions by Prime Sales Incorporated — including insulated panels, doors, and accessories."
+      />
+      <link
+        rel="canonical"
+        href="https://www.primesalesincorporated.com/cold-chain"
+      />
+    </Helmet>
     <div className="text-center mb-12">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
         Cold Chain Solutions – Reliable Temperature-Controlled Storage

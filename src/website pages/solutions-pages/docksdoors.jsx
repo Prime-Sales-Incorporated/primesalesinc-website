@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const docksDoorsSolutions = [
   {
@@ -115,6 +116,17 @@ const docksDoorsSolutions = [
 
 const DocksDoors = () => (
   <div className="flex flex-col gap-12">
+    <Helmet>
+      <title>Docks & Doors | Prime Sales Incorporated</title>
+      <meta
+        name="description"
+        content="Prime Sales Incorporated offers efficient dock levelers, industrial doors, and loading systems for safe, fast, and reliable warehouse operations in the Philippines."
+      />
+      <link
+        rel="canonical"
+        href="https://www.primesalesincorporated.com/docks-doors"
+      />
+    </Helmet>
     <div className="text-center mb-12">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
         Docks & Doors – Efficient Loading & Industrial Access Systems

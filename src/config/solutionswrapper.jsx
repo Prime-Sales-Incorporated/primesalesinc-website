@@ -102,14 +102,14 @@ const SolutionsWrapper = () => {
 
   if (!solutionData) return <div>Solution not found</div>;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: solutionData.title,
-    description: solutionData.description,
-    image: solutionData.image,
-    url: solutionData.canonical,
-  };
+  // const jsonLd = {
+  //   "@context": "https://schema.org",
+  //   "@type": "Product",
+  //   name: solutionData.title,
+  //   description: solutionData.description,
+  //   image: solutionData.image,
+  //   url: solutionData.canonical,
+  // };
 
   return (
     <div className="bg-background-light dark:bg-background-dark min-h-screen p-24 flex flex-col font-display text-gray-800 dark:text-gray-200">
@@ -132,7 +132,7 @@ const SolutionsWrapper = () => {
         <meta name="twitter:image" content={solutionData.image} />
 
         {/* JSON-LD Structured Data */}
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        {/* <script type="application/ld+json">{JSON.stringify(jsonLd)}</script> */}
       </Helmet>
 
       <Header dark={dark} setDark={setDark} />

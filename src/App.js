@@ -15,6 +15,7 @@ import UnderConstruction from "./website pages/UnderConstruction";
 import { HelmetProvider } from "react-helmet-async";
 import MHESolutions from "./website pages/solutions-pages/mhe";
 import SolutionsWrapper from "./config/solutionswrapper";
+import About from "./website pages/about-us";
 
 // 🌟 Floating Chat Button
 function FloatingChatButton() {
@@ -105,6 +106,7 @@ function App() {
         <Routes>
           {/* <Route path="/3d" element={<ThreeDScene />} /> */}
           <Route path="/" element={<WebsiteMain />} />
+          <Route path="/about" element={<About />} />
           <Route
             path="/solutions/:solutionSlug"
             element={<SolutionsWrapper />}

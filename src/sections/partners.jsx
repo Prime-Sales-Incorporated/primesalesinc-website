@@ -12,7 +12,7 @@ const PartnersCarousel = () => {
     },
     {
       name: "Manhattan",
-      logo: "https://static.wixstatic.com/media/f0d37b_34317869e1f843d6b030ce30881c7fe2~mv2.png/v1/fill/w_608,h_208,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/manh_logo_darkblue_rgb-1.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Manhattan-Associates-Inc.-logo.jpg?20180416171816",
     },
 
     // {
@@ -35,7 +35,7 @@ const PartnersCarousel = () => {
 
     {
       name: "Dematic",
-      logo: "https://static.wixstatic.com/media/f0d37b_9476fc8e56354536a8f2e7ffb480d1c5~mv2.png/v1/fill/w_504,h_180,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/f0d37b_9476fc8e56354536a8f2e7ffb480d1c5~mv2.png",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9B8pFPylAy8Didg2PWpegIkOWrIyftGj5hg&s",
     },
     {
       name: "Hormann",
@@ -43,7 +43,7 @@ const PartnersCarousel = () => {
     },
     {
       name: "Honeywell",
-      logo: "https://static.wixstatic.com/media/f0d37b_5fae650563d240a88a0be2bea9e90663~mv2.png/v1/fill/w_528,h_296,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/f0d37b_5fae650563d240a88a0be2bea9e90663~mv2.png",
+      logo: "https://1000logos.net/wp-content/uploads/2018/01/Honeywell-logo.jpg",
     },
 
     {

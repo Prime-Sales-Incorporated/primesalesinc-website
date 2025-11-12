@@ -98,9 +98,9 @@ const WebsiteMain = () => {
         {/* OUR STORY */}
         <div className="px-4 py-0 sm:px-6 sm:py-0 lg:px-8 transition-all duration-700 ease-out ">
           <section className="text-center py-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+            {/* <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
               About <span className="text-green-500">PSI</span>
-            </h2>
+            </h2> */}
             {/* <p className="mt-4 max-w-4xl mx-auto text-gray-600 dark:text-gray-300">
               Prime Sales Inc. (PSI) founded in 1976, is a leading supplier of
               intelligent intralogistics solution for dry and cold chain

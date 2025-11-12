@@ -76,7 +76,7 @@ const PlasticPallets = () => (
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
         Plastic Pallets, Bins & Crates – Durable & Hygienic Storage Solutions
       </h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
+      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
         Prime Sales Incorporated provides durable and hygienic plastic pallets,
         bins, and crates for warehouse storage, logistics, and industrial
         applications, ensuring efficiency, safety, and long-lasting performance

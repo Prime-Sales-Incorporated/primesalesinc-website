@@ -54,9 +54,11 @@ const ColdChain = () => (
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
         Cold Chain Solutions – Reliable Temperature-Controlled Storage
       </h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
-        High-quality cold storage and refrigeration systems to preserve
-        products, maintain freshness, and optimize logistics.
+      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+        Prime Sales Incorporated offers high-quality cold chain solutions,
+        including insulated panels, doors, and refrigeration systems, designed
+        to preserve products, maintain freshness, and optimize logistics for
+        warehouses and businesses across the Philippines.
       </p>
     </div>
 

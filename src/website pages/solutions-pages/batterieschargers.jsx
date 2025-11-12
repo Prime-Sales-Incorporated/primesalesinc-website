@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const batteriesChargersSolutions = [
   {
@@ -38,13 +39,26 @@ const batteriesChargersSolutions = [
 
 const BatteriesChargers = () => (
   <div className="flex flex-col gap-12">
+    <Helmet>
+      <title>Industrial Batteries & Chargers | Prime Sales Incorporated</title>
+      <meta
+        name="description"
+        content="Prime Sales Incorporated offers high-performance forklift batteries, chargers, and battery management systems for reliable and uninterrupted warehouse operations in the Philippines."
+      />
+      <link
+        rel="canonical"
+        href="https://www.primesalesincorporated.com/industrial-batteries-chargers"
+      />
+    </Helmet>
     <div className="text-center mb-12">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
         Industrial Batteries & Chargers – High-Performance Forklift Power
       </h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
-        Discover reliable forklift batteries, chargers, and battery management
-        systems for uninterrupted warehouse operations.
+      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+        Prime Sales Incorporated offers durable and hygienic plastic pallets,
+        bins, and crates designed for logistics, warehouse storage, and
+        industrial applications, ensuring efficiency, safety, and long-term
+        reliability in operations across the Philippines.
       </p>
     </div>
 

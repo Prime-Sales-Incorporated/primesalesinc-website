@@ -131,9 +131,11 @@ const DocksDoors = () => (
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
         Docks & Doors – Efficient Loading & Industrial Access Systems
       </h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
-        Explore dock levelers, industrial doors, and loading systems for safe,
-        fast, and efficient warehouse operations.
+      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+        Prime Sales Incorporated offers high-quality docks and doors, including
+        dock levelers, industrial doors, and loading systems, designed to ensure
+        safe, fast, and efficient warehouse operations for businesses across the
+        Philippines.
       </p>
     </div>
 

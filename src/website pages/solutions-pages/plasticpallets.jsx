@@ -77,8 +77,10 @@ const PlasticPallets = () => (
         Plastic Pallets, Bins & Crates – Durable & Hygienic Storage Solutions
       </h1>
       <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
-        High-quality plastic pallets, bins, and crates designed for logistics
-        efficiency, hygiene, and long-term durability.
+        Prime Sales Incorporated provides durable and hygienic plastic pallets,
+        bins, and crates for warehouse storage, logistics, and industrial
+        applications, ensuring efficiency, safety, and long-lasting performance
+        across the Philippines.
       </p>
     </div>
 

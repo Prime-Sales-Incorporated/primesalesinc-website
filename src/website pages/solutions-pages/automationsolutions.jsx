@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const automationSolutions = [
   {
@@ -38,13 +39,26 @@ const automationSolutions = [
 
 const AutomationSolutions = () => (
   <div className="flex flex-col gap-12">
+    <Helmet>
+      <title>Automation Solutions | Prime Sales Incorporated</title>
+      <meta
+        name="description"
+        content="Prime Sales Incorporated provides automated conveyors, storage, and retrieval systems to boost warehouse productivity, efficiency, and accuracy in the Philippines."
+      />
+      <link
+        rel="canonical"
+        href="https://www.primesalesincorporated.com/automation-solutions"
+      />
+    </Helmet>
     <div className="text-center mb-12">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
         Automation Solutions – Boost Warehouse Productivity
       </h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
-        Automated conveyors, storage, and retrieval systems designed to improve
-        efficiency, accuracy, and warehouse operations.
+      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+        Prime Sales Incorporated provides automation solutions, including
+        conveyors, automated storage, and retrieval systems, designed to enhance
+        warehouse efficiency, accuracy, and productivity for businesses across
+        the Philippines.
       </p>
     </div>
 

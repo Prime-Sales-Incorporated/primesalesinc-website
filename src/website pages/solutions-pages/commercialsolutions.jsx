@@ -51,9 +51,11 @@ const CommercialSolutions = () => (
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
         Commercial Solutions – Retail Shelving & Rolling Shutters
       </h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
-        Explore retail shelving, barriers, and commercial rolling shutters
-        designed for efficiency, security, and presentation.
+      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+        Prime Sales Incorporated provides high-quality commercial solutions,
+        including retail shelving, barriers, and rolling shutters, designed to
+        enhance store efficiency, security, and product presentation for
+        businesses across the Philippines.
       </p>
     </div>
 

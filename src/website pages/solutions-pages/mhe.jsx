@@ -99,9 +99,11 @@ const MHESolutions = () => (
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
         Material Handling Equipment – Efficient Forklifts & Warehouse Tools
       </h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
-        Discover electric forklifts, reach trucks, pallet stackers, and more for
-        safer and faster warehouse operations in the Philippines.
+      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+        Prime Sales Incorporated offers a wide range of material handling
+        equipment, including electric forklifts, reach trucks, pallet stackers,
+        and other warehouse tools, designed to improve efficiency, safety, and
+        productivity in Philippine warehouses and logistics operations.
       </p>
     </div>
 

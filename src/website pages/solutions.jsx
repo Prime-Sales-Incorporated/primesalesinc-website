@@ -39,11 +39,11 @@ const OurSolutions = () => {
       tab: "Automation Solutions",
     },
     {
-      title: "Docks & Doors",
+      title: "Docks and Doors",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQZi1mz4AVCxzDP_KgpTcu9rfEVAkWAMxLWw&s",
       desc: "Efficient dock and door solutions for warehouses and logistics facilities.",
       video: "/hormann.mp4",
-      tab: "Docks & Doors",
+      tab: "Docks and Doors",
     },
     {
       title: "Industrial Batteries and Chargers",

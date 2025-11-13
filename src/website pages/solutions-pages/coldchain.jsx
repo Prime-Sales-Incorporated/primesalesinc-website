@@ -47,7 +47,7 @@ const ColdChain = () => (
       />
       <link
         rel="canonical"
-        href="https://www.primesalesincorporated.com/cold-chain"
+        href="https://www.primegroup.com.ph/solutions/cold-chain"
       />
     </Helmet>
     <div className="text-center mb-12">

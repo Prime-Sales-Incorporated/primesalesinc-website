@@ -118,7 +118,7 @@ const WebsiteMain = () => {
                 },
                 {
                   title: "Our Mission & Vision",
-                  desc: "Prime Sales Inc. is your dynamic business partner committed to provide cost-effective solutions to ensure customer.",
+                  desc: "Prime Sales Inc. is your dynamic business partner committed to provide cost-effective solutions to ensure customer satisfaction.",
                 },
               ].map((item, i) => (
                 <div

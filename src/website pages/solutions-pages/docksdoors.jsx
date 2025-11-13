@@ -124,7 +124,7 @@ const DocksDoors = () => (
       />
       <link
         rel="canonical"
-        href="https://www.primesalesincorporated.com/docks-doors"
+        href="https://www.primegroup.com.ph/solutions/docks-and-doors"
       />
     </Helmet>
     <div className="text-center mb-12">

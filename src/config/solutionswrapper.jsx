@@ -112,7 +112,7 @@ const SolutionsWrapper = () => {
   // };
 
   return (
-    <div className="bg-background-light dark:bg-background-dark min-h-screen p-24 flex flex-col font-display text-gray-800 dark:text-gray-200">
+    <div className="bg-background-light dark:bg-background-dark min-h-screen px-8 py-20 md:p-24 flex flex-col font-display text-gray-800 dark:text-gray-200">
       <Helmet>
         <title>{solutionData.title}</title>
         <meta name="description" content={solutionData.description} />

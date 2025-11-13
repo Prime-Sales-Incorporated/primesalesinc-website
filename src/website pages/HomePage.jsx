@@ -82,7 +82,7 @@ const WebsiteMain = () => {
               />
             </div>
 
-            <p className="   md:text-xl font-sans font-light leading-relaxed max-w-4xl mx-auto text-base text-gray-300 opacity-0 animate-fadeInUp [animation-delay:0.3s]">
+            <p className="   md:text-xl font-sans font-light leading-relaxed max-w-4xl mx-auto text-sm text-gray-300 opacity-0 animate-fadeInUp [animation-delay:0.3s]">
               Prime Sales Inc. (PSI), founded in 1976, is a Philippine company
               providing intralogistics solutions for both the dry and cold chain
               industries. Partnering with global manufacturers, PSI offers

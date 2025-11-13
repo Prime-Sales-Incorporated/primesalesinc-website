@@ -37,7 +37,7 @@ const solutionsMap = {
     canonical: "https://primegroup.com.ph/solutions/docks-and-doors",
     image: "https://example.com/images/docks-doors.jpg",
   },
-  "plastic-pallets-bins-and-crates": {
+  "plastic-pallets,-bins-and-crates": {
     component: <PlasticPallets />,
     title: "Plastic Pallets, Bins & Crates Philippines | Prime Sales",
     description:

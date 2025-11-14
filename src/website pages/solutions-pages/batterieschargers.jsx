@@ -47,7 +47,7 @@ const BatteriesChargers = () => (
       />
       <link
         rel="canonical"
-        href="https://www.primesalesincorporated.com/industrial-batteries-chargers"
+        href="https://www.primegroup.com.ph/solutions/industrial-batteries-and-chargers"
       />
     </Helmet>
     <div className="text-center mb-12">

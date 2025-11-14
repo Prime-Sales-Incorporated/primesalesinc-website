@@ -91,7 +91,7 @@ const IndustrialStorage = () => (
       />
       <link
         rel="canonical"
-        href="https://www.primesalesincorporated.com/industrial-storage"
+        href="https://www.primegroup.com.ph/solutions/industrial-storage"
       />
     </Helmet>
     <div className="text-center mb-12">

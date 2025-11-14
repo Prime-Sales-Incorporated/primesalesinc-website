@@ -91,7 +91,7 @@ const MHESolutions = () => (
       />
       <link
         rel="canonical"
-        href="https://www.primesalesincorporated.com/material-handling"
+        href="https://www.primegroup.com.ph/solutions/mhe"
       />
     </Helmet>
 

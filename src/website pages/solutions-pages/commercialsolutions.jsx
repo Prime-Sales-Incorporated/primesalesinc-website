@@ -45,6 +45,10 @@ const CommercialSolutions = () => (
         name="description"
         content="Explore Prime Sales Inc.’s commercial solutions — from warehouse storage and material handling systems to customized racking and cold chain equipment designed for retail, logistics, and industrial operations in the Philippines."
       />
+      <link
+        rel="canonical"
+        href="https://www.primegroup.com.ph/solutions/commercial-solutions"
+      />
     </Helmet>
 
     <div className="text-center mb-12">

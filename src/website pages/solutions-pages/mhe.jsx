@@ -84,7 +84,10 @@ const mheSolutions = [
 const MHESolutions = () => (
   <div className="flex flex-col gap-12">
     <Helmet>
-      <title>Material Handling Equipment | Prime Sales Incorporated</title>
+      <title>
+        Material Handling Equipment | Forklifts, Reach Trucks, Stackers &
+        Warehouse Solutions | Prime Sales Incorporated
+      </title>
       <meta
         name="description"
         content="Prime Sales Incorporated offers electric forklifts, reach trucks, pallet stackers, and other material handling equipment to improve warehouse efficiency, safety, and productivity in the Philippines."

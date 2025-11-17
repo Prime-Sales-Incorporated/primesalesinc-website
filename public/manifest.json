@@ -8,12 +8,17 @@
       "type": "image/x-icon"
     },
     {
-      "src": "/psi.png",
+      "src": "/32.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/psi.png",
+      "src": "/192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

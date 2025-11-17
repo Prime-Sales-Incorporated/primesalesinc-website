@@ -21,19 +21,16 @@ const Footer = () => {
             workswith global partners to offer strong and efficient supply chain
             systems in the Philippines.
           </p>
-          <p className="text-center text-xs leading-5 text-gray-500 dark:text-gray-400 mt-8">
-            © 2025 Prime Sales. All rights reserved.
-          </p>
         </div>
 
-        <div className="flex justify-center space-x-12 md:order-2 mt-8 md:mt-0">
+        <div className="flex justify-center space-x-4 md:space-x-12 md:order-2 mt-8 md:mt-0">
           {/* About */}
           <div className="flex flex-col items-start ">
             <Link
               to="/about"
               className="text-gray-500 dark:text-gray-400 hover:text-gray-600 text-lg dark:hover:text-gray-300 mb-2 font-semibold"
             >
-              About Us
+              About
             </Link>
           </div>
 
@@ -119,7 +116,7 @@ const Footer = () => {
           </div>
 
           {/* Terms of Service */}
-          <div className="flex flex-col items-start">
+          {/* <div className="flex flex-col items-start">
             <p className="text-gray-500 dark:text-gray-400 hover:text-gray-600 text-lg dark:hover:text-gray-300 mb-2 font-semibold">
               Terms of Service
             </p>
@@ -135,8 +132,11 @@ const Footer = () => {
             >
               Cookies
             </a>
-          </div>
+          </div> */}
         </div>
+        <p className="text-center text-xs leading-5 text-gray-500 dark:text-gray-400 mt-8">
+          © 2025 Prime Sales. All rights reserved.
+        </p>
       </div>
     </footer>
   );

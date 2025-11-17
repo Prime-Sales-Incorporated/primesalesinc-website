@@ -16,6 +16,7 @@ import { HelmetProvider } from "react-helmet-async";
 import MHESolutions from "./website pages/solutions-pages/mhe";
 import SolutionsWrapper from "./config/solutionswrapper";
 import About from "./website pages/about-us";
+import WMSSolutions from "./website pages/solutions-pages/warehouse-solutions,";
 
 // 🌟 Floating Chat Button
 function FloatingChatButton() {

@@ -11,11 +11,21 @@ import AutomationSolutions from "../website pages/solutions-pages/automationsolu
 import IndustrialStorage from "../website pages/solutions-pages/industrialstorage";
 import BatteriesChargers from "../website pages/solutions-pages/batterieschargers";
 import CommercialSolutions from "../website pages/solutions-pages/commercialsolutions";
+import WMSSolutions from "../website pages/solutions-pages/warehouse-solutions,";
 
 const solutionsMap = {
   mhe: {
     component: <MHESolutions />,
     title: "Forklift Philippines | Material Handling Equipment | Prime Sales",
+    description:
+      "Discover electric forklifts, pallet stackers, and reach trucks in the Philippines.",
+    canonical: "https://primegroup.com.ph/solutions/mhe",
+    image: "https://example.com/images/mhe.jpg",
+  },
+  "warehouse-management-system": {
+    component: <WMSSolutions />,
+    title:
+      "  Warehouse Management System | Manhattan WMS Partner | Prime Sales Incorporated",
     description:
       "Discover electric forklifts, pallet stackers, and reach trucks in the Philippines.",
     canonical: "https://primegroup.com.ph/solutions/mhe",

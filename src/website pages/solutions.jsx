@@ -46,6 +46,13 @@ const OurSolutions = () => {
       tab: "Docks and Doors",
     },
     {
+      title: "Warehouse Management System",
+      img: "https://images3.welcomesoftware.com/Zz05ZTBlZTI3MDBhYmExMWVlYWE4NzY2YjhiM2IzOTMzYQ==?w=1400&h=1120&format=webp",
+      desc: "Streamline warehouse operations with real-time visibility, efficient picking and putaway, and automation-ready workflows.",
+      video: "/wms.mp4",
+      tab: "Warehouse Management System",
+    },
+    {
       title: "Industrial Batteries and Chargers",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTedKd_YgLpG2K8vHBxekSlDwjX6qcwvX3RFw&s",
       desc: "High-performance batteries and chargers for material handling equipment.",

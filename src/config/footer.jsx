@@ -21,6 +21,9 @@ const Footer = () => {
             workswith global partners to offer strong and efficient supply chain
             systems in the Philippines.
           </p>
+          <p className="text-center hidden md:flex text-xs leading-5 text-gray-500 dark:text-gray-400 mt-8">
+            © 2025 Prime Sales. All rights reserved.
+          </p>
         </div>
 
         <div className="flex justify-center space-x-4 md:space-x-12 md:order-2 mt-8 md:mt-0">
@@ -41,56 +44,56 @@ const Footer = () => {
             </p>
             <a
               href="/solutions/mhe"
-              className="text-gray-400 text-sm hover:text-gray-500 dark:hover:text-gray-300"
+              className="text-gray-400 text-xs hover:text-gray-500 dark:hover:text-gray-300"
             >
               Material Handling Equipment
             </a>
             <a
               href="/solutions/industrial-storage"
-              className="text-gray-400 text-sm hover:text-gray-500 dark:hover:text-gray-300"
+              className="text-gray-400 text-xs hover:text-gray-500 dark:hover:text-gray-300"
             >
               Industrial Storage Solutions
             </a>
             <a
               href="/solutions/cold-chain"
-              className="text-gray-400 text-sm hover:text-gray-500 dark:hover:text-gray-300"
+              className="text-gray-400 text-xs hover:text-gray-500 dark:hover:text-gray-300"
             >
               Cold Chain Solutions
             </a>
 
             <a
               href="/solutions/docks-and-doors"
-              className="text-gray-400 text-sm hover:text-gray-500 dark:hover:text-gray-300"
+              className="text-gray-400 text-xs hover:text-gray-500 dark:hover:text-gray-300"
             >
               Docks and Doors
             </a>
             <a
               href="/solutions/plastic-pallets,-bins-and-crates"
-              className="text-gray-400 text-sm hover:text-gray-500 dark:hover:text-gray-300"
+              className="text-gray-400 text-xs hover:text-gray-500 dark:hover:text-gray-300"
             >
               Plastic Pallets, Bins and Crates
             </a>
             <a
               href="/solutions/industrial-batteries-and-chargers"
-              className="text-gray-400 text-sm hover:text-gray-500 dark:hover:text-gray-300"
+              className="text-gray-400 text-xs hover:text-gray-500 dark:hover:text-gray-300"
             >
               Industrial Batteries and Chargers
             </a>
             <a
               href="/solutions/automation-solutions"
-              className="text-gray-400 text-sm hover:text-gray-500 dark:hover:text-gray-300"
+              className="text-gray-400 text-xs hover:text-gray-500 dark:hover:text-gray-300"
             >
               Automation Solutions
             </a>
             <a
               href="/solutions/warehouse-management-system"
-              className="text-gray-400 text-sm hover:text-gray-500 dark:hover:text-gray-300"
+              className="text-gray-400 text-xs hover:text-gray-500 dark:hover:text-gray-300"
             >
               Warehouse Management Solutions
             </a>
             <a
               href="/solutions/commercial-solutions"
-              className="text-gray-400 text-sm hover:text-gray-500 dark:hover:text-gray-300"
+              className="text-gray-400 text-xs hover:text-gray-500 dark:hover:text-gray-300"
             >
               Commercial Solutions
             </a>
@@ -103,13 +106,13 @@ const Footer = () => {
             </p>
             <a
               href="#"
-              className="text-gray-400 text-sm hover:text-gray-500 dark:hover:text-gray-300"
+              className="text-gray-400 text-xs hover:text-gray-500 dark:hover:text-gray-300"
             >
               Support
             </a>
             <a
               href="#"
-              className="text-gray-400 text-sm hover:text-gray-500 dark:hover:text-gray-300"
+              className="text-gray-400 text-xs hover:text-gray-500 dark:hover:text-gray-300"
             >
               Locations
             </a>
@@ -134,7 +137,7 @@ const Footer = () => {
             </a>
           </div> */}
         </div>
-        <p className="text-center text-xs leading-5 text-gray-500 dark:text-gray-400 mt-8">
+        <p className="text-center block md:hidden text-xs leading-5 text-gray-500 dark:text-gray-400 mt-8">
           © 2025 Prime Sales. All rights reserved.
         </p>
       </div>

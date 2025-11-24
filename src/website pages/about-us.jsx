@@ -4,6 +4,7 @@ import Footer from "../config/footer";
 import Timeline from "../sections/timeline";
 import PartnersCarousel from "../sections/partners";
 import WhyChooseUs from "../sections/whyChoouseUs";
+import BranchesMap from "../sections/map-branches";
 
 const About = () => {
   const [dark, setDark] = useState(() => {
@@ -84,6 +85,8 @@ const About = () => {
               </h2>
               <WhyChooseUs />
               <Timeline dark={dark} />
+
+              <BranchesMap />
               <PartnersCarousel />
             </div>
           </section>

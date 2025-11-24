@@ -58,7 +58,7 @@ const docksDoorsSolutions = [
     ],
   },
   {
-    title: "High-Speed Sectional Doors",
+    title: "High-Speed Doors",
     desc: "Fast-operating sectional doors for high-traffic industrial environments.",
     img: "https://www.assaabloyentrance.com/globalassets/assa-abloy/entrance-systems/products/industrial-doors/high-speed-doors/assa-abloy-high-speed-section-door/assa-abloy-high-speed-sectional-door-2.jpg",
     applications: [
@@ -69,7 +69,18 @@ const docksDoorsSolutions = [
     ],
   },
   {
-    title: "Industrial Rolling Shutters",
+    title: "High-Speed Sectional Doors / ISO Cold",
+    desc: "Fast-operating sectional doors for high-traffic industrial environments.",
+    img: "https://www.assaabloyentrance.com/globalassets/assa-abloy/entrance-systems/products/industrial-doors/high-speed-doors/assa-abloy-high-speed-section-door/assa-abloy-high-speed-sectional-door-2.jpg",
+    applications: [
+      "Enhances workflow efficiency in busy areas.",
+      "Maintains temperature control in sensitive zones.",
+      "Equipped with safety sensors and quick-reset features.",
+      "Reduces downtime and energy loss.",
+    ],
+  },
+  {
+    title: "Industrial Rolling Shutters / Rolling Grilles",
     desc: "Heavy-duty steel or aluminum shutters for secure and efficient closure.",
     img: "https://www.enviroblinds.co.uk/media/catalog/product/cache/ba0e4743d5d3e153f02f32656e2f28cc/s/e/security_roller_shutter_door_1_1.jpg",
     applications: [
@@ -79,39 +90,29 @@ const docksDoorsSolutions = [
       "Ideal for industrial and commercial buildings.",
     ],
   },
-  {
-    title: "Industrial Rolling Grilles",
-    desc: "Ventilated rolling grilles offering visibility and airflow while maintaining security.",
-    img: "https://www.cornelliron.com/getmedia/5f2b24f9-5db9-43f5-9771-541e1f1bb958/Rolling-Grille-Storefront.jpg",
-    applications: [
-      "Used in parking areas, retail fronts, and warehouses.",
-      "Provides security without blocking visibility.",
-      "Durable and corrosion-resistant materials.",
-      "Available in various grille patterns and finishes.",
-    ],
-  },
-  {
-    title: "Strip Curtains",
-    desc: "Flexible PVC curtains providing separation while allowing easy passage.",
-    img: "https://www.stripcurtainsdirect.co.uk/cdn/shop/articles/what-are-pvc-strip-curtains.jpg",
-    applications: [
-      "Maintains temperature zones and reduces dust entry.",
-      "Used in cold storage, food processing, and cleanrooms.",
-      "Allows passage of personnel and equipment without obstruction.",
-      "Simple to install and replace.",
-    ],
-  },
-  {
-    title: "ISO Doors",
-    desc: "Specialized doors designed for temperature-controlled and cleanroom environments.",
-    img: "https://www.metaflexdoors.com/wp-content/uploads/2021/06/ISO-262_3-scaled.jpg",
-    applications: [
-      "Ensures airtight sealing and insulation.",
-      "Used in pharmaceutical, food, and cold storage facilities.",
-      "Supports hygiene standards and contamination control.",
-      "Available in sliding or hinged configurations.",
-    ],
-  },
+
+  // {
+  //   title: "Strip Curtains",
+  //   desc: "Flexible PVC curtains providing separation while allowing easy passage.",
+  //   img: "https://www.stripcurtainsdirect.co.uk/cdn/shop/articles/what-are-pvc-strip-curtains.jpg",
+  //   applications: [
+  //     "Maintains temperature zones and reduces dust entry.",
+  //     "Used in cold storage, food processing, and cleanrooms.",
+  //     "Allows passage of personnel and equipment without obstruction.",
+  //     "Simple to install and replace.",
+  //   ],
+  // },
+  // {
+  //   title: "ISO Doors",
+  //   desc: "Specialized doors designed for temperature-controlled and cleanroom environments.",
+  //   img: "https://www.metaflexdoors.com/wp-content/uploads/2021/06/ISO-262_3-scaled.jpg",
+  //   applications: [
+  //     "Ensures airtight sealing and insulation.",
+  //     "Used in pharmaceutical, food, and cold storage facilities.",
+  //     "Supports hygiene standards and contamination control.",
+  //     "Available in sliding or hinged configurations.",
+  //   ],
+  // },
 ];
 
 const DocksDoors = () => (

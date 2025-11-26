@@ -103,6 +103,12 @@ function HeaderHome({ dark, setDark }) {
           >
             Contact
           </a>
+          <a
+            href="#"
+            className="hover:text-white  hover:scale-105 transition-all duration-300"
+          >
+            Careers
+          </a>
           <button className="flex items-center gap-1 hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">
             EN
             <ChevronDown size={14} />

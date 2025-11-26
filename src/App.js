@@ -17,6 +17,7 @@ import MHESolutions from "./website pages/solutions-pages/mhe";
 import SolutionsWrapper from "./config/solutionswrapper";
 import About from "./website pages/about-us";
 import WMSSolutions from "./website pages/solutions-pages/warehouse-solutions,";
+import CareersPage from "./website pages/careers-page";
 
 // 🌟 Floating Chat Button
 function FloatingChatButton() {
@@ -108,6 +109,7 @@ function App() {
           {/* <Route path="/3d" element={<ThreeDScene />} /> */}
           <Route path="/" element={<WebsiteMain />} />
           <Route path="/about" element={<About />} />
+          <Route path="/careers" element={<CareersPage />} />
           <Route
             path="/solutions/:solutionSlug"
             element={<SolutionsWrapper />}

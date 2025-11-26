@@ -31,14 +31,14 @@ const CareersPage = () => {
           <h1 className="text-white text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl">
             Shape the Future of Intralogistics
           </h1>
-          <p className="text-white/80 text-base sm:text-lg">
+          <p className="md:text-xl font-sans font-light leading-relaxed max-w-4xl mx-auto text-sm text-gray-300 opacity-0 animate-fadeInUp [animation-delay:0.3s]">
             Join our team and be a part of the revolution in intelligent
             automation. We are looking for passionate innovators to help us
             build the next generation of logistics solutions.
           </p>
           <a
             href="#open-positions"
-            className="flex items-center justify-center h-12 px-5 rounded-lg bg-primary text-background-dark text-base font-bold hover:bg-opacity-90 transition-colors"
+            className="flex items-center justify-center h-12 px-5 rounded-lg bg-green-500 text-background-dark text-base font-bold hover:bg-opacity-90 transition-colors"
           >
             View Open Positions
           </a>
@@ -122,7 +122,7 @@ const CareersPage = () => {
                     </div>
                   </div>
                   <a
-                    className="px-4 py-2 rounded-lg bg-primary text- text-sm font-bold hover:bg-opacity-90 transition-colors"
+                    className="px-4 py-2 rounded-lg bg-green-500 text- text-sm font-bold hover:bg-opacity-90 transition-colors"
                     href="#"
                   >
                     View Details

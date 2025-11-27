@@ -104,9 +104,9 @@ const CareersPage = () => {
                 loc: "Paranaque City, Philippines",
               },
               {
-                title: "Project Estimator",
-                dept: "Engineering",
-                loc: "Paranaque City, Philippines",
+                title: "Robotics Operations Specialist",
+                dept: "Operations",
+                loc: "Berlin, Germany",
               },
             ].map((job, i) => (
               <div

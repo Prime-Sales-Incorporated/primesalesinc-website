@@ -109,7 +109,7 @@ function App() {
           {/* <Route path="/3d" element={<ThreeDScene />} /> */}
           <Route path="/" element={<WebsiteMain />} />
           <Route path="/about" element={<About />} />
-          {/* <Route path="/careers" element={<CareersPage />} /> */}
+          <Route path="/careers" element={<CareersPage />} />
           <Route
             path="/solutions/:solutionSlug"
             element={<SolutionsWrapper />}

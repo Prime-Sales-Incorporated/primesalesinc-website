@@ -18,16 +18,26 @@ const CareersPage = () => {
   const jobs = [
     {
       title: "Assistant Sales Manager",
-      dept: "Automation",
+      dept: "Prime Commercial Solutions",
+      loc: "Paranaque City, Philippines",
+    },
+    // {
+    //   title: "Sales Executive",
+    //   dept: "Material Handling Equipment Department",
+    //   loc: "Paranaque City, Philippines",
+    // },
+    {
+      title: "Sales Executive",
+      dept: "Cold Chain Solutions",
       loc: "Paranaque City, Philippines",
     },
     {
       title: "Sales Executive",
-      dept: "Material Handling Equipment Department",
+      dept: "Industrial Storage and Office Solutions",
       loc: "Paranaque City, Philippines",
     },
     {
-      title: "Material Handling Equipment (MHE) Technician",
+      title: "Service Technician",
       dept: "Material Handling Equipment",
       loc: "Paranaque City, Philippines",
     },

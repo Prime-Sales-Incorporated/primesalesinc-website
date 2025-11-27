@@ -8,12 +8,42 @@ const CareersPage = () => {
     }
     return false;
   });
+  const [selectedDept, setSelectedDept] = useState("All");
 
   useEffect(() => {
     localStorage.setItem("darkMode", dark);
     if (dark) document.documentElement.classList.add("dark");
     else document.documentElement.classList.remove("dark");
   }, [dark]);
+  const jobs = [
+    {
+      title: "Assistant Sales Manager",
+      dept: "Automation",
+      loc: "Paranaque City, Philippines",
+    },
+    {
+      title: "Sales Executive",
+      dept: "Material Handling Equipment Department",
+      loc: "Paranaque City, Philippines",
+    },
+    {
+      title: "Material Handling Equipment (MHE) Technician",
+      dept: "Material Handling Equipment",
+      loc: "Paranaque City, Philippines",
+    },
+    {
+      title: "Robotics Operations Specialist",
+      dept: "Operations",
+      loc: "Berlin, Germany",
+    },
+  ];
+
+  // Unique departments for dropdown (if you add dropdown later)
+  const departments = ["All", ...new Set(jobs.map((j) => j.dept))];
+
+  // Filtered list
+  const filteredJobs =
+    selectedDept === "All" ? jobs : jobs.filter((j) => j.dept === selectedDept);
 
   return (
     <main className="flex-grow bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
@@ -72,58 +102,46 @@ const CareersPage = () => {
             </div>
 
             <div className="md:col-span-3 flex flex-wrap gap-3">
-              <button className="flex h-12 flex-1 min-w-[150px] justify-between items-center px-4 rounded-lg bg-white/5 hover:bg-white/10 text- text-sm">
-                <p>All Departments</p>
-                <span className="material-symbols-outlined">expand_more</span>
-              </button>
-
-              <button className="flex h-12 flex-1 min-w-[150px] justify-between items-center px-4 rounded-lg bg-white/5 hover:bg-white/10 text- text-sm">
-                <p>All Locations</p>
-                <span className="material-symbols-outlined">expand_more</span>
-              </button>
+              <select
+                value={selectedDept}
+                onChange={(e) => setSelectedDept(e.target.value)}
+                className="h-12 px-4 rounded-lg 
+             bg-white/5 dark:bg-gray-800 
+             text-black dark:text-white 
+             border border-gray-300 dark:border-gray-600 
+             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              >
+                <option value="All">All Departments</option>
+                <option value="Automation">Automation</option>
+                <option value="Material Handling Equipment Department">
+                  Material Handling Equipment Department
+                </option>
+                <option value="Material Handling Equipment">
+                  Material Handling Equipment
+                </option>
+                <option value="Operations">Operations</option>
+              </select>
             </div>
           </div>
 
           {/* Job Cards */}
           <div className="space-y-4">
-            {[
-              {
-                title: "Assistant Sales Manager",
-                dept: "Automation",
-                loc: "Paranaque City, Philippines",
-              },
-              {
-                title: "Sales Executive",
-                dept: "Material Handling Equipment Department",
-                loc: "Paranaque City, Philippines",
-              },
-
-              {
-                title: "Material Handling Equipment (MHE) Technician",
-                dept: "Material Handling Equipment",
-                loc: "Paranaque City, Philippines",
-              },
-              {
-                title: "Robotics Operations Specialist",
-                dept: "Operations",
-                loc: "Berlin, Germany",
-              },
-            ].map((job, i) => (
+            {filteredJobs.map((job, i) => (
               <div
                 key={i}
-                className="bg-gray-200 dark:bg-white/5  p-6 rounded-lg border border-white/10 hover:border-primary  transition-all"
+                className="bg-gray-200 dark:bg-white/5 p-6 rounded-lg border border-white/10 hover:border-primary transition-all"
               >
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                   <div className="flex-1">
-                    <h3 className="text- text-xl font-bold">{job.title}</h3>
-                    <div className="flex items-center gap-4 mt-2 text-sm ">
+                    <h3 className="text-xl font-bold">{job.title}</h3>
+                    <div className="flex items-center gap-4 mt-2 text-sm">
                       <span>{job.dept}</span>
                       <span className="text-white/30">•</span>
                       <span>{job.loc}</span>
                     </div>
                   </div>
                   <a
-                    className="px-4 py-2 rounded-lg bg-green-500 text- text-sm font-bold hover:bg-opacity-90 transition-colors"
+                    className="px-4 py-2 rounded-lg bg-green-500 text-sm font-bold hover:bg-opacity-90 transition-colors"
                     href="#"
                   >
                     View Details

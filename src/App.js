@@ -37,7 +37,7 @@ function FloatingChatButton() {
       <button
         onClick={handleClick}
         aria-label="Chat with us"
-        className="group flex items-center   hover:bg-green-600 
+        className="group flex items-center bg-green-500  hover:bg-green-600 
                    text-white rounded-full shadow-xl 
                    transition-all duration-500 ease-in-out 
                    pl-4 pr-4 py-3 hover:pl-6 hover:pr-6 

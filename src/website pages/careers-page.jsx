@@ -24,14 +24,14 @@ const CareersPage = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(16,34,22,0.8), rgba(16,34,22,1)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAjABUaJboZEn_a1q0jOqvMYFqwbVK661-qPrGJObVW-Mr8jw4aZMyOCcmnc7L5J4QDpKpsyWRf4vDM6GsbrxEmcRyRkJRXEiXqDB_kUMkUuOgL2GjnyNdMhVZFuAd3M4Q2BRe_6GptYG6HocEtD0gogk9YPbwvAkfctikr06KSyPBC6xBr0hNJ0IDJLfK_kOmpgMfvZD4-XQYYnVYTNL77-pEKfWn5RJhLWALkx5S__t8ibHY2TGzP8t5WZkFo5SX40tCt41Y8q72P')",
+              "linear-gradient(rgba(16,34,22,0.8), rgba(16,34,22,1)), url('/psi-cover.webp')",
           }}
         ></div>
         <div className="relative z-10 flex flex-col items-center gap-6 max-w-3xl">
           <h1 className="text-white text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl">
             Build Your Career With
           </h1>
-          <img src="/logo1.png" className="h-24 w-56" />
+          <img src="/logo1.png" className="h-24 w-48" />
           <p className="md:text-xl font-sans font-light leading-relaxed max-w-4xl mx-auto text-sm text-gray-300 opacity-0 animate-fadeInUp [animation-delay:0.3s]">
             Join a company that values hard work, professionalism, and growth.
             Be part of a team where your contributions truly matter.

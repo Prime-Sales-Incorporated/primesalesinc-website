@@ -104,7 +104,7 @@ function HeaderHome({ dark, setDark }) {
             Contact
           </a>
           <a
-            href="#"
+            href="/careers"
             className="hover:text-white  hover:scale-105 transition-all duration-300"
           >
             Careers

@@ -26,6 +26,18 @@ const slides = [
     desc: "Smart, space-efficient storage systems designed to optimize your logistics operations.",
     img: "/proj/2.jpg",
   },
+  {
+    id: 5,
+    title: "Innovative Warehousing",
+    desc: "Smart, space-efficient storage systems designed to optimize your logistics operations.",
+    img: "/proj/9.jpg",
+  },
+  {
+    id: 6,
+    title: "Innovative Warehousing",
+    desc: "Smart, space-efficient storage systems designed to optimize your logistics operations.",
+    img: "/proj/5.png",
+  },
 ];
 
 const ShowcaseCarousel = () => {

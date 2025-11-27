@@ -29,12 +29,12 @@ const CareersPage = () => {
         ></div>
         <div className="relative z-10 flex flex-col items-center gap-6 max-w-3xl">
           <h1 className="text-white text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl">
-            Shape the Future of Intralogistics
+            Build Your Career With
           </h1>
+          <img src="/logo1.png" className="h-24 w-56" />
           <p className="md:text-xl font-sans font-light leading-relaxed max-w-4xl mx-auto text-sm text-gray-300 opacity-0 animate-fadeInUp [animation-delay:0.3s]">
-            Join our team and be a part of the revolution in intelligent
-            automation. We are looking for passionate innovators to help us
-            build the next generation of logistics solutions.
+            Join a company that values hard work, professionalism, and growth.
+            Be part of a team where your contributions truly matter.
           </p>
           <a
             href="#open-positions"
@@ -88,24 +88,25 @@ const CareersPage = () => {
           <div className="space-y-4">
             {[
               {
-                title: "Senior Software Engineer",
+                title: "Assistant Sales Manager",
+                dept: "Automation",
+                loc: "Paranaque City, Philippines",
+              },
+              {
+                title: "Sales Executive",
+                dept: "Material Handling Equipment Department",
+                loc: "Paranaque City, Philippines",
+              },
+
+              {
+                title: "Material Handling Equipment (MHE) Technician",
+                dept: "Material Handling Equipment",
+                loc: "Paranaque City, Philippines",
+              },
+              {
+                title: "Project Estimator",
                 dept: "Engineering",
-                loc: "Berlin, Germany",
-              },
-              {
-                title: "Product Manager, Automation",
-                dept: "Product",
-                loc: "Remote",
-              },
-              {
-                title: "Marketing Lead",
-                dept: "Marketing",
-                loc: "New York, USA",
-              },
-              {
-                title: "Robotics Operations Specialist",
-                dept: "Operations",
-                loc: "Berlin, Germany",
+                loc: "Paranaque City, Philippines",
               },
             ].map((job, i) => (
               <div

@@ -74,31 +74,31 @@ function HeaderHome({ dark, setDark }) {
             About Us
           </a>
           <a
-            href="#"
+            href="/services"
             className="hover:text-white hover:scale-105 transition-all duration-300"
           >
             Services
           </a>
           <a
-            href="#"
+            href="/solutions"
             className="hover:text-white  hover:scale-105 transition-all duration-300"
           >
             Solutions
           </a>
           <a
-            href="#"
+            href="/news"
             className="hover:text-white hover:scale-105 transition-all duration-300"
           >
             News
           </a>
           <a
-            href="#"
+            href="/showcase"
             className="hover:text-white  hover:scale-105 transition-all duration-300"
           >
             Showcase
           </a>
           <a
-            href="#"
+            href="/contact"
             className="hover:text-white  hover:scale-105 transition-all duration-300"
           >
             Contact

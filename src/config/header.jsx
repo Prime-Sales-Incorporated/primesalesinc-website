@@ -77,7 +77,7 @@ function Header({ dark, setDark }) {
             About Us
           </a>
           <a
-            href="#"
+            href="/services"
             className="hover:text-background-dark dark:hover:text-white hover:scale-105 transition-all duration-300"
           >
             Services
@@ -89,19 +89,19 @@ function Header({ dark, setDark }) {
             Solutions
           </a>
           <a
-            href="#"
+            href="/news"
             className="hover:text-background-dark dark:hover:text-white hover:scale-105 transition-all duration-300"
           >
             News
           </a>
           <a
-            href="#"
+            href="/showcase"
             className="hover:text-background-dark dark:hover:text-white  hover:scale-105 transition-all duration-300"
           >
             Showcase
           </a>
           <a
-            href="#"
+            href="/contact"
             className="hover:text-background-dark dark:hover:text-white  hover:scale-105 transition-all duration-300"
           >
             Contact

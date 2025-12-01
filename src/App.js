@@ -109,6 +109,10 @@ function App() {
           {/* <Route path="/3d" element={<ThreeDScene />} /> */}
           <Route path="/" element={<WebsiteMain />} />
           <Route path="/about" element={<About />} />
+          <Route path="/services" element={<UnderConstruction />} />
+          <Route path="/news" element={<UnderConstruction />} />
+          <Route path="/showcase" element={<UnderConstruction />} />
+          <Route path="/contact" element={<UnderConstruction />} />
           <Route path="/careers" element={<CareersPage />} />
           <Route
             path="/solutions/:solutionSlug"

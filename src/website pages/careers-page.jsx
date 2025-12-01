@@ -92,14 +92,14 @@ const CareersPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
-            <div className="md:col-span-2">
+            <div className="md:col-span-2  bg-white/5 dark:bg-gray-800 ">
               <label className="flex flex-col min-w-40 h-12 w-full">
-                <div className="flex items-center w-full h-full rounded-lg ">
+                <div className="flex items-center w-full h-full rounded-lg border  ">
                   <span className="material-symbols-outlined  pl-4">
                     search
                   </span>
                   <input
-                    className="flex-1 bg-transparent  border-none focus:ring-0 px-2 placeholder:text-white/50"
+                    className="flex-1 bg-transparent border-none focus:outline-none focus:ring-0 px-2 placeholder:text-white/50"
                     placeholder="Search by keyword"
                   />
                 </div>

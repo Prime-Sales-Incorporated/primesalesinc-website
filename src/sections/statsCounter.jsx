@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export default function StatsCounter() {
   const stats = [
     { label: "ESTABLISHED", value: 1976 },
-    { label: "PROJECTS COMPLETED", value: 600 },
+    { label: "PROJECTS COMPLETED", value: 400 },
     { label: "YEARS OF EXPERIENCE", value: 49 },
     { label: "NATIONS SERVED", value: 16 },
   ];

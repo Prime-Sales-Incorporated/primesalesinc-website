@@ -36,8 +36,11 @@ function Header({ dark, setDark }) {
       <div className="flex justify-between items-center">
         {/* Logo */}
         <Link to="/">
-          <div className="text-white font-serif text-xl flex items-center">
+          <div className="text-white font-serif text-xl dark:flex items-center hidden">
             <img src="/logo1.png" alt="Prime Sales Logo" className="h-8 w-16" />
+          </div>
+          <div className="text-white font-serif text-xl dark:hidden items-center flex">
+            <img src="/logo.png" alt="Prime Sales Logo" className="h-8 w-16" />
           </div>
         </Link>
 
@@ -68,7 +71,7 @@ function Header({ dark, setDark }) {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8 text-background-dark/90  dark:text-white/90 font-sans text-sm font-light">
           <a
-            href="#"
+            href="/about"
             className="hover:text-background-dark dark:hover:text-white hover:scale-105 transition-all duration-300"
           >
             About Us

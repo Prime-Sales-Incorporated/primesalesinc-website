@@ -60,7 +60,7 @@ const About = () => {
                 {[
                   {
                     title: "Our Story",
-                    desc: "Prime Sales Inc. (PSI) founded in 1976, is a leading supplier ofintelligent intralogistics solutions for dry and cold chainapplications. With over 40 years of proven reputation, PSI workswith global partners to offer strong and efficient supply chain systems in the Philippines.",
+                    desc: "Prime Sales Inc. (PSI) founded in 1976, is a leading supplier of intelligent intralogistics solution for dry and cold chain applications in the Philippines. Exemplifying remarkable reputation for more than 40 years in the industry, PSI works in synergy with proven global partners to offer strong and efficient supply chain solutions in the country.",
                   },
                   {
                     title: "Our Mission & Vision",

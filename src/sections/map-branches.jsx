@@ -20,7 +20,9 @@ const BranchesMaps = () => {
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-          <p className="text-center mt-2 dark:text-white">Parañaque City</p>
+          <p className="text-center mt-2 dark:text-white">
+            Parañaque City, Metro Manila, Philippines
+          </p>
         </div>
 
         {/* Branch 2 Map */}
@@ -33,7 +35,9 @@ const BranchesMaps = () => {
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-          <p className="text-center mt-2 dark:text-white">Mandaue City</p>
+          <p className="text-center mt-2 dark:text-white">
+            Mandaue City, Cebu, Philippines
+          </p>
         </div>
       </div>
     </section>

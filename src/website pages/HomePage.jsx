@@ -78,7 +78,7 @@ const WebsiteMain = () => {
               <img
                 src="/logo1.png"
                 alt="Prime Sales Inc. Logo"
-                className="justify-center flex h-24 md:h-36 md:w-72 mb-8  opacity-0 animate-fadeInUp"
+                className="justify-center flex h-24 md:h-32 md:w-64 mb-8  opacity-0 animate-fadeInUp"
               />
             </div>
 
@@ -114,7 +114,7 @@ const WebsiteMain = () => {
               {[
                 {
                   title: "Our Story",
-                  desc: "Prime Sales Inc. (PSI) founded in 1976, is a leading supplier ofintelligent intralogistics solutions for dry and cold chainapplications. With over 40 years of proven reputation, PSI workswith global partners to offer strong and efficient supply chain systems in the Philippines.",
+                  desc: "Prime Sales Inc. (PSI) founded in 1976, is a leading supplier of intelligent intralogistics solution for dry and cold chain applications in the Philippines. Exemplifying remarkable reputation for more than 40 years in the industry, PSI works in synergy with proven global partners to offer strong and efficient supply chain solutions in the country.",
                 },
                 {
                   title: "Our Mission & Vision",

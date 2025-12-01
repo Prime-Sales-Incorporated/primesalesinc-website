@@ -5,7 +5,7 @@ const docksDoorsSolutions = [
   {
     title: "Dock Levelers",
     desc: "Hydraulic and mechanical dock levelers for safe loading and unloading.",
-    img: "https://www.redsteelmh.com/wp-content/uploads/2023/04/Dock-Levelers-Red-Steel.jpg",
+    img: "/docks-doors/dock-leveler.jpg",
     applications: [
       "Bridges gap between dock and vehicle.",
       "Ensures safe cargo transfer.",
@@ -16,7 +16,7 @@ const docksDoorsSolutions = [
   {
     title: "Dock Shelters",
     desc: "Flexible dock shelters for efficient sealing and protection from the elements.",
-    img: "https://gw-assets.assaabloy.com/is/image/assaabloy/TS_Series_Rigid_Frame_Dock_Shelter",
+    img: "/docks-doors/dock-shelters.jpg",
     applications: [
       "Provides weather sealing during loading.",
       "Reduces energy loss in temperature-controlled areas.",
@@ -38,7 +38,7 @@ const docksDoorsSolutions = [
   {
     title: "Control Systems",
     desc: "Smart controls for dock and door operations.",
-    img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
+    img: "/docks-doors/control-systems.jpg",
     applications: [
       "Integrates dock levelers, shelters, and doors.",
       "Ensures synchronized operation and safety.",
@@ -49,7 +49,7 @@ const docksDoorsSolutions = [
   {
     title: "Industrial Sectional Doors",
     desc: "Insulated, vertically opening doors for industrial and commercial facilities.",
-    img: "https://www.hormann.com/fileadmin/_processed_/a/a/csm_Sectional-doors-SPU_F42-Double-skinned-insulated-door-leaves_02_65e0d7e234.jpg",
+    img: "/docks-doors/industrialsecdoor.jpg",
     applications: [
       "Provides thermal insulation and noise reduction.",
       "Operates vertically to save internal space.",
@@ -60,7 +60,7 @@ const docksDoorsSolutions = [
   {
     title: "High-Speed Doors",
     desc: "Fast-operating sectional doors for high-traffic industrial environments.",
-    img: "https://www.assaabloyentrance.com/globalassets/assa-abloy/entrance-systems/products/industrial-doors/high-speed-doors/assa-abloy-high-speed-section-door/assa-abloy-high-speed-sectional-door-2.jpg",
+    img: "/docks-doors/high-speed-door.jpg",
     applications: [
       "Enhances workflow efficiency in busy areas.",
       "Maintains temperature control in sensitive zones.",
@@ -71,7 +71,7 @@ const docksDoorsSolutions = [
   {
     title: "High-Speed Sectional Doors / ISO Cold",
     desc: "Fast-operating sectional doors for high-traffic industrial environments.",
-    img: "https://www.assaabloyentrance.com/globalassets/assa-abloy/entrance-systems/products/industrial-doors/high-speed-doors/assa-abloy-high-speed-section-door/assa-abloy-high-speed-sectional-door-2.jpg",
+    img: "/docks-doors/iso-door.jpg",
     applications: [
       "Enhances workflow efficiency in busy areas.",
       "Maintains temperature control in sensitive zones.",
@@ -82,7 +82,7 @@ const docksDoorsSolutions = [
   {
     title: "Industrial Rolling Shutters / Rolling Grilles",
     desc: "Heavy-duty steel or aluminum shutters for secure and efficient closure.",
-    img: "https://www.enviroblinds.co.uk/media/catalog/product/cache/ba0e4743d5d3e153f02f32656e2f28cc/s/e/security_roller_shutter_door_1_1.jpg",
+    img: "/docks-doors/rolling-grilles.jpg",
     applications: [
       "Provides robust protection for loading docks and entrances.",
       "Compact design saves space above the doorway.",

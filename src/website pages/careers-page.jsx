@@ -68,7 +68,7 @@ const CareersPage = () => {
           }}
         ></div>
         <div className="relative z-10 flex flex-col items-center gap-6 max-w-3xl">
-          <h1 className="text-white text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl">
+          <h1 className="text-white  font-black leading-tight tracking-tight text-3xl md:text-5xl">
             Build Your Career With
           </h1>
           <img src="/logo1.png" className="h-24 w-48" />

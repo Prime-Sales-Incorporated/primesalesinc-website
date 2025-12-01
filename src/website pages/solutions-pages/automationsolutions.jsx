@@ -47,7 +47,7 @@ const AutomationSolutions = () => (
       />
       <link
         rel="canonical"
-        href="hhttps://www.primegroup.com.ph/solutions/automation-solutions"
+        href="https://www.primegroup.com.ph/solutions/automation-solutions"
       />
     </Helmet>
     <div className="text-center mb-12">

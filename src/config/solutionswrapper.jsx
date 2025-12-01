@@ -114,7 +114,7 @@ const SolutionsWrapper = () => {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: solutionData.title,
     description: solutionData.description,
     image: solutionData.image,

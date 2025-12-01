@@ -78,7 +78,7 @@ const CareersPage = () => {
           </p>
           <a
             href="#open-positions"
-            className="flex items-center justify-center h-12 px-5 rounded-lg bg-green-500 text-background-dark text-base font-bold hover:bg-opacity-90 transition-colors"
+            className="flex items-center justify-center h-12 px-5 rounded-lg bg-green-500 text-white text-base font-bold hover:bg-opacity-90 transition-colors"
           >
             View Open Positions
           </a>
@@ -139,23 +139,29 @@ const CareersPage = () => {
             {filteredJobs.map((job, i) => (
               <div
                 key={i}
-                className="bg-gray-200 dark:bg-white/5 p-6 rounded-lg border border-white/10 hover:border-primary transition-all"
+                className="bg-gray-200 dark:bg-white/5 p-2 px-4 rounded-lg border border-white/10 hover:border-primary transition-all"
               >
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                   <div className="flex-1">
                     <h3 className="text-xl font-bold">{job.title}</h3>
                     <div className="flex items-center gap-4 mt-2 text-sm">
                       <span>{job.dept}</span>
-                      <span className="text-white/30">•</span>
-                      <span>{job.loc}</span>
                     </div>
                   </div>
-                  <a
-                    className="px-4 py-2 rounded-lg bg-green-400 text-sm font-bold hover:bg-opacity-90 transition-colors"
-                    href="#"
-                  >
-                    View Details
-                  </a>
+                  <div className="flex justify-between ">
+                    <a
+                      className="px-4 py-2 rounded-lg dark:bg-green-500 bg-green-400 text-sm font-bold hover:bg-opacity-90 transition-colors"
+                      href="#"
+                    >
+                      View Details
+                    </a>
+                  </div>
+                </div>
+                <div className="flex justify-end text-xs mt-8">
+                  <span class="material-symbols-outlined text-xs mr-1">
+                    location_on
+                  </span>
+                  <span>{job.loc}</span>
                 </div>
               </div>
             ))}
@@ -214,7 +220,7 @@ const CareersPage = () => {
                 className="flex flex-col items-center text-center p-6"
               >
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-green-400 dark:bg-primary/20 mb-4">
-                  <span className="material-symbols-outlined text-black/80 dark:text-primary text-4xl">
+                  <span className="material-symbols-outlined text-yellow-700   dark:text-primary text-4xl">
                     {b.icon}
                   </span>
                 </div>

@@ -41,11 +41,6 @@ const CareersPage = () => {
       dept: "Material Handling Equipment",
       loc: "Parañaque City, Philippines",
     },
-    {
-      title: "Robotics Operations Specialist",
-      dept: "Operations",
-      loc: "Parañaque City, Philippines",
-    },
   ];
 
   // Unique departments for dropdown (if you add dropdown later)

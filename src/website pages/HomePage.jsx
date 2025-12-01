@@ -13,6 +13,7 @@ import ThreeDScene from "../sections/3d";
 import { motion } from "framer-motion";
 import { Truck } from "lucide-react";
 import HeaderHome from "../config/header copy";
+import StatsCounter from "../sections/statsCounter";
 
 const WebsiteMain = () => {
   const [storyRef, storyVisible] = useInView();
@@ -244,6 +245,8 @@ const WebsiteMain = () => {
           >
             <ShowcaseCarousel />
             <PartnersCarousel />
+
+            <StatsCounter />
           </div>
         </div>
       </main>

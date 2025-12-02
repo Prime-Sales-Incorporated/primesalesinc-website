@@ -36,7 +36,14 @@ const About = () => {
               />
 
               {/* Black Overlay */}
-              <div className="absolute inset-0 bg-gray-800/80 "></div>
+              <div className="absolute inset-0 bg-black/70  "></div>
+              <div
+                className={`absolute bottom-0 left-0 right-0 h-[50%] transition-all duration-700 ${
+                  dark
+                    ? "bg-gradient-to-t from-[#101922] via-[#101922]/60 to-transparent"
+                    : "bg-gradient-to-t from-[#f6f7f8] via-[#f6f7f8]/30 to-transparent"
+                }`}
+              ></div>
 
               {/* Text on Top */}
               <div className="absolute inset-0 flex items-center justify-center">

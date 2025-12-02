@@ -58,9 +58,16 @@ const CareersPage = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "linear-gradient(rgba(16,34,22,0.8), rgba(16,34,22,1)), url('/psi-cover.webp')",
+            backgroundImage: " url('/psi-cover.webp')",
           }}
+        ></div>
+        <div className="absolute inset-0 bg-black/70  "></div>
+        <div
+          className={`absolute bottom-0 left-0 right-0 h-[50%] transition-all duration-700 ${
+            dark
+              ? "bg-gradient-to-t from-[#101922] via-[#101922]/60 to-transparent"
+              : "bg-gradient-to-t from-[#f6f7f8] via-[#f6f7f8]/30 to-transparent"
+          }`}
         ></div>
         <div className="relative z-10 flex flex-col items-center gap-6 max-w-3xl">
           <h1 className="text-white  font-black leading-tight tracking-tight text-3xl md:text-5xl">

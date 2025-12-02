@@ -23,6 +23,7 @@ const WebsiteMain = () => {
   const [partnersRef, partnersVisible] = useInView();
   const [solutionRef, solutionVisible] = useInView();
   const [timelineRef, timelineVisible] = useInView();
+  const [statsRef, statsVisible] = useInView();
 
   const [dark, setDark] = useState(() => {
     if (typeof window !== "undefined") {
@@ -244,9 +245,10 @@ const WebsiteMain = () => {
             }`}
           >
             <ShowcaseCarousel />
+            <div ref={statsRef}>
+              <StatsCounter visible={statsVisible} />
+            </div>
             <PartnersCarousel />
-
-            <StatsCounter />
           </div>
         </div>
       </main>

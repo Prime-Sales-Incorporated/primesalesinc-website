@@ -11,9 +11,9 @@ const Footer = () => {
             alt="Prime Sales Logo"
             className="h-8 w-16 mb-4"
           />
-          <h1 className="text-semibold mb-4 text-start  ">
+          {/* <h1 className="text-semibold mb-4 text-start  ">
             Prime Sales Incorporated
-          </h1>
+          </h1> */}
           <p className=" text-xs leading-5 text-gray-500 dark:text-gray-400">
             Prime Sales Inc. (PSI) founded in 1976, is a leading supplier
             ofintelligent intralogistics solutions for dry and cold

@@ -110,6 +110,8 @@ function App() {
           <Route path="/" element={<WebsiteMain />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<UnderConstruction />} />
+          <Route path="/solutions" element={<UnderConstruction />} />
+
           <Route path="/news" element={<UnderConstruction />} />
           <Route path="/showcase" element={<UnderConstruction />} />
           <Route path="/contact" element={<UnderConstruction />} />

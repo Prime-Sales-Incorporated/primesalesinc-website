@@ -83,7 +83,7 @@ function Header({ dark, setDark }) {
             Services
           </a>
           <a
-            href="#"
+            href="/solutions"
             className="hover:text-background-dark dark:hover:text-white  hover:scale-105 transition-all duration-300"
           >
             Solutions

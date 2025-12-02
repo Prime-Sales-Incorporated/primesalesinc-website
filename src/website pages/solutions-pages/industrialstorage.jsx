@@ -27,7 +27,7 @@ const industrialStorageSolutions = [
   {
     title: "Mobile Pallet Racking",
     desc: "Motorized storage racks on mobile bases for compact warehousing.",
-    img: "https://technometalegypt.com/wp-content/uploads/2020/09/mobile-pelletracking-euromag-ferretto1.jpg",
+    img: "https://img.directindustry.com/images_di/photo-g/167790-10862989.jpg",
     applications: [
       "Used in cold stores and high-value storage areas.",
       "Eliminates unnecessary aisles for space efficiency.",
@@ -38,7 +38,7 @@ const industrialStorageSolutions = [
   {
     title: "Pallet Shuttle System",
     desc: "Semi-automated storage system using shuttles to move pallets within racks.",
-    img: "https://www.dexion.com/globalassets/images/products/shuttle-systems/pallet-shuttle/dexion-pallet-shuttle-1.jpg",
+    img: "https://igps.net/wp-content/uploads/2025/01/a-guide-to-pallet-shuttle-racking-system.webp",
     applications: [
       "Ideal for high-density storage.",
       "Reduces forklift travel time inside aisles.",
@@ -49,7 +49,7 @@ const industrialStorageSolutions = [
   {
     title: "Drive-In Racking",
     desc: "High-density storage system designed for last-in, first-out (LIFO) operations.",
-    img: "https://www.aracking.com/uploads/2021/01/drive-in-racking-system-3.jpg",
+    img: "https://www.dexion.com/globalassets/images/products/pallet-racking/drive-in-racking/pp-drive-in-04.jpg?w=800&h=400",
     applications: [
       "Maximizes storage space for homogeneous products.",
       "Used in cold storage and bulk storage warehouses.",
@@ -60,7 +60,7 @@ const industrialStorageSolutions = [
   {
     title: "Pallet Flow Racking",
     desc: "Gravity-fed racking system for FIFO inventory management.",
-    img: "https://www.mecalux.com.sg/wp-content/uploads/sites/16/2018/02/pallet-flow-racking-system.jpg",
+    img: "https://www.dexion.com/globalassets/images/products/pallet-racking/pallet-flow/pp-p90-pallet-flow-03.jpg?w=800&h=400",
     applications: [
       "Ensures automatic stock rotation.",
       "Perfect for perishable goods and high-turnover products.",
@@ -71,7 +71,7 @@ const industrialStorageSolutions = [
   {
     title: "Multi-Tier Racking",
     desc: "Multi-level storage system for maximizing vertical warehouse space.",
-    img: "https://www.linkmisr.com/wp-content/uploads/2020/08/multi-tier.jpg",
+    img: "https://www.dexion.com/globalassets/images/products/pallet-racking/multi-tier-pallet-racking/pp-p90-multi-tier-04.jpg?w=800&h=400",
     applications: [
       "Ideal for manual picking and inventory operations.",
       "Maximizes cubic storage area.",

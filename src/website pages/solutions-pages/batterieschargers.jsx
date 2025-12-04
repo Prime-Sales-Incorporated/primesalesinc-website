@@ -5,7 +5,7 @@ const batteriesChargersSolutions = [
   {
     title: "Industrial Batteries",
     desc: "High-performance traction batteries for electric forklifts and trucks.",
-    img: "https://juicestoredenergy.co.uk/cdn/shop/files/Forklift_Battery_Components.jpg?v=1692805221",
+    img: "https://www.batteryasia.com.sg/image/catalog/Lithium/Duroxo%20pic%202png.png",
     applications: [
       "Used in material handling and AGV systems.",
       "Long service life and deep-cycle performance.",
@@ -16,7 +16,7 @@ const batteriesChargersSolutions = [
   {
     title: "Battery Chargers",
     desc: "Smart charging systems for energy efficiency and battery longevity.",
-    img: "https://micropower-group.com/storage/media/729/729-fit-844x731.webp",
+    img: "https://www.batteryasia.com.sg//image/cache/catalog/Product/Chargers/High%20Frequency%20Charger%202-600x600.png",
     applications: [
       "Ensures efficient power management.",
       "Reduces charging time with optimized algorithms.",
@@ -24,17 +24,17 @@ const batteriesChargersSolutions = [
       "Protects battery health and temperature.",
     ],
   },
-  {
-    title: "Battery Management Systems",
-    desc: "Monitoring and control solutions for optimized battery performance.",
-    img: "https://ek-robotics.com/fileadmin/_processed_/d/1/csm_ek_robotics-agv-amr-x_move_1200-hubbalken-ladestation-rgb_971386577b.jpg",
-    applications: [
-      "Monitors charging status and cell health.",
-      "Prevents overcharging and deep discharge.",
-      "Integrates with fleet management software.",
-      "Enhances energy usage and safety compliance.",
-    ],
-  },
+  // {
+  //   title: "Battery Management Systems",
+  //   desc: "Monitoring and control solutions for optimized battery performance.",
+  //   img: "https://ek-robotics.com/fileadmin/_processed_/d/1/csm_ek_robotics-agv-amr-x_move_1200-hubbalken-ladestation-rgb_971386577b.jpg",
+  //   applications: [
+  //     "Monitors charging status and cell health.",
+  //     "Prevents overcharging and deep discharge.",
+  //     "Integrates with fleet management software.",
+  //     "Enhances energy usage and safety compliance.",
+  //   ],
+  // },
 ];
 
 const BatteriesChargers = () => (

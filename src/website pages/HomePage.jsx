@@ -140,8 +140,8 @@ const WebsiteMain = () => {
 
           {/* Features */}
           <section className="mt-8 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              PSI at a <span className="text-green-500"> Glance</span>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
+              Who we <span className="text-green-500"> Are</span>
             </h2>
 
             <p className="mt-4 max-w-4xl mx-auto text-gray-600 dark:text-gray-300">
@@ -214,12 +214,12 @@ const WebsiteMain = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8 dark:text-white">
+            <h2 className="text-4xl font-bold text-gray-900 text-center mb-8 dark:text-white">
               Why Choose <span className="text-green-500"> Prime</span>
             </h2>
             <WhyChooseUs />
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-16 md:mb-20 dark:text-white">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16 md:mb-20 dark:text-white">
             The Prime <span className="text-green-500"> Journey</span>
           </h2>
           {/* Add 3D Scene Section */}

@@ -42,7 +42,7 @@ const WebsiteMain = () => {
   return (
     <div className="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 min-h-screen flex flex-col">
       <HeaderHome dark={dark} setDark={setDark} />
-      {/* <Helmet>
+      <Helmet>
         <title>
           Prime Sales Inc. | Forklifts, Racking, Storage, Cold Chain &
           Automation Solutions Philippines
@@ -56,7 +56,7 @@ const WebsiteMain = () => {
           content="racking system Philippines, industrial storage solutions, pallet racks, warehouse shelves, forklifts Philippines, cold chain systems, Prime Sales Inc, Prime Group"
         />
         <link rel="canonical" href="https://www.primegroup.com.ph/" />
-      </Helmet> */}
+      </Helmet>
       <main className="flex-1">
         {/* Hero Section */}
         <div className="relative flex min-h-[50vh] md:min-h-[70vh] items-center justify-center text-center overflow-hidden ">

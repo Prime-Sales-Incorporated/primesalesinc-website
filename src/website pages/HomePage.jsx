@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import { Truck } from "lucide-react";
 import HeaderHome from "../config/header copy";
 import StatsCounter from "../sections/statsCounter";
+import { Helmet } from "react-helmet-async";
 
 const WebsiteMain = () => {
   const [storyRef, storyVisible] = useInView();
@@ -41,7 +42,21 @@ const WebsiteMain = () => {
   return (
     <div className="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 min-h-screen flex flex-col">
       <HeaderHome dark={dark} setDark={setDark} />
-
+      <Helmet>
+        <title>
+          Prime Sales Inc. | Forklifts, Racking, Storage, Cold Chain &
+          Automation Solutions Philippines
+        </title>
+        <meta
+          name="description"
+          content="Prime Sales Inc. is a leading Philippine supplier of industrial storage systems, pallet racking, forklifts, and cold chain solutions. Trusted since 1976 for efficient intralogistics solutions for dry and cold chain applications."
+        />
+        <meta
+          name="keywords"
+          content="racking system Philippines, industrial storage solutions, pallet racks, warehouse shelves, forklifts Philippines, cold chain systems, Prime Sales Inc, Prime Group"
+        />
+        <link rel="canonical" href="https://www.primegroup.com.ph/" />
+      </Helmet>
       <main className="flex-1">
         {/* Hero Section */}
         <div className="relative flex min-h-[50vh] md:min-h-[70vh] items-center justify-center text-center overflow-hidden ">

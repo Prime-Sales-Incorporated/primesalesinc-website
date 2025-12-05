@@ -56,8 +56,8 @@ const ColdChain = () => (
       </h1>
       <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
         Prime Sales Incorporated offers high-quality cold chain solutions,
-        including insulated panels, doors, and refrigeration systems, designed
-        to preserve products, maintain freshness, and optimize logistics for
+        including insulated panels, doors and refrigeration systems, designed to
+        preserve products, maintain freshness, and optimize logistics for
         warehouses and businesses across the Philippines.
       </p>
     </div>

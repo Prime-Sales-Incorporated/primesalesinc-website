@@ -16,8 +16,8 @@ const Footer = () => {
           </h1> */}
           <p className=" text-xs leading-5 text-gray-500 dark:text-gray-400">
             Prime Sales Inc. (PSI) founded in 1976, is a leading supplier of
-            intelligent intralogistics solutions for dry and cold chain
-            applications. With over 40 years of proven reputation, PSI workswith
+            intelligent intralogistics solutions for dry and cold chain a
+            pplications. With over 40 years of proven reputation, PSI workswith
             global partners to offer strong and efficient supply chain systems
             in the Philippines.
           </p>

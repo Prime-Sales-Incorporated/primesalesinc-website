@@ -119,7 +119,7 @@ const Timeline = ({ dark, onEndReached }) => {
       }`}
     >
       <div className="flex-col justify-center items-center">
-        <h2 className="text-4xl mb-8 font-bold text-center text-gray-900 dark:text-white">
+        <h2 className="text-3xl md:text-4xl mb-8 font-bold text-center text-gray-900 dark:text-white">
           Our <span className="text-green-500">Timeline</span>
         </h2>
 

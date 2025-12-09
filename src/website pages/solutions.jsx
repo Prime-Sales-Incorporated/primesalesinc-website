@@ -82,12 +82,12 @@ const OurSolutions = () => {
         ))}
       </div>
 
-      <main className="container mx-auto  lg:px-8 py-16">
+      <main className="container mx-auto px-2  lg:px-8 py-16">
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark">
             Our <span className="text-green-500">Solutions</span>
           </h1>
-          <p className="mt-4 text-lg text-gray-800 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="mt-4  text-sm md:text-base text-gray-800 dark:text-gray-300 max-w-2xl mx-auto">
             We provide a comprehensive range of intralogistics solutions
             tailored to meet your specific needs.
           </p>
@@ -133,7 +133,7 @@ const OurSolutions = () => {
                   <h3 className="text-2xl font-bold text-text-light dark:text-text-dark">
                     {solution.title}
                   </h3>
-                  <p className="mt-2 text-gray-600 dark:text-gray-300">
+                  <p className="mt-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
                     {solution.desc}
                   </p>
                 </div>

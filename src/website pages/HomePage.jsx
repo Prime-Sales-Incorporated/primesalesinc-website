@@ -145,7 +145,7 @@ const WebsiteMain = () => {
                   <h3 className="text-xl font-semibold text-green-500 mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                  <p className="text-sm md:text-base text-gray-600 dark:text-gray-300">
                     {item.desc}
                   </p>
                 </div>
@@ -155,11 +155,11 @@ const WebsiteMain = () => {
 
           {/* Features */}
           <section className="mt-8 text-center">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
               Who we <span className="text-green-500"> Are</span>
             </h2>
 
-            <p className="mt-4 max-w-4xl mx-auto text-gray-600 dark:text-gray-300">
+            <p className="mt-4 text-sm md:text-base max-w-4xl mx-auto text-gray-600 dark:text-gray-300">
               Prime Sales Inc. (PSI) is a trusted name in intralogistics
               solutions, evolving since 1976 to deliver high-quality racking
               systems, storage designs, and innovative supply chain services
@@ -203,7 +203,7 @@ const WebsiteMain = () => {
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                  <p className="text-sm md:text-base text-gray-600 dark:text-gray-300">
                     {feature.desc}
                   </p>
                 </div>
@@ -229,12 +229,12 @@ const WebsiteMain = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-4xl font-bold text-gray-900 text-center mb-8 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-8 dark:text-white">
               Why Choose <span className="text-green-500"> Prime</span>
             </h2>
             <WhyChooseUs />
           </div>
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16 md:mb-20 dark:text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16 md:mb-20 dark:text-white">
             The Prime <span className="text-green-500"> Journey</span>
           </h2>
           {/* Add 3D Scene Section */}

@@ -57,7 +57,7 @@ const BookStory = () => {
               <h2 className="text-2xl md:text-4xl lg:text-5xl w-full font-bold dark:text-white text-background-dark mb-4">
                 {stories[index].title}
               </h2>
-              <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto">
+              <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto">
                 {stories[index].text}
               </p>
             </motion.div>

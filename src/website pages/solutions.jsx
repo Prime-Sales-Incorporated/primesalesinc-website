@@ -11,9 +11,9 @@ const OurSolutions = () => {
       tab: "Cold Chain",
     },
     {
-      title: "Industrial Storage Solutions",
+      title: "Industrial Storage ",
       img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCNW_nVSRhCGbRNUmfJjMf_qqbetLTR1MfkYTjlbN1bxowIFGpPc_pqjlkz57tkrqzGzTxPq8PwzE9ipVXNDdZIAcKiVL5N4Mz3E6P2z-We6QhbdIFbA831k-Xr4BLA58iwOx551cKoYW8PmuSg3HT7CMPJIcIoL7cn-HQRpWWzfpZg00nFAVOORvBeAQvR4Qd0YnaiVZIF0cIvTnm6Dvi1xXQ9nfy5pWpChb4G6UiUZD4aVnHtb8QUacEPEQZG-H8IW_1JI0spUF4",
-      desc: "Comprehensive storage solutions designed to maximize warehouse space through durable and versatile racking systems, like wide aisle, narrow aisle, mobile pallet, pallet shuttle systems, drive-in, pallet flow and multi-tier racking.",
+      desc: "Storage solutions designed to maximize warehouse space through durable and versatile racking systems, like wide aisle, narrow aisle, mobile pallet, pallet shuttle systems, drive-in, pallet flow and multi-tier racking.",
       video: "/iss.mp4",
       tab: "Industrial Storage",
     },
@@ -34,7 +34,7 @@ const OurSolutions = () => {
     {
       title: "Automation Solutions",
       img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCGGSThrlguVhMZyhxolbW6gvgAG3wmWFGtc-9atK_OJxP1UDmqJ167tUmqymcGpawV6khJuXBqqm9z19CBdWX9qHLT972AGYuHwNTR6YHK8GZoEAGlPjAgGeQYO5H59j7r1VslSNDMpmSCvHS85actfkRSPlfLliBCDDb57G1jWrpS_5s4Ew5OlPa0D_q2gqZrMCk0EX2TZLCoCCigcLqHyOuJvU8WWfLIloxFoIIQCB71aAIE8tqdUZmBxdBVzj0kxoLqz-yNXWA",
-      desc: "Comprehensive automation solutions, including conveyor systems, automated storage and retrieval systems (AS/RS), and multishuttle robots, designed to enhance productivity, precision, and operational efficiency in warehouses and industrial facilities.",
+      desc: "Comprehensive automation solutions, including conveyor systems, automated storage and retrieval systems (AS/RS), and multishuttle robots, designed to enhance productivity, precision and operational efficiency in warehouses and facilities",
       video: "/automationvid.mp4",
       tab: "Automation Solutions",
     },
@@ -82,7 +82,7 @@ const OurSolutions = () => {
         ))}
       </div>
 
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <main className="container mx-auto  lg:px-8 py-16">
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark">
             Our <span className="text-green-500">Solutions</span>

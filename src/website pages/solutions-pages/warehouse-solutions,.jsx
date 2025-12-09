@@ -19,10 +19,10 @@ const WMSSolutions = () => (
     </Helmet>
 
     <div className="text-center mb-12">
-      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+      <h1 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white">
         Warehouse Management System (WMS)
       </h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+      <p className="mt-2 text-gray-600 text-sm md:text-base dark:text-gray-300 max-w-4xl mx-auto">
         Manhattan’s industry-leading WMS provides real-time visibility,
         optimized warehouse workflows, intelligent slotting, and seamless
         automation integration—enabling faster, smarter, and more efficient
@@ -46,7 +46,7 @@ const WMSSolutions = () => (
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
           Warehouse Management System
         </h3>
-        <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed max-w-xl mx-auto md:mx-0 mb-4">
+        <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed max-w-xl mx-auto md:mx-0 mb-4">
           A modern, cloud-native warehouse solution designed to improve
           inventory accuracy, optimize warehouse workflows, enhance picking
           efficiency, and support advanced warehouse automation.
@@ -55,7 +55,7 @@ const WMSSolutions = () => (
         <h4 className="text-lg font-semibold text-green-500 mb-2">
           Key Features
         </h4>
-        <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-1">
+        <ul className="list-disc pl-5 text-gray-600 text-sm md:text-base dark:text-gray-300 space-y-1">
           <li>Real-time inventory visibility & control</li>
           <li>
             Automated receiving, putaway, picking, packing, and shipping
@@ -76,7 +76,7 @@ const WMSSolutions = () => (
       <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 text-center md:text-left">
         Applications
       </h2>
-      <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-2 max-w-3xl mx-auto md:mx-0">
+      <ul className="list-disc pl-5 text-sm md:text-base text-gray-700 dark:text-gray-300 space-y-2 max-w-3xl mx-auto md:mx-0">
         <li>Distribution Centers</li>
         <li>Retail Warehouses</li>
         <li>E-commerce Fulfillment Centers</li>

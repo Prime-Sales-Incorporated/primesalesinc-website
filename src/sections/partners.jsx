@@ -26,7 +26,7 @@ const PartnersCarousel = () => {
     },
     {
       name: "Kardex",
-      logo: "https://static.wixstatic.com/media/f0d37b_a3b9ca0025684b4899dd098aae171aa0~mv2.png/v1/fill/w_708,h_78,al_c,lg_1,q_85,enc_avif,quality_auto/f0d37b_a3b9ca0025684b4899dd098aae171aa0~mv2.png",
+      logo: "/kardex.png",
     },
     {
       name: "CycleWorld",

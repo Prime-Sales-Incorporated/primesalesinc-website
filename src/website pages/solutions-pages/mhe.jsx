@@ -99,10 +99,10 @@ const MHESolutions = () => (
     </Helmet>
 
     <div className="text-center mb-12">
-      <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+      <h1 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white">
         Material Handling Equipment – Efficient Forklifts & Warehouse Tools
       </h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+      <p className="mt-2 text-gray-600 dark:text-gray-300  text-sm md:text-base max-w-4xl mx-auto">
         Prime Sales Incorporated offers a wide range of material handling
         equipment, including electric forklifts, reach trucks, pallet stackers,
         and other warehouse tools, designed to improve efficiency, safety, and
@@ -122,17 +122,17 @@ const MHESolutions = () => (
           style={{ backgroundImage: `url(${solution.img})` }}
         ></div>
         <div className="w-full md:w-1/2 p-6 sm:p-8 text-center md:text-left">
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+          <h3 className="text-lg md:text-2xl font-bold text-gray-900 dark:text-white mb-3">
             {solution.title}
           </h3>
-          <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed max-w-xl mx-auto md:mx-0 mb-4">
+          <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed max-w-xl mx-auto md:mx-0 mb-4">
             {solution.desc}
           </p>
           <div className="mt-4">
             <h4 className="text-lg font-semibold text-green-500 mb-2">
               Applications
             </h4>
-            <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-1">
+            <ul className="list-disc pl-5 text-sm md:text-base text-gray-600 dark:text-gray-300 space-y-1">
               {solution.applications.map((app, i) => (
                 <li key={i}>{app}</li>
               ))}

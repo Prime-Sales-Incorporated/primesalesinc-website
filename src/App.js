@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import Home from "./website pages/Home";
-import OurSolutions from "./website pages/solutions";
+import OurSolutions from "./sections/solutions";
 import WebsiteMain from "./website pages/HomePage";
 import { MessageCircle, ArrowUp } from "lucide-react";
 import Timeline from "./sections/timeline";
@@ -18,6 +18,7 @@ import SolutionsWrapper from "./config/solutionswrapper";
 import About from "./website pages/about-us";
 import WMSSolutions from "./website pages/solutions-pages/warehouse-solutions,";
 import CareersPage from "./website pages/careers-page";
+import OurSolutionsPage from "./website pages/solutions-page";
 
 // 🌟 Floating Chat Button
 function FloatingChatButton() {
@@ -110,12 +111,13 @@ function App() {
           <Route path="/" element={<WebsiteMain />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<UnderConstruction />} />
-          <Route path="/solutions" element={<UnderConstruction />} />
+          {/* <Route path="/solutions" element={<UnderConstruction />} /> */}
 
           <Route path="/news" element={<UnderConstruction />} />
           <Route path="/showcase" element={<UnderConstruction />} />
           <Route path="/contact" element={<UnderConstruction />} />
           <Route path="/careers" element={<CareersPage />} />
+          <Route path="/solutions" element={<OurSolutionsPage />} />
           <Route
             path="/solutions/:solutionSlug"
             element={<SolutionsWrapper />}

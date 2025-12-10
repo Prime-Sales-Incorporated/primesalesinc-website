@@ -154,7 +154,7 @@ const SolutionsWrapper = () => {
       </Helmet>
 
       <Header dark={dark} setDark={setDark} />
-      <main className="flex-1">{solutionData.component}</main>
+      <main className="flex-1 px-8">{solutionData.component}</main>
       <Footer />
     </div>
   );

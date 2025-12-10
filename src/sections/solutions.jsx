@@ -25,23 +25,23 @@ const OurSolutions = () => {
       tab: "MHE",
     },
     {
-      title: "Plastic Pallets, Bins and Crates",
+      title: "Plastic Pallets, Bins & Crates",
       img: "/pallets.png",
-      desc: "A complete selection of durable and hygienic load-handling products, including eco pallets, warehouse pallets, hygiene pallets, metal reinforced pallets, and spill containment pallets, designed for efficient and compliant logistics operations.",
+      desc: "Comprehensive set  of durable and hygienic handling products including eco pallets, warehouse pallets, metal reinforced pallets and spill containment pallets designed for efficient and compliant logistics operations.",
       video: "/pallets.mp4",
       tab: "Plastic Pallets, Bins and Crates",
     },
     {
       title: "Automation Solutions",
       img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCGGSThrlguVhMZyhxolbW6gvgAG3wmWFGtc-9atK_OJxP1UDmqJ167tUmqymcGpawV6khJuXBqqm9z19CBdWX9qHLT972AGYuHwNTR6YHK8GZoEAGlPjAgGeQYO5H59j7r1VslSNDMpmSCvHS85actfkRSPlfLliBCDDb57G1jWrpS_5s4Ew5OlPa0D_q2gqZrMCk0EX2TZLCoCCigcLqHyOuJvU8WWfLIloxFoIIQCB71aAIE8tqdUZmBxdBVzj0kxoLqz-yNXWA",
-      desc: "Comprehensive automation solutions, including conveyor systems, automated storage and retrieval systems (AS/RS), and multishuttle robots, designed to enhance productivity, precision and operational efficiency in warehouses and facilities",
+      desc: "Comprehensive automation solutions including conveyor systems, automated storage and retrieval systems (AS/RS) and multishuttle robots to enhance productivity, precision and operational efficiency in warehouses and facilities.",
       video: "/automationvid.mp4",
       tab: "Automation Solutions",
     },
     {
       title: "Docks and Doors",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQZi1mz4AVCxzDP_KgpTcu9rfEVAkWAMxLWw&s",
-      desc: "Complete dock and door solutions, including levelers, shelters, loading houses, control systems, sectional and high-speed doors, ISO cold doors, and rolling shutters, designed for safe and efficient warehouse operations.",
+      desc: "Comprehensive dock and door solutions including levelers, shelters, loading houses, control systems, sectional and high-speed doors, ISO cold doors and rolling shutters designed for safe and efficient warehouse operations.",
       video: "/hormann.mp4",
       tab: "Docks and Doors",
     },
@@ -53,7 +53,7 @@ const OurSolutions = () => {
       tab: "Warehouse Management System",
     },
     {
-      title: "Industrial Batteries and Chargers",
+      title: "Industrial Batteries & Chargers",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTedKd_YgLpG2K8vHBxekSlDwjX6qcwvX3RFw&s",
       desc: "Complete battery and charging solutions, including industrial batteries, smart battery chargers, and battery management systems, designed to deliver reliable power, optimize performance, and support efficient operations for material handling equipment.",
       video: "/batteries.mp4",
@@ -82,7 +82,7 @@ const OurSolutions = () => {
         ))}
       </div>
 
-      <main className="container mx-auto px-2  lg:px-8 py-16">
+      <main className="container mx-auto px-2 xl:px-2 2xl:px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark">
             Our <span className="text-green-500">Solutions</span>
@@ -130,7 +130,7 @@ const OurSolutions = () => {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-text-light dark:text-text-dark">
+                  <h3 className="text-xl text-green-500 font-bold text-text-light dark:text-text-dark">
                     {solution.title}
                   </h3>
                   <p className="mt-2 text-sm md:text-base text-gray-600 dark:text-gray-300">

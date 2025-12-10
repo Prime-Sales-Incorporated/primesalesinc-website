@@ -5,7 +5,7 @@ import Header from "../config/header";
 import useInView from "../hooks/useInView";
 import Footer from "../config/footer";
 import PartnersCarousel from "../sections/partners";
-import OurSolutions from "./solutions";
+import OurSolutions from "../sections/solutions";
 import Timeline from "../sections/timeline";
 import StoryScroll from "../sections/ourStory";
 import ShowcaseCarousel from "../sections/medias";
@@ -127,7 +127,7 @@ const WebsiteMain = () => {
               supply chain solutions in the country.
             </p> */}
 
-            <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:px-4  2xl:px-16">
               {[
                 {
                   title: "Our Story",
@@ -154,7 +154,7 @@ const WebsiteMain = () => {
           </section>
 
           {/* Features */}
-          <section className="mt-8 text-center">
+          <section className="mt-8 text-center xl:px-4  2xl:px-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
               Who we <span className="text-green-500"> Are</span>
             </h2>

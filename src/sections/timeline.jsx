@@ -5,32 +5,76 @@ const timelineData = [
   {
     year: "1976",
     text: "Prime Sales Inc. started as an insulation company using aluminum foil.",
+    imageLight: "/foil.png",
+
+    imageDark: "/foil.png",
   },
-  { year: "1978", text: "Transitioned to insulated sandwich panel." },
-  { year: "1986", text: "Introduced “Racking System” as a storage solution." },
+  {
+    year: "1978",
+    text: "Transitioned to insulated sandwich panel.",
+    imageLight:
+      "https://cycleworld.com.my/wp-content/uploads/2020/11/CWP-%E2%80%93-1-3.jpg",
+
+    imageDark:
+      "https://cycleworld.com.my/wp-content/uploads/2020/11/CWP-%E2%80%93-1-3.jpg",
+  },
+  {
+    year: "1986",
+    text: "Introduced “Racking System” as a storage solution.",
+    imageLight:
+      "https://www.dexion.com/contentassets/9101ec80c33649f18be836f70e8deb22/dsc_0078-2.jpg?w=720&quality=50",
+
+    imageDark:
+      "https://www.dexion.com/contentassets/9101ec80c33649f18be836f70e8deb22/dsc_0078-2.jpg?w=720&quality=50",
+  },
   {
     year: "1988",
     text: "Added “Battery Operated Lift Truck” in the product portfolio.",
+    imageLight:
+      "https://www.lindemhe.com/wp-content/uploads/2017/04/electric-4-wheel-truck-2-5-3-5ton.jpg",
+
+    imageDark:
+      "https://www.lindemhe.com/wp-content/uploads/2017/04/electric-4-wheel-truck-2-5-3-5ton.jpg",
   },
   {
     year: "2008",
     text: "Strenghten product portfolio  with the addition of  loading technology and doors for various applications.",
+    imageLight:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNumngild1auwpJuap0VjyQnwvQKRjfw2ZDA&s",
+
+    imageDark:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNumngild1auwpJuap0VjyQnwvQKRjfw2ZDA&s",
   },
   {
     year: "2009",
     text: "Completed the materials handling line by adding Internal Combustion Engine Forklifts.",
+    imageLight:
+      "https://elevex.ca/wp-content/uploads/2019/01/Linde-1319-series.jpg",
+
+    imageDark:
+      "https://elevex.ca/wp-content/uploads/2019/01/Linde-1319-series.jpg",
   },
   {
     year: "2013",
     text: "PSI ventured as an exclusive distributor of warehouse automation technology in the country. ",
+
+    imageLight: "/venture.png",
+
+    imageDark: "/venture.png",
   },
   {
     year: "2015",
     text: "Warehouse Management Software for better supply chain visibility and performance",
+    imageLight: "/wms.png",
+
+    imageDark: "/wms.png",
   },
   {
     year: "2017",
     text: "Moved to our new headquarters at Prime Corporate Center East Service Road, Paranaque .",
+    imageLight: "/psi-cover.jpg",
+
+    imageDark: "/psi-cover.jpg",
   },
   {
     year: "2019",
@@ -63,7 +107,7 @@ const TimelineItem = ({ year, text, imageLight, imageDark, active, dark }) => (
         {year}
       </h3>
       <p
-        className={`text-sm max-w-xs  transition-colors duration-500 ${
+        className={`text-[12.8px] md:text-sm max-w-xs  transition-colors duration-500 ${
           dark ? "text-gray-400" : "text-gray-600"
         }`}
       >
@@ -74,7 +118,7 @@ const TimelineItem = ({ year, text, imageLight, imageDark, active, dark }) => (
         <img
           src={dark ? imageDark : imageLight}
           alt={`${year} event`}
-          className="mt-3 w-24 h-auto rounded-lg shadow-md border border-gray-200 dark:border-gray-700 transition-transform duration-300 hover:scale-105"
+          className="mt-3 w-36 h-auto rounded-lg shadow-md border border-gray-200 dark:border-gray-700 transition-transform duration-300 hover:scale-105"
         />
       )}
     </div>
@@ -149,7 +193,7 @@ const Timeline = ({ dark, onEndReached }) => {
             className="absolute top-0 left-[-18px] w-12 "
             style={{ y: 0 }}
             animate={{
-              y: `calc(${scrollPercent * 2400}% - 5px)`, // 👈 follows bottom of green line
+              y: `calc(${scrollPercent * 3700}% - 0px)`, // 👈 follows bottom of green line
             }}
             transition={{ type: "spring", stiffness: 50, damping: 20 }}
           />

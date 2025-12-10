@@ -229,7 +229,7 @@ const WebsiteMain = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-8 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mt-8 text-gray-900 text-center mb-8 dark:text-white">
               Why Choose <span className="text-green-500"> Prime</span>
             </h2>
             <WhyChooseUs />

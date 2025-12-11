@@ -208,7 +208,7 @@ const Timeline = ({ dark, onEndReached }) => {
                 containerHeight - 40
               ),
             }}
-            transition={{ type: "spring", stiffness: 45, damping: 20 }}
+            transition={{ type: "spring", stiffness: 50, damping: 20 }}
           />
 
           {/* Timeline items */}

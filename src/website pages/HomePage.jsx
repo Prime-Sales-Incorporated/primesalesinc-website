@@ -15,6 +15,7 @@ import { Truck } from "lucide-react";
 import HeaderHome from "../config/header copy";
 import StatsCounter from "../sections/statsCounter";
 import { Helmet } from "react-helmet-async";
+import HolidayGreetingBanner from "../sections/banner";
 
 const WebsiteMain = () => {
   const [storyRef, storyVisible] = useInView();
@@ -91,6 +92,7 @@ const WebsiteMain = () => {
             >
               PRIME <span className="text-green-500">SALES Inc.</span>
             </h1> */}
+
             <div className="justify-center flex ">
               <img
                 src="/logo1.png"
@@ -112,6 +114,7 @@ const WebsiteMain = () => {
           </div>
         </div>
 
+        <HolidayGreetingBanner />
         {/* OUR STORY */}
         <div className="px-4 py-0 sm:px-6 sm:py-0 lg:px-8 transition-all duration-700 ease-out ">
           <section className="text-center py-12">
@@ -127,7 +130,7 @@ const WebsiteMain = () => {
               supply chain solutions in the country.
             </p> */}
 
-            <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:px-4  2xl:px-16">
+            <div className="mt-0  md:mt-8 grid gap-6 sm:grid-cols-2 xl:px-4  2xl:px-16">
               {[
                 {
                   title: "Our Story",

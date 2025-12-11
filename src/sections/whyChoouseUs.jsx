@@ -2,7 +2,7 @@ import React from "react";
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-16 px-4 lg:px-16 bg-background-light dark:bg-background-dark mb-8">
+    <section className="py-16 px-4 lg:px-16 bg-background-light dark:bg-background-dark mb-0">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 items-center justify-center ">
           {/* Image Section */}

@@ -129,6 +129,18 @@ const Timeline = ({ dark, onEndReached }) => {
   const containerRef = useRef(null);
   const itemRefs = useRef([]);
   const [scrollPercent, setScrollPercent] = useState(0);
+  const [containerHeight, setContainerHeight] = useState(0);
+  useEffect(() => {
+    const updateHeight = () => {
+      if (containerRef.current) {
+        setContainerHeight(containerRef.current.scrollHeight);
+      }
+    };
+
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -141,8 +153,9 @@ const Timeline = ({ dark, onEndReached }) => {
           if (itemTop < window.innerHeight * 0.8) lastVisibleIndex = index + 1;
         }
       });
+      const percent = Math.min(lastVisibleIndex / timelineData.length, 1);
+      setScrollPercent(percent);
 
-      const percent = lastVisibleIndex / timelineData.length;
       setScrollPercent(percent);
 
       // 🔥 Notify parent when reaching bottom (near 100%)
@@ -190,10 +203,12 @@ const Timeline = ({ dark, onEndReached }) => {
           <motion.img
             src="/f2.png"
             alt="Forklift"
-            className="absolute top-0 left-[-18px] w-12 "
-            style={{ y: 0 }}
+            className="absolute top-0 left-[-18px] w-12"
             animate={{
-              y: `calc(${scrollPercent * 3700}% - 0px)`, // 👈 follows bottom of green line
+              y: Math.min(
+                scrollPercent * containerHeight,
+                containerHeight - 40
+              ),
             }}
             transition={{ type: "spring", stiffness: 50, damping: 20 }}
           />

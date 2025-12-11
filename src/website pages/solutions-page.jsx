@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../config/header";
+import Footer from "../config/footer";
 
 const OurSolutionsPage = () => {
   const solutions = [
@@ -96,8 +97,8 @@ const OurSolutionsPage = () => {
         ))}
       </div>
 
-      <main className="container mx-auto px-2  lg:px-8 py-16">
-        <div className="text-center mb-12">
+      <main className="container mx-auto px-6  lg:px-8 py-16">
+        <div className="text-center mt-8 mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark">
             Our <span className="text-green-500">Solutions</span>
           </h1>
@@ -156,6 +157,8 @@ const OurSolutionsPage = () => {
           ))}
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 };

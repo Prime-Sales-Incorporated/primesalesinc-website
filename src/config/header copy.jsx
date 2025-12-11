@@ -73,12 +73,12 @@ function HeaderHome({ dark, setDark }) {
           >
             About Us
           </a>
-          <a
+          {/* <a
             href="/services"
             className="hover:text-white hover:scale-105 transition-all duration-300"
           >
             Services
-          </a>
+          </a> */}
           <a
             href="/solutions"
             className="hover:text-white  hover:scale-105 transition-all duration-300"

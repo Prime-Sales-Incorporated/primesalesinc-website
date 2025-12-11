@@ -160,11 +160,10 @@ const WebsiteMain = () => {
             </h2>
 
             <p className="mt-4 text-sm md:text-base max-w-4xl mx-auto text-gray-600 dark:text-gray-300">
-              Prime Sales Inc. (PSI) is a trusted name in intralogistics
-              solutions, evolving since 1976 to deliver high-quality racking
-              systems, storage designs, and innovative supply chain services
-              that meet the growing demands of businesses across the
-              Philippines.
+              Prime Sales Inc. (PSI) is a trusted intralogistics provider in the
+              Philippines. Since 1976, we’ve helped companies improve their
+              operations with reliable racking systems, smart storage solutions,
+              and advanced supply chain services.
             </p>
 
             <div
@@ -213,7 +212,7 @@ const WebsiteMain = () => {
 
           <div
             ref={solutionRef}
-            className={`transition-all duration-700 ease-out ${
+            className={`transition-all duration-700 ease-out mt-8 ${
               solutionVisible
                 ? "opacity-100 translate-y-0 animate-fadeInUp"
                 : "opacity-0 translate-y-10"
@@ -242,7 +241,7 @@ const WebsiteMain = () => {
 
           <div
             ref={timelineRef}
-            className={`transition-all duration-700 ease-out mt-8 md:mt-0 ${
+            className={`transition-all duration-700 ease-out mt-8 md:mt-8 ${
               timelineVisible
                 ? "opacity-100 translate-y-0 animate-fadeInUp"
                 : "opacity-0 translate-y-10"

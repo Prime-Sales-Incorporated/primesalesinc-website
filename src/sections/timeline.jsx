@@ -146,20 +146,18 @@ const Timeline = ({ dark, onEndReached }) => {
     const handleScroll = () => {
       if (!containerRef.current) return;
 
-      let lastVisibleIndex = 0;
-      itemRefs.current.forEach((ref, index) => {
-        if (ref) {
-          const itemTop = ref.getBoundingClientRect().top;
-          if (itemTop < window.innerHeight * 0.8) lastVisibleIndex = index + 1;
-        }
-      });
-      const percent = Math.min(lastVisibleIndex / timelineData.length, 1);
-      setScrollPercent(percent);
+      const rect = containerRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
 
-      setScrollPercent(percent);
+      // Compute how far through the timeline the user has scrolled
+      const progress = Math.min(
+        Math.max((windowHeight - rect.top) / (rect.height + windowHeight), 0),
+        1
+      );
 
-      // 🔥 Notify parent when reaching bottom (near 100%)
-      if (percent >= 0.98 && onEndReached) {
+      setScrollPercent(progress);
+
+      if (progress >= 0.98 && onEndReached) {
         onEndReached();
       }
     };
@@ -167,7 +165,7 @@ const Timeline = ({ dark, onEndReached }) => {
     window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [onEndReached]);
+  }, []);
 
   return (
     <div

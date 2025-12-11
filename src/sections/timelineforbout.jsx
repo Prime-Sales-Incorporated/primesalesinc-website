@@ -125,7 +125,7 @@ const TimelineItem = ({ year, text, imageLight, imageDark, active, dark }) => (
   </div>
 );
 
-const Timeline = ({ dark, onEndReached }) => {
+const TimelineforAbout = ({ dark, onEndReached }) => {
   const containerRef = useRef(null);
   const itemRefs = useRef([]);
   const [scrollPercent, setScrollPercent] = useState(0);
@@ -229,4 +229,4 @@ const Timeline = ({ dark, onEndReached }) => {
   );
 };
 
-export default Timeline;
+export default TimelineforAbout;

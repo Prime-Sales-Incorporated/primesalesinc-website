@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import HeaderHome from "../config/header copy";
+import Footer from "../config/footer";
 
 const CareersPage = () => {
   const [dark, setDark] = useState(() => {
@@ -232,6 +233,7 @@ const CareersPage = () => {
             ))}
           </div>
         </div>
+        <Footer />
       </section>
     </main>
   );

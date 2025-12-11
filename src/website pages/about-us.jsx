@@ -5,6 +5,7 @@ import Timeline from "../sections/timeline";
 import PartnersCarousel from "../sections/partners";
 import WhyChooseUs from "../sections/whyChoouseUs";
 import BranchesMap from "../sections/map-branches";
+import TimelineforAbout from "../sections/timelineforbout";
 
 const About = () => {
   const [dark, setDark] = useState(() => {
@@ -91,7 +92,7 @@ const About = () => {
                 Why Choose <span className="text-green-500"> Prime</span>
               </h2>
               <WhyChooseUs />
-              <Timeline dark={dark} />
+              <TimelineforAbout dark={dark} />
 
               <BranchesMap />
               <PartnersCarousel />

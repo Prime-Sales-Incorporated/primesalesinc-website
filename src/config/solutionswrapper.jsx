@@ -122,9 +122,9 @@ const SolutionsWrapper = () => {
   };
 
   return (
-    <div className="bg-background-light dark:bg-background-dark min-h-screen px-4 py-20 md:p-12 md:py-20 flex flex-col font-display text-gray-800 dark:text-gray-200">
+    <div className="bg-background-light dark:bg-background-dark min-h-screen px-0 py-20 md:p-12 md:py-20 flex flex-col font-display text-gray-800 dark:text-gray-200">
       <Link to="/">
-        <div className="flex mb-4 items-center">
+        <div className="flex mb-4 px-4 items-center">
           <span class="material-symbols-outlined">arrow_back_ios</span>
           <p className="text-green-500">Home</p>
         </div>

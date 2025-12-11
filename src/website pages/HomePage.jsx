@@ -114,7 +114,6 @@ const WebsiteMain = () => {
           </div>
         </div>
 
-        <HolidayGreetingBanner />
         {/* OUR STORY */}
         <div className="px-4 py-0 sm:px-6 sm:py-0 lg:px-8 transition-all duration-700 ease-out ">
           <section className="text-center py-12">
@@ -268,6 +267,8 @@ const WebsiteMain = () => {
             <PartnersCarousel />
           </div>
         </div>
+
+        <HolidayGreetingBanner />
       </main>
 
       {/* Footer */}

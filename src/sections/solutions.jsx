@@ -130,7 +130,7 @@ const OurSolutions = () => {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl text-gray-900 dark:text-green-500 font-bold text-text-light dark:text-text-dark">
+                  <h3 className="text-xl text-gray-900 dark:text-white font-bold text-text-light dark:text-text-dark">
                     {solution.title}
                   </h3>
                   <p className="mt-2 text-sm md:text-base text-gray-600 dark:text-gray-300">

@@ -5,9 +5,9 @@ const timelineData = [
   {
     year: "1976",
     text: "Prime Sales Inc. started as an insulation company using aluminum foil.",
-    imageLight: "/foil.png",
+    imageLight: "/1.png",
 
-    imageDark: "/foil.png",
+    imageDark: "/1.png",
   },
   {
     year: "1978",
@@ -193,7 +193,7 @@ const Timeline = ({ dark, onEndReached }) => {
             className="absolute top-0 left-[-18px] w-12 "
             style={{ y: 0 }}
             animate={{
-              y: `calc(${scrollPercent * 2940}% - 5px)`, // 👈 follows bottom of green line
+              y: `calc(${scrollPercent * 3000}% - 5px)`, // 👈 follows bottom of green line
             }}
             transition={{ type: "spring", stiffness: 50, damping: 20 }}
           />

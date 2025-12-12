@@ -136,34 +136,34 @@ function Header({ dark, setDark }) {
           className={`absolute top-16 right-6 bg-black/90 text-white rounded-lg shadow-lg p-6 flex flex-col gap-4 w-48 text-sm font-light animate-fadeIn`}
         >
           <a
-            href="#"
-            className="hover:text-primary transition-all duration-200"
+            href="/solutions"
+            className="hover:text-background-dark dark:hover:text-white  hover:scale-105 transition-all duration-300"
           >
-            Our Mission
+            Solutions
           </a>
           <a
-            href="#"
-            className="hover:text-primary transition-all duration-200"
+            href="/news"
+            className="hover:text-background-dark dark:hover:text-white hover:scale-105 transition-all duration-300"
           >
-            Services
+            News
           </a>
           <a
-            href="#"
-            className="hover:text-primary transition-all duration-200"
+            href="/showcase"
+            className="hover:text-background-dark dark:hover:text-white  hover:scale-105 transition-all duration-300"
           >
-            Products
+            Showcase
           </a>
           <a
-            href="#"
-            className="hover:text-primary transition-all duration-200"
-          >
-            Support Us
-          </a>
-          <a
-            href="#"
-            className="hover:text-primary transition-all duration-200"
+            href="/contact"
+            className="hover:text-background-dark dark:hover:text-white  hover:scale-105 transition-all duration-300"
           >
             Contact
+          </a>
+          <a
+            href="/careers"
+            className="hover:text-white  hover:scale-105 transition-all duration-300"
+          >
+            Careers
           </a>
           <button className="flex items-center gap-1 hover:text-primary transition-all duration-200">
             EN <ChevronDown size={14} />

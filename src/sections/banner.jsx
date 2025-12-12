@@ -12,7 +12,7 @@ const HolidayGreetingBanner = () => {
 
   return (
     <div className="bg-background-light dark:bg-background-dark  mt-8 flex items-center justify-center ">
-      <div className="w-full max-w-[1400px] bg-background-light dark:bg-background-dark overflow-hidden shadow- lg:  border-primary/20 dark:border-primary/30 rounded-none md:rounded-lg flex flex-col relative">
+      <div className="w-full max-w-[1400px] bg-background-light dark:bg-background-dark overflow-hidden shadow- lg:  border-primary/20 dark:border-primary/30 rounded-none  flex flex-col relative">
         {/* Main content */}
         <div className="flex flex-col-reverse md:flex-row lg:flex-row h-auto lg:h-[600px] ">
           {/* Left Side */}

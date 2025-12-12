@@ -19,6 +19,7 @@ import About from "./website pages/about-us";
 import WMSSolutions from "./website pages/solutions-pages/warehouse-solutions,";
 import CareersPage from "./website pages/careers-page";
 import OurSolutionsPage from "./website pages/solutions-page";
+import { TfiArrowCircleUp } from "react-icons/tfi";
 
 // 🌟 Floating Chat Button
 function FloatingChatButton() {
@@ -84,9 +85,8 @@ function ScrollUpButton() {
     <button
       onClick={scrollToTop}
       className={`fixed bottom-24 right-4 md:bottom-28 md:right-4
-                  bg-red-500 hover:bg-red-600 text-white 
                   p-3 rounded-full shadow-lg transition-all duration-300 
-                  ease-in-out z-[9999] 
+                  ease-in-out z-[9999] bg-background-light dark:bg-background-dark 
                   ${
                     visible
                       ? "opacity-100 translate-y-0"
@@ -94,7 +94,7 @@ function ScrollUpButton() {
                   }`}
       aria-label="Scroll to top"
     >
-      <ArrowUp size={22} className="text-white" />
+      <TfiArrowCircleUp size={22} className="text-red-500 dark:text-gray-500" />
     </button>
   );
 }

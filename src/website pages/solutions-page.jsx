@@ -149,7 +149,7 @@ const OurSolutionsPage = () => {
                     {solution.title}
                   </h3>
                   <p className="mt-2 text-sm md:text-base text-gray-600 dark:text-gray-300">
-                    {solution.desc}
+                    {/* {solution.desc} */}
                   </p>
                 </div>
               </div>

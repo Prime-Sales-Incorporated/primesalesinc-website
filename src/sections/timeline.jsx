@@ -107,7 +107,7 @@ const TimelineItem = ({ year, text, imageLight, imageDark, active, dark }) => (
         {year}
       </h3>
       <p
-        className={`text-sm max-w-xs  transition-colors duration-500 ${
+        className={`text-xs md:text-sm max-w-lg  transition-colors duration-500 ${
           dark ? "text-gray-400" : "text-gray-600"
         }`}
       >
@@ -193,7 +193,7 @@ const Timeline = ({ dark, onEndReached }) => {
             className="absolute top-0 left-[-18px] w-12 "
             style={{ y: 0 }}
             animate={{
-              y: `calc(${scrollPercent * 3150}% - 5px)`, // 👈 follows bottom of green line
+              y: `calc(${scrollPercent * 2940}% - 5px)`, // 👈 follows bottom of green line
             }}
             transition={{ type: "spring", stiffness: 50, damping: 20 }}
           />

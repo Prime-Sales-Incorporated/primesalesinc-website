@@ -21,7 +21,7 @@ export default function ElectricForkliftProductListing() {
       height: "3000 mm",
     },
     {
-      name: "ELECTRIC FORKLIFT TRUCKS 2.0-2.5T",
+      name: "Electric Forklift Trucks 2.0-2.5T",
       img: "https://www.lindemh-cn.com/wp-content/uploads/2021/12/1293-1.png",
       capacity: "2000 - 2500 kg",
       height: "3600 - 6500 mm",
@@ -75,41 +75,43 @@ export default function ElectricForkliftProductListing() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 max-w-8xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl gap-x-8 gap-y-16 max-w-8xl mx-auto">
           {products.map((p) => (
             <div
               key={p.name}
-              className="flex flex-col group border border-gray-600 rounded-lg"
+              className="flex flex-rows-1 md:flex-col h-52 md:h-full group border border-gray-600 rounded-lg"
             >
-              <div className="flex justify-center items-end h-64 px-8 mb-[-40px] relative z-10 bg-background-light border rounded-t-lg">
+              <div className="flex justify-center  w-52 md:w-full items-end h-52 md:h-64 px-8 mb-[-40px] relative z-10 bg-background-light border rounded-t-lg">
                 <img
                   src={p.img}
                   alt={p.name}
-                  className="object-contain h-full drop-shadow-xl transform group-hover:-translate-y-2 transition-transform duration-300"
+                  className="object-contain w-full h-full drop-shadow-xl transform group-hover:-translate-y-2 transition-transform duration-300"
                 />
               </div>
 
-              <div className="bg-card-light dark:bg-card-dark pt-14 pb-8 px-8 relative shadow-sm hover:shadow-md transition-shadow rounded-sm">
-                <span className="inline-block bg-label-bg text- text-xs px-3 py-1 mb-3 rounded-sm">
+              <div className="bg-card-light dark:bg-card-dark pt-14 pb-8 px-8  max-w-2xl relative shadow-sm hover:shadow-md transition-shadow rounded-sm">
+                <span className="inline- bg-label-bg hidden md:text-block text-xs px-3 py-1 mb-3 rounded-sm">
                   Electric Forklifts
                 </span>
 
-                <h2 className="text-3xl font-bold mb-4 text-">{p.name}</h2>
+                <h2 className="text-sm md:text-3xl font-bold mb-4 text-">
+                  {p.name}
+                </h2>
 
                 <div className="space-y-2 mb-8 text-text-secondary-light dark:text-text-secondary-dark">
                   <div className="flex items-center">
-                    <span className="material-symbols-outlined mr-2 text-">
+                    <span className=" text-xs md:text-base material-symbols-outlined mr-2 text-">
                       weight
                     </span>
-                    <span className="text-lg font-medium text-">
+                    <span className="text-xs md:text-lg font-medium text-">
                       {p.capacity}
                     </span>
                   </div>
                   <div className="flex items-center">
-                    <span className="material-symbols-outlined mr-2 text-">
+                    <span className=" text-xs md:text-base material-symbols-outlined mr-2 text-">
                       upload
                     </span>
-                    <span className="text-lg font-medium text-wite">
+                    <span className="text-xs md:text-lg font-medium text-wite">
                       {p.height}
                     </span>
                   </div>

@@ -92,7 +92,7 @@ const About = () => {
                 Why Choose <span className="text-green-500"> Prime</span>
               </h2>
               <WhyChooseUs />
-              <TimelineforAbout dark={dark} />
+              <Timeline dark={dark} />
 
               <BranchesMap />
               <PartnersCarousel />

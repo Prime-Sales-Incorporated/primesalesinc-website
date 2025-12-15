@@ -1,4 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Header from "../../../config/header";
+import Footer from "../../../config/footer";
 
 export default function ElectricForkliftProductListing() {
   useEffect(() => {
@@ -55,11 +57,17 @@ export default function ElectricForkliftProductListing() {
       height: "3050 - 7255 mm",
     },
   ];
-
+  const [dark, setDark] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("darkMode") === "true";
+    }
+    return false;
+  });
   return (
-    <div className="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white min-h-screen transition-colors duration-300">
-      <div className="container mx-auto px-4 py-12">
-        <header className="mb-12 text-center">
+    <div className="bg-background-light m dark:bg-background-dark text-gray-900 dark:text-white min-h-screen transition-colors duration-300">
+      <Header dark={dark} setDark={setDark} />
+      <div className="container mx-auto px-4 py-12 ">
+        <header className="mb-12 text-center mt-8">
           <h1 className="text-3xl font-bold mb-4 text-">Electric Forklifts</h1>
           <p className="text-text-secondary-light dark:text-text-secondary-dark max-w-2xl mx-auto text-">
             Explore our range of high-performance electric forklifts designed
@@ -69,8 +77,11 @@ export default function ElectricForkliftProductListing() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 max-w-8xl mx-auto">
           {products.map((p) => (
-            <div key={p.name} className="flex flex-col group">
-              <div className="flex justify-center items-end h-64 px-8 mb-[-40px] relative z-10">
+            <div
+              key={p.name}
+              className="flex flex-col group border border-gray-600 rounded-lg"
+            >
+              <div className="flex justify-center items-end h-64 px-8 mb-[-40px] relative z-10 bg-background-light border rounded-t-lg">
                 <img
                   src={p.img}
                   alt={p.name}
@@ -116,7 +127,7 @@ export default function ElectricForkliftProductListing() {
       </div>
 
       {/* Dark mode toggle */}
-      <button
+      {/* <button
         onClick={() => document.documentElement.classList.toggle("dark")}
         className="fixed bottom-4 left-4 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg border"
       >
@@ -124,7 +135,8 @@ export default function ElectricForkliftProductListing() {
         <span className="material-symbols-outlined hidden dark:block">
           light_mode
         </span>
-      </button>
+      </button> */}
+      <Footer />
     </div>
   );
 }

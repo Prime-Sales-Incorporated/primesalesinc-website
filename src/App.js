@@ -20,9 +20,10 @@ import WMSSolutions from "./website pages/solutions-pages/warehouse-solutions,";
 import CareersPage from "./website pages/careers-page";
 import OurSolutionsPage from "./website pages/solutions-page";
 import { TfiArrowCircleUp } from "react-icons/tfi";
-import Gallery from "./sections/gallery";
 import ContactPage from "./website pages/contactpage";
 import ElectricForkliftProductListing from "./website pages/solutions-pages/forklits-pages/eforklift";
+import Gallery from "./website pages/gallery";
+import ElectrickPalletTrucks from "./website pages/solutions-pages/forklits-pages/pallettrucks";
 
 // 🌟 Floating Chat Button
 function FloatingChatButton() {
@@ -122,6 +123,10 @@ function App() {
           <Route
             path="/solutions/mhe/electric-forklift"
             element={<ElectricForkliftProductListing />}
+          />
+          <Route
+            path="/solutions/mhe/pallet-trucks"
+            element={<ElectrickPalletTrucks />}
           />
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/solutions" element={<OurSolutionsPage />} />

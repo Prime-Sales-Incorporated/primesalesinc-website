@@ -95,16 +95,16 @@ function Header({ dark, setDark }) {
             News
           </a>
           <a
-            href="/showcase"
+            href="/gallery"
             className="hover:text-background-dark dark:hover:text-white  hover:scale-105 transition-all duration-300"
           >
-            Showcase
+            Gallery
           </a>
           <a
             href="/contact"
             className="hover:text-background-dark dark:hover:text-white  hover:scale-105 transition-all duration-300"
           >
-            Contact
+            Contact Us
           </a>
           <a
             href="/careers"
@@ -148,10 +148,10 @@ function Header({ dark, setDark }) {
             News
           </a>
           <a
-            href="/showcase"
+            href="/gallery"
             className="hover:text-background-dark dark:hover:text-white  hover:scale-105 transition-all duration-300"
           >
-            Showcase
+            Gallery
           </a>
           <a
             href="/contact"

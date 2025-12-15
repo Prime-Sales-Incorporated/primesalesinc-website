@@ -1,0 +1,130 @@
+import { useEffect } from "react";
+
+export default function ElectricForkliftProductListing() {
+  useEffect(() => {
+    document.documentElement.classList.add("font-display");
+  }, []);
+
+  const products = [
+    {
+      name: "Electric Forklift Truck 3.0-3.5T",
+      img: "https://www.lindemh-cn.com/wp-content/uploads/2020/04/1294-v5-ptb-1.png",
+      capacity: "3000 - 3500 kg",
+      height: "3000 mm",
+    },
+    {
+      name: "Electric Forklift Truck 1.5-2.0T",
+      img: "https://www.lindemh-cn.com/wp-content/uploads/2020/09/5K1A8031-1.png",
+      capacity: "1500 - 2000 kg",
+      height: "3000 mm",
+    },
+    {
+      name: "ELECTRIC FORKLIFT TRUCKS 2.0-2.5T",
+      img: "https://www.lindemh-cn.com/wp-content/uploads/2021/12/1293-1.png",
+      capacity: "2000 - 2500 kg",
+      height: "3600 - 6500 mm",
+    },
+    {
+      name: "Electric Forklift Trucks 1.6-2.0t ",
+      img: "https://www.lindemh-cn.com/wp-content/uploads/2017/10/E-01.png",
+      capacity: "1600 - 2000 kg",
+      height: "2770 - 6220 mm",
+    },
+    {
+      name: "Electric Forklift Trucks 2.5-3.5T",
+      img: "https://www.lindemh-cn.com/wp-content/uploads/2017/10/E-04.png",
+      capacity: "2500 - 3500 kg",
+      height: "2850 - 6605 mm",
+    },
+    {
+      name: "Electric Forklift Trucks 3.0-3.8T",
+      img: "https://www.lindemh-cn.com/wp-content/uploads/2017/11/5K1A8031.png",
+      capacity: "3000 - 3800 kg",
+      height: "3000 mm",
+    },
+    {
+      name: "Electric Forklift Trucks 3.5-5.0T",
+      img: "https://www.lindemh-cn.com/wp-content/uploads/2017/10/E-05.png",
+      capacity: "3500 - 5000 kg",
+      height: "3100 - 6015 mm",
+    },
+    {
+      name: "Electric Forklift Trucks 6.0-8.0T",
+      img: "https://www.lindemh-cn.com/wp-content/uploads/2017/10/E-06.png",
+      capacity: "6000 - 8000 kg",
+      height: "3050 - 7255 mm",
+    },
+  ];
+
+  return (
+    <div className="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white min-h-screen transition-colors duration-300">
+      <div className="container mx-auto px-4 py-12">
+        <header className="mb-12 text-center">
+          <h1 className="text-3xl font-bold mb-4 text-">Electric Forklifts</h1>
+          <p className="text-text-secondary-light dark:text-text-secondary-dark max-w-2xl mx-auto text-">
+            Explore our range of high-performance electric forklifts designed
+            for efficiency and durability.
+          </p>
+        </header>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 max-w-8xl mx-auto">
+          {products.map((p) => (
+            <div key={p.name} className="flex flex-col group">
+              <div className="flex justify-center items-end h-64 px-8 mb-[-40px] relative z-10">
+                <img
+                  src={p.img}
+                  alt={p.name}
+                  className="object-contain h-full drop-shadow-xl transform group-hover:-translate-y-2 transition-transform duration-300"
+                />
+              </div>
+
+              <div className="bg-card-light dark:bg-card-dark pt-14 pb-8 px-8 relative shadow-sm hover:shadow-md transition-shadow rounded-sm">
+                <span className="inline-block bg-label-bg text- text-xs px-3 py-1 mb-3 rounded-sm">
+                  Electric Forklifts
+                </span>
+
+                <h2 className="text-3xl font-bold mb-4 text-">{p.name}</h2>
+
+                <div className="space-y-2 mb-8 text-text-secondary-light dark:text-text-secondary-dark">
+                  <div className="flex items-center">
+                    <span className="material-symbols-outlined mr-2 text-">
+                      weight
+                    </span>
+                    <span className="text-lg font-medium text-">
+                      {p.capacity}
+                    </span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="material-symbols-outlined mr-2 text-">
+                      upload
+                    </span>
+                    <span className="text-lg font-medium text-wite">
+                      {p.height}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="absolute -bottom-5 right-8">
+                  <button className="bg-green-500 hover:bg-red-800 text- py-2 px-6 shadow-md transition-colors">
+                    Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Dark mode toggle */}
+      <button
+        onClick={() => document.documentElement.classList.toggle("dark")}
+        className="fixed bottom-4 left-4 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg border"
+      >
+        <span className="material-symbols-outlined dark:hidden">dark_mode</span>
+        <span className="material-symbols-outlined hidden dark:block">
+          light_mode
+        </span>
+      </button>
+    </div>
+  );
+}

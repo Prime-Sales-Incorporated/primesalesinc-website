@@ -92,10 +92,10 @@ function HeaderHome({ dark, setDark }) {
             News
           </a>
           <a
-            href="/showcase"
+            href="/gallery"
             className="hover:text-white  hover:scale-105 transition-all duration-300"
           >
-            Showcase
+            Gallery
           </a>
           <a
             href="/contact"
@@ -145,10 +145,10 @@ function HeaderHome({ dark, setDark }) {
             News
           </a>
           <a
-            href="/showcase"
+            href="/gallery"
             className="hover:text-white  hover:scale-105 transition-all duration-300"
           >
-            Showcase
+            Gallery
           </a>
           <a
             href="/contact"

@@ -54,7 +54,7 @@ const OurSolutions = () => {
     },
     {
       title: "Industrial Batteries & Chargers",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTedKd_YgLpG2K8vHBxekSlDwjX6qcwvX3RFw&s",
+      img: "https://media.licdn.com/dms/image/v2/C561BAQHaY1KfM2dfGQ/company-background_10000/company-background_10000/0/1630636203551/batteryasiasingapore_cover?e=2147483647&v=beta&t=Gq3eJS9DGVbtHLFoJHaK5uSoEOTEBjin7UJirmHNB4s",
       desc: "Complete battery and charging solutions, including industrial batteries, smart battery chargers, and battery management systems, designed to deliver reliable power, optimize performance, and support efficient operations for material handling equipment.",
       video: "/batteries.mp4",
       tab: "Industrial Batteries and Chargers",

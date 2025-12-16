@@ -5,7 +5,7 @@ const coldChainSolutions = [
   {
     title: "Structural Insulated Panels",
     desc: "High-performance insulated panels for temperature-controlled environments.",
-    img: "https://cdn.prod.website-files.com/65b78bf37d2c3fb937b48de0/666c05755512f939a027e001_structural-insulated-panels-sips.jpg",
+    img: "/insulated-panels.jpeg",
     applications: [
       "Used for cold rooms, freezers, and chillers.",
       "Ensures consistent temperature control.",

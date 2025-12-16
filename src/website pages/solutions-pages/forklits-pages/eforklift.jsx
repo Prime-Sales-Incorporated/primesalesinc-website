@@ -10,49 +10,49 @@ export default function ElectricForkliftProductListing() {
   const products = [
     {
       name: "Electric Forklift Truck 3.0-3.5T",
-      img: "https://www.lindemh-cn.com/wp-content/uploads/2020/04/1294-v5-ptb-1.png",
+      img: "/linde/forklift/1.png",
       capacity: "3000 - 3500 kg",
       height: "3000 mm",
     },
     {
       name: "Electric Forklift Truck 1.5-2.0T",
-      img: "https://www.lindemh-cn.com/wp-content/uploads/2020/09/5K1A8031-1.png",
+      img: "/linde/forklift/2.png",
       capacity: "1500 - 2000 kg",
       height: "3000 mm",
     },
     {
       name: "Electric Forklift Trucks 2.0-2.5T",
-      img: "https://www.lindemh-cn.com/wp-content/uploads/2021/12/1293-1.png",
+      img: "/linde/forklift/3.png",
       capacity: "2000 - 2500 kg",
       height: "3600 - 6500 mm",
     },
     {
       name: "Electric Forklift Trucks 1.6-2.0t ",
-      img: "https://www.lindemh-cn.com/wp-content/uploads/2017/10/E-01.png",
+      img: "/linde/forklift/4.png",
       capacity: "1600 - 2000 kg",
       height: "2770 - 6220 mm",
     },
     {
       name: "Electric Forklift Trucks 2.5-3.5T",
-      img: "https://www.lindemh-cn.com/wp-content/uploads/2017/10/E-04.png",
+      img: "/linde/forklift/5.png",
       capacity: "2500 - 3500 kg",
       height: "2850 - 6605 mm",
     },
     {
       name: "Electric Forklift Trucks 3.0-3.8T",
-      img: "https://www.lindemh-cn.com/wp-content/uploads/2017/11/5K1A8031.png",
+      img: "/linde/forklift/6.png",
       capacity: "3000 - 3800 kg",
       height: "3000 mm",
     },
     {
       name: "Electric Forklift Trucks 3.5-5.0T",
-      img: "https://www.lindemh-cn.com/wp-content/uploads/2017/10/E-05.png",
+      img: "/linde/forklift/7.png",
       capacity: "3500 - 5000 kg",
       height: "3100 - 6015 mm",
     },
     {
       name: "Electric Forklift Trucks 6.0-8.0T",
-      img: "https://www.lindemh-cn.com/wp-content/uploads/2017/10/E-06.png",
+      img: "/linde/forklift/8.png",
       capacity: "6000 - 8000 kg",
       height: "3050 - 7255 mm",
     },
@@ -79,9 +79,9 @@ export default function ElectricForkliftProductListing() {
           {products.map((p) => (
             <div
               key={p.name}
-              className="flex flex-rows-1 md:flex-col h-52 md:h-full group border border-gray-600 rounded-lg"
+              className="flex flex-rows-1 md:flex-col h-52 md:h-full group border border-gray-600  rounded-l-lg md:rounded-t-lg"
             >
-              <div className="flex justify-center  w-52 md:w-full items-end h-52 md:h-64 px-8 mb-[-40px] relative z-10 bg-background-light border rounded-t-lg">
+              <div className="flex justify-center  w-52 md:w-full items-end h-52 md:h-64 px-8 mb-[-40px] relative z-10 bg-background-light border md:rounded-b-none  rounded-l-lg md:rounded-t-lg">
                 <img
                   src={p.img}
                   alt={p.name}
@@ -94,7 +94,7 @@ export default function ElectricForkliftProductListing() {
                   Electric Forklifts
                 </span>
 
-                <h2 className="text-sm md:text-3xl font-bold mb-4 text-">
+                <h2 className="text-sm  md:text-xl font-bold mb-4 text-">
                   {p.name}
                 </h2>
 

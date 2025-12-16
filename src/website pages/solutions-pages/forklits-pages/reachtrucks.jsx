@@ -2,72 +2,47 @@ import { useEffect, useState } from "react";
 import Header from "../../../config/header";
 import Footer from "../../../config/footer";
 
-export default function ElectrickPalletTrucks() {
+export default function ReachTrucksProductListing() {
   useEffect(() => {
     document.documentElement.classList.add("font-display");
   }, []);
 
   const products = [
     {
-      name: "Electric Pallet Truck 1.5 - 2.0 T",
-      img: "/linde/pallettrucks/1.png",
-      capacity: "1500 - 2000 kg",
-      height: "115 mm",
-    },
-    // {
-    //   name: "Electric Pallet Truck 1.5T",
-    //   img: "https://www.lindemh-cn.com/wp-content/uploads/2021/02/192015B.png",
-    //   capacity: "1500 kg",
-    //   height: "115 mm",
-    // },
-    // {
-    //   name: "Electric Pallet Truck 1.5T",
-    //   img: "https://www.lindemh-cn.com/wp-content/uploads/2021/12/mt15c.png",
-    //   capacity: "1500 kg",
-    //   height: "115 mm",
-    // },
-    // {
-    //   name: "Electric Pallet Truck 1.5T",
-    //   img: "https://www.lindemh-cn.com/wp-content/uploads/2022/06/mt15a.png",
-    //   capacity: "1500-2000 kg",
-    //   height: "115 mm",
-    // },
-    // {
-    //   name: "Electric Pallet Trucks 1.5/2.0t ",
-    //   img: "https://www.lindemh-cn.com/wp-content/uploads/2022/06/BG-1.png",
-    //   capacity: "2000 kg",
-    //   height: "120 mm",
-    // },
-    {
-      name: "Pedestrian Pallet Trucks 1.6 - 2.0 t",
-      img: "/linde/pallettrucks/2.png",
-      capacity: "1600 - 2000 kg",
-      height: "125 mm",
-    },
-
-    {
-      name: "Stand-on Electric Pallet Trucks 2.0T",
-      img: "/linde/pallettrucks/3.png",
-      capacity: "2000 kg",
-      height: "120 mm",
+      name: "Double-deep Reach Truck 1.35T",
+      img: "/linde/reachtrucks/1.png",
+      capacity: "1362",
+      height: "6052 mm",
     },
     {
-      name: "Stand-on Electric Pallet Trucks 2.0T",
-      img: "/linde/pallettrucks/4.png",
-      capacity: "2000 kg",
-      height: "120 mm",
+      name: "Reach Truck 1.2 - 1.5 T",
+      img: "/linde/reachtrucks/2.png",
+      capacity: "1200 - 1500 kg",
+      height: "2700 - 4500 mm",
     },
     {
-      name: "Stand-on Electric Pallet Trucks 2.0T",
-      img: "/linde/pallettrucks/5.png",
-      capacity: "2000 kg",
-      height: "125 mm",
+      name: "Electric Reach Truck 1.0 - 1.4 T",
+      img: "/linde/reachtrucks/3.png",
+      capacity: "1000 - 1400 kg",
+      height: "3650 - 6220 mm",
     },
     {
-      name: "Pedestrian Pallet Trucks 3.0 t",
-      img: "/linde/pallettrucks/6.png",
-      capacity: "3000 kg",
-      height: "125 mm",
+      name: "Electric Reach Truck 1.4 - 1.8 T",
+      img: "/linde/reachtrucks/4.png",
+      capacity: "1400 - 1800 kg",
+      height: "3250 - 6220 mm",
+    },
+    {
+      name: "Electric Reach Truck 1.4 - 2.0 T",
+      img: "/linde/reachtrucks/5.png",
+      capacity: "1400 - 2000 kg",
+      height: "4355 - 11455 mm",
+    },
+    {
+      name: "Electric Reach Truck 1.4 - 2.0 T",
+      img: "/linde/reachtrucks/6.png",
+      capacity: "1400 - 2000 kg",
+      height: "4355 - 11455 mm",
     },
   ];
   const [dark, setDark] = useState(() => {
@@ -76,15 +51,14 @@ export default function ElectrickPalletTrucks() {
     }
     return false;
   });
-
   return (
-    <div className="bg-background-light  dark:bg-background-dark text-gray-900 dark:text-white min-h-screen transition-colors duration-300">
+    <div className="bg-background-light m dark:bg-background-dark text-gray-900 dark:text-white min-h-screen transition-colors duration-300">
       <Header dark={dark} setDark={setDark} />
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 ">
         <header className="mb-12 text-center mt-8">
-          <h1 className="text-3xl font-bold mb-4 text-">Pallet Trucks</h1>
+          <h1 className="text-3xl font-bold mb-4 text-">Reach Trucks</h1>
           <p className="text-text-secondary-light dark:text-text-secondary-dark max-w-2xl mx-auto text-">
-            Explore our range of high-performance pallet trucks designed for
+            Explore our range of high-performance Reach Trucks designed for
             efficiency and durability.
           </p>
         </header>
@@ -93,9 +67,9 @@ export default function ElectrickPalletTrucks() {
           {products.map((p) => (
             <div
               key={p.name}
-              className="flex flex-rows-1 md:flex-col h-52 md:h-full group border border-gray-600 rounded-lg"
+              className="flex flex-rows-1 md:flex-col h-52 md:h-full group border border-gray-600  rounded-l-lg md:rounded-t-lg"
             >
-              <div className="flex justify-center  w-52 md:w-full items-end h-52 md:h-64 px-8 mb-[-40px] relative z-10 bg-background-light border rounded-l-lg md:rounded-b-none  md:rounded-t-lg">
+              <div className="flex justify-center  w-52 md:w-full items-end h-52 md:h-64 px-8 mb-[-40px] relative z-10 bg-background-light border  rounded-l-lg md:rounded-b-none  md:rounded-t-lg">
                 <img
                   src={p.img}
                   alt={p.name}

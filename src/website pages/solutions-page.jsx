@@ -7,7 +7,7 @@ const OurSolutionsPage = () => {
   const solutions = [
     {
       title: "Cold Chain",
-      img: "https://www.seoulz.com/wp-content/uploads/2022/06/coldchain.jpg",
+      img: "/cold-chain.jpg",
       desc: "Comprehensive cold chain solutions designed for temperature control like structural insulated panels, insulated doors and panel and door accessories that ensure durability, energy efficiency, and reliable thermal performance.",
       video: "/cold.mp4",
       tab: "Cold Chain",

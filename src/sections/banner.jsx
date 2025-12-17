@@ -14,9 +14,9 @@ const HolidayGreetingBanner = () => {
     <div className="bg-background-light dark:bg-background-dark  mt-8 flex items-center justify-center ">
       <div className="w-full max-w-[1400px] bg-background-light dark:bg-background-dark overflow-hidden shadow- lg:  border-primary/20 dark:border-primary/30 rounded-none  flex flex-col relative">
         {/* Main content */}
-        <div className="flex flex-col-reverse md:flex-row lg:flex-row h-auto lg:h-[600px] ">
+        <div className="flex flex-col-reverse md:flex-row lg:flex-row h-auto lg:h-[600px] px-0 md:px-4 ">
           {/* Left Side */}
-          <div className="w-full md:w-7/12 lg:w-5/12 p-8 lg:p-16 flex flex-col justify-center bg-background-light dark:bg-background-dark z-10 relative">
+          <div className="w-full md:w-7/12 lg:w-5/12 p-8 md:p-4 flex flex-col justify-center bg-background-light dark:bg-background-dark z-10 relative">
             <div className="w-16 h-1 bg-primary mb-6 lg:hidden"></div>
             <h3 className="text-red-900 font-bold text-base md:text-lg mb-4 tracking-wide uppercase dark:text-white">
               Best wishes from{" "}
@@ -31,7 +31,7 @@ const HolidayGreetingBanner = () => {
           </div>
 
           {/* Right Side */}
-          <div className="w-full lg:w-7/12 relative h-64 md:h-[400px] lg:h-auto overflow-hidden">
+          <div className="w-full lg:w-7/12 p-4 relative h-64 md:h-[400px] lg:h-auto overflow-hidden">
             <img
               alt="Christmas tree background with blurred lights"
               className="absolute inset-0 w-full h-full object-cover object-center"

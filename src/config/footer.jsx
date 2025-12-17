@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="border-t mt-8 w- border-primary/20 dark:border-primary/30">
-      <div className="mx-auto max-w-7xl px-8 md:px-12 py-12 md:flex md:items-center md:justify-between lg:px-8">
+      <div className="mx-auto max-w-7xl px-8 md:px-12 py-12 md:flex md:items-center md:justify-between lg:px-24">
         <div className="mt-0 md:order-1 md:mt-0 max-w-xs ">
           <img
             src="/logo1.png"

@@ -16,7 +16,7 @@ const mheSolutions = [
     ],
   },
   {
-    title: "ICE Forklift Truck",
+    title: "ICCB Forklift Truck",
     slug: "ice-forklift",
     desc: "Durable forklifts designed for outdoor and heavy-duty lifting operations.",
     img: "https://www.linde-mh.com/media/Global-Content/Landingpage-Forklift-Truck/LMH_Range_Portfolio_02_002_Small_16x9w1920.jpg",

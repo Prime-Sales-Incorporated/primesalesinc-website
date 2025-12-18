@@ -99,8 +99,10 @@ const IndustrialStorage = () => (
         Industrial Storage Solutions – Maximize Warehouse Efficiency
       </h1>
       <p className="mt-2 text-gray-600 dark:text-gray-300 text-sm md:text-base max-w-xl mx-auto">
-        Explore a wide range of pallet racking systems and storage solutions
-        designed for safety, efficiency, and high-density warehouse management.
+        Explore a wide range of pallet racking systems and warehouse storage
+        solutions from a trusted Philippine supplier, designed to maximize
+        space, improve safety, and support high-density warehouse operations
+        across the Philippines.
       </p>
     </div>
     {industrialStorageSolutions.map((solution, index) => (

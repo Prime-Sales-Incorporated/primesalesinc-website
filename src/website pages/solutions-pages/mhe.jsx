@@ -112,10 +112,12 @@ const MHESolutions = () => (
         Material Handling Equipment – Efficient Forklifts & Warehouse Tools
       </h1>
       <p className="mt-2 text-gray-600 dark:text-gray-300  text-sm md:text-base max-w-4xl mx-auto">
-        Prime Sales Incorporated offers a wide range of material handling
-        including electric forklifts, reach trucks, pallet stackers, and other
-        warehouse tools, designed to improve efficiency, safety, and
-        productivity in Philippine warehouses and logistics operations.
+        Prime Sales Incorporated is a leading material handling equipment
+        supplier in the Philippines, specializing in electric forklifts, reach
+        trucks, pallet stackers, and warehouse equipment. Our solutions are
+        designed to enhance warehouse efficiency, safety, and productivity for
+        logistics, manufacturing, and distribution operations across the
+        Philippines.
       </p>
     </div>
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Header from "../config/header";
 import Footer from "../config/footer";
 
@@ -10,11 +10,30 @@ export default function ContactPage() {
     return false;
   });
 
+  const handleSubmit = (e) => {
+    const checkedSolutions = Array.from(
+      e.target.querySelectorAll('input[name="solutions[]"]:checked')
+    ).map((el) => el.value);
+
+    const existing = e.target.querySelector('input[name="_subject"]');
+    if (existing) existing.remove();
+
+    const subjectInput = document.createElement("input");
+    subjectInput.type = "hidden";
+    subjectInput.name = "_subject";
+    subjectInput.value = checkedSolutions.length
+      ? `Inquiry: ${checkedSolutions.join(", ")}`
+      : "Inquiry: General Inquiry";
+
+    e.target.appendChild(subjectInput);
+  };
+
   return (
     <div className="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 min-h-screen flex flex-col">
       <main className="bg-white dark:bg-background-dark text-gray-900 dark:text-white font-sans antialiased transition-colors duration-200">
-        {/* Hero */}
         <Header dark={dark} setDark={setDark} />
+
+        {/* Hero */}
         <div className="relative bg-grid border-b border-gray-200 dark:border-gray-800">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white dark:to-background-dark pointer-events-none" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
@@ -27,9 +46,6 @@ export default function ContactPage() {
             <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-600 dark:text-gray-400">
               Got any questions about the product or scaling on our platform?
               We&apos;re here to help.
-              <br className="hidden sm:block" />
-              Chat to our friendly team 24/7 and get onboard in less than 5
-              minutes.
             </p>
           </div>
         </div>
@@ -39,13 +55,22 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
             {/* Form */}
             <div className="lg:col-span-7">
-              <form className="space-y-6">
+              <form
+                action="https://formspree.io/f/xeejjkpg"
+                method="POST"
+                className="space-y-6"
+                onSubmit={handleSubmit}
+              >
+                <input type="text" name="_gotcha" style={{ display: "none" }} />
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium mb-1">
                       First name
                     </label>
                     <input
+                      required
+                      name="First Name"
                       type="text"
                       placeholder="First name"
                       className="block w-full rounded-lg p-2 border border-gray-300 dark:border-slate-600 dark:bg-slate-800 py-2.5"
@@ -56,9 +81,11 @@ export default function ContactPage() {
                       Last name
                     </label>
                     <input
+                      required
+                      name="Last Name"
                       type="text"
                       placeholder="Last name"
-                      className="block w-full p-2 rounded-lg  border border-gray-300 dark:border-slate-600 dark:bg-slate-800 py-2.5"
+                      className="block w-full p-2 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-800 py-2.5"
                     />
                   </div>
                 </div>
@@ -68,9 +95,11 @@ export default function ContactPage() {
                     Email
                   </label>
                   <input
+                    required
+                    name="Email"
                     type="email"
                     placeholder="you@company.com"
-                    className="block w-full rounded-lg border-gray-300 border p-2 dark:border-slate-600 dark:bg-slate-800 py-2.5"
+                    className="block w-full rounded-lg border border-gray-300 p-2 dark:border-slate-600 dark:bg-slate-800 py-2.5"
                   />
                 </div>
 
@@ -85,9 +114,10 @@ export default function ContactPage() {
                       <option>EU</option>
                     </select>
                     <input
+                      name="Phone Number"
                       type="text"
                       placeholder="091758473291"
-                      className="block w-full rounded-lg border-gray-300 border pl-20 dark:border-slate-600 dark:bg-slate-800 py-2.5"
+                      className="block w-full rounded-lg border border-gray-300 pl-20 dark:border-slate-600 dark:bg-slate-800 py-2.5"
                     />
                   </div>
                 </div>
@@ -97,9 +127,10 @@ export default function ContactPage() {
                     Message
                   </label>
                   <textarea
+                    name="Message"
                     rows={4}
                     placeholder="Leave us a message..."
-                    className="block w-full rounded-lg p-2 border-gray-300 border dark:border-slate-600 dark:bg-slate-800 py-2.5"
+                    className="block w-full rounded-lg p-2 border border-gray-300 dark:border-slate-600 dark:bg-slate-800 py-2.5"
                   />
                 </div>
 
@@ -123,7 +154,12 @@ export default function ContactPage() {
                         key={item}
                         className="flex items-center gap-3 text-sm"
                       >
-                        <input type="checkbox" className="h-4 w-4" />
+                        <input
+                          type="checkbox"
+                          name="Inquiries"
+                          value={item}
+                          className="h-4 w-4"
+                        />
                         {item}
                       </label>
                     ))}
@@ -201,6 +237,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+
         <Footer />
       </main>
     </div>

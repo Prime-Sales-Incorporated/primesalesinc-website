@@ -68,6 +68,12 @@ function HeaderHome({ dark, setDark }) {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8 text-white/90 font-sans text-sm font-light">
           <a
+            href="/"
+            className="hover:text-white dark:hover:text-white hover:scale-105 transition-all duration-300"
+          >
+            Home
+          </a>
+          <a
             href="about"
             className="hover:text-white hover:scale-105 transition-all duration-300"
           >

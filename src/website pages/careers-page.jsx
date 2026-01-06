@@ -200,26 +200,26 @@ const CareersPage = () => {
                   title: "Health & Wellness",
                   text: "Comprehensive health insurance and wellness programs.",
                 },
-                {
-                  icon: "schedule",
-                  title: "Flexible Hours",
-                  text: "Flexible schedules and remote options.",
-                },
+                // {
+                //   icon: "schedule",
+                //   title: "Flexible Hours",
+                //   text: "Flexible schedules and remote options.",
+                // },
                 {
                   icon: "diversity_3",
                   title: "Team Events",
                   text: "Team‑building activities and social events.",
                 },
-                {
-                  icon: "rocket_launch",
-                  title: "Impactful Work",
-                  text: "Work on solutions shaping the logistics industry.",
-                },
-                {
-                  icon: "emoji_events",
-                  title: "Competitive Compensation",
-                  text: "Competitive salaries and performance bonuses.",
-                },
+                // {
+                //   icon: "rocket_launch",
+                //   title: "Impactful Work",
+                //   text: "Work on solutions shaping the logistics industry.",
+                // },
+                // {
+                //   icon: "emoji_events",
+                //   title: "Competitive Compensation",
+                //   text: "Competitive salaries and performance bonuses.",
+                // },
               ].map((b, i) => (
                 <div
                   key={i}

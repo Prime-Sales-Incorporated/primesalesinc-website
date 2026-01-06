@@ -16,6 +16,7 @@ import HeaderHome from "../config/header copy";
 import StatsCounter from "../sections/statsCounter";
 import { Helmet } from "react-helmet-async";
 import HolidayGreetingBanner from "../sections/banner";
+import VideoSection from "../sections/videosection";
 
 const WebsiteMain = () => {
   const [storyRef, storyVisible] = useInView();
@@ -268,7 +269,9 @@ const WebsiteMain = () => {
           </div>
         </div>
 
-        <HolidayGreetingBanner />
+        {/* <HolidayGreetingBanner /> */}
+
+        <VideoSection />
       </main>
 
       {/* Footer */}

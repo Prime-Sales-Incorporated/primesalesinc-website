@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "../../../config/header";
 import Footer from "../../../config/footer";
+import { Link } from "react-router-dom";
 
 export default function VNAProductList() {
   useEffect(() => {
@@ -29,13 +30,18 @@ export default function VNAProductList() {
   });
 
   return (
-    <div className="bg-background-light  dark:bg-background-dark text-gray-900 dark:text-white min-h-screen transition-colors duration-300">
+    <div className="bg-background-light p-8 dark:bg-background-dark text-gray-900 dark:text-white min-h-screen transition-colors duration-300">
       <Header dark={dark} setDark={setDark} />
       <div className="container mx-auto px-4 py-12">
+        <div className="mt-8">
+          <Link to="/solutions/mhe/" className="py-12 font- font-">
+            <span className="mt-16 text-green-500">View all Forklifts</span>
+          </Link>
+        </div>
         <header className="mb-12 text-center mt-8">
-          <h1 className="text-3xl font-bold mb-4 text-">Pallet Stackers</h1>
+          <h1 className="text-3xl font-bold mb-4 text-">Very Narrow Aisle</h1>
           <p className="text-text-secondary-light dark:text-text-secondary-dark max-w-2xl mx-auto text-">
-            Explore our range of high-performance pallet stackers designed for
+            Explore our range of high-performance very narrow aisle designed for
             efficiency and durability.
           </p>
         </header>

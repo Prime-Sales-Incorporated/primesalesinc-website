@@ -3,36 +3,124 @@ import { Helmet } from "react-helmet-async";
 
 const commercialSolutions = [
   {
-    title: "Retail Shelving Systems",
-    desc: "Stylish and modular display systems for modern retail environments.",
-    img: "https://images.unsplash.com/photo-1593085512428-5cc0f42b3c95",
+    title: "Electrical mobile shelving",
+    desc: "High-efficiency mobile shelving powered by electric motors, designed to maximize storage capacity with minimal effort.",
+    img: "https://bruynzeel-storage.com/storage/17112/conversions/5.-Mobile-storage-systems-for-archives---Compactus┬«-Dynamic-II-overview.jpg",
     applications: [
-      "Used in supermarkets, pharmacies, and showrooms.",
-      "Customizable configurations and finishes.",
-      "Supports both light and heavy merchandise.",
-      "Designed for aesthetic and durability.",
+      "Ideal for archives, offices, and high-density storage areas.",
+      "Reduces floor space while increasing storage capacity.",
+      "Motorized movement for easy access to stored items.",
+      "Customizable to fit different shelving heights and widths.",
     ],
   },
   {
-    title: "Parking Barriers",
-    desc: "Automatic barriers and gates for secure and efficient parking control.",
-    img: "https://images.unsplash.com/photo-1617687617038-f07f6d1f5149",
+    title: "Mechanical mobile shelving",
+    desc: "Space-saving shelving systems operated manually, combining durability with easy access and flexible configurations.",
+    img: "https://bruynzeel-storage.com/storage/653/conversions/Smart-warehousing-nieuw-default.jpg",
     applications: [
-      "Deployed in parking lots and gated facilities.",
-      "Supports RFID, ticketing, or sensor systems.",
-      "Weatherproof and low maintenance.",
-      "Improves security and access control.",
+      "Perfect for warehouses, libraries, and storage rooms.",
+      "Manual crank system allows smooth movement.",
+      "Optimizes storage density without electricity.",
+      "Robust construction for heavy-duty use.",
     ],
   },
   {
-    title: "Rolling Shutters",
-    desc: "Heavy-duty shutters for storefronts and industrial applications.",
-    img: "https://images.unsplash.com/photo-1623394213591-1f4d0a6f7f29",
+    title: "Static shelving",
+    desc: "Traditional stationary shelving for versatile and reliable storage of a wide range of items.",
+    img: "https://bruynzeel-storage.com/storage/12329/conversions/Archive_static_sysco-default.jpg",
     applications: [
-      "Provides security for warehouses and shops.",
-      "Available in manual or motorized types.",
-      "Made with galvanized or stainless steel slats.",
-      "Resists impact, weather, and corrosion.",
+      "Used in offices, warehouses, and retail backrooms.",
+      "Supports light to heavy items with strong, stable construction.",
+      "Easily configurable to different shelf heights.",
+      "Durable and low maintenance solution.",
+    ],
+  },
+  {
+    title: "Art racks",
+    desc: "Specialized storage racks designed to safely store and protect artwork, prints, and fragile items.",
+    img: "https://bruynzeel-storage.com/storage/17114/conversions/ArteStore-Terra-5_Bruynzeel-Storage-Systems_Boijmans-Van-Beuningen_©Ossip-van-Duivenbode-overview.jpg",
+    applications: [
+      "Ideal for museums, galleries, and art storage facilities.",
+      "Maximizes storage while minimizing handling damage.",
+      "Adjustable racks for different artwork sizes.",
+      "Protects sensitive materials from environmental damage.",
+    ],
+  },
+  {
+    title: "Library shelving",
+    desc: "Optimized shelving solutions for libraries and archives, ensuring accessibility and organized storage.",
+    img: "https://bruynzeel-storage.com/storage/604/conversions/Library-default.jpg",
+    applications: [
+      "Supports books, magazines, and media collections.",
+      "Can be static or mobile to save space.",
+      "Durable and modular for future expansion.",
+      "Enhances library organization and user accessibility.",
+    ],
+  },
+  {
+    title: "Double decker shelving",
+    desc: "Maximizes vertical storage space with multi-level shelving, ideal for high-density storage environments.",
+    img: "https://bruynzeel-storage.com/storage/12798/conversions/Compactus-Double-Decker_Bruynzeel-Storage-Systems_Amsab-overview.jpg",
+    applications: [
+      "Perfect for warehouses and large storage rooms.",
+      "Two levels of shelving increase storage capacity without extra floor space.",
+      "Strong construction supports heavy loads.",
+      "Customizable layouts to optimize space utilization.",
+    ],
+  },
+  {
+    title: "Compactus XTR",
+    desc: "High-performance mobile shelving system designed for heavy-duty and high-density storage applications.",
+    img: "https://bruynzeel-storage.com/storage/12651/conversions/Project-462_EdenRavenscroft-03-default.jpg",
+    applications: [
+      "Ideal for offices, archives, and industrial storage.",
+      "Motorized system ensures smooth, effortless operation.",
+      "Optimizes storage space while keeping items easily accessible.",
+      "Customizable configurations and safety features included.",
+    ],
+  },
+  {
+    title: "Compactus XT",
+    desc: "Advanced mobile shelving system combining durability, high capacity, and efficient access for professional storage solutions.",
+    img: "https://bruynzeel-storage.com/storage/12480/conversions/Saab-large-default.jpg",
+    applications: [
+      "Suitable for offices, museums, and industrial environments.",
+      "Motorized movement for quick access to stored items.",
+      "Maximizes storage density with minimal footprint.",
+      "Built for heavy loads and frequent use.",
+    ],
+  },
+  {
+    title: "Hörmann Steel Doors",
+    desc: "Robust steel doors designed for security, durability, and long-lasting performance in commercial and industrial buildings.",
+    img: "https://shaktihormann.com/wp-content/uploads/2022/12/DSC_7480_RD.jpg", // placeholder, you can replace with actual
+    applications: [
+      "Ideal for warehouses, factories, and commercial premises.",
+      "Provides high-level security and resistance to impact.",
+      "Available in multiple finishes and sizes.",
+      "Low maintenance and long service life.",
+    ],
+  },
+  {
+    title: "Hörmann Multi-Purpose Steel Doors",
+    desc: "Versatile steel doors suitable for a wide range of applications, combining functionality, strength, and reliability.",
+    img: "https://images.hoermann-cloud.de/landingpages/de/Neuheiten_2023/Collage-Stahltu__r-ZK-Mehrzweck-3x2.jpg?auto=compress%2Cformat&ixlib=php-4.1.0&q=70&s=77b1a804da21bf2aea4146dbc022e126", // placeholder
+    applications: [
+      "Used in industrial, commercial, and institutional buildings.",
+      "Can be customized for different security and insulation requirements.",
+      "Durable steel construction with modern design.",
+      "Suitable for high-traffic entrances.",
+    ],
+  },
+  {
+    title: "Hörmann Fire-Rated Doors",
+    desc: "Specialized steel doors offering fire protection, ensuring safety and compliance with building regulations.",
+    img: "https://images.hoermann-cloud.de/landingpages/de/Neuheiten_2023/070T_DHH_Souterrain_TM1.jpg?auto=compress%2Cformat&ixlib=php-4.1.0&q=70&rect=370%2C318%2C3808%2C2539&s=bde66782352a4d4edc0ea137387a3a6a", // placeholder
+    applications: [
+      "Used in commercial buildings, warehouses, and fire-rated zones.",
+      "Resistant to fire for certified durations (e.g., 30–120 minutes).",
+      "Supports safety regulations and emergency planning.",
+      "Available in various sizes and finishes for different applications.",
     ],
   },
 ];

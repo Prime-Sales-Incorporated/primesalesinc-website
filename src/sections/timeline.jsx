@@ -86,7 +86,7 @@ const timelineData = [
 
 const TimelineItem = ({ year, text, imageLight, imageDark, active, dark }) => (
   <div
-    className="relative flex gap-6 items-start"
+    className="relative max-w-[18em] md:max-w-sm flex gap-6 items-start"
     style={{ minHeight: "96px" }}
   >
     <div
@@ -94,11 +94,11 @@ const TimelineItem = ({ year, text, imageLight, imageDark, active, dark }) => (
         active
           ? "bg-green-500 border-green-500"
           : dark
-          ? "bg-gray-700 border-gray-600"
-          : "bg-gray-300 border-gray-400"
+            ? "bg-gray-700 border-gray-600"
+            : "bg-gray-300 border-gray-400"
       }`}
     />
-    <div className="">
+    <div className="w-full">
       <h3
         className={`font-bold text-lg  transition-colors duration-500 ${
           active ? "text-green-400" : dark ? "text-gray-300" : "text-gray-700"
@@ -193,7 +193,7 @@ const Timeline = ({ dark, onEndReached }) => {
             className="absolute top-0 left-[-18px] w-12 "
             style={{ y: 0 }}
             animate={{
-              y: `calc(${scrollPercent * 3000}% - 5px)`, // 👈 follows bottom of green line
+              y: `calc(${scrollPercent * 3100}% - 0px)`, // 👈 follows bottom of green line
             }}
             transition={{ type: "spring", stiffness: 50, damping: 20 }}
           />

@@ -107,7 +107,7 @@ const WebsiteMain = () => {
               providing intralogistics solutions for both the dry and cold chain
               industries. Partnering with global manufacturers, PSI offers
               services such as warehouse design, storage systems, and
-              after-sales support. With over 40 years of industry experience,
+              after-sales support. With over 49 years of industry experience,
               PSI has built a strong reputation and collaborates with proven
               global partners to deliver efficient intralogistics and supply
               chain solutions in the Philippines.

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../config/header";
 import Footer from "../config/footer";
+import { Link } from "react-router-dom";
 
 export default function ContactPage() {
   const [dark, setDark] = useState(() => {
@@ -12,7 +13,7 @@ export default function ContactPage() {
 
   const handleSubmit = (e) => {
     const checkedSolutions = Array.from(
-      e.target.querySelectorAll('input[name="solutions[]"]:checked')
+      e.target.querySelectorAll('input[name="solutions[]"]:checked'),
     ).map((el) => el.value);
 
     const existing = e.target.querySelector('input[name="_subject"]');
@@ -197,17 +198,29 @@ export default function ContactPage() {
                         </li>
                         <li className="flex items-center gap-2">
                           Message us on
-                          <img
-                            src="/fb.png"
-                            alt="Facebook"
-                            className="w-4 h-4"
-                          />
+                          <a
+                            href="https://www.facebook.com/primesalesofficial/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img
+                              src="/fb.png"
+                              alt="Facebook"
+                              className="w-4 h-4"
+                            />
+                          </a>
                           or
-                          <img
-                            src="/ig.png"
-                            alt="Facebook"
-                            className="w-4 h-4"
-                          />
+                          <a
+                            href="https://www.instagram.com/primesalesincorporated/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img
+                              src="/ig.png"
+                              alt="Facebook"
+                              className="w-4 h-4"
+                            />
+                          </a>
                         </li>
                       </ul>
                     </div>

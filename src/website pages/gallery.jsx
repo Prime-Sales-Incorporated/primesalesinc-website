@@ -67,7 +67,7 @@ export default function Gallery() {
 
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-            Our <span className="text-green-500">Solutions</span>
+            Our <span className="text-green-500">Gallery</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-300 mt-2">
             Explore our commitment to innovation and operational excellence.

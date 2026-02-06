@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
             <h3 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
               Unlocking Efficiency in Your Supply Chain
             </h3>
-            <p className="text-gray-600 text-sm md:text-base dark:text-gray-400 mb-8">
+            <p className="text-gray-600 text-sm md:text-base dark:text-gray-300 mb-8">
               We are dedicated to providing innovative and reliable
               intralogistics solutions. Our commitment to excellence ensures
               that we deliver tailored systems that meet your specific needs,
@@ -54,7 +54,7 @@ const WhyChooseUs = () => {
                     40+ Years of{" "}
                     <span className="text-green-500">Experience</span>
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-400 mt-1 text-sm md:text-base">
+                  <p className="text-gray-600 dark:text-gray-300 mt-1 text-sm md:text-base">
                     Leveraging decades of industry expertise to deliver proven
                     and reliable solutions.
                   </p>
@@ -73,7 +73,7 @@ const WhyChooseUs = () => {
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                     After Sales <span className="text-green-500">Service</span>
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-400 mt-1 text-sm md:text-base">
+                  <p className="text-gray-600 dark:text-gray-300 mt-1 text-sm md:text-base">
                     We build long-term relationships through consistent,
                     high-quality after-sales service and dedicated customer
                     care.
@@ -95,7 +95,7 @@ const WhyChooseUs = () => {
                     Trusted{" "}
                     <span className="text-green-500">Global Partners</span>
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-400 mt-1 text-sm md:text-base">
+                  <p className="text-gray-600 dark:text-gray-300 mt-1 text-sm md:text-base">
                     Collaborating with world-renowned partners to bring you
                     cutting-edge technology.
                   </p>
@@ -115,7 +115,7 @@ const WhyChooseUs = () => {
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                     Customized <span className="text-green-500">Solutions</span>
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-400 mt-1 text-sm md:text-base">
+                  <p className="text-gray-600 dark:text-gray-300 mt-1 text-sm md:text-base">
                     Designing and implementing tailored intralogistics systems
                     to fit your unique operational needs.
                   </p>
@@ -134,7 +134,7 @@ const WhyChooseUs = () => {
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                     End-to-End <span className="text-green-500">Support</span>
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-400 mt-1 text-sm md:text-base">
+                  <p className="text-gray-600 dark:text-gray-300 mt-1 text-sm md:text-base">
                     From consultation and design to installation and
                     maintenance, we provide complete lifecycle support to ensure
                     long-term performance.

@@ -17,6 +17,7 @@ import StatsCounter from "../sections/statsCounter";
 import { Helmet } from "react-helmet-async";
 import HolidayGreetingBanner from "../sections/banner";
 import VideoSection from "../sections/videosection";
+import OurStoryHome from "../sections/story";
 
 const WebsiteMain = () => {
   const [storyRef, storyVisible] = useInView();
@@ -80,7 +81,7 @@ const WebsiteMain = () => {
               className={`absolute bottom-0 left-0 right-0 h-[50%] transition-all duration-700 ${
                 dark
                   ? "bg-gradient-to-t from-[#101922] via-[#101922]/60 to-transparent"
-                  : "bg-gradient-to-t from-[#f6f7f8] via-[#f6f7f8]/30 to-transparent"
+                  : "bg-gradient-to-t from-[#f6f7f8] via-[#f6f7f8]/30 to-transparent "
               }`}
             ></div>
           </div>
@@ -117,7 +118,7 @@ const WebsiteMain = () => {
 
         {/* OUR STORY */}
         <div className="px-4 py-0 sm:px-6 sm:py-0 lg:px-8 transition-all duration-700 ease-out ">
-          <section className="text-center py-12">
+          <section className="text-center py-0">
             {/* <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
               About <span className="text-green-500">PSI</span>
             </h2> */}
@@ -129,12 +130,12 @@ const WebsiteMain = () => {
               synergy with proven global partners to offer strong and efficient
               supply chain solutions in the country.
             </p> */}
-
+            {/* <OurStoryHome /> */}
             <div className="mt-0  md:mt-8 grid gap-6 sm:grid-cols-2 xl:px-4  2xl:px-16">
               {[
                 {
-                  title: "Our Story",
-                  desc: "Prime Sales Inc. (PSI) founded in 1976, is a leading supplier of intelligent intralogistics solution for dry and cold chain applications in the Philippines. Exemplifying remarkable reputation for more than 40 years in the industry, PSI works in synergy with proven global partners to offer strong and efficient supply chain solutions in the country.",
+                  title: "Our Commitment",
+                  desc: "At Prime Sales Inc., your long-term operational success is our foremost priority. We back our intralogistics systems with comprehensive technical support and preventive maintenance services designed to maximize uptime and efficiency. We combine quality equipment with expert support to keep your operations seamless and productive.",
                 },
                 {
                   title: "Our Mission & Vision",
@@ -155,7 +156,7 @@ const WebsiteMain = () => {
               ))}
             </div>
           </section>
-
+          <OurStoryHome />
           {/* Features */}
           <section className="mt-8 text-center xl:px-4  2xl:px-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">

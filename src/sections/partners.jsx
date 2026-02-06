@@ -64,7 +64,7 @@ const PartnersCarousel = () => {
   const extended = [...partners, ...partners];
 
   return (
-    <section className="py-8 bg-bg-light dark:bg-bg-dark overflow-hidden">
+    <section className="py-8 bg-bg-light dark:bg-bg-dark overflow-hidden w-full">
       <div className="w-full mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-text-light dark:text-text-dark mb-8 flex items-center justify-center gap-2">
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
@@ -78,7 +78,7 @@ const PartnersCarousel = () => {
             {extended.map((partner, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center min-w-[160px] rounded-2xl p-6"
+                className="flex items-center justify-center min-w-[240px] rounded-2xl p-6"
               >
                 <img
                   src={partner.logo}

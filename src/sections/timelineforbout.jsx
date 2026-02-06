@@ -94,8 +94,8 @@ const TimelineItem = ({ year, text, imageLight, imageDark, active, dark }) => (
         active
           ? "bg-green-500 border-green-500"
           : dark
-          ? "bg-gray-700 border-gray-600"
-          : "bg-gray-300 border-gray-400"
+            ? "bg-gray-700 border-gray-600"
+            : "bg-gray-300 border-gray-400"
       }`}
     />
     <div className="">
@@ -171,7 +171,7 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
 
   return (
     <div
-      className={`relative flex justify-center py-10 min-h-screen mb-8 ${
+      className={`relative flex justify-center py-10  mb-8 ${
         dark ? "bg-[#101922] text-white" : "bg-[#f6f7f8] text-gray-900"
       }`}
     >
@@ -207,7 +207,7 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
             animate={{
               y: Math.min(
                 scrollPercent * containerHeight,
-                containerHeight - 40
+                containerHeight - 40,
               ),
             }}
             transition={{ type: "spring", stiffness: 45, damping: 20 }}

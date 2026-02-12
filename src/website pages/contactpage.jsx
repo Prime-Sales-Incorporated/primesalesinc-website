@@ -31,7 +31,7 @@ export default function ContactPage() {
 
   return (
     <div className="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 min-h-screen flex flex-col">
-      <main className="bg-white dark:bg-background-dark text-gray-900 dark:text-white font-sans antialiased transition-colors duration-200">
+      <main className="bg-white dark:bg-background-dark text-gray-900 dark:text-white font-sans antialiased ">
         <Header dark={dark} setDark={setDark} />
 
         {/* Hero */}
@@ -137,7 +137,7 @@ export default function ContactPage() {
 
                 <div>
                   <label className="block text-sm font-medium mb-3">
-                    Solutions
+                    Please check the solutions you are interested in:
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {[

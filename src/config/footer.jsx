@@ -22,7 +22,7 @@ const Footer = () => {
             in the Philippines.
           </p>
           <p className="text-center hidden md:flex text-xs leading-5 text-gray-500 dark:text-gray-400 mt-8">
-            © 2025 Prime Sales. All rights reserved.
+            © 2026 Prime Sales. All rights reserved.
           </p>
         </div>
 
@@ -138,7 +138,7 @@ const Footer = () => {
           </div> */}
         </div>
         <p className="text-center block md:hidden text-xs leading-5 text-gray-500 dark:text-gray-400 mt-8">
-          © 2025 Prime Sales. All rights reserved.
+          © 2026 Prime Sales. All rights reserved.
         </p>
       </div>
     </footer>

@@ -101,7 +101,7 @@ export default function ICCBTrucksProductListing() {
 
                 <div className="space-y-2 mb-8 text-text-secondary-light dark:text-text-secondary-dark">
                   <div className="flex items-center">
-                    <span className=" text-xs md:text-base material-symbols-outlined mr-2 text-">
+                    <span className=" text-xs md:text-base text-green-500 material-symbols-outlined mr-2 text-">
                       weight
                     </span>
                     <span className="text-xs md:text-lg font-medium text-">
@@ -109,8 +109,8 @@ export default function ICCBTrucksProductListing() {
                     </span>
                   </div>
                   <div className="flex items-center">
-                    <span className=" text-xs md:text-base material-symbols-outlined mr-2 text-">
-                      upload
+                    <span className="text-green-500 text-xs md:text-base material-symbols-outlined mr-2 text-">
+                      height
                     </span>
                     <span className="text-xs md:text-lg font-medium text-wite">
                       {p.height}
@@ -119,8 +119,11 @@ export default function ICCBTrucksProductListing() {
                 </div>
 
                 <div className="absolute -bottom-5 right-8">
-                  <button className="bg-green-500 hover:bg-red-800 text- py-2 px-6 shadow-md transition-colors">
+                  <button class="bg-green-500 hover:bg-green-600 text-background-dark px-6 py-2 rounded-lg font-bold text-sm flex items-center gap-2 transition-colors">
                     Details
+                    <span class="material-symbols-outlined text-sm">
+                      arrow_forward
+                    </span>
                   </button>
                 </div>
               </div>

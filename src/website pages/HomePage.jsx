@@ -133,13 +133,19 @@ const WebsiteMain = () => {
             {/* <OurStoryHome /> */}
             <div className="mt-0  md:mt-8 grid gap-6 sm:grid-cols-2 xl:px-4  2xl:px-16">
               {[
+                // {
+                //   title: "Our Commitment",
+                //   desc: "At Prime Sales Inc., your long-term operational success is our foremost priority. We back our intralogistics systems with comprehensive technical support and preventive maintenance services designed to maximize uptime and efficiency. We combine quality equipment with expert support to keep your operations seamless and productive.",
+                // },
                 {
-                  title: "Our Commitment",
-                  desc: "At Prime Sales Inc., your long-term operational success is our foremost priority. We back our intralogistics systems with comprehensive technical support and preventive maintenance services designed to maximize uptime and efficiency. We combine quality equipment with expert support to keep your operations seamless and productive.",
+                  title: "Our Mission",
+                  desc: "Prime Sales, Inc. strives to be your dynamic business partner commited to provide cost-effective solutions ensuring customer satisfaction.",
                 },
                 {
-                  title: "Our Mission & Vision",
-                  desc: "Prime Sales Inc. is your dynamic business partner committed to provide cost-effective solutions to ensure customer satisfaction.",
+                  title: "Our Vision ",
+                  desc: "'Lead and Spark Challenge'",
+                  subdesc:
+                    "As a trailblazer, Prime Sales Incorporated recognizes the megatrends and challenges that transform the supply chain of today and beyond",
                 },
               ].map((item, i) => (
                 <div
@@ -149,8 +155,10 @@ const WebsiteMain = () => {
                   <h3 className="text-xl font-semibold text-green-500 mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm md:text-base text-gray-600 dark:text-gray-300">
+                  <p className="text-sm md:text-base flex-col flex text-gray-600 dark:text-gray-300">
                     {item.desc}
+
+                    <span>{item.subdesc}</span>
                   </p>
                 </div>
               ))}

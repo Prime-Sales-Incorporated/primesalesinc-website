@@ -7,7 +7,7 @@ const mheSolutions = [
     title: "Electric Forklift Truck",
     slug: "electric-forklift",
     desc: "Efficient and reliable forklifts for various material handling needs.",
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuC_vw9NEPHJp7s3azmXzhzd00bTrCQGZ2c1ZAD5e2-aEyYniVjTCf9XAW-eiAQ_dCxgPl_PxIUA57KiDZ02WDjEhDcDoNsAa2N5Ehniin0vIkKB43SPG5uurQMmC_gi7ccKy--nbmRTXselEQklN5AESR-QxnEkCucuxrQh9YPVlJfzfhwdkTHm6UbrT3sbfSeC6nkaUl9KNFZ1VGthZS2m_1gQ9hOBbycXju-Wfcij5iWNSgg3Gac7D0OF2O0jfWh3TiZIQofBwCg",
+    img: "/forklift.jpg",
     applications: [
       "Ideal for indoor warehousing with zero-emission operation.",
       "Used in manufacturing lines and logistics hubs.",

@@ -19,7 +19,7 @@ const OurSolutions = () => {
     },
     {
       title: "Material Handling Equipment",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuATOnPlS6_h1gQHBxebXeHQ65NaJbuzE9WWEXhMj-Inc5ncODptXaj4QDgF05LEJ0dN609FyDQlQU05aLKlgvZLEzLe5-U3ECLktbo-1YTIezHRFW1nmWF8b2yh6yGvYMdh03-XSWDrv1Gg16SVcP79LEDxIjZW89lu3ApyXieFFh1a5VOTDs93reQVwD45DJ5jZPFNXyGxrjGC8NYZIthDrUmTDhYHvQW-oV_yrkA1huasJYkPmjp9aQhoDtN5qOm9WcpM9Xk6dkE",
+      img: "/forklift.jpg",
       desc: "A complete lineup of material handling equipment, including forklifts, reach trucks, order pickers, pallet movers, stackers, and very narrow aisle trucks, engineered to deliver efficient and reliable performance across all industries.",
       video: "/mhe.mp4",
       tab: "MHE",

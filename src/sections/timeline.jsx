@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 const timelineData = [
   {
     year: "1976",
-    text: "Prime Sales Inc. started as an insulation company using aluminum foil.",
+    text: "Established as an insulationcompany offering InsulatedPanels for warehouses",
     imageLight: "/1.png",
 
     imageDark: "/1.png",
   },
   {
     year: "1978",
-    text: "Transitioned to insulated sandwich panel.",
+    text: "Transitioned to pre fabricatedinsulated panels.",
     imageLight:
       "https://cycleworld.com.my/wp-content/uploads/2020/11/CWP-%E2%80%93-1-3.jpg",
 
@@ -20,7 +20,7 @@ const timelineData = [
   },
   {
     year: "1986",
-    text: "Introduced “Racking System” as a storage solution.",
+    text: "Introduced Rackingsystems to our product lineup",
     imageLight:
       "https://www.dexion.com/contentassets/9101ec80c33649f18be836f70e8deb22/dsc_0078-2.jpg?w=720&quality=50",
 
@@ -29,12 +29,22 @@ const timelineData = [
   },
   {
     year: "1988",
-    text: "Added “Battery Operated Lift Truck” in the product portfolio.",
+    text: "Added Material HandlingEquipment (MHE) in the portfolio",
     imageLight:
       "https://www.lindemhe.com/wp-content/uploads/2017/04/electric-4-wheel-truck-2-5-3-5ton.jpg",
 
     imageDark:
       "https://www.lindemhe.com/wp-content/uploads/2017/04/electric-4-wheel-truck-2-5-3-5ton.jpg",
+  },
+
+  {
+    year: "2004",
+    text: "Office archiving and storage solutions under Prime Commercial Solutions",
+    imageLight:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThn53_33ZkcR-WcaFw5ixQqYukDk65kbaJAw&s",
+
+    imageDark:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThn53_33ZkcR-WcaFw5ixQqYukDk65kbaJAw&s",
   },
   {
     year: "2008",
@@ -47,7 +57,7 @@ const timelineData = [
   },
   {
     year: "2009",
-    text: "Completed the materials handling line by adding Internal Combustion Engine Forklifts.",
+    text: "Expanded the product lineup to include plastic pallets",
     imageLight:
       "https://elevex.ca/wp-content/uploads/2019/01/Linde-1319-series.jpg",
 
@@ -56,7 +66,7 @@ const timelineData = [
   },
   {
     year: "2013",
-    text: "PSI ventured as an exclusive distributor of warehouse automation technology in the country. ",
+    text: "PSI ventured as an exclusivedistributor of warehouse automation technology in the country. ",
 
     imageLight: "/venture.png",
 
@@ -64,7 +74,7 @@ const timelineData = [
   },
   {
     year: "2015",
-    text: "Warehouse Management Software for better supply chain visibility and performance",
+    text: "Warehouse Management Softwaredesigned to enhance supply chain visibility and drive more efficient operations",
     imageLight: "/wms.png",
 
     imageDark: "/wms.png",
@@ -81,6 +91,33 @@ const timelineData = [
     text: "Prime Sales Inc. established its sister company, Optichain Solutions Inc. to offer material handling and industrial storage solutions to booming midrange market.",
     imageLight: "/6.png",
     imageDark: "/6.png",
+  },
+
+  {
+    year: "2022",
+    text: "Comprehensive solutions for printers and barcode scanners to support operational accuracy.",
+    imageLight:
+      "https://grandtechintlonline.com/images/products/images/VOYAGER%201250G.png",
+    imageDark:
+      "https://grandtechintlonline.com/images/products/images/VOYAGER%201250G.png",
+  },
+
+  {
+    year: "2025",
+    text: "Automated storage solutions featuring Vertical Lift Modules (VLM) and Carousel Systems.",
+    imageLight:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8OCI_YTDlOpOx7vooFBPLZSEV4MbFkXHfZQ&s",
+    imageDark:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8OCI_YTDlOpOx7vooFBPLZSEV4MbFkXHfZQ&s",
+  },
+
+  {
+    year: "2026",
+    text: "Business Solutions offering rental services for pallets, racking, and MHE.",
+    imageLight:
+      "https://cdn.prod.website-files.com/683544d285b4afc041a4bc3b/6850fee35cb09a438b2a2563_Efficient-Warehouse-Operations-.jpeg",
+    imageDark:
+      "https://cdn.prod.website-files.com/683544d285b4afc041a4bc3b/6850fee35cb09a438b2a2563_Efficient-Warehouse-Operations-.jpeg",
   },
 ];
 
@@ -182,7 +219,7 @@ const Timeline = ({ dark, onEndReached }) => {
           {/* Green progress line */}
           <motion.div
             className="absolute left-[6px] top-0 w-[2px] bg-green-500 rounded-full origin-top"
-            animate={{ height: `${scrollPercent * 100}%` }}
+            animate={{ height: `${scrollPercent * 72}%` }}
             transition={{ type: "spring", stiffness: 50, damping: 20 }}
           />
 
@@ -193,7 +230,7 @@ const Timeline = ({ dark, onEndReached }) => {
             className="absolute top-0 left-[-18px] w-12 "
             style={{ y: 0 }}
             animate={{
-              y: `calc(${scrollPercent * 3100}% - 0px)`, // 👈 follows bottom of green line
+              y: `calc(${scrollPercent * 3200}% - 0px)`, // 👈 follows bottom of green line
             }}
             transition={{ type: "spring", stiffness: 50, damping: 20 }}
           />

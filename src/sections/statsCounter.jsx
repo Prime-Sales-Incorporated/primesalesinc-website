@@ -4,7 +4,7 @@ export default function StatsCounter({ visible }) {
   const stats = [
     { label: "ESTABLISHED", value: 1976 },
     { label: "PROJECTS COMPLETED", value: 500 },
-    { label: "YEARS OF EXPERIENCE", value: 49 },
+    { label: "YEARS OF EXPERIENCE", value: 50 },
     { label: "NATIONS SERVED", value: 16 },
   ];
 

@@ -38,7 +38,7 @@ const OurStoryHome = () => {
 
             <div className="flex items-center gap-6 pt-4">
               <div>
-                <div className="text-3xl font-bold text-primary">49</div>
+                <div className="text-3xl font-bold text-primary">50</div>
                 <div className="text-xs uppercase tracking-wider font-semibold opacity-60">
                   Years Experience
                 </div>

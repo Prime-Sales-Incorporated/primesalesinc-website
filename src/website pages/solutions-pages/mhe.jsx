@@ -129,7 +129,7 @@ const MHESolutions = () => (
       ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
         >
           <div
-            className="w-full md:w-1/2 h-56 sm:h-64 md:h-[32em] bg-center bg-cover"
+            className="w-full md:w-1/2 h-56 sm:h-64 md:h-[18em] bg-center bg-cover"
             style={{ backgroundImage: `url(${solution.img})` }}
           />
 

@@ -36,7 +36,7 @@ const WMSSolutions = () => (
       bg-background-light dark:bg-background-dark shadow-md hover:shadow-lg"
     >
       <div
-        className="w-full md:w-1/2 h-56 sm:h-64 md:h-[32em] bg-center bg-cover"
+        className="w-full md:w-1/2 h-56 sm:h-64 md:h-[18em] bg-center bg-cover"
         style={{
           backgroundImage: `url(https://images2.cmp.optimizely.com/assets/Insight-promotion-state-of-warehouse-operations-2024/Zz02ZDk1ZDliNDJkOGMxMWVmOGIxYTJlZDEwMzFmODk2ZA==?w=1056&h=594&format=webp)`,
         }}

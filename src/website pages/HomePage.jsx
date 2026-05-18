@@ -95,13 +95,13 @@ const WebsiteMain = () => {
               PRIME <span className="text-green-500">SALES Inc.</span>
             </h1> */}
 
-            <div className="justify-center flex ">
+            {/* <div className="justify-center flex ">
               <img
                 src="/logo1.png"
                 alt="Prime Sales Inc. Logo"
                 className="justify-center flex h-24 md:h-32 md:w-64 mb-8  opacity-0 animate-fadeInUp"
               />
-            </div>
+            </div> */}
 
             <p className="   md:text-xl font-sans font-light leading-relaxed max-w-3xl lg:max-w-4xl mx-auto text-sm text-gray-300 opacity-0 animate-fadeInUp [animation-delay:0.3s]">
               Prime Sales Inc. (PSI), founded in 1976, is a Philippine company

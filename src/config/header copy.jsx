@@ -37,13 +37,17 @@ function HeaderHome({ dark, setDark }) {
         {/* Logo */}
         <Link to="/">
           <div className="text-white font-serif text-xl flex items-center">
-            <img src="/logo1.png" alt="Prime Sales Logo" className="h-8 w-16" />
+            <img
+              src="/logo1.png"
+              alt="Prime Sales Logo"
+              className="h-12 w-24"
+            />
           </div>
         </Link>
 
         {/* Dark Mode Toggle (Desktop) */}
         <div
-          className={`absolute top-5 right-4 hidden md:flex items-center justify-between w-12 h-6 p-1 rounded-full cursor-pointer transition-colors duration-300 ${
+          className={`absolute top-6 right-6 hidden md:flex items-center justify-between w-12 h-6 p-1 rounded-full cursor-pointer transition-colors duration-300 ${
             dark ? "bg-gray-800" : "bg-gray-800"
           }`}
           onClick={() => setDark(!dark)}

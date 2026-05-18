@@ -40,7 +40,7 @@ function Header({ dark, setDark }) {
             <img src="/logo1.png" alt="Prime Sales Logo" className="h-8 w-16" />
           </div>
           <div className="text-white font-serif text-xl dark:hidden items-center flex">
-            <img src="/logo.png" alt="Prime Sales Logo" className="h-8 w-16" />
+            <img src="/logo.png" alt="Prime Sales Logo" className="h-16 w-24" />
           </div>
         </Link>
 

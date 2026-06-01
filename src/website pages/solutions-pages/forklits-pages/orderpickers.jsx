@@ -105,7 +105,7 @@ export default function OrderPickersProductList() {
               <br />
               <span className="text-[#38bdf8]">Pickers.</span>
             </h1>
-
+            {/* sample */}
             <p className="text-white/55 text-sm md:text-base max-w-lg mb-10 leading-relaxed">
               From low-level floor picking to high-reach aisle operations —
               precision-engineered for fast, accurate order fulfillment at every

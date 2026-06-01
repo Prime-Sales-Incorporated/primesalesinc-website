@@ -21,7 +21,10 @@ body {
   overflow-x: hidden;
 }
 .text-shadow-glow {
-  text-shadow: 0 0 8px #22c55e, 0 0 12px #22c55e, 0 0 20px #22c55e;
+  text-shadow:
+    0 0 8px #22c55e,
+    0 0 12px #22c55e,
+    0 0 20px #22c55e;
 }
 @keyframes float {
   0%,
@@ -51,4 +54,16 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+/* Hide scrollbar but keep scrolling */
+html,
+body {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE & Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome / Safari */
 }

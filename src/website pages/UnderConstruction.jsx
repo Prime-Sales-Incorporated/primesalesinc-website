@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Construction, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import Header from "../config/header";
+import HeaderHome from "../config/header copy";
 
 const UnderConstruction = () => {
   const [dark, setDark] = useState(() => {
@@ -19,7 +20,7 @@ const UnderConstruction = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen dark:bg-background-dark bg-background-light text-gray-800">
-      <Header dark={dark} setDark={setDark} />
+      <HeaderHome dark={dark} setDark={setDark} />
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}

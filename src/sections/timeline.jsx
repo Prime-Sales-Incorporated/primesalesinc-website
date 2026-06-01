@@ -196,7 +196,7 @@ const Timeline = ({ dark, onEndReached }) => {
   return (
     <div
       className={`relative flex justify-center py-10  mb-8 ${
-        dark ? "bg-[#101922] text-white" : "bg-[#f6f7f8] text-gray-900"
+        dark ? "bg-[#000000] text-white" : "bg-[#f6f7f8] text-gray-900"
       }`}
     >
       <div className="flex-col justify-center items-center">

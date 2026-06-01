@@ -8,7 +8,7 @@ const OurStoryHome = () => {
           {/* Text Content */}
           <div className="flex-1 space-y-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 text-green-500 border border-primary/20">
-              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+              <span className="w-2 h-2 rounded-full bg-[#75C043] animate-pulse"></span>
               <span className="text-xs font-bold uppercase tracking-widest">
                 Our Story
               </span>
@@ -16,7 +16,7 @@ const OurStoryHome = () => {
 
             <h1 className="text-3xl md:text-6xl font-extrabold tracking-tight leading-[1.1]">
               Pioneering{" "}
-              <span className="text-green-500 italic">Intralogistics</span>{" "}
+              <span className="text-[#75C043] italic">Intralogistics</span>{" "}
               since 1976.
             </h1>
 
@@ -38,14 +38,14 @@ const OurStoryHome = () => {
 
             <div className="flex items-center gap-6 pt-4">
               <div>
-                <div className="text-3xl font-bold text-primary">50</div>
+                <div className="text-3xl font-bold text-[#75C043]">50</div>
                 <div className="text-xs uppercase tracking-wider font-semibold opacity-60">
                   Years Experience
                 </div>
               </div>
               <div className="w-px h-10 bg-slate-200 dark:bg-slate-800"></div>
               <div>
-                <div className="text-3xl font-bold text-primary">500+</div>
+                <div className="text-3xl font-bold text-[#75C043]">500+</div>
                 <div className="text-xs uppercase tracking-wider font-semibold opacity-60">
                   Completed Projects
                 </div>

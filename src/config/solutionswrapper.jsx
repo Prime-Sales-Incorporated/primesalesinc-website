@@ -12,6 +12,7 @@ import IndustrialStorage from "../website pages/solutions-pages/industrialstorag
 import BatteriesChargers from "../website pages/solutions-pages/batterieschargers";
 import CommercialSolutions from "../website pages/solutions-pages/commercialsolutions";
 import WMSSolutions from "../website pages/solutions-pages/warehouse-solutions,";
+import HeaderHome from "./header copy";
 
 const solutionsMap = {
   mhe: {
@@ -153,7 +154,7 @@ const SolutionsWrapper = () => {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
-      <Header dark={dark} setDark={setDark} />
+      <HeaderHome dark={dark} setDark={setDark} />
       <main className="flex-1 px-8">{solutionData.component}</main>
       <Footer />
     </div>

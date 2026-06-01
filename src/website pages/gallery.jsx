@@ -63,7 +63,7 @@ export default function Gallery() {
   return (
     <div className="w-full min-h-screen bg-background-light dark:bg-background-dark">
       <section className="relative py-24 px-4 min-h-screen w-full  overflow-hidden">
-        <Header dark={dark} setDark={setDark} />
+        <HeaderHome dark={dark} setDark={setDark} />
 
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">

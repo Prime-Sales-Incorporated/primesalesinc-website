@@ -18,6 +18,7 @@ import { Helmet } from "react-helmet-async";
 import HolidayGreetingBanner from "../sections/banner";
 import VideoSection from "../sections/videosection";
 import OurStoryHome from "../sections/story";
+import HeroCarousel from "../sections/hercarousel";
 
 const WebsiteMain = () => {
   const [storyRef, storyVisible] = useInView();
@@ -28,7 +29,32 @@ const WebsiteMain = () => {
   const [solutionRef, solutionVisible] = useInView();
   const [timelineRef, timelineVisible] = useInView();
   const [statsRef, statsVisible] = useInView();
+  // Add this hook at the top of your component (inside WebsiteMain, before return):
+  const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Add these carousel images (replace with your real images):
+  const heroSlides = [
+    {
+      src: "https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-6/305844029_447582417394066_7425055348128986817_n.png?_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=qqqVrQ7cblAQ7kNvwFLZh9N&_nc_oc=AdpSa1dqQQzg6K3FHFS3IUQ86i102m8WdAybkqJnP-JN3-uZ5BsCjQs5WpFWBuyRlhSwMVhhB27I2gU9yT-JrJ27&_nc_zt=23&_nc_ht=scontent.fmnl3-4.fna&_nc_gid=KIRMTq-gF5hy3LNK7Gtu4w&_nc_ss=7b289&oh=00_Af5ZKPQY5O6RzKJOwKxkEhFj6kQct_2y5PnKykrDbsba8w&oe=6A11B618",
+      alt: "Prime Sales Warehouse",
+    },
+    {
+      src: "https://www.elementlogic.net/content/uploads/sites/8/2024/10/for-4-main-functions-of-warehouse-1200x649-1.jpg", // replace with your real image
+      alt: "Cold Chain Solutions",
+    },
+    {
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiFRpChdkfgm2TPi1WwvhoeKPIgYSPnU8TfA&s", // replace with your real image
+      alt: "Forklift Operations",
+    },
+  ];
+
+  // Add auto-advance effect (place with your other useEffects):
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
   const [dark, setDark] = useState(() => {
     if (typeof window !== "undefined") {
       return localStorage.getItem("darkMode") === "true";
@@ -62,59 +88,8 @@ const WebsiteMain = () => {
       </Helmet>
       <main className="flex-1">
         {/* Hero Section */}
-        <div className="relative flex min-h-[50vh] md:min-h-[70vh] items-center justify-center text-center overflow-hidden ">
-          {/* Shared Background Video */}
-          <div className="absolute inset-0 overflow-hidden">
-            <video
-              className="w-full h-full object-cover"
-              autoPlay
-              loop
-              muted
-              playsInline
-            >
-              <source src="/iss.mp4" type="video/mp4" />
-            </video>
-
-            {/* Dark Overlay Shader */}
-            <div className="absolute inset-0 bg-black/70  "></div>
-            <div
-              className={`absolute bottom-0 left-0 right-0 h-[50%] transition-all duration-700 ${
-                dark
-                  ? "bg-gradient-to-t from-[#101922] via-[#101922]/60 to-transparent"
-                  : "bg-gradient-to-t from-[#f6f7f8] via-[#f6f7f8]/30 to-transparent "
-              }`}
-            ></div>
-          </div>
-
-          {/* Hero Text */}
-          <div className="relative z-10 mx-auto justi max-w-4xl px-4 py-20 text-white">
-            {/* <h1
-              className="font-serif text-white  text-4xl lg:text-6xl font-light tracking-tight mb-4 opacity-0 animate-fadeInUp"
-              style={{ fontFamily: "Sufrimeda, sans-serif" }}
-            >
-              PRIME <span className="text-green-500">SALES Inc.</span>
-            </h1> */}
-
-            {/* <div className="justify-center flex ">
-              <img
-                src="/logo1.png"
-                alt="Prime Sales Inc. Logo"
-                className="justify-center flex h-24 md:h-32 md:w-64 mb-8  opacity-0 animate-fadeInUp"
-              />
-            </div> */}
-
-            <p className="   md:text-xl font-sans font-light leading-relaxed max-w-3xl lg:max-w-4xl mx-auto text-sm text-gray-300 opacity-0 animate-fadeInUp [animation-delay:0.3s]">
-              Prime Sales Inc. (PSI), founded in 1976, is a Philippine company
-              providing intralogistics solutions for both the dry and cold chain
-              industries. Partnering with global manufacturers, PSI offers
-              services such as warehouse design, storage systems, and
-              after-sales support. With over 50 years of industry experience,
-              PSI has built a strong reputation and collaborates with proven
-              global partners to deliver efficient intralogistics and supply
-              chain solutions in the Philippines.
-            </p>
-          </div>
-        </div>
+        {/* Hero Carousel Section */}
+        <HeroCarousel dark={dark} />
 
         {/* OUR STORY */}
         <div className="px-4 py-0 sm:px-6 sm:py-0 lg:px-8 transition-all duration-700 ease-out ">
@@ -168,7 +143,7 @@ const WebsiteMain = () => {
           {/* Features */}
           <section className="mt-8 text-center xl:px-4  2xl:px-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-              Who we <span className="text-green-500"> Are</span>
+              Who We <span className="text-[#75C043]"> Are</span>
             </h2>
 
             <p className="mt-4 text-sm md:text-base max-w-4xl mx-auto text-gray-600 dark:text-gray-300">

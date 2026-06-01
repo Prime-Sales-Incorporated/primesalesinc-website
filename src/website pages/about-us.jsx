@@ -41,7 +41,7 @@ const About = () => {
               <div
                 className={`absolute bottom-0 left-0 right-0 h-[50%] transition-all duration-700 ${
                   dark
-                    ? "bg-gradient-to-t from-[#101922] via-[#101922]/60 to-transparent"
+                    ? "bg-gradient-to-t from-[#000000] via-[#101922]/60 to-transparent"
                     : "bg-gradient-to-t from-[#f6f7f8] via-[#f6f7f8]/30 to-transparent"
                 }`}
               ></div>
@@ -92,7 +92,7 @@ const About = () => {
                 Why Choose <span className="text-green-500"> Prime</span>
               </h2>
               <WhyChooseUs />
-              <Timeline dark={dark} />
+              <TimelineforAbout dark={dark} />
 
               <BranchesMap />
               <PartnersCarousel />

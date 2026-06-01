@@ -44,15 +44,15 @@ const WhyChooseUs = () => {
               <div className="flex items-start">
                 <div className="flex-shrink-0">
                   <div className="bg-primary/10 dark:bg-primary/20 p-3 rounded-full">
-                    <span className="material-icons text-primary text-2xl">
+                    <span className="material-icons text-[#75C043] text-2xl">
                       star_outline
                     </span>
                   </div>
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                    40+ Years of{" "}
-                    <span className="text-green-500">Experience</span>
+                    50+ Years of{" "}
+                    <span className="text-[#75C043]">Experience</span>
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300 mt-1 text-sm md:text-base">
                     Leveraging decades of industry expertise to deliver proven
@@ -64,14 +64,14 @@ const WhyChooseUs = () => {
               <div className="flex items-start">
                 <div className="flex-shrink-0">
                   <div className="bg-primary/10 dark:bg-primary/20 p-3 rounded-full">
-                    <span className="material-icons text-primary text-2xl">
+                    <span className="material-icons text-[#75C043] text-2xl">
                       support_agent
                     </span>
                   </div>
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                    After Sales <span className="text-green-500">Service</span>
+                    After Sales <span className="text-[#75C043]">Service</span>
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300 mt-1 text-sm md:text-base">
                     We build long-term relationships through consistent,
@@ -85,7 +85,7 @@ const WhyChooseUs = () => {
               <div className="flex items-start">
                 <div className="flex-shrink-0">
                   <div className="bg-primary/10 dark:bg-primary/20 p-3 rounded-full">
-                    <span className="material-icons text-primary text-2xl">
+                    <span className="material-icons text-[#75C043] text-2xl">
                       verified_user
                     </span>
                   </div>
@@ -93,7 +93,7 @@ const WhyChooseUs = () => {
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
                     Trusted{" "}
-                    <span className="text-green-500">Global Partners</span>
+                    <span className="text-[#75C043]">Global Partners</span>
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300 mt-1 text-sm md:text-base">
                     Collaborating with world-renowned partners to bring you
@@ -106,14 +106,14 @@ const WhyChooseUs = () => {
               <div className="flex items-start">
                 <div className="flex-shrink-0">
                   <div className="bg-primary/10 dark:bg-primary/20 p-3 rounded-full">
-                    <span className="material-icons text-primary text-2xl">
+                    <span className="material-icons text-[#75C043] text-2xl">
                       engineering
                     </span>
                   </div>
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                    Customized <span className="text-green-500">Solutions</span>
+                    Customized <span className="text-[#75C043]">Solutions</span>
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300 mt-1 text-sm md:text-base">
                     Designing and implementing tailored intralogistics systems
@@ -125,14 +125,14 @@ const WhyChooseUs = () => {
               <div className="flex items-start">
                 <div className="flex-shrink-0">
                   <div className="bg-primary/10 dark:bg-primary/20 p-3 rounded-full">
-                    <span className="material-icons text-primary text-2xl">
+                    <span className="material-icons text-[#75C043] text-2xl">
                       settings
                     </span>
                   </div>
                 </div>
                 <div className="ml-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                    End-to-End <span className="text-green-500">Support</span>
+                    End-to-End <span className="text-[#75C043]">Support</span>
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300 mt-1 text-sm md:text-base">
                     From consultation and design to installation and

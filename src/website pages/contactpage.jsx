@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../config/header";
 import Footer from "../config/footer";
 import { Link } from "react-router-dom";
+import HeaderHome from "../config/header copy";
 
 export default function ContactPage() {
   const [dark, setDark] = useState(() => {
@@ -32,7 +33,7 @@ export default function ContactPage() {
   return (
     <div className="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 min-h-screen flex flex-col">
       <main className="bg-white dark:bg-background-dark text-gray-900 dark:text-white font-sans antialiased ">
-        <Header dark={dark} setDark={setDark} />
+        <HeaderHome dark={dark} setDark={setDark} />
 
         {/* Hero */}
         <div className="relative bg-grid border-b border-gray-200 dark:border-gray-800">
@@ -74,7 +75,7 @@ export default function ContactPage() {
                       name="First Name"
                       type="text"
                       placeholder="First name"
-                      className="block w-full rounded-lg p-2 border border-gray-300 dark:border-slate-600 dark:bg-slate-800 py-2.5"
+                      className="block w-full rounded-lg p-2 border border-gray-300 dark:border-slate-600 dark:bg-black  py-2.5"
                     />
                   </div>
                   <div>
@@ -86,7 +87,7 @@ export default function ContactPage() {
                       name="Last Name"
                       type="text"
                       placeholder="Last name"
-                      className="block w-full p-2 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-slate-800 py-2.5"
+                      className="block w-full p-2 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-black  py-2.5"
                     />
                   </div>
                 </div>
@@ -100,7 +101,7 @@ export default function ContactPage() {
                     name="Email"
                     type="email"
                     placeholder="you@company.com"
-                    className="block w-full rounded-lg border border-gray-300 p-2 dark:border-slate-600 dark:bg-slate-800 py-2.5"
+                    className="block w-full rounded-lg border border-gray-300 p-2 dark:border-slate-600 dark:bg-black  py-2.5"
                   />
                 </div>
 
@@ -118,7 +119,7 @@ export default function ContactPage() {
                       name="Phone Number"
                       type="text"
                       placeholder="091758473291"
-                      className="block w-full rounded-lg border border-gray-300 pl-20 dark:border-slate-600 dark:bg-slate-800 py-2.5"
+                      className="block w-full rounded-lg border border-gray-300 pl-20 dark:border-slate-600 dark:bg-black  py-2.5"
                     />
                   </div>
                 </div>
@@ -131,7 +132,7 @@ export default function ContactPage() {
                     name="Message"
                     rows={4}
                     placeholder="Leave us a message..."
-                    className="block w-full rounded-lg p-2 border border-gray-300 dark:border-slate-600 dark:bg-slate-800 py-2.5"
+                    className="block w-full rounded-lg p-2 border border-gray-300 dark:border-slate-600 dark:bg-black  py-2.5"
                   />
                 </div>
 
@@ -169,7 +170,7 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-lg text-sm font-semibold text-white bg-slate-900 dark:bg-white dark:text-slate-900"
+                  className="w-full py-3 rounded-lg text-sm font-semibold text-white bg-black  dark:bg-white dark:text-slate-900"
                 >
                   Send message
                 </button>

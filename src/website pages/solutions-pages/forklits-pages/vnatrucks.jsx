@@ -162,7 +162,7 @@ export default function VNAProductList() {
               ].map((stat, i) => (
                 <div key={i} className="flex flex-col">
                   <span
-                    className="text-2xl font-bold font-mono"
+                    className="text-xl md:text-2xl font-bold font-mono"
                     style={{ color: "#eab308" }}
                   >
                     {stat.value}

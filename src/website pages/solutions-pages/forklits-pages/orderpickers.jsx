@@ -56,14 +56,14 @@ export default function OrderPickersProductList() {
 
       <main className="pt-0">
         {/* ── HERO BANNER ── */}
-        <section className="relative w-full h-[420px] md:h-[700px] overflow-hidden">
+        <section className="relative w-full h-[620px] md:h-[700px] overflow-hidden">
           {/* Background — tall warehouse racking / order fulfillment aisle */}
           <img
             src="https://www.lindemh-cn.com/wp-content/uploads/2017/10/v-1920x800.jpg"
             alt="Order Pickers Banner"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
-
+          <div className="absolute inset-0 bg-black/50 z-[1]" />
           {/* Deep blue-navy overlay — distinct from green (electric) and orange (ICCB) */}
           <div
             className="absolute inset-0"
@@ -89,24 +89,24 @@ export default function OrderPickersProductList() {
           <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#38bdf8]" />
 
           {/* Content */}
-          <div className="relative z-10 h-full max-w-[1440px] mx-auto px-4 md:px-16 flex flex-col justify-center">
+          <div className="relative z-10 h-full max-w-[1440px]  mx-auto px-4 md:px-16 flex flex-col justify-center">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#38bdf8]/50 mb-6 bg-black/40 backdrop-blur-sm w-fit">
+            <div className="inline-flex  mt-20 md:mt-0  items-center gap-2  px-2 py-1 md:px-4 md:py-1.5 rounded-full border border-[#38bdf8]/50 mb-4 bg-black/40 backdrop-blur-sm w-fit">
               <span className="material-symbols-outlined text-[#38bdf8] text-[15px]">
                 inventory
               </span>
-              <span className="uppercase tracking-[0.25em] text-[11px] text-[#38bdf8] font-semibold">
+              <span className="uppercase tracking-[0.25em] text-[8px] md:text-[11px] text-[#38bdf8] font-semibold">
                 Order Picker Series · Precision Fulfillment
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-5 max-w-2xl">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-5 max-w-2xl">
               Order
               <br />
               <span className="text-[#38bdf8]">Pickers.</span>
             </h1>
             {/* sample */}
-            <p className="text-white/55 text-sm md:text-base max-w-lg mb-10 leading-relaxed">
+            <p className="text-white/55 text-sm md:text-base max-w-[18em] md:max-w-lg mb-10 leading-relaxed">
               From low-level floor picking to high-reach aisle operations —
               precision-engineered for fast, accurate order fulfillment at every
               level.
@@ -138,10 +138,10 @@ export default function OrderPickersProductList() {
                 { value: "Low–High", label: "Level Range" },
               ].map((stat, i) => (
                 <div key={i} className="flex flex-col">
-                  <span className="text-2xl font-bold text-[#38bdf8] font-mono">
+                  <span className="text-xl md:text-2xl font-bold text-[#38bdf8] font-mono">
                     {stat.value}
                   </span>
-                  <span className="text-[11px] uppercase tracking-widest text-white/40 mt-0.5">
+                  <span className="text-[10px] uppercase tracking-widest text-white/40 mt-0.5">
                     {stat.label}
                   </span>
                 </div>

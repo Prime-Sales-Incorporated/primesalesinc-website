@@ -62,13 +62,15 @@ export default function ElectrickPalletTrucks() {
 
       <main className="pt-">
         {/* ── HERO BANNER ── */}
-        <section className="relative w-full h-[420px] md:h-[700px] overflow-hidden">
+        <section className="relative w-full h-[620px] md:h-[700px] overflow-hidden">
           {/* Background — warehouse floor-level goods movement scene */}
           <img
             src="https://www.mmh.com/images/old_imported_images/MMH2208_LTS_toyota_Inline1.jpg"
             alt="Pallet Trucks Banner"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
+
+          <div className="absolute inset-0 bg-black/20 z-[1]" />
 
           {/* Deep teal/cyan overlay — distinct from green, orange, blue, purple used before */}
           <div
@@ -94,7 +96,7 @@ export default function ElectrickPalletTrucks() {
           <div className="relative z-10 h-full max-w-[1440px] mx-auto px-4 md:px-16 flex flex-col justify-center">
             {/* Badge */}
             <div
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border mb-6 w-fit backdrop-blur-sm"
+              className="inline-flex mt-20 md:mt-0 items-center gap-2 px-4 py-1.5 rounded-full border mb-4 w-fit backdrop-blur-sm"
               style={{
                 borderColor: "rgba(20,184,166,0.5)",
                 background: "rgba(0,0,0,0.4)",
@@ -107,21 +109,21 @@ export default function ElectrickPalletTrucks() {
                 conveyor_belt
               </span>
               <span
-                className="uppercase tracking-[0.25em] text-[11px] font-semibold"
+                className="uppercase tracking-[0.25em] text-[8px] md:text-[11px]  font-semibold"
                 style={{ color: "#14b8a6" }}
               >
                 Pallet Truck Series · Agile &amp; Reliable
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-5 max-w-2xl">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-5 max-w-2xl">
               Pallet
               <br />
               <span style={{ color: "#14b8a6" }}>Trucks.</span>
             </h1>
 
             <p
-              className="text-sm md:text-base max-w-lg mb-10 leading-relaxed"
+              className="text-sm md:text-base max-w-[18em] md:max-w-lg mb-10 leading-relaxed"
               style={{ color: "rgba(255,255,255,0.55)" }}
             >
               Pedestrian and stand-on electric pallet trucks engineered for
@@ -174,11 +176,11 @@ export default function ElectrickPalletTrucks() {
               {[
                 { value: "6", label: "Models Available" },
                 { value: "3T", label: "Max Capacity" },
-                { value: "Walk & Ride", label: "Operation Modes" },
+                { value: "Walk/Ride", label: "Operation Modes" },
               ].map((stat, i) => (
                 <div key={i} className="flex flex-col">
                   <span
-                    className="text-2xl font-bold font-mono"
+                    className="text-xl md:text-2xl font-bold font-mono"
                     style={{ color: "#14b8a6" }}
                   >
                     {stat.value}

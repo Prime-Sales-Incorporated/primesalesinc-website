@@ -62,7 +62,7 @@ export default function ReachTrucksProductListing() {
 
       <main className="pt-">
         {/* ── HERO BANNER ── */}
-        <section className="relative w-full h-[420px] md:h-[700px] overflow-hidden">
+        <section className="relative w-full h-[620px] md:h-[700px] overflow-hidden">
           {/* Background — high-bay narrow aisle warehouse racking */}
           <img
             src="https://www.linde-mh.com/media/Global-Content/03_Solutions_Loesungen/Applications/reach_truck-loading-retail-3959_4046_16x9w1920.jpg"
@@ -102,7 +102,7 @@ export default function ReachTrucksProductListing() {
           <div className="relative z-10 h-full max-w-[1440px] mx-auto px-4 md:px-16 flex flex-col justify-center">
             {/* Badge */}
             <div
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border mb-6 w-fit backdrop-blur-sm"
+              className="inline-flex  mt-20 md:mt-0  items-center gap-2  px-2 py-1 md:px-4 md:py-1.5 rounded-full border mb-4 w-fit backdrop-blur-sm"
               style={{
                 borderColor: "rgba(239,68,68,0.5)",
                 background: "rgba(0,0,0,0.4)",
@@ -115,21 +115,21 @@ export default function ReachTrucksProductListing() {
                 vertical_align_top
               </span>
               <span
-                className="uppercase tracking-[0.25em] text-[11px] font-semibold"
+                className="uppercase tracking-[0.25em]  text-[8px] md:text-[11px] font-semibold"
                 style={{ color: "#ef4444" }}
               >
                 Reach Truck Series · High-Reach Precision
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-5 max-w-2xl">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-5 max-w-2xl">
               Reach
               <br />
               <span style={{ color: "#ef4444" }}>Trucks.</span>
             </h1>
 
             <p
-              className="text-sm md:text-base max-w-lg mb-10 leading-relaxed"
+              className="text-sm md:text-base max-w-[18em]  md:max-w-lg mb-10 leading-relaxed"
               style={{ color: "rgba(255,255,255,0.55)" }}
             >
               Narrow-aisle electric reach trucks built for high-bay warehousing
@@ -186,7 +186,7 @@ export default function ReachTrucksProductListing() {
               ].map((stat, i) => (
                 <div key={i} className="flex flex-col">
                   <span
-                    className="text-2xl font-bold font-mono"
+                    className="text-xl md:text-2xl font-bold font-mono"
                     style={{ color: "#ef4444" }}
                   >
                     {stat.value}

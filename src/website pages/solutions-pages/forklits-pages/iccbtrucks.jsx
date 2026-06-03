@@ -75,6 +75,7 @@ export default function ICCBTrucksProductListing() {
             alt="ICCB Forklift Banner"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
+          <div className="absolute inset-0 bg-black/20 z-[1]" />
 
           {/* Warm-toned overlay to distinguish from the electric (green/cool) banner */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a0e00]/90 via-[#1a0e00]/65 to-transparent" />
@@ -143,7 +144,7 @@ export default function ICCBTrucksProductListing() {
                 { value: "Diesel/LPG", label: "Power Options" },
               ].map((stat, i) => (
                 <div key={i} className="flex flex-col">
-                  <span className="text-2xl font-bold text-[#f97316] font-mono">
+                  <span className="text-xl md:text-2xl font-bold text-[#f97316] font-mono">
                     {stat.value}
                   </span>
                   <span className="text-[11px] uppercase tracking-widest text-white/40 mt-0.5">

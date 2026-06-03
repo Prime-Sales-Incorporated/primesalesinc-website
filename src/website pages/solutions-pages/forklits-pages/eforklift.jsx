@@ -89,6 +89,7 @@ export default function ElectricForkliftProductListing() {
             alt="Electric Forklift Banner"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
+          <div className="absolute inset-0 bg-black/50 z-[1]" />
 
           {/* Gradient overlay — left side darker for text legibility, right side lighter to show forklift */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a0e00]/90 via-[#1a0e00]/65 to-transparent" />
@@ -111,11 +112,11 @@ export default function ElectricForkliftProductListing() {
           {/* Content */}
           <div className="relative z-10   h-full max-w-[1440px] mx-auto px-4 md:px-16 flex flex-col justify-center">
             {/* Badge */}
-            <div className="inline-flex mt-20 items-center gap-2 px-2 py-1 md:px-4 md:py-1.5 rounded-full border border-[#2ae500]/50 mb-6 bg-black/40 backdrop-blur-sm w-fit">
+            <div className="inline-flex mt-20 md:mt-0 items-center gap-2 px-2 py-1 md:px-4 md:py-1.5 rounded-full border border-[#2ae500]/50 mb-4 bg-black/40 backdrop-blur-sm w-fit">
               <span className="material-symbols-outlined text-[#2ae500] text-[15px]">
                 bolt
               </span>
-              <span className="uppercase tracking-[0.25em] text-[8px] text-[#2ae500] font-semibold">
+              <span className="uppercase tracking-[0.25em] text-[8px] md:text-[11px] text-[#2ae500] font-semibold">
                 Electric Series · Zero Emission
               </span>
             </div>
@@ -158,7 +159,7 @@ export default function ElectricForkliftProductListing() {
                 { value: "12m", label: "Max Lift Height" },
               ].map((stat, i) => (
                 <div key={i} className="flex flex-col">
-                  <span className="text-2xl font-bold text-[#2ae500] font-mono">
+                  <span className="text-xl md:text-2xl font-bold text-[#2ae500] font-mono">
                     {stat.value}
                   </span>
                   <span className="text-[11px] uppercase tracking-widest text-white/40 mt-0.5">
@@ -303,7 +304,7 @@ export default function ElectricForkliftProductListing() {
               {products.map((p, index) => (
                 <div
                   key={index}
-                  className="group flex flex-col lg:flex-row border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0b0f10] overflow-hidden transition-all duration-300 hover:border-[#2ae500]"
+                  className="group flex flex-col md:flex-row border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0b0f10] overflow-hidden transition-all duration-300 hover:border-[#2ae500]"
                   style={{
                     boxShadow: "none",
                     transition: "border-color 0.3s, box-shadow 0.3s",

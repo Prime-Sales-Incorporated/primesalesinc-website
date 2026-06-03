@@ -74,7 +74,7 @@ export default function PalletStackersProductList() {
 
       <main className="pt-">
         {/* ── HERO BANNER ── */}
-        <section className="relative w-full h-[420px] md:h-[700px] overflow-hidden">
+        <section className="relative w-full h-[620px] md:h-[700px] overflow-hidden">
           {/* Background — narrow aisle / compact warehouse storage scene */}
           <img
             src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1440&q=80&fm=webp"
@@ -90,6 +90,7 @@ export default function PalletStackersProductList() {
                 "linear-gradient(to right, rgba(30,10,60,0.93) 0%, rgba(30,10,60,0.62) 50%, transparent 100%)",
             }}
           />
+          <div className="absolute inset-0 bg-black/50 z-[1]" />
 
           {/* Bottom fade to page background */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent" />
@@ -115,7 +116,7 @@ export default function PalletStackersProductList() {
           <div className="relative z-10 h-full max-w-[1440px] mx-auto px-4 md:px-16 flex flex-col justify-center">
             {/* Badge */}
             <div
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border mb-6 w-fit backdrop-blur-sm"
+              className="inline-flex items-center mt-20 md:mt-0  gap-2  px-2 py-1 md:px-4 md:py-1.5 rounded-full border mb-4 w-fit backdrop-blur-sm"
               style={{
                 borderColor: "rgba(168,85,247,0.5)",
                 background: "rgba(0,0,0,0.4)",
@@ -128,21 +129,21 @@ export default function PalletStackersProductList() {
                 stacks
               </span>
               <span
-                className="uppercase tracking-[0.25em] text-[11px] font-semibold"
+                className="uppercase tracking-[0.25em] text-[8px] md:text-[11px] font-semibold"
                 style={{ color: "#a855f7" }}
               >
                 Stacker Series · Compact &amp; Versatile
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-5 max-w-2xl">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-5 max-w-2xl">
               Pallet
               <br />
               <span style={{ color: "#a855f7" }}>Stackers.</span>
             </h1>
 
             <p
-              className="text-sm md:text-base max-w-lg mb-10 leading-relaxed"
+              className="text-white/55 text-sm md:text-base max-w-[20em] md:max-w-lg mb-10 leading-relaxed"
               style={{ color: "rgba(255,255,255,0.55)" }}
             >
               Pedestrian, stand-on, and straddle stackers built for tight aisles
@@ -199,7 +200,7 @@ export default function PalletStackersProductList() {
               ].map((stat, i) => (
                 <div key={i} className="flex flex-col">
                   <span
-                    className="text-2xl font-bold font-mono"
+                    className="text-xl md:text-2xl font-bold font-mono"
                     style={{ color: "#a855f7" }}
                   >
                     {stat.value}

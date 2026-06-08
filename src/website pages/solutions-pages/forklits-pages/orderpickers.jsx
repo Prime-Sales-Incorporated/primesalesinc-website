@@ -57,14 +57,12 @@ export default function OrderPickersProductList() {
       <main className="pt-0">
         {/* ── HERO BANNER ── */}
         <section className="relative w-full h-[620px] md:h-[700px] overflow-hidden">
-          {/* Background — tall warehouse racking / order fulfillment aisle */}
           <img
             src="https://www.lindemh-cn.com/wp-content/uploads/2017/10/v-1920x800.jpg"
             alt="Order Pickers Banner"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/50 z-[1]" />
-          {/* Deep blue-navy overlay — distinct from green (electric) and orange (ICCB) */}
           <div
             className="absolute inset-0"
             style={{
@@ -72,10 +70,7 @@ export default function OrderPickersProductList() {
                 "linear-gradient(to right, rgba(0,17,43,0.92) 0%, rgba(0,17,43,0.65) 50%, transparent 100%)",
             }}
           />
-          {/* Bottom fade */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent" />
-
-          {/* Dot-grid texture — different from stripes and grid used before */}
           <div
             className="absolute inset-0 opacity-[0.04]"
             style={{
@@ -84,14 +79,11 @@ export default function OrderPickersProductList() {
               backgroundSize: "28px 28px",
             }}
           />
-
-          {/* Sky-blue accent line */}
           <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#38bdf8]" />
 
           {/* Content */}
-          <div className="relative z-10 h-full max-w-[1440px]  mx-auto px-4 md:px-16 flex flex-col justify-center">
-            {/* Badge */}
-            <div className="inline-flex  mt-20 md:mt-0  items-center gap-2  px-2 py-1 md:px-4 md:py-1.5 rounded-full border border-[#38bdf8]/50 mb-4 bg-black/40 backdrop-blur-sm w-fit">
+          <div className="relative z-10 h-full max-w-[1440px] mx-auto px-4 md:px-16 flex flex-col justify-center">
+            <div className="inline-flex mt-20 md:mt-0 items-center gap-2 px-2 py-1 md:px-4 md:py-1.5 rounded-full border border-[#38bdf8]/50 mb-4 bg-black/40 backdrop-blur-sm w-fit">
               <span className="material-symbols-outlined text-[#38bdf8] text-[15px]">
                 inventory
               </span>
@@ -105,7 +97,7 @@ export default function OrderPickersProductList() {
               <br />
               <span className="text-[#38bdf8]">Pickers.</span>
             </h1>
-            {/* sample */}
+
             <p className="text-white/55 text-sm md:text-base max-w-[18em] md:max-w-lg mb-10 leading-relaxed">
               From low-level floor picking to high-reach aisle operations —
               precision-engineered for fast, accurate order fulfillment at every
@@ -268,8 +260,11 @@ export default function OrderPickersProductList() {
               {products.map((p, index) => (
                 <div
                   key={index}
-                  className="group flex flex-col lg:flex-row border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0b0f10] overflow-hidden transition-all duration-300 hover:border-[#2ae500]"
-                  style={{ transition: "border-color 0.3s, box-shadow 0.3s" }}
+                  className="group flex flex-col md:flex-row border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0b0f10] overflow-hidden transition-all duration-300 hover:border-[#2ae500]"
+                  style={{
+                    boxShadow: "none",
+                    transition: "border-color 0.3s, box-shadow 0.3s",
+                  }}
                   onMouseEnter={(e) =>
                     (e.currentTarget.style.boxShadow =
                       "0 0 15px -3px rgba(42,229,0,0.2)")
@@ -279,7 +274,7 @@ export default function OrderPickersProductList() {
                   }
                 >
                   {/* Image */}
-                  <div className="lg:w-1/4 bg-gray-50 dark:bg-white flex items-center justify-center p-8 shrink-0">
+                  <div className="md:w-1/3 lg:w-1/4 md:h-auto bg-gray-50 dark:bg-white flex items-center justify-center p-8 shrink-0">
                     <img
                       src={p.img}
                       alt={p.name}
@@ -288,13 +283,14 @@ export default function OrderPickersProductList() {
                   </div>
 
                   {/* Content */}
-                  <div className="flex-grow p-8 flex flex-col md:flex-row justify-between gap-8">
-                    <div className="flex-grow">
-                      <h3 className="text-xl font-semibold mb-6 leading-snug text-gray-800 dark:text-gray-100">
-                        {p.name}
-                      </h3>
+                  <div className="flex-grow p-5 md:p-6 lg:p-8 flex flex-col gap-3 lg:gap-4">
+                    <h3 className="text-base md:text-lg lg:text-xl font-semibold leading-snug text-gray-800 dark:text-gray-100">
+                      {p.name}
+                    </h3>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Desktop lg+: specs horizontal, CTA right */}
+                    <div className="hidden lg:flex lg:flex-row lg:items-center lg:justify-between lg:gap-6">
+                      <div className="flex flex-row gap-8">
                         <div className="flex items-center gap-3">
                           <span className="material-symbols-outlined text-[#2ae500]">
                             weight
@@ -322,21 +318,67 @@ export default function OrderPickersProductList() {
                           </div>
                         </div>
                       </div>
+                      <div className="flex flex-col items-end justify-center gap-2 border-l border-slate-300 dark:border-slate-700 pl-8 shrink-0 min-w-[180px]">
+                        <div className="text-right">
+                          <span className="block text-[11px] uppercase tracking-wider text-[#2ae500] font-mono mb-1">
+                            In Stock
+                          </span>
+                          <span className="text-gray-500 dark:text-[#baccb0] text-xs font-mono">
+                            Enterprise Pricing
+                          </span>
+                        </div>
+                        <button className="bg-[#2ae500]/10 border border-[#2ae500] text-[#2ae500] px-6 py-3 font-bold uppercase tracking-wider text-xs font-mono hover:bg-[#39ff14] hover:text-[#022100] transition-all text-center w-full">
+                          View Details
+                        </button>
+                      </div>
                     </div>
 
-                    {/* CTA */}
-                    <div className="flex flex-row md:flex-col justify-between md:justify-center items-end gap-4 md:min-w-[180px] md:border-l md:border-slate-300 dark:md:border-slate-700 md:pl-8">
-                      <div className="text-right">
-                        <span className="block text-[11px] uppercase tracking-wider text-[#2ae500] font-mono mb-1">
-                          In Stock
-                        </span>
-                        <span className="text-gray-500 dark:text-[#baccb0] text-xs font-mono">
-                          Enterprise Pricing
-                        </span>
+                    {/* Tablet/mobile: specs stacked vertically, CTA on right */}
+                    <div className="lg:hidden flex flex-row items-center justify-between gap-4">
+                      {/* Specs — vertical stack */}
+                      <div className="flex flex-col gap-3 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span className="material-symbols-outlined text-[#2ae500] text-[18px]">
+                            weight
+                          </span>
+                          <div className="flex flex-col min-w-0">
+                            <span className="text-[9px] uppercase tracking-widest text-gray-500 dark:text-[#baccb0] font-mono">
+                              Capacity
+                            </span>
+                            <span className="text-xs font-bold font-mono text-gray-800 dark:text-gray-100">
+                              {p.capacity}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="material-symbols-outlined text-[#2ae500] text-[18px]">
+                            height
+                          </span>
+                          <div className="flex flex-col min-w-0">
+                            <span className="text-[9px] uppercase tracking-widest text-gray-500 dark:text-[#baccb0] font-mono">
+                              Lift Height
+                            </span>
+                            <span className="text-xs font-bold font-mono text-gray-800 dark:text-gray-100">
+                              {p.height}
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                      <button className="bg-[#2ae500]/10 border border-[#2ae500] text-[#2ae500] px-6 py-3 font-bold uppercase tracking-wider text-xs font-mono hover:bg-[#39ff14] hover:text-[#022100] transition-all w-full md:w-auto text-center">
-                        View Details
-                      </button>
+
+                      {/* CTA */}
+                      <div className="flex flex-col items-end justify-center gap-2 border-l border-slate-300 dark:border-slate-700 pl-4 shrink-0">
+                        <div className="text-right">
+                          <span className="block text-[10px] uppercase tracking-wider text-[#2ae500] font-mono mb-0.5">
+                            In Stock
+                          </span>
+                          <span className="text-gray-500 dark:text-[#baccb0] text-[10px] font-mono">
+                            Enterprise Pricing
+                          </span>
+                        </div>
+                        <button className="bg-[#2ae500]/10 border border-[#2ae500] text-[#2ae500] px-3 py-2 font-bold uppercase tracking-wider text-[10px] font-mono hover:bg-[#39ff14] hover:text-[#022100] transition-all text-center whitespace-nowrap">
+                          View Details
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>

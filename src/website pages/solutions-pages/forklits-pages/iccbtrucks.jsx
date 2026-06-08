@@ -69,20 +69,14 @@ export default function ICCBTrucksProductListing() {
       <main className="pt- md:pt-0 ">
         {/* ── HERO BANNER ── */}
         <section className="relative w-full h-[620px] md:h-[700px] overflow-hidden">
-          {/* Background — outdoor/heavy-duty yard scene, different from electric forklift banner */}
           <img
             src="https://www.linde-mh.com/media/Global-Content/04-About-Linde/Magazine/Ostendorf/Ostendorf-Xi20_PH-4681_0768_CX_16x9w1920.jpg"
             alt="ICCB Forklift Banner"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/20 z-[1]" />
-
-          {/* Warm-toned overlay to distinguish from the electric (green/cool) banner */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a0e00]/90 via-[#1a0e00]/65 to-transparent" />
-          {/* Bottom fade to page background */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent" />
-
-          {/* Diagonal stripe texture — industrial feel */}
           <div
             className="absolute inset-0 opacity-[0.035]"
             style={{
@@ -90,13 +84,10 @@ export default function ICCBTrucksProductListing() {
                 "repeating-linear-gradient(45deg, rgba(255,255,255,0.6) 0px, rgba(255,255,255,0.6) 1px, transparent 1px, transparent 12px)",
             }}
           />
-
-          {/* Amber/orange accent line — visually distinct from electric's green */}
           <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#f97316]" />
 
           {/* Content */}
           <div className="relative z-10 h-full max-w-[1440px] mx-auto px-4 md:px-16 flex flex-col justify-center">
-            {/* Badge */}
             <div className="inline-flex mt-20 md:mt-0 items-center gap-2 px-2 py-1 md:px-4 md:py-1.5 rounded-full border border-[#f97316]/50 mb-4 bg-black/40 backdrop-blur-sm w-fit">
               <span className="material-symbols-outlined text-[#f97316] text-[15px]">
                 local_shipping
@@ -274,8 +265,11 @@ export default function ICCBTrucksProductListing() {
               {products.map((p, index) => (
                 <div
                   key={index}
-                  className="group flex flex-col lg:flex-row border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0b0f10] overflow-hidden transition-all duration-300 hover:border-[#2ae500]"
-                  style={{ transition: "border-color 0.3s, box-shadow 0.3s" }}
+                  className="group flex flex-col md:flex-row border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0b0f10] overflow-hidden transition-all duration-300 hover:border-[#2ae500]"
+                  style={{
+                    boxShadow: "none",
+                    transition: "border-color 0.3s, box-shadow 0.3s",
+                  }}
                   onMouseEnter={(e) =>
                     (e.currentTarget.style.boxShadow =
                       "0 0 15px -3px rgba(42,229,0,0.2)")
@@ -285,7 +279,7 @@ export default function ICCBTrucksProductListing() {
                   }
                 >
                   {/* Image */}
-                  <div className="lg:w-1/4 bg-gray-50 dark:bg-white flex items-center justify-center p-8 shrink-0">
+                  <div className="md:w-1/3 lg:w-1/4 md:h-auto bg-gray-50 dark:bg-white flex items-center justify-center p-8 shrink-0">
                     <img
                       src={p.img}
                       alt={p.name}
@@ -294,13 +288,14 @@ export default function ICCBTrucksProductListing() {
                   </div>
 
                   {/* Content */}
-                  <div className="flex-grow p-8 flex flex-col md:flex-row justify-between gap-8">
-                    <div className="flex-grow">
-                      <h3 className="text-xl font-semibold mb-6 leading-snug text-gray-800 dark:text-gray-100">
-                        {p.name}
-                      </h3>
+                  <div className="flex-grow p-5 md:p-6 lg:p-8 flex flex-col gap-3 lg:gap-4">
+                    <h3 className="text-base md:text-lg lg:text-xl font-semibold leading-snug text-gray-800 dark:text-gray-100">
+                      {p.name}
+                    </h3>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Desktop lg+: specs horizontal, CTA right */}
+                    <div className="hidden lg:flex lg:flex-row lg:items-center lg:justify-between lg:gap-6">
+                      <div className="flex flex-row gap-8">
                         <div className="flex items-center gap-3">
                           <span className="material-symbols-outlined text-[#2ae500]">
                             weight
@@ -328,21 +323,67 @@ export default function ICCBTrucksProductListing() {
                           </div>
                         </div>
                       </div>
+                      <div className="flex flex-col items-end justify-center gap-2 border-l border-slate-300 dark:border-slate-700 pl-8 shrink-0 min-w-[180px]">
+                        <div className="text-right">
+                          <span className="block text-[11px] uppercase tracking-wider text-[#2ae500] font-mono mb-1">
+                            In Stock
+                          </span>
+                          <span className="text-gray-500 dark:text-[#baccb0] text-xs font-mono">
+                            Enterprise Pricing
+                          </span>
+                        </div>
+                        <button className="bg-[#2ae500]/10 border border-[#2ae500] text-[#2ae500] px-6 py-3 font-bold uppercase tracking-wider text-xs font-mono hover:bg-[#39ff14] hover:text-[#022100] transition-all text-center w-full">
+                          View Details
+                        </button>
+                      </div>
                     </div>
 
-                    {/* CTA */}
-                    <div className="flex flex-row md:flex-col justify-between md:justify-center items-end gap-4 md:min-w-[180px] md:border-l md:border-slate-300 dark:md:border-slate-700 md:pl-8">
-                      <div className="text-right">
-                        <span className="block text-[11px] uppercase tracking-wider text-[#2ae500] font-mono mb-1">
-                          In Stock
-                        </span>
-                        <span className="text-gray-500 dark:text-[#baccb0] text-xs font-mono">
-                          Enterprise Pricing
-                        </span>
+                    {/* Tablet/mobile: specs stacked vertically, CTA on right */}
+                    <div className="lg:hidden flex flex-row items-center justify-between gap-4">
+                      {/* Specs — vertical stack */}
+                      <div className="flex flex-col gap-3 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span className="material-symbols-outlined text-[#2ae500] text-[18px]">
+                            weight
+                          </span>
+                          <div className="flex flex-col min-w-0">
+                            <span className="text-[9px] uppercase tracking-widest text-gray-500 dark:text-[#baccb0] font-mono">
+                              Capacity
+                            </span>
+                            <span className="text-xs font-bold font-mono text-gray-800 dark:text-gray-100">
+                              {p.capacity}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="material-symbols-outlined text-[#2ae500] text-[18px]">
+                            height
+                          </span>
+                          <div className="flex flex-col min-w-0">
+                            <span className="text-[9px] uppercase tracking-widest text-gray-500 dark:text-[#baccb0] font-mono">
+                              Lift Height
+                            </span>
+                            <span className="text-xs font-bold font-mono text-gray-800 dark:text-gray-100">
+                              {p.height}
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                      <button className="bg-[#2ae500]/10 border border-[#2ae500] text-[#2ae500] px-6 py-3 font-bold uppercase tracking-wider text-xs font-mono hover:bg-[#39ff14] hover:text-[#022100] transition-all w-full md:w-auto text-center">
-                        View Details
-                      </button>
+
+                      {/* CTA */}
+                      <div className="flex flex-col items-end justify-center gap-2 border-l border-slate-300 dark:border-slate-700 pl-4 shrink-0">
+                        <div className="text-right">
+                          <span className="block text-[10px] uppercase tracking-wider text-[#2ae500] font-mono mb-0.5">
+                            In Stock
+                          </span>
+                          <span className="text-gray-500 dark:text-[#baccb0] text-[10px] font-mono">
+                            Enterprise Pricing
+                          </span>
+                        </div>
+                        <button className="bg-[#2ae500]/10 border border-[#2ae500] text-[#2ae500] px-3 py-2 font-bold uppercase tracking-wider text-[10px] font-mono hover:bg-[#39ff14] hover:text-[#022100] transition-all text-center whitespace-nowrap">
+                          View Details
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>

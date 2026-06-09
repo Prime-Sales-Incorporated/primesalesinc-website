@@ -29,6 +29,11 @@ import ReachTrucksProductListing from "./website pages/solutions-pages/forklits-
 import PalletStackersProductList from "./website pages/solutions-pages/forklits-pages/palletstackers";
 import OrderPickersProductList from "./website pages/solutions-pages/forklits-pages/orderpickers";
 import VNAProductList from "./website pages/solutions-pages/forklits-pages/vnatrucks";
+import ElectricForkliftDetail from "./website pages/solutions-pages/forklift-detail-pages/electric-forklift-detail";
+import ICCBTrucksDetail from "./website pages/solutions-pages/forklift-detail-pages/iccb-forklift-detail";
+import OrderPickersDetail from "./website pages/solutions-pages/forklift-detail-pages/orderpickers-details";
+import PalletStackersDetail from "./website pages/solutions-pages/forklift-detail-pages/pallet-stacker-detail";
+import ElectricPalletTrucksDetail from "./website pages/solutions-pages/forklift-detail-pages/pallet-truck-details";
 
 // 🌟 Floating Chat Button
 function FloatingChatButton() {
@@ -36,7 +41,7 @@ function FloatingChatButton() {
     window.open(
       "https://primesales-chatbot.vercel.app/",
       "_blank",
-      "noopener,noreferrer"
+      "noopener,noreferrer",
     );
   };
 
@@ -125,6 +130,30 @@ function App() {
           <Route path="/news" element={<UnderConstruction />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route
+            path="/solutions/mhe/electric-forklift/:slug"
+            element={<ElectricForkliftDetail />}
+          />
+          <Route
+            path="/solutions/mhe/order-pickers/:slug"
+            element={<OrderPickersDetail />}
+          />
+          <Route
+            path="/solutions/mhe/order-pickers/:slug"
+            element={<OrderPickersDetail />}
+          />
+          <Route
+            path="/solutions/mhe/pallet-stackers/:slug"
+            element={<PalletStackersDetail />}
+          />
+          <Route
+            path="/solutions/mhe/pallet-trucks/:slug"
+            element={<ElectricPalletTrucksDetail />}
+          />
+          <Route
+            path="/solutions/mhe/iccb-trucks/:slug"
+            element={<ICCBTrucksDetail />}
+          />
           <Route
             path="/solutions/mhe/electric-forklift"
             element={<ElectricForkliftProductListing />}

@@ -19,6 +19,7 @@ export default function ElectricForkliftProductListing() {
 
   const products = [
     {
+      slug: "electric-forklift-3t-3-5t",
       name: "Electric Forklift Truck 3.0-3.5T",
       img: "/linde/forklift/1.png",
       capacity: "3000 - 3500 kg",
@@ -26,6 +27,7 @@ export default function ElectricForkliftProductListing() {
       voltage: "80V / 600Ah",
     },
     {
+      slug: "electric-forklift-1-5t-2t",
       name: "Electric Forklift Truck 1.5-2.0T",
       img: "/linde/forklift/2.png",
       capacity: "1500 - 2000 kg",
@@ -33,6 +35,7 @@ export default function ElectricForkliftProductListing() {
       voltage: "48V / 500Ah",
     },
     {
+      slug: "electric-forklift-2t-2-5t",
       name: "Electric Forklift Trucks 2.0-2.5T",
       img: "/linde/forklift/3.png",
       capacity: "2000 - 2500 kg",
@@ -40,6 +43,7 @@ export default function ElectricForkliftProductListing() {
       voltage: "80V / 625Ah",
     },
     {
+      slug: "electric-forklift-1-6t-2t",
       name: "Electric Forklift Trucks 1.6-2.0T",
       img: "/linde/forklift/4.png",
       capacity: "1600 - 2000 kg",
@@ -47,6 +51,7 @@ export default function ElectricForkliftProductListing() {
       voltage: "48V / 625Ah",
     },
     {
+      slug: "electric-forklift-2-5t-3-5t",
       name: "Electric Forklift Trucks 2.5-3.5T",
       img: "/linde/forklift/5.png",
       capacity: "2500 - 3500 kg",
@@ -54,6 +59,7 @@ export default function ElectricForkliftProductListing() {
       voltage: "80V / 700Ah",
     },
     {
+      slug: "electric-forklift-3t-3-8t",
       name: "Electric Forklift Trucks 3.0-3.8T",
       img: "/linde/forklift/6.png",
       capacity: "3000 - 3800 kg",
@@ -61,6 +67,7 @@ export default function ElectricForkliftProductListing() {
       voltage: "80V / 750Ah",
     },
     {
+      slug: "electric-forklift-3-5t-5t",
       name: "Electric Forklift Trucks 3.5-5.0T",
       img: "/linde/forklift/7.png",
       capacity: "3500 - 5000 kg",
@@ -68,6 +75,7 @@ export default function ElectricForkliftProductListing() {
       voltage: "80V / 840Ah",
     },
     {
+      slug: "electric-forklift-6t-8t",
       name: "Electric Forklift Trucks 6.0-8.0T",
       img: "/linde/forklift/8.png",
       capacity: "6000 - 8000 kg",
@@ -83,20 +91,14 @@ export default function ElectricForkliftProductListing() {
       <main className="pt-0">
         {/* ── HERO BANNER ── */}
         <section className="relative w-full h-[620px] md:h-[700px] overflow-hidden">
-          {/* Background image */}
           <img
             src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1440&q=80&fm=webp"
             alt="Electric Forklift Banner"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/50 z-[1]" />
-
-          {/* Gradient overlay — left side darker for text legibility, right side lighter to show forklift */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a0e00]/90 via-[#1a0e00]/65 to-transparent" />
-          {/* Bottom fade */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent" />
-
-          {/* Subtle grid overlay for industrial feel */}
           <div
             className="absolute inset-0 opacity-[0.04]"
             style={{
@@ -105,13 +107,9 @@ export default function ElectricForkliftProductListing() {
               backgroundSize: "60px 60px",
             }}
           />
-
-          {/* Accent line */}
           <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#2ae500]" />
 
-          {/* Content */}
           <div className="relative z-10 h-full max-w-[1440px] mx-auto px-4 md:px-16 flex flex-col justify-center">
-            {/* Badge */}
             <div className="inline-flex mt-20 md:mt-0 items-center gap-2 px-2 py-1 md:px-4 md:py-1.5 rounded-full border border-[#2ae500]/50 mb-4 bg-black/40 backdrop-blur-sm w-fit">
               <span className="material-symbols-outlined text-[#2ae500] text-[15px]">
                 bolt
@@ -151,7 +149,6 @@ export default function ElectricForkliftProductListing() {
               </a>
             </div>
 
-            {/* Stats row */}
             <div className="flex items-center gap-8 mt-12 pt-8 border-t border-white/10">
               {[
                 { value: "8", label: "Models Available" },
@@ -187,7 +184,6 @@ export default function ElectricForkliftProductListing() {
               </span>
             </Link>
 
-            {/* View Toggle */}
             <div className="flex gap-1 p-1 bg-gray-100 dark:bg-[#1d2022] rounded">
               <button
                 onClick={() => setViewMode("grid")}
@@ -225,7 +221,6 @@ export default function ElectricForkliftProductListing() {
                   key={index}
                   className="group border border-slate-300 dark:border-slate-700 bg-white dark:bg-black overflow-hidden transition-all duration-300 hover:border-[#2ae500]"
                 >
-                  {/* Image */}
                   <div className="relative bg-gray-50 dark:bg-white h-[320px] flex items-center justify-center overflow-hidden p-8">
                     <div
                       className="absolute inset-0 opacity-5"
@@ -242,7 +237,6 @@ export default function ElectricForkliftProductListing() {
                     />
                   </div>
 
-                  {/* Content */}
                   <div className="p-6 flex flex-col h-full">
                     <h2 className="text-xl font-semibold mb-6 leading-snug text-gray-800 dark:text-gray-100">
                       {p.name}
@@ -284,12 +278,15 @@ export default function ElectricForkliftProductListing() {
                       </div>
                     </div>
 
-                    <button className="mt-auto flex items-center justify-between w-full bg-[#39ff14] text-[#022100] px-6 py-4 font-bold uppercase tracking-wider hover:bg-[#2ae500] transition-all active:scale-95">
-                      Details
+                    <Link
+                      to={`/solutions/mhe/electric-forklift/${p.slug}`}
+                      className="mt-auto flex items-center justify-between w-full bg-[#39ff14] text-[#022100] px-6 py-4 font-bold uppercase tracking-wider hover:bg-[#2ae500] transition-all active:scale-95"
+                    >
+                      View Details
                       <span className="material-symbols-outlined">
                         arrow_forward
                       </span>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -315,7 +312,6 @@ export default function ElectricForkliftProductListing() {
                     (e.currentTarget.style.boxShadow = "none")
                   }
                 >
-                  {/* Image — always white bg so product photos look right */}
                   <div className="md:w-1/3 lg:w-1/4 md:h-auto bg-gray-50 dark:bg-white flex items-center justify-center p-8 shrink-0">
                     <img
                       src={p.img}
@@ -324,13 +320,12 @@ export default function ElectricForkliftProductListing() {
                     />
                   </div>
 
-                  {/* Content */}
                   <div className="flex-grow p-5 md:p-6 lg:p-8 flex flex-col gap-3 lg:gap-4">
                     <h3 className="text-base md:text-lg lg:text-xl font-semibold leading-snug text-gray-800 dark:text-gray-100">
                       {p.name}
                     </h3>
 
-                    {/* On lg+: specs go horizontal, CTA stays right */}
+                    {/* lg+: horizontal specs + CTA */}
                     <div className="hidden lg:flex lg:flex-row lg:items-center lg:justify-between lg:gap-6">
                       <div className="flex flex-row gap-8">
                         <div className="flex items-center gap-3">
@@ -382,17 +377,18 @@ export default function ElectricForkliftProductListing() {
                             Enterprise Pricing
                           </span>
                         </div>
-                        <button className="bg-[#2ae500]/10 border border-[#2ae500] text-[#2ae500] px-6 py-3 font-bold uppercase tracking-wider text-xs font-mono hover:bg-[#39ff14] hover:text-[#022100] transition-all text-center w-full">
+                        <Link
+                          to={`/solutions/mhe/electric-forklift/${p.slug}`}
+                          className="bg-[#2ae500]/10 border border-[#2ae500] text-[#2ae500] px-6 py-3 font-bold uppercase tracking-wider text-xs font-mono hover:bg-[#39ff14] hover:text-[#022100] transition-all text-center w-full"
+                        >
                           View Details
-                        </button>
+                        </Link>
                       </div>
                     </div>
 
-                    {/* Tablet: specs stacked vertically, CTA on right */}
+                    {/* Tablet: stacked specs + CTA */}
                     <div className="lg:hidden flex flex-row items-center justify-between gap-4">
-                      {/* Specs — always vertical stack */}
                       <div className="flex flex-col gap-3 min-w-0">
-                        {/* Capacity */}
                         <div className="flex items-center gap-2">
                           <span className="material-symbols-outlined text-[#2ae500] text-[18px]">
                             weight
@@ -406,7 +402,6 @@ export default function ElectricForkliftProductListing() {
                             </span>
                           </div>
                         </div>
-                        {/* Height */}
                         <div className="flex items-center gap-2">
                           <span className="material-symbols-outlined text-[#2ae500] text-[18px]">
                             height
@@ -420,7 +415,6 @@ export default function ElectricForkliftProductListing() {
                             </span>
                           </div>
                         </div>
-                        {/* Voltage */}
                         <div className="flex items-center gap-2">
                           <span className="material-symbols-outlined text-[#2ae500] text-[18px]">
                             battery_charging_full
@@ -436,7 +430,6 @@ export default function ElectricForkliftProductListing() {
                         </div>
                       </div>
 
-                      {/* CTA */}
                       <div className="flex flex-col items-end justify-center gap-2 border-l border-slate-300 dark:border-slate-700 pl-4 shrink-0">
                         <div className="text-right">
                           <span className="block text-[10px] uppercase tracking-wider text-[#2ae500] font-mono mb-0.5">
@@ -446,9 +439,12 @@ export default function ElectricForkliftProductListing() {
                             Enterprise Pricing
                           </span>
                         </div>
-                        <button className="bg-[#2ae500]/10 border border-[#2ae500] text-[#2ae500] px-3 py-2 font-bold uppercase tracking-wider text-[10px] font-mono hover:bg-[#39ff14] hover:text-[#022100] transition-all text-center whitespace-nowrap">
+                        <Link
+                          to={`/solutions/mhe/electric-forklift/${p.slug}`}
+                          className="bg-[#2ae500]/10 border border-[#2ae500] text-[#2ae500] px-3 py-2 font-bold uppercase tracking-wider text-[10px] font-mono hover:bg-[#39ff14] hover:text-[#022100] transition-all text-center whitespace-nowrap"
+                        >
                           View Details
-                        </button>
+                        </Link>
                       </div>
                     </div>
                   </div>

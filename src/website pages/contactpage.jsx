@@ -142,9 +142,9 @@ export default function ContactPage() {
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {[
-                      "Industrial Storage Solutions",
+                      "Racking Solutions",
                       "Material Handling Equipment",
-                      "Cold Chain Solutions",
+                      "Insulated Panels",
                       "Automation Solutions",
                       "Commercial Solutions",
                       "Plastic Pallets, Bins & Crates",

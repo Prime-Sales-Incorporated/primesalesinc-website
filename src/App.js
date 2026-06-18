@@ -34,6 +34,8 @@ import ICCBTrucksDetail from "./website pages/solutions-pages/forklift-detail-pa
 import OrderPickersDetail from "./website pages/solutions-pages/forklift-detail-pages/orderpickers-details";
 import PalletStackersDetail from "./website pages/solutions-pages/forklift-detail-pages/pallet-stacker-detail";
 import ElectricPalletTrucksDetail from "./website pages/solutions-pages/forklift-detail-pages/pallet-truck-details";
+import ReachTrucksDetail from "./website pages/solutions-pages/forklift-detail-pages/reach-truck-detail";
+import VNADetail from "./website pages/solutions-pages/forklift-detail-pages/vna-forklift-detail";
 
 // 🌟 Floating Chat Button
 function FloatingChatButton() {
@@ -154,6 +156,11 @@ function App() {
             path="/solutions/mhe/iccb-trucks/:slug"
             element={<ICCBTrucksDetail />}
           />
+          <Route
+            path="/solutions/mhe/reach-trucks/:slug"
+            element={<ReachTrucksDetail />}
+          />
+          <Route path="/solutions/mhe/vna/:slug" element={<VNADetail />} />
           <Route
             path="/solutions/mhe/electric-forklift"
             element={<ElectricForkliftProductListing />}

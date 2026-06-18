@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 ───────────────────────────────────────────── */
 const solutionItems = [
   {
-    label: "Cold Chain",
+    label: "Insulated Panels",
     photo:
       "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=480&q=75&fm=webp",
     description:
@@ -101,7 +101,7 @@ const solutionItems = [
         link: "/solutions/mhe/electric-forklift",
       },
       {
-        name: "ICCB Forklift Truck",
+        name: " Internal Combustion Counterbalance   Truck",
         photo:
           "https://www.linde-mh.com/media/Global-Content/Landingpage-Forklift-Truck/LMH_Range_Portfolio_02_002_Small_16x9w1920.jpg",
         desc: "Durable forklifts designed for outdoor and heavy-duty lifting operations.",

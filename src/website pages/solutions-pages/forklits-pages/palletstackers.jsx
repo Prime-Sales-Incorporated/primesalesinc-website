@@ -68,6 +68,13 @@ export default function PalletStackersProductList() {
       height: "1924 - 4266 mm",
     },
     {
+      slug: "reach-truck-1-2t-1-5t",
+      name: "Reach Truck 1.2 - 1.5 T",
+      img: "/linde/reachtrucks/2.png",
+      capacity: "1200 - 1500 kg",
+      height: "2700 - 4500 mm",
+    },
+    {
       slug: "straddle-electric-pallet-stacker-1-4t-1-6t",
       name: "Straddle Electric Pallet Stacker 1.4 - 1.6 t",
       img: "/linde/palletstackers/8.png",
@@ -288,11 +295,11 @@ export default function PalletStackersProductList() {
 
           {/* LIST VIEW */}
           {viewMode === "list" && (
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               {products.map((p, index) => (
                 <div
                   key={index}
-                  className="group flex flex-col md:flex-row border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0b0f10] overflow-hidden transition-all duration-300 hover:border-[#a855f7]"
+                  className="group flex flex-row md:flex-row border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0b0f10] overflow-hidden transition-all duration-300 hover:border-[#a855f7]"
                   style={{
                     boxShadow: "none",
                     transition: "border-color 0.3s, box-shadow 0.3s",
@@ -305,16 +312,17 @@ export default function PalletStackersProductList() {
                     (e.currentTarget.style.boxShadow = "none")
                   }
                 >
-                  <div className="md:w-1/3 lg:w-1/4 md:h-auto bg-gray-50 dark:bg-white flex items-center justify-center p-8 shrink-0">
+                  {/* Image: small square on mobile, larger panel on desktop */}
+                  <div className="w-[110px] sm:w-[140px] md:w-1/3 lg:w-1/4 h-[140px] sm:h-[140px] md:h-auto bg-gray-50 dark:bg-white flex items-center justify-center p-2 md:p-8 shrink-0">
                     <img
                       src={p.img}
                       alt={p.name}
-                      className="w-full h-auto object-contain max-h-[200px] transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full md:h-auto object-contain max-h-full md:max-h-[200px] transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
 
-                  <div className="flex-grow p-5 md:p-6 lg:p-8 flex flex-col gap-3 lg:gap-4">
-                    <h3 className="text-base md:text-lg lg:text-xl font-semibold leading-snug text-gray-800 dark:text-gray-100">
+                  <div className="flex-grow p-3 md:p-6 lg:p-8 flex flex-col gap-2 lg:gap-4 min-w-0">
+                    <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold leading-snug text-gray-800 dark:text-gray-100 line-clamp-2">
                       {p.name}
                     </h3>
 
@@ -366,48 +374,34 @@ export default function PalletStackersProductList() {
                       </div>
                     </div>
 
-                    {/* Tablet/mobile: stacked specs + CTA */}
-                    <div className="lg:hidden flex flex-row items-center justify-between gap-4">
-                      <div className="flex flex-col gap-3 min-w-0">
-                        <div className="flex items-center gap-2">
-                          <span className="material-symbols-outlined text-[#a855f7] text-[18px]">
+                    {/* Mobile/Tablet: compact specs row + thin CTA */}
+                    <div className="lg:hidden flex flex-col gap-2">
+                      <div className="flex flex-row items-center gap-3 sm:gap-4 flex-wrap">
+                        <div className="flex items-center gap-1.5">
+                          <span className="material-symbols-outlined text-[#a855f7] text-[16px] sm:text-[18px]">
                             weight
                           </span>
-                          <div className="flex flex-col min-w-0">
-                            <span className="text-[9px] uppercase tracking-widest text-gray-500 dark:text-[#baccb0] font-mono">
-                              Capacity
-                            </span>
-                            <span className="text-xs font-bold font-mono text-gray-800 dark:text-gray-100">
-                              {p.capacity}
-                            </span>
-                          </div>
+                          <span className="text-[11px] sm:text-xs font-bold font-mono text-gray-800 dark:text-gray-100 leading-tight">
+                            {p.capacity}
+                          </span>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <span className="material-symbols-outlined text-[#a855f7] text-[18px]">
+                        <div className="flex items-center gap-1.5">
+                          <span className="material-symbols-outlined text-[#a855f7] text-[16px] sm:text-[18px]">
                             height
                           </span>
-                          <div className="flex flex-col min-w-0">
-                            <span className="text-[9px] uppercase tracking-widest text-gray-500 dark:text-[#baccb0] font-mono">
-                              Lift Height
-                            </span>
-                            <span className="text-xs font-bold font-mono text-gray-800 dark:text-gray-100">
-                              {p.height}
-                            </span>
-                          </div>
+                          <span className="text-[11px] sm:text-xs font-bold font-mono text-gray-800 dark:text-gray-100 leading-tight">
+                            {p.height}
+                          </span>
                         </div>
                       </div>
-                      <div className="flex flex-col items-end justify-center gap-2 border-l border-slate-300 dark:border-slate-700 pl-4 shrink-0">
-                        <div className="text-right">
-                          <span className="block text-[10px] uppercase tracking-wider text-[#a855f7] font-mono mb-0.5">
-                            In Stock
-                          </span>
-                          <span className="text-gray-500 dark:text-[#baccb0] text-[10px] font-mono">
-                            Enterprise Pricing
-                          </span>
-                        </div>
+
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#a855f7] font-mono shrink-0">
+                          In Stock
+                        </span>
                         <Link
                           to={`/solutions/mhe/pallet-stackers/${p.slug}`}
-                          className="bg-[#a855f7]/10 border border-[#a855f7] text-[#a855f7] px-3 py-2 font-bold uppercase tracking-wider text-[10px] font-mono hover:bg-[#a855f7] hover:text-white transition-all text-center whitespace-nowrap"
+                          className="bg-[#a855f7]/10 border border-[#a855f7] text-[#a855f7] px-4 py-2 font-bold uppercase tracking-wider text-[10px] sm:text-[11px] font-mono hover:bg-[#a855f7] hover:text-white transition-all text-center whitespace-nowrap"
                         >
                           View Details
                         </Link>

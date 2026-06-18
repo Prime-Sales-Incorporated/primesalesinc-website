@@ -353,30 +353,49 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
         </div>
 
         {/* Detail panel */}
+        {/* Detail panel */}
         <div
           key={active}
-          className={`detail-anim mx-4 md:mx-16 mt-6 border rounded-xl p-5 flex gap-5 items-start ${
+          className={`detail-anim mx-4 md:mx-16 mt-6 border rounded-xl p-5 flex flex-col sm:flex-row gap-5 items-start ${
             dark ? "border-green-800 bg-gray-900" : "border-green-300 bg-white"
           }`}
         >
-          <div className="flex-shrink-0">
-            <p className="text-4xl md:text-5xl font-semibold text-green-700 dark:text-green-400 leading-none">
-              {d.year}
-            </p>
-            <span
-              className={`inline-block mt-2 text-[10px] px-2 py-0.5 rounded-full font-medium ${
-                dark
-                  ? "bg-green-900/50 text-green-300"
-                  : "bg-green-100 text-green-800"
-              }`}
-            >
-              {d.tag}
-            </span>
+          {/* Top row on mobile: year + tag + image side by side */}
+          <div className="flex flex-row sm:flex-col items-start justify-between w-full sm:w-auto gap-3 sm:gap-0">
+            <div>
+              <p className="text-4xl md:text-5xl font-semibold text-green-700 dark:text-green-400 leading-none">
+                {d.year}
+              </p>
+              <span
+                className={`inline-block mt-2 text-[10px] px-2 py-0.5 rounded-full font-medium ${
+                  dark
+                    ? "bg-green-900/50 text-green-300"
+                    : "bg-green-100 text-green-800"
+                }`}
+              >
+                {d.tag}
+              </span>
+            </div>
+            {/* Image: inline with year on mobile, separate column on sm+ */}
+            <div className="sm:hidden flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800">
+              <img
+                src={d.image}
+                alt={d.year}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
+              />
+            </div>
           </div>
+
+          {/* Description text — full width on mobile */}
           <p className="flex-1 text-sm md:text-base leading-relaxed text-gray-700 dark:text-gray-300 mt-1">
             {d.text}
           </p>
-          <div className="flex-shrink-0 w-24 h-20 md:w-28 md:h-24 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800">
+
+          {/* Image: only shows on sm+ (hidden on mobile, shown inline above instead) */}
+          <div className="hidden sm:block flex-shrink-0 w-24 h-20 md:w-28 md:h-24 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800">
             <img
               src={d.image}
               alt={d.year}

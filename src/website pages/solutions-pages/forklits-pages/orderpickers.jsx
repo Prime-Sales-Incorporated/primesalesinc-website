@@ -18,13 +18,13 @@ export default function OrderPickersProductList() {
   const [viewMode, setViewMode] = useState("list");
 
   const products = [
-    {
-      slug: "battery-order-picker-1-36t",
-      name: "Battery Order Picking Truck 1.36 t",
-      img: "/linde/orderpickers/1.png",
-      capacity: "1360 kg",
-      height: "6030 - 9130 mm",
-    },
+    // {
+    //   slug: "battery-order-picker-1-36t",
+    //   name: "Battery Order Picking Truck 1.36 t",
+    //   img: "/linde/orderpickers/1.png",
+    //   capacity: "1360 kg",
+    //   height: "6030 - 9130 mm",
+    // },
     {
       slug: "low-level-order-picker-2t",
       name: "Low Level Order Pickers 2.0 t",
@@ -263,11 +263,11 @@ export default function OrderPickersProductList() {
 
           {/* LIST VIEW */}
           {viewMode === "list" && (
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               {products.map((p, index) => (
                 <div
                   key={index}
-                  className="group flex flex-col md:flex-row border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0b0f10] overflow-hidden transition-all duration-300 hover:border-[#38bdf8]"
+                  className="group flex flex-row md:flex-row border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0b0f10] overflow-hidden transition-all duration-300 hover:border-[#38bdf8]"
                   style={{
                     boxShadow: "none",
                     transition: "border-color 0.3s, box-shadow 0.3s",
@@ -280,16 +280,17 @@ export default function OrderPickersProductList() {
                     (e.currentTarget.style.boxShadow = "none")
                   }
                 >
-                  <div className="md:w-1/3 lg:w-1/4 md:h-auto bg-gray-50 dark:bg-white flex items-center justify-center p-8 shrink-0">
+                  {/* Image: small square on mobile, larger panel on desktop */}
+                  <div className="w-[110px] sm:w-[140px] md:w-1/3 lg:w-1/4 h-[140px] sm:h-[140px] md:h-auto bg-gray-50 dark:bg-white flex items-center justify-center p-2 md:p-8 shrink-0">
                     <img
                       src={p.img}
                       alt={p.name}
-                      className="w-full h-auto object-contain max-h-[200px] transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full md:h-auto object-contain max-h-full md:max-h-[200px] transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
 
-                  <div className="flex-grow p-5 md:p-6 lg:p-8 flex flex-col gap-3 lg:gap-4">
-                    <h3 className="text-base md:text-lg lg:text-xl font-semibold leading-snug text-gray-800 dark:text-gray-100">
+                  <div className="flex-grow p-3 md:p-6 lg:p-8 flex flex-col gap-2 lg:gap-4 min-w-0">
+                    <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold leading-snug text-gray-800 dark:text-gray-100 line-clamp-2">
                       {p.name}
                     </h3>
 
@@ -341,48 +342,34 @@ export default function OrderPickersProductList() {
                       </div>
                     </div>
 
-                    {/* Tablet/mobile: stacked specs + CTA */}
-                    <div className="lg:hidden flex flex-row items-center justify-between gap-4">
-                      <div className="flex flex-col gap-3 min-w-0">
-                        <div className="flex items-center gap-2">
-                          <span className="material-symbols-outlined text-[#38bdf8] text-[18px]">
+                    {/* Mobile/Tablet: compact specs row + thin CTA */}
+                    <div className="lg:hidden flex flex-col gap-2">
+                      <div className="flex flex-row items-center gap-3 sm:gap-4 flex-wrap">
+                        <div className="flex items-center gap-1.5">
+                          <span className="material-symbols-outlined text-[#38bdf8] text-[16px] sm:text-[18px]">
                             weight
                           </span>
-                          <div className="flex flex-col min-w-0">
-                            <span className="text-[9px] uppercase tracking-widest text-gray-500 dark:text-[#baccb0] font-mono">
-                              Capacity
-                            </span>
-                            <span className="text-xs font-bold font-mono text-gray-800 dark:text-gray-100">
-                              {p.capacity}
-                            </span>
-                          </div>
+                          <span className="text-[11px] sm:text-xs font-bold font-mono text-gray-800 dark:text-gray-100 leading-tight">
+                            {p.capacity}
+                          </span>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <span className="material-symbols-outlined text-[#38bdf8] text-[18px]">
+                        <div className="flex items-center gap-1.5">
+                          <span className="material-symbols-outlined text-[#38bdf8] text-[16px] sm:text-[18px]">
                             height
                           </span>
-                          <div className="flex flex-col min-w-0">
-                            <span className="text-[9px] uppercase tracking-widest text-gray-500 dark:text-[#baccb0] font-mono">
-                              Lift Height
-                            </span>
-                            <span className="text-xs font-bold font-mono text-gray-800 dark:text-gray-100">
-                              {p.height}
-                            </span>
-                          </div>
+                          <span className="text-[11px] sm:text-xs font-bold font-mono text-gray-800 dark:text-gray-100 leading-tight">
+                            {p.height}
+                          </span>
                         </div>
                       </div>
-                      <div className="flex flex-col items-end justify-center gap-2 border-l border-slate-300 dark:border-slate-700 pl-4 shrink-0">
-                        <div className="text-right">
-                          <span className="block text-[10px] uppercase tracking-wider text-[#38bdf8] font-mono mb-0.5">
-                            In Stock
-                          </span>
-                          <span className="text-gray-500 dark:text-[#baccb0] text-[10px] font-mono">
-                            Enterprise Pricing
-                          </span>
-                        </div>
+
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#38bdf8] font-mono shrink-0">
+                          In Stock
+                        </span>
                         <Link
                           to={`/solutions/mhe/order-pickers/${p.slug}`}
-                          className="bg-[#38bdf8]/10 border border-[#38bdf8] text-[#38bdf8] px-3 py-2 font-bold uppercase tracking-wider text-[10px] font-mono hover:bg-[#38bdf8] hover:text-[#00112b] transition-all text-center whitespace-nowrap"
+                          className="bg-[#38bdf8]/10 border border-[#38bdf8] text-[#38bdf8] px-4 py-2 font-bold uppercase tracking-wider text-[10px] sm:text-[11px] font-mono hover:bg-[#38bdf8] hover:text-[#00112b] transition-all text-center whitespace-nowrap"
                         >
                           View Details
                         </Link>

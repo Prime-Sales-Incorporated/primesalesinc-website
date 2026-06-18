@@ -19,6 +19,7 @@ import HolidayGreetingBanner from "../sections/banner";
 import VideoSection from "../sections/videosection";
 import OurStoryHome from "../sections/story";
 import HeroCarousel from "../sections/hercarousel";
+import TimelineforAbout from "../sections/timelineforbout";
 
 const WebsiteMain = () => {
   const [storyRef, storyVisible] = useInView();
@@ -114,13 +115,11 @@ const WebsiteMain = () => {
                 // },
                 {
                   title: "Our Mission",
-                  desc: "Prime Sales, Inc. strives to be your dynamic business partner commited to provide cost-effective solutions ensuring customer satisfaction.",
+                  desc: "At Prime Sales, Inc. we are dedicated to delivering innovative and cost-effective solutions while building lasting partnerships through exceptional customer satisfaction",
                 },
                 {
                   title: "Our Vision ",
-                  desc: "'Lead and Spark Challenge'",
-                  subdesc:
-                    "As a trailblazer, Prime Sales Incorporated recognizes the megatrends and challenges that transform the supply chain of today and beyond",
+                  desc: "As a forward-thinking industry leader, Prime Sales, Inc. is committed to navigating emerging supply chain challenges and shaping sustainable solutions for the future.",
                 },
               ].map((item, i) => (
                 <div
@@ -234,7 +233,7 @@ const WebsiteMain = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <Timeline dark={dark} />
+            <TimelineforAbout dark={dark} />
           </div>
 
           <div

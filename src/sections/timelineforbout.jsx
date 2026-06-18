@@ -396,14 +396,16 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
 
           {/* Image: only shows on sm+ (hidden on mobile, shown inline above instead) */}
           <div className="hidden sm:block flex-shrink-0 w-24 h-20 md:w-28 md:h-24 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800">
-            <img
-              src={d.image}
-              alt={d.year}
-              className="w-full h-full object-cover"
-              onError={(e) => {
-                e.currentTarget.style.display = "none";
-              }}
-            />
+            <div className="bg-gray-50 h-full">
+              <img
+                src={d.image}
+                alt={d.year}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
+              />
+            </div>
           </div>
         </div>
 

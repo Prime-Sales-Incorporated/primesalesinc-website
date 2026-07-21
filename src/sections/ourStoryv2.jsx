@@ -824,7 +824,7 @@ const concepts = [
   { id: "conveyor", label: "Conveyor Line", Comp: ConveyorConcept },
   { id: "route", label: "Shipping Route", Comp: RouteConcept },
   { id: "dock", label: "Loading Dock", Comp: DockConcept },
-  { id: "blueprint", label: "Blueprint Plan", Comp: BlueprintConcept },
+  // { id: "blueprint", label: "Blueprint Plan", Comp: BlueprintConcept },
   { id: "barcode", label: "Barcode Scan", Comp: BarcodeConcept },
 ];
 

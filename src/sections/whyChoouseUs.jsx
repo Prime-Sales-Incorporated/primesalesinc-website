@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
             <img
               src="/logo1.png"
               alt="Dark mode warehouse"
-              className="rounded-lg h-[8em] md:h-[18em] object-cover hidden dark:block animate-float"
+              className="rounded-lg h-[8em] md:h-[14em] object-cover hidden dark:block animate-float"
             />
           </div>
 

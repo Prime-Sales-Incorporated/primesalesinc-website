@@ -72,7 +72,7 @@ const WebsiteMain = () => {
   }, [dark]);
 
   return (
-    <div className="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 min-h-screen flex flex-col">
+    <div className="bg-background-light  dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 min-h-screen flex flex-col">
       <HeaderHome dark={dark} setDark={setDark} />
       <Helmet>
         <title>
@@ -89,7 +89,7 @@ const WebsiteMain = () => {
         />
         <link rel="canonical" href="https://www.primegroup.com.ph/" />
       </Helmet>
-      <main className="flex-1">
+      <main className="flex-1 ">
         {/* Hero Section */}
         {/* Hero Carousel Section */}
         <HeroCarousel dark={dark} />
@@ -219,7 +219,7 @@ const WebsiteMain = () => {
             <WhyChooseUs />
           </div>
           {/* Add 3D Scene Section */}
-          <JourneyConcepts />
+          <JourneyConcepts dark={dark} />
 
           <div
             ref={timelineRef}

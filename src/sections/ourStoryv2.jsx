@@ -8,7 +8,6 @@ import {
 } from "lucide-react";
 
 const GREEN = "#75C043";
-const BG = "#0A0C0A";
 
 const stories = [
   {
@@ -54,20 +53,47 @@ const rgba = (hex, a) => {
   return `rgba(${r},${g},${b},${a})`;
 };
 
+/* ---------------- Theme: swaps every ink/surface value between dark & light ---------------- */
+const getTheme = (dark) => ({
+  bg: dark ? "#0A0C0A" : "#F6F7F4",
+  panel: dark ? "#0f120f" : "#FFFFFF",
+  panelAlt: dark ? "#111311" : "#FFFFFF",
+  tabBar: dark ? "#0d0e10" : "#FFFFFF",
+  text: dark ? "#ffffff" : "#12140F",
+  border: dark ? "rgba(255,255,255,0.1)" : "rgba(18,20,15,0.12)",
+  borderStrong: dark ? "rgba(255,255,255,0.15)" : "rgba(18,20,15,0.2)",
+  dashedBorder: dark ? "rgba(255,255,255,0.25)" : "rgba(18,20,15,0.25)",
+  muted25: dark ? "rgba(255,255,255,0.25)" : "rgba(18,20,15,0.3)",
+  muted1: dark ? "rgba(255,255,255,0.3)" : "rgba(18,20,15,0.35)",
+  muted35: dark ? "rgba(255,255,255,0.35)" : "rgba(18,20,15,0.4)",
+  muted2: dark ? "rgba(255,255,255,0.4)" : "rgba(18,20,15,0.45)",
+  muted3: dark ? "rgba(255,255,255,0.5)" : "rgba(18,20,15,0.5)",
+  muted6: dark ? "rgba(255,255,255,0.6)" : "rgba(18,20,15,0.65)",
+  subtleBg: dark ? "rgba(255,255,255,0.02)" : "rgba(18,20,15,0.03)",
+  subtleBg2: dark ? "rgba(255,255,255,0.03)" : "rgba(18,20,15,0.04)",
+  subtleBg1: dark ? "rgba(255,255,255,0.05)" : "rgba(18,20,15,0.06)",
+  stripe: dark ? "rgba(255,255,255,0.06)" : "rgba(18,20,15,0.08)",
+  stripe2: dark ? "rgba(255,255,255,0.08)" : "rgba(18,20,15,0.1)",
+  trackBg: dark ? "#1a1d1a" : "#E7E9E5",
+  dotInactive: dark ? "#4b524b" : "#C7CBC1",
+  barcodeBars: dark ? "rgba(255,255,255,0.8)" : "rgba(18,20,15,0.85)",
+});
+
 /* ---------------- Concept 1: Rack Timeline ---------------- */
-const RackConcept = () => {
+const RackConcept = ({ dark }) => {
+  const t = getTheme(dark);
   const [active, setActive] = useState(0);
   useEffect(() => {
-    const t = setInterval(
+    const timer = setInterval(
       () => setActive((p) => (p + 1) % stories.length),
       4500,
     );
-    return () => clearInterval(t);
+    return () => clearInterval(timer);
   }, []);
 
   return (
     <div
-      style={{ background: BG, color: "#fff" }}
+      style={{ background: t.bg, color: t.text }}
       className="px-6 md:px-16 py-16 md:py-20"
     >
       <style>{keyframes}</style>
@@ -102,7 +128,7 @@ const RackConcept = () => {
                 <div className="flex flex-col items-center w-14 md:w-20 shrink-0">
                   <div
                     style={{
-                      background: i <= active ? GREEN : "rgba(255,255,255,0.1)",
+                      background: i <= active ? GREEN : t.border,
                       boxShadow: isActive
                         ? `0 0 16px 2px ${rgba(GREEN, 0.6)}`
                         : "none",
@@ -113,7 +139,7 @@ const RackConcept = () => {
                   />
                   <span
                     style={{
-                      color: isActive ? GREEN : "rgba(255,255,255,0.3)",
+                      color: isActive ? GREEN : t.muted1,
                     }}
                     className="mt-2 text-xs font-mono tracking-wider"
                   >
@@ -125,10 +151,8 @@ const RackConcept = () => {
                   style={{
                     flex: 1,
                     marginBottom: 16,
-                    border: `1px solid ${isActive ? rgba(GREEN, 0.6) : "rgba(255,255,255,0.1)"}`,
-                    background: isActive
-                      ? rgba(GREEN, 0.06)
-                      : "rgba(255,255,255,0.02)",
+                    border: `1px solid ${isActive ? rgba(GREEN, 0.6) : t.border}`,
+                    background: isActive ? rgba(GREEN, 0.06) : t.subtleBg,
                     opacity: isActive ? 1 : 0.5,
                     borderRadius: 8,
                     padding: "16px 20px",
@@ -136,13 +160,10 @@ const RackConcept = () => {
                   }}
                 >
                   <div className="flex items-center gap-3 mb-1">
-                    <Package
-                      size={16}
-                      color={isActive ? GREEN : "rgba(255,255,255,0.3)"}
-                    />
+                    <Package size={16} color={isActive ? GREEN : t.muted1} />
                     <span
                       style={{
-                        color: isActive ? GREEN : "rgba(255,255,255,0.4)",
+                        color: isActive ? GREEN : t.muted2,
                       }}
                       className="font-mono text-xs tracking-wider"
                     >
@@ -154,7 +175,7 @@ const RackConcept = () => {
                   </h3>
                   {isActive && (
                     <p
-                      style={{ color: "rgba(255,255,255,0.6)" }}
+                      style={{ color: t.muted6 }}
                       className="text-sm md:text-base leading-relaxed max-w-2xl"
                     >
                       {s.text}
@@ -171,19 +192,20 @@ const RackConcept = () => {
 };
 
 /* ---------------- Concept 2: Conveyor Journey ---------------- */
-const ConveyorConcept = () => {
+const ConveyorConcept = ({ dark }) => {
+  const t = getTheme(dark);
   const [active, setActive] = useState(0);
   useEffect(() => {
-    const t = setInterval(
+    const timer = setInterval(
       () => setActive((p) => (p + 1) % stories.length),
       5000,
     );
-    return () => clearInterval(t);
+    return () => clearInterval(timer);
   }, []);
 
   return (
     <div
-      style={{ background: BG, color: "#fff" }}
+      style={{ background: t.bg, color: t.text }}
       className="px-6 md:px-16 py-16 md:py-20 overflow-hidden"
     >
       <style>{keyframes}</style>
@@ -217,7 +239,7 @@ const ConveyorConcept = () => {
         <div
           style={{
             border: `1px solid ${rgba(GREEN, 0.5)}`,
-            background: "#0f120f",
+            background: t.panel,
             borderRadius: 10,
           }}
           className="relative px-6 py-6 text-center"
@@ -231,10 +253,7 @@ const ConveyorConcept = () => {
           <h3 className="text-xl md:text-2xl font-bold mt-1 mb-2">
             {stories[active].title}
           </h3>
-          <p
-            style={{ color: "rgba(255,255,255,0.6)" }}
-            className="text-sm leading-relaxed"
-          >
+          <p style={{ color: t.muted6 }} className="text-sm leading-relaxed">
             {stories[active].text}
           </p>
         </div>
@@ -245,10 +264,9 @@ const ConveyorConcept = () => {
           style={{
             height: 12,
             borderRadius: 9999,
-            background: "#1a1d1a",
-            border: "1px solid rgba(255,255,255,0.1)",
-            backgroundImage:
-              "repeating-linear-gradient(90deg, rgba(255,255,255,0.08) 0 2px, transparent 2px 20px)",
+            background: t.trackBg,
+            border: `1px solid ${t.border}`,
+            backgroundImage: `repeating-linear-gradient(90deg, ${t.stripe2} 0 2px, transparent 2px 20px)`,
             animation: "rollerSpin 1.2s linear infinite",
           }}
         />
@@ -271,10 +289,8 @@ const ConveyorConcept = () => {
                     width: 40,
                     height: 40,
                     borderRadius: 4,
-                    border: `1px solid ${isActive ? GREEN : "rgba(255,255,255,0.15)"}`,
-                    background: isActive
-                      ? rgba(GREEN, 0.1)
-                      : "rgba(255,255,255,0.03)",
+                    border: `1px solid ${isActive ? GREEN : t.borderStrong}`,
+                    background: isActive ? rgba(GREEN, 0.1) : t.subtleBg2,
                     transform: isActive ? "translateY(-4px)" : "none",
                     transition: "all .3s",
                     display: "flex",
@@ -282,13 +298,10 @@ const ConveyorConcept = () => {
                     justifyContent: "center",
                   }}
                 >
-                  <Package
-                    size={16}
-                    color={isActive ? GREEN : "rgba(255,255,255,0.3)"}
-                  />
+                  <Package size={16} color={isActive ? GREEN : t.muted1} />
                 </div>
                 <span
-                  style={{ color: isActive ? GREEN : "rgba(255,255,255,0.3)" }}
+                  style={{ color: isActive ? GREEN : t.muted1 }}
                   className="text-xs font-mono"
                 >
                   {s.year}
@@ -303,14 +316,15 @@ const ConveyorConcept = () => {
 };
 
 /* ---------------- Concept 3: Shipping Route ---------------- */
-const RouteConcept = () => {
+const RouteConcept = ({ dark }) => {
+  const t = getTheme(dark);
   const [active, setActive] = useState(0);
   useEffect(() => {
-    const t = setInterval(
+    const timer = setInterval(
       () => setActive((p) => (p + 1) % stories.length),
       4500,
     );
-    return () => clearInterval(t);
+    return () => clearInterval(timer);
   }, []);
 
   const n = stories.length;
@@ -318,7 +332,7 @@ const RouteConcept = () => {
 
   return (
     <div
-      style={{ background: BG, color: "#fff" }}
+      style={{ background: t.bg, color: t.text }}
       className="px-6 md:px-16 py-16 md:py-20"
     >
       <style>{keyframes}</style>
@@ -358,7 +372,7 @@ const RouteConcept = () => {
                 cx={x}
                 cy={y}
                 r={isActive ? 2.4 : 1.4}
-                fill={isActive ? GREEN : "#4b524b"}
+                fill={isActive ? GREEN : t.dotInactive}
                 onClick={() => setActive(i)}
                 style={{
                   cursor: "pointer",
@@ -375,7 +389,7 @@ const RouteConcept = () => {
               key={i}
               onClick={() => setActive(i)}
               style={{
-                color: i === active ? GREEN : "rgba(255,255,255,0.3)",
+                color: i === active ? GREEN : t.muted1,
                 background: "none",
                 border: "none",
                 cursor: "pointer",
@@ -389,20 +403,20 @@ const RouteConcept = () => {
 
         <div
           style={{
-            border: "1px solid rgba(255,255,255,0.1)",
+            border: `1px solid ${t.border}`,
             borderRadius: 10,
             overflow: "hidden",
           }}
         >
           <div
             style={{
-              borderBottom: "1px solid rgba(255,255,255,0.1)",
-              background: "rgba(255,255,255,0.02)",
+              borderBottom: `1px solid ${t.border}`,
+              background: t.subtleBg,
             }}
             className="flex items-center justify-between px-5 py-2.5"
           >
             <span
-              style={{ color: "rgba(255,255,255,0.4)" }}
+              style={{ color: t.muted2 }}
               className="flex items-center gap-2 font-mono text-xs tracking-wider"
             >
               <MapPin size={12} color={GREEN} />
@@ -413,7 +427,7 @@ const RouteConcept = () => {
               <button
                 onClick={() => setActive((active - 1 + n) % n)}
                 style={{
-                  color: "rgba(255,255,255,0.4)",
+                  color: t.muted2,
                   background: "none",
                   border: "none",
                   cursor: "pointer",
@@ -424,7 +438,7 @@ const RouteConcept = () => {
               <button
                 onClick={() => setActive((active + 1) % n)}
                 style={{
-                  color: "rgba(255,255,255,0.4)",
+                  color: t.muted2,
                   background: "none",
                   border: "none",
                   cursor: "pointer",
@@ -439,7 +453,7 @@ const RouteConcept = () => {
               {stories[active].title}
             </h3>
             <p
-              style={{ color: "rgba(255,255,255,0.6)" }}
+              style={{ color: t.muted6 }}
               className="text-sm md:text-base leading-relaxed max-w-2xl"
             >
               {stories[active].text}
@@ -452,19 +466,20 @@ const RouteConcept = () => {
 };
 
 /* ---------------- Concept 4: Loading Dock ---------------- */
-const DockConcept = () => {
+const DockConcept = ({ dark }) => {
+  const t = getTheme(dark);
   const [active, setActive] = useState(0);
   useEffect(() => {
-    const t = setInterval(
+    const timer = setInterval(
       () => setActive((p) => (p + 1) % stories.length),
       4500,
     );
-    return () => clearInterval(t);
+    return () => clearInterval(timer);
   }, []);
 
   return (
     <div
-      style={{ background: BG, color: "#fff" }}
+      style={{ background: t.bg, color: t.text }}
       className="px-6 md:px-16 py-16 md:py-20"
     >
       <style>{keyframes}</style>
@@ -496,9 +511,9 @@ const DockConcept = () => {
             >
               <div
                 style={{
-                  border: `1px solid ${isActive ? GREEN : "rgba(255,255,255,0.15)"}`,
+                  border: `1px solid ${isActive ? GREEN : t.borderStrong}`,
                   borderRadius: "6px 6px 2px 2px",
-                  background: "#111311",
+                  background: t.panelAlt,
                   overflow: "hidden",
                   position: "relative",
                   height: 110,
@@ -509,10 +524,10 @@ const DockConcept = () => {
                   style={{
                     position: "absolute",
                     inset: 0,
-                    background: isActive ? rgba(GREEN, 0.12) : "#1a1d1a",
+                    background: isActive ? rgba(GREEN, 0.12) : t.trackBg,
                     backgroundImage: isActive
                       ? "none"
-                      : "repeating-linear-gradient(0deg, rgba(255,255,255,0.06) 0 6px, transparent 6px 12px)",
+                      : `repeating-linear-gradient(0deg, ${t.stripe} 0 6px, transparent 6px 12px)`,
                     transform: isActive ? "translateY(-70%)" : "translateY(0%)",
                     transition: "transform .5s ease",
                   }}
@@ -527,14 +542,11 @@ const DockConcept = () => {
                     paddingBottom: 8,
                   }}
                 >
-                  <Truck
-                    size={18}
-                    color={isActive ? GREEN : "rgba(255,255,255,0.25)"}
-                  />
+                  <Truck size={18} color={isActive ? GREEN : t.muted25} />
                 </div>
               </div>
               <div
-                style={{ color: isActive ? GREEN : "rgba(255,255,255,0.35)" }}
+                style={{ color: isActive ? GREEN : t.muted35 }}
                 className="mt-2 text-[10px] md:text-xs font-mono tracking-wider text-center"
               >
                 BAY {String(i + 1).padStart(2, "0")}
@@ -547,10 +559,10 @@ const DockConcept = () => {
       <div
         className="max-w-2xl mx-auto text-center"
         style={{
-          border: "1px solid rgba(255,255,255,0.1)",
+          border: `1px solid ${t.border}`,
           borderRadius: 10,
           padding: "24px 28px",
-          background: "rgba(255,255,255,0.02)",
+          background: t.subtleBg,
         }}
       >
         <span
@@ -563,7 +575,7 @@ const DockConcept = () => {
           {stories[active].title}
         </h3>
         <p
-          style={{ color: "rgba(255,255,255,0.6)" }}
+          style={{ color: t.muted6 }}
           className="text-sm md:text-base leading-relaxed"
         >
           {stories[active].text}
@@ -573,7 +585,7 @@ const DockConcept = () => {
   );
 };
 
-/* ---------------- Concept 5: Blueprint Facility Plan ---------------- */
+/* ---------------- Concept 5: Blueprint Facility Plan (currently unused, kept for reference) ---------------- */
 const BlueprintConcept = () => {
   const [active, setActive] = useState(0);
   const NAVY = "#0B1F3A";
@@ -694,21 +706,22 @@ const BlueprintConcept = () => {
 };
 
 /* ---------------- Concept 6: Barcode Scan ---------------- */
-const BarcodeConcept = () => {
+const BarcodeConcept = ({ dark }) => {
+  const t = getTheme(dark);
   const [active, setActive] = useState(0);
   const widths = [3, 1, 2, 1, 4, 1, 2, 3, 1, 2, 4, 1, 3, 2, 1, 4, 2, 1, 3, 1];
 
   useEffect(() => {
-    const t = setInterval(
+    const timer = setInterval(
       () => setActive((p) => (p + 1) % stories.length),
       4500,
     );
-    return () => clearInterval(t);
+    return () => clearInterval(timer);
   }, []);
 
   return (
     <div
-      style={{ background: BG, color: "#fff" }}
+      style={{ background: t.bg, color: t.text }}
       className="px-6 md:px-16 py-16 md:py-20"
     >
       <style>{keyframes}</style>
@@ -727,8 +740,8 @@ const BarcodeConcept = () => {
       <div
         className="max-w-3xl mx-auto relative mb-3"
         style={{
-          background: "#111311",
-          border: "1px solid rgba(255,255,255,0.1)",
+          background: t.panelAlt,
+          border: `1px solid ${t.border}`,
           borderRadius: 8,
           padding: "20px 16px",
           overflow: "hidden",
@@ -742,7 +755,7 @@ const BarcodeConcept = () => {
               key={i}
               style={{
                 width: w * 3,
-                background: "rgba(255,255,255,0.8)",
+                background: t.barcodeBars,
                 borderRadius: 1,
               }}
             />
@@ -770,7 +783,7 @@ const BarcodeConcept = () => {
               background: "none",
               border: "none",
               cursor: "pointer",
-              color: i === active ? GREEN : "rgba(255,255,255,0.3)",
+              color: i === active ? GREEN : t.muted1,
             }}
             className="text-xs font-mono tracking-wider"
           >
@@ -782,16 +795,16 @@ const BarcodeConcept = () => {
       <div
         className="max-w-xl mx-auto"
         style={{
-          border: "1px dashed rgba(255,255,255,0.25)",
+          border: `1px dashed ${t.dashedBorder}`,
           borderRadius: 6,
           padding: "20px 24px",
           fontFamily: "monospace",
-          background: "rgba(255,255,255,0.02)",
+          background: t.subtleBg,
         }}
       >
         <div
           style={{
-            color: "rgba(255,255,255,0.4)",
+            color: t.muted2,
             fontSize: 11,
             marginBottom: 8,
           }}
@@ -807,10 +820,7 @@ const BarcodeConcept = () => {
         >
           {stories[active].title}
         </h3>
-        <p
-          style={{ color: "rgba(255,255,255,0.6)" }}
-          className="text-sm leading-relaxed"
-        >
+        <p style={{ color: t.muted6 }} className="text-sm leading-relaxed">
           {stories[active].text}
         </p>
       </div>
@@ -828,16 +838,17 @@ const concepts = [
   { id: "barcode", label: "Barcode Scan", Comp: BarcodeConcept },
 ];
 
-const JourneyConcepts = () => {
+const JourneyConcepts = ({ dark = false }) => {
+  const t = getTheme(dark);
   const [tab, setTab] = useState("rack");
   const Active = concepts.find((c) => c.id === tab).Comp;
 
   return (
-    <div style={{ minHeight: "100vh", background: BG }}>
+    <div style={{ minHeight: "100vh", background: t.bg }}>
       <div
         style={{
-          background: "#0d0e10",
-          borderBottom: "1px solid rgba(255,255,255,0.1)",
+          background: t.tabBar,
+          borderBottom: `1px solid ${t.border}`,
         }}
         className="sticky top-0 z-10 flex flex-wrap gap-2 p-3"
       >
@@ -848,8 +859,8 @@ const JourneyConcepts = () => {
               key={c.id}
               onClick={() => setTab(c.id)}
               style={{
-                background: isActive ? GREEN : "rgba(255,255,255,0.05)",
-                color: isActive ? "#000" : "rgba(255,255,255,0.5)",
+                background: isActive ? GREEN : t.subtleBg1,
+                color: isActive ? "#000" : t.muted3,
                 border: "none",
                 cursor: "pointer",
               }}
@@ -860,7 +871,7 @@ const JourneyConcepts = () => {
           );
         })}
       </div>
-      <Active />
+      <Active dark={dark} />
     </div>
   );
 };

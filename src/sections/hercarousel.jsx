@@ -839,7 +839,7 @@ export default function HeroCarousel({ dark }) {
   const accent = dark ? slide.accentColor : slide.accentColorLight;
 
   return (
-    <div className="relative w-full min-h-[50vh] md:min-h-[70vh] overflow-hidden ">
+    <div className="relative w-full min-h-[70vh] md:min-h-[70vh] overflow-hidden ">
       {/* ── Slide backgrounds ── */}
       {slides.map((s, i) => (
         <div

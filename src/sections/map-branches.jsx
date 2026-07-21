@@ -5,7 +5,7 @@ const BranchesMaps = () => {
     <section className="px-4 py-16 sm:px-6 lg:px-16">
       <h2 className="text-3xl font-bold text-text-light dark:text-text-dark mb-8 flex items-center justify-center gap-2">
         <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-          Our <span className="text-green-500">Branches</span>
+          Our <span className="text-[#75C043]">Branches</span>
         </p>
       </h2>
 

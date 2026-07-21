@@ -72,7 +72,7 @@ const OurSolutions = () => {
   const videoRefs = useRef([]);
 
   return (
-    <div className="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white font-display relative ">
+    <div className="bg-background-light p-16 dark:bg-background-dark text-gray-900 dark:text-white font-display relative ">
       {/* Hidden links for SEO / prerendering */}
       <div style={{ display: "none" }}>
         {solutions.map((s, i) => (

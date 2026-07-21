@@ -75,7 +75,7 @@ export default function ContactPage() {
                       name="First Name"
                       type="text"
                       placeholder="First name"
-                      className="block w-full rounded-lg p-2 border border-gray-300 dark:border-slate-600 dark:bg-black  py-2.5"
+                      className="block w-full rounded-lg p-2 border border-gray-300 dark:border-slate-600 dark:bg-[#0A0C0A] py-2.5"
                     />
                   </div>
                   <div>
@@ -87,7 +87,7 @@ export default function ContactPage() {
                       name="Last Name"
                       type="text"
                       placeholder="Last name"
-                      className="block w-full p-2 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-black  py-2.5"
+                      className="block w-full p-2 rounded-lg border border-gray-300 dark:border-slate-600 dark:bg-[#0A0C0A]  py-2.5"
                     />
                   </div>
                 </div>
@@ -101,7 +101,7 @@ export default function ContactPage() {
                     name="Email"
                     type="email"
                     placeholder="you@company.com"
-                    className="block w-full rounded-lg border border-gray-300 p-2 dark:border-slate-600 dark:bg-black  py-2.5"
+                    className="block w-full rounded-lg border border-gray-300 p-2 dark:border-slate-600 dark:bg-[#0A0C0A] py-2.5"
                   />
                 </div>
 
@@ -119,7 +119,7 @@ export default function ContactPage() {
                       name="Phone Number"
                       type="text"
                       placeholder="091758473291"
-                      className="block w-full rounded-lg border border-gray-300 pl-20 dark:border-slate-600 dark:bg-black  py-2.5"
+                      className="block w-full rounded-lg border border-gray-300 pl-20 dark:border-slate-600 dark:bg-[#0A0C0A]  py-2.5"
                     />
                   </div>
                 </div>
@@ -132,7 +132,7 @@ export default function ContactPage() {
                     name="Message"
                     rows={4}
                     placeholder="Leave us a message..."
-                    className="block w-full rounded-lg p-2 border border-gray-300 dark:border-slate-600 dark:bg-black  py-2.5"
+                    className="block w-full rounded-lg p-2 border border-gray-300 dark:border-slate-600 dark:bg-[#0A0C0A] py-2.5"
                   />
                 </div>
 
@@ -143,7 +143,7 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {[
                       "Racking Solutions",
-                      "Material Handling Equipment",
+                      "Forklift Trucks",
                       "Insulated Panels",
                       "Automation Solutions",
                       "Commercial Solutions",

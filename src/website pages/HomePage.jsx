@@ -20,6 +20,8 @@ import VideoSection from "../sections/videosection";
 import OurStoryHome from "../sections/story";
 import HeroCarousel from "../sections/hercarousel";
 import TimelineforAbout from "../sections/timelineforbout";
+import JourneyConcepts from "../sections/ourStoryv2";
+import OurSolutionsv2 from "../sections/solutionsv2";
 
 const WebsiteMain = () => {
   const [storyRef, storyVisible] = useInView();
@@ -96,16 +98,16 @@ const WebsiteMain = () => {
         <div className="px-4 py-0 sm:px-6 sm:py-0 lg:px-8 transition-all duration-700 ease-out ">
           <section className="text-center py-0">
             {/* <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              About <span className="text-green-500">PSI</span>
-            </h2> */}
+                About <span className="text-green-500">PSI</span>
+              </h2> */}
             {/* <p className="mt-4 max-w-4xl mx-auto text-gray-600 dark:text-gray-300">
-              Prime Sales Inc. (PSI) founded in 1976, is a leading supplier of
-              intelligent intralogistics solution for dry and cold chain
-              applications in the Philippines. Exemplifying remarkable
-              reputation for more than 40 years in the industry, PSI works in
-              synergy with proven global partners to offer strong and efficient
-              supply chain solutions in the country.
-            </p> */}
+                Prime Sales Inc. (PSI) founded in 1976, is a leading supplier of
+                intelligent intralogistics solution for dry and cold chain
+                applications in the Philippines. Exemplifying remarkable
+                reputation for more than 40 years in the industry, PSI works in
+                synergy with proven global partners to offer strong and efficient
+                supply chain solutions in the country.
+              </p> */}
             {/* <OurStoryHome /> */}
             <div className="mt-0  md:mt-8 grid gap-6 sm:grid-cols-2 xl:px-4  2xl:px-16">
               {[
@@ -115,7 +117,7 @@ const WebsiteMain = () => {
                 // },
                 {
                   title: "Our Mission",
-                  desc: "At Prime Sales, Inc. we are dedicated to delivering innovative and cost-effective solutions while building lasting partnerships through exceptional customer satisfaction",
+                  desc: "At Prime Sales, Inc. we are dedicated to delivering innovative and cost-effective solutions while building lasting partnerships through exceptional customer satisfaction.",
                 },
                 {
                   title: "Our Vision ",
@@ -204,7 +206,7 @@ const WebsiteMain = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <OurSolutions />
+            <OurSolutionsv2 />
           </div>
           <div
             ref={whyRef}
@@ -214,16 +216,10 @@ const WebsiteMain = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mt-8 text-gray-900 text-center mb-8 dark:text-white">
-              Why Choose <span className="text-green-500"> Prime</span>
-            </h2>
             <WhyChooseUs />
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16 md:mb-20 dark:text-white">
-            The Prime <span className="text-green-500"> Journey</span>
-          </h2>
           {/* Add 3D Scene Section */}
-          <StoryScroll />
+          <JourneyConcepts />
 
           <div
             ref={timelineRef}

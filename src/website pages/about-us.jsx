@@ -37,19 +37,26 @@ const About = () => {
               />
 
               {/* Black Overlay */}
-              <div className="absolute inset-0 bg-black/70  "></div>
+              <div className="absolute inset-0 bg-white/30 dark:bg-black/70  "></div>
               <div
                 className={`absolute bottom-0 left-0 right-0 h-[50%] transition-all duration-700 ${
                   dark
                     ? "bg-gradient-to-t from-[#000000] via-[#101922]/60 to-transparent"
-                    : "bg-gradient-to-t from-[#f6f7f8] via-[#f6f7f8]/30 to-transparent"
+                    : "bg-gradient-to-t from-[#f6f7f8] via-[#f6f7f8]/70 to-transparent"
+                }`}
+              ></div>
+              <div
+                className={`absolute bottom-0 top-20 left-0 right-0 h-[150%] transition-all duration-700 ${
+                  dark
+                    ? "bg-gradient-to-t from-[#000000] via-[#101922]/60 to-transparent"
+                    : "bg-gradient-to-t from-[#f6f7f8] via-[#f6f7f8]/70 to-transparent"
                 }`}
               ></div>
 
               {/* Text on Top */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <h2 className="text-4xl sm:text-5xl font-bold text-white z-10">
-                  About <span className="text-green-500">Us</span>
+                <h2 className="text-4xl sm:text-5xl font-bold text-black dark:text-white z-10">
+                  About <span className="text-[#75C043]">Us</span>
                 </h2>
               </div>
             </div>
@@ -64,15 +71,19 @@ const About = () => {
               supply chain solutions in the country.
             </p> */}
 
-              <div className="mt-10 grid gap-6 sm:grid-cols-2">
+              <div className="mt-0  md:mt-8 grid gap-6 sm:grid-cols-2 xl:px-4  2xl:px-16">
                 {[
+                  // {
+                  //   title: "Our Commitment",
+                  //   desc: "At Prime Sales Inc., your long-term operational success is our foremost priority. We back our intralogistics systems with comprehensive technical support and preventive maintenance services designed to maximize uptime and efficiency. We combine quality equipment with expert support to keep your operations seamless and productive.",
+                  // },
                   {
-                    title: "Our Story",
-                    desc: "Prime Sales Inc. (PSI) founded in 1976, is a leading supplier of intelligent intralogistics solution for dry and cold chain applications in the Philippines. Exemplifying remarkable reputation for more than 40 years in the industry, PSI works in synergy with proven global partners to offer strong and efficient supply chain solutions in the country.",
+                    title: "Our Mission",
+                    desc: "At Prime Sales, Inc. we are dedicated to delivering innovative and cost-effective solutions while building lasting partnerships through exceptional customer satisfaction.",
                   },
                   {
-                    title: "Our Mission & Vision",
-                    desc: "Prime Sales Inc. is your dynamic business partner committed to provide cost-effective solutions to ensure customer.",
+                    title: "Our Vision ",
+                    desc: "As a forward-thinking industry leader, Prime Sales, Inc. is committed to navigating emerging supply chain challenges and shaping sustainable solutions for the future.",
                   },
                 ].map((item, i) => (
                   <div
@@ -82,15 +93,15 @@ const About = () => {
                     <h3 className="text-xl font-semibold text-green-500 mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                    <p className="text-sm md:text-base flex-col flex text-gray-600 dark:text-gray-300">
                       {item.desc}
+
+                      <span>{item.subdesc}</span>
                     </p>
                   </div>
                 ))}
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 text-center mb-8 mt-12 dark:text-white">
-                Why Choose <span className="text-green-500"> Prime</span>
-              </h2>
+
               <WhyChooseUs />
               <TimelineforAbout dark={dark} />
 

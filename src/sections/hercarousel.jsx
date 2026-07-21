@@ -863,8 +863,8 @@ export default function HeroCarousel({ dark }) {
       {/* ── Dark mode overlays only ── */}
       {dark && (
         <>
-          <div className="absolute inset-0 bg-black/60 z-[1]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent z-[2]" />
+          <div className="absolute inset-0 bg-background-dark/60 z-[1]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background-dark/85 via-background-dark/20 to-transparent z-[2]" />
         </>
       )}
 

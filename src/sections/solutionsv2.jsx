@@ -101,7 +101,7 @@ const OurSolutions = () => {
   };
 
   return (
-    <div className="bg-background-light p-8 md:p-16 dark:bg-background-dark text-gray-900 dark:text-white font-display relative">
+    <div className="bg-background-light px-2 md:px-16 dark:bg-background-dark text-gray-900 dark:text-white font-display relative">
       {/* Hidden links for SEO / prerendering */}
       <div style={{ display: "none" }}>
         {solutions.map((s, i) => (

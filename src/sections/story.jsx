@@ -64,7 +64,7 @@ const styles = `
 
 const OurStoryHome = () => {
   return (
-    <section className="py-12 md:py-12 mb-12 overflow-hidden">
+    <section className=" md:py-0 mb-0 overflow-hidden">
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"

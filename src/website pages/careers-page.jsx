@@ -67,8 +67,8 @@ const CareersPage = () => {
           <div
             className={`absolute bottom-0 left-0 right-0 h-[50%] transition-all duration-700 ${
               dark
-                ? "bg-gradient-to-t from-[#101922] via-[#101922]/60 to-transparent"
-                : "bg-gradient-to-t from-[#f6f7f8] via-[#f6f7f8]/30 to-transparent"
+                ? "bg-gradient-to-t from-[#0A0C0A] via-[#0A0C0A]/60 to-transparent"
+                : "bg-gradient-to-t from-[#f6f7f8] via-[#000000]/30 to-transparent"
             }`}
           ></div>
           <div className="relative z-10 flex flex-col items-center gap-6 max-w-3xl">

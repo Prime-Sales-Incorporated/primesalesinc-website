@@ -89,11 +89,78 @@ const WebsiteMain = () => {
         />
         <link rel="canonical" href="https://www.primegroup.com.ph/" />
       </Helmet>
-      <main className="flex-1 ">
+      <main className="flex-1 py- ">
         {/* Hero Section */}
-        {/* Hero Carousel Section */}
-        <HeroCarousel dark={dark} />
+        <div className="relative w-full h-screen overflow-hidden">
+          <video
+            src="/bg4.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          />
 
+          <div className="absolute inset-0 bg-black/50 z-[1]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-[2]" />
+
+          <div className="absolute inset-0 z-10 flex items-center justify-center text-center px-4 pb-10">
+            <div className="max-w-4xl">
+              <div className="text-xs font-bold tracking-[0.25em] uppercase mb-3 text-[#75C043]">
+                Prime Sales Inc. Since 1976
+              </div>
+
+              <h1 className="text-xl md:text-5xl font-bold mb-4 leading-tight text-white">
+                Intelligent Warehouse Storage
+              </h1>
+
+              <p className="text-xs md:text-base font-light leading-relaxed max-w-3xl mx-auto text-gray-200">
+                Prime Sales Inc. (PSI), founded in 1976, is a Philippine company
+                providing intralogistics solutions for both the dry and cold
+                chain industries. Partnering with global manufacturers, PSI
+                offers services such as warehouse design, storage systems, and
+                after-sales support. With over 50 years of industry experience,
+                PSI has built a strong reputation and collaborates with proven
+                global partners to deliver efficient intralogistics and supply
+                chain solutions in the Philippines.
+              </p>
+
+              <div className="mt-6">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center gap-2 md:px-7 md:py-3 px-4 py-2 rounded-full text-xs md:text-sm font-semibold tracking-wide uppercase transition-all duration-300 hover:scale-105 active:scale-95"
+                  style={{
+                    background: "#75C043",
+                    color: "#000",
+                    boxShadow: "0 0 24px #75C04355",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.boxShadow = "0 0 36px #75C04388";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = "0 0 24px #75C04355";
+                  }}
+                >
+                  Inquire Now
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* <HeroCarousel dark={dark} /> */}
         {/* OUR STORY */}
         <div className="px-4 py-0 sm:px-6 sm:py-0 lg:px-8 transition-all duration-700 ease-out ">
           <section className="text-center py-0">
@@ -141,8 +208,9 @@ const WebsiteMain = () => {
             </div>
           </section>
           <OurStoryHome />
+
           {/* Features */}
-          <section className="mt-8 text-center xl:px-4  2xl:px-16">
+          <section className=" text-center xl:px-4  2xl:px-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
               Who We <span className="text-[#75C043]"> Are</span>
             </h2>

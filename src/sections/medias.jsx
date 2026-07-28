@@ -52,7 +52,7 @@ const ShowcaseCarousel = () => {
   }, []);
 
   return (
-    <section className="relative py-20 bg-background-light dark:bg-background-dark overflow-hidden">
+    <section className="relative py-0 bg-background-light dark:bg-background-dark overflow-hidden">
       <div className="text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
           Our <span className="text-green-500">Projects</span>

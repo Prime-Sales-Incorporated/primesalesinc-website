@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next"; // NEW
 import WhyChooseUs from "../sections/whyChoouseUs";
 import Header from "../config/header";
 import useInView from "../hooks/useInView";
@@ -24,6 +25,8 @@ import JourneyConcepts from "../sections/ourStoryv2";
 import OurSolutionsv2 from "../sections/solutionsv2";
 
 const WebsiteMain = () => {
+  const { t } = useTranslation(); // NEW
+
   const [storyRef, storyVisible] = useInView();
   const [featuresRef, featuresVisible] = useInView();
   const [missionRef, missionVisible] = useInView();
@@ -75,14 +78,8 @@ const WebsiteMain = () => {
     <div className="bg-background-light  dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 min-h-screen flex flex-col">
       <HeaderHome dark={dark} setDark={setDark} />
       <Helmet>
-        <title>
-          Prime Sales Inc. | Forklifts, Racking, Storage, Cold Chain &
-          Automation Solutions Philippines
-        </title>
-        <meta
-          name="description"
-          content="Prime Sales Inc. is a leading Philippine supplier of industrial storage systems, pallet racking, forklifts, and cold chain solutions. Trusted since 1976 for efficient intralogistics solutions for dry and cold chain applications."
-        />
+        <title>{t("meta_title")}</title>
+        <meta name="description" content={t("meta_description")} />
         <meta
           name="keywords"
           content="racking system Philippines, industrial storage solutions, pallet racks, warehouse shelves, forklifts Philippines, cold chain systems, Prime Sales Inc, Prime Group"
@@ -107,22 +104,15 @@ const WebsiteMain = () => {
           <div className="absolute inset-0 z-10 flex items-center justify-center text-center px-4 pb-10">
             <div className="max-w-4xl">
               <div className="text-xs font-bold tracking-[0.25em] uppercase mb-3 text-[#75C043]">
-                Prime Sales Inc. Since 1976
+                {t("hero_eyebrow")}
               </div>
 
               <h1 className="text-xl md:text-5xl font-bold mb-4 leading-tight text-white">
-                Intelligent Warehouse Storage
+                {t("hero_title")}
               </h1>
 
               <p className="text-xs md:text-base font-light leading-relaxed max-w-3xl mx-auto text-gray-200">
-                Prime Sales Inc. (PSI), founded in 1976, is a Philippine company
-                providing intralogistics solutions for both the dry and cold
-                chain industries. Partnering with global manufacturers, PSI
-                offers services such as warehouse design, storage systems, and
-                after-sales support. With over 50 years of industry experience,
-                PSI has built a strong reputation and collaborates with proven
-                global partners to deliver efficient intralogistics and supply
-                chain solutions in the Philippines.
+                {t("hero_desc")}
               </p>
 
               <div className="mt-6">
@@ -141,7 +131,7 @@ const WebsiteMain = () => {
                     e.currentTarget.style.boxShadow = "0 0 24px #75C04355";
                   }}
                 >
-                  Inquire Now
+                  {t("hero_cta")}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -164,31 +154,15 @@ const WebsiteMain = () => {
         {/* OUR STORY */}
         <div className="px-4 py-0 sm:px-6 sm:py-0 lg:px-8 transition-all duration-700 ease-out ">
           <section className="text-center py-0">
-            {/* <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-                About <span className="text-green-500">PSI</span>
-              </h2> */}
-            {/* <p className="mt-4 max-w-4xl mx-auto text-gray-600 dark:text-gray-300">
-                Prime Sales Inc. (PSI) founded in 1976, is a leading supplier of
-                intelligent intralogistics solution for dry and cold chain
-                applications in the Philippines. Exemplifying remarkable
-                reputation for more than 40 years in the industry, PSI works in
-                synergy with proven global partners to offer strong and efficient
-                supply chain solutions in the country.
-              </p> */}
-            {/* <OurStoryHome /> */}
             <div className="mt-0  md:mt-8 grid gap-6 sm:grid-cols-2 xl:px-4  2xl:px-16">
               {[
-                // {
-                //   title: "Our Commitment",
-                //   desc: "At Prime Sales Inc., your long-term operational success is our foremost priority. We back our intralogistics systems with comprehensive technical support and preventive maintenance services designed to maximize uptime and efficiency. We combine quality equipment with expert support to keep your operations seamless and productive.",
-                // },
                 {
-                  title: "Our Mission",
-                  desc: "At Prime Sales, Inc. we are dedicated to delivering innovative and cost-effective solutions while building lasting partnerships through exceptional customer satisfaction.",
+                  title: t("mission_title"),
+                  desc: t("mission_desc"),
                 },
                 {
-                  title: "Our Vision ",
-                  desc: "As a forward-thinking industry leader, Prime Sales, Inc. is committed to navigating emerging supply chain challenges and shaping sustainable solutions for the future.",
+                  title: t("vision_title"),
+                  desc: t("vision_desc"),
                 },
               ].map((item, i) => (
                 <div
@@ -212,14 +186,12 @@ const WebsiteMain = () => {
           {/* Features */}
           <section className=" text-center xl:px-4  2xl:px-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-              Who We <span className="text-[#75C043]"> Are</span>
+              {t("who_title_1")}{" "}
+              <span className="text-[#75C043]"> {t("who_title_2")}</span>
             </h2>
 
             <p className="mt-4 text-sm md:text-base max-w-4xl mx-auto text-gray-600 dark:text-gray-300">
-              Prime Sales Inc. (PSI) is a trusted intralogistics provider in the
-              Philippines. Since 1976, we’ve helped companies improve their
-              operations with reliable racking systems, smart storage solutions,
-              and advanced supply chain services.
+              {t("who_desc")}
             </p>
 
             <div
@@ -232,20 +204,20 @@ const WebsiteMain = () => {
             >
               {[
                 {
-                  title: "Founding Evolution",
-                  desc: "Established in 1976, the company has evolved from basic supply operations to premium racking systems and intralogistics services.",
+                  title: t("feature_1_title"),
+                  desc: t("feature_1_desc"),
                 },
                 {
-                  title: "Key Services",
-                  desc: "PSI provides intelligent intralogistics solutions, including design and implementation of advanced storage systems.",
+                  title: t("feature_2_title"),
+                  desc: t("feature_2_desc"),
                 },
                 {
-                  title: "Business Model",
-                  desc: "The company collaborates with global partners to ensure reliable supply chain performance across the Philippines.",
+                  title: t("feature_3_title"),
+                  desc: t("feature_3_desc"),
                 },
                 {
-                  title: "Company Philosophy",
-                  desc: "PSI embraces change and innovation, continuously improving strategies and developing a competent salesforce.",
+                  title: t("feature_4_title"),
+                  desc: t("feature_4_desc"),
                 },
               ].map((feature, i) => (
                 <div

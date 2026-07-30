@@ -6,36 +6,13 @@ import {
   ChevronRight,
   Truck,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const GREEN = "#75C043";
 
-const stories = [
-  {
-    year: "1976",
-    title: "The Beginning",
-    text: "It was a risky yet promising opportunity courageously taken. In 1976, Prime Sales Inc. began as a bold idea — a small team with big dreams to change the way supply chains worked.",
-  },
-  {
-    year: "1988",
-    title: "Built on Trust",
-    text: "Guided by excellent salesmanship and genuine understanding of customers' unique challenges, PSI grew into a trusted name in intralogistics and supply chain solutions.",
-  },
-  {
-    year: "2001",
-    title: "Global Partnerships",
-    text: "Our reputation for quality opened doors to partnerships with global leaders like DEXION and DEMATIC, enhancing our ability to deliver world-class storage and material handling systems.",
-  },
-  {
-    year: "2015",
-    title: "Innovation & Expertise",
-    text: "With over four decades of experience, our engineers and managers continually refine their craft — mastering the design of efficient, intelligent supply chain systems.",
-  },
-  {
-    year: "Today",
-    title: "Moving Forward",
-    text: "PSI continues to innovate with strong partners, modern technology, and unwavering commitment to helping clients lead their markets.",
-  },
-];
+// year stays as data (used for sorting/labels); title/text are looked up via
+// translation keys journey_story_<i>_year / journey_story_<i>_title / journey_story_<i>_text
+const STORY_COUNT = 5;
 
 const keyframes = `
   @keyframes rollerSpin { from { background-position: 0 0; } to { background-position: -40px 0; } }
@@ -53,7 +30,7 @@ const rgba = (hex, a) => {
   return `rgba(${r},${g},${b},${a})`;
 };
 
-/* ---------------- Theme: swaps every ink/surface value between dark & light ---------------- */
+/* ---------------- Theme ---------------- */
 const getTheme = (dark) => ({
   bg: dark ? "#0A0C0A" : "#F6F7F4",
   panel: dark ? "#0f120f" : "#FFFFFF",
@@ -81,11 +58,12 @@ const getTheme = (dark) => ({
 
 /* ---------------- Concept 1: Rack Timeline ---------------- */
 const RackConcept = ({ dark }) => {
-  const t = getTheme(dark);
+  const { t } = useTranslation();
+  const th = getTheme(dark);
   const [active, setActive] = useState(0);
   useEffect(() => {
     const timer = setInterval(
-      () => setActive((p) => (p + 1) % stories.length),
+      () => setActive((p) => (p + 1) % STORY_COUNT),
       4500,
     );
     return () => clearInterval(timer);
@@ -93,7 +71,7 @@ const RackConcept = ({ dark }) => {
 
   return (
     <div
-      style={{ background: t.bg, color: t.text }}
+      style={{ background: th.bg, color: th.text }}
       className="px-6 md:px-16 py-16 md:py-20"
     >
       <style>{keyframes}</style>
@@ -102,15 +80,16 @@ const RackConcept = ({ dark }) => {
           style={{ color: GREEN }}
           className="text-xs font-bold tracking-widest uppercase mb-3"
         >
-          Level by level
+          {t("journey_rack_eyebrow")}
         </p>
         <h2 className="text-3xl md:text-5xl font-extrabold">
-          Stacking Up Our <span style={{ color: GREEN }}>Journey</span>
+          {t("journey_rack_title_pre")}{" "}
+          <span style={{ color: GREEN }}>{t("journey_rack_title_accent")}</span>
         </h2>
       </div>
 
       <div className="max-w-3xl mx-auto">
-        {stories.map((s, i) => {
+        {Array.from({ length: STORY_COUNT }).map((_, i) => {
           const isActive = i === active;
           return (
             <button
@@ -128,7 +107,7 @@ const RackConcept = ({ dark }) => {
                 <div className="flex flex-col items-center w-14 md:w-20 shrink-0">
                   <div
                     style={{
-                      background: i <= active ? GREEN : t.border,
+                      background: i <= active ? GREEN : th.border,
                       boxShadow: isActive
                         ? `0 0 16px 2px ${rgba(GREEN, 0.6)}`
                         : "none",
@@ -139,11 +118,11 @@ const RackConcept = ({ dark }) => {
                   />
                   <span
                     style={{
-                      color: isActive ? GREEN : t.muted1,
+                      color: isActive ? GREEN : th.muted1,
                     }}
                     className="mt-2 text-xs font-mono tracking-wider"
                   >
-                    L{`0${stories.length - i}`}
+                    L{`0${STORY_COUNT - i}`}
                   </span>
                 </div>
 
@@ -151,8 +130,8 @@ const RackConcept = ({ dark }) => {
                   style={{
                     flex: 1,
                     marginBottom: 16,
-                    border: `1px solid ${isActive ? rgba(GREEN, 0.6) : t.border}`,
-                    background: isActive ? rgba(GREEN, 0.06) : t.subtleBg,
+                    border: `1px solid ${isActive ? rgba(GREEN, 0.6) : th.border}`,
+                    background: isActive ? rgba(GREEN, 0.06) : th.subtleBg,
                     opacity: isActive ? 1 : 0.5,
                     borderRadius: 8,
                     padding: "16px 20px",
@@ -160,25 +139,25 @@ const RackConcept = ({ dark }) => {
                   }}
                 >
                   <div className="flex items-center gap-3 mb-1">
-                    <Package size={16} color={isActive ? GREEN : t.muted1} />
+                    <Package size={16} color={isActive ? GREEN : th.muted1} />
                     <span
                       style={{
-                        color: isActive ? GREEN : t.muted2,
+                        color: isActive ? GREEN : th.muted2,
                       }}
                       className="font-mono text-xs tracking-wider"
                     >
-                      {s.year}
+                      {t(`journey_story_${i}_year`)}
                     </span>
                   </div>
                   <h3 className="text-lg md:text-2xl font-bold mb-1">
-                    {s.title}
+                    {t(`journey_story_${i}_title`)}
                   </h3>
                   {isActive && (
                     <p
-                      style={{ color: t.muted6 }}
+                      style={{ color: th.muted6 }}
                       className="text-sm md:text-base leading-relaxed max-w-2xl"
                     >
-                      {s.text}
+                      {t(`journey_story_${i}_text`)}
                     </p>
                   )}
                 </div>
@@ -193,11 +172,12 @@ const RackConcept = ({ dark }) => {
 
 /* ---------------- Concept 2: Conveyor Journey ---------------- */
 const ConveyorConcept = ({ dark }) => {
-  const t = getTheme(dark);
+  const { t } = useTranslation();
+  const th = getTheme(dark);
   const [active, setActive] = useState(0);
   useEffect(() => {
     const timer = setInterval(
-      () => setActive((p) => (p + 1) % stories.length),
+      () => setActive((p) => (p + 1) % STORY_COUNT),
       5000,
     );
     return () => clearInterval(timer);
@@ -205,7 +185,7 @@ const ConveyorConcept = ({ dark }) => {
 
   return (
     <div
-      style={{ background: t.bg, color: t.text }}
+      style={{ background: th.bg, color: th.text }}
       className="px-6 md:px-16 py-16 md:py-20 overflow-hidden"
     >
       <style>{keyframes}</style>
@@ -214,10 +194,13 @@ const ConveyorConcept = ({ dark }) => {
           style={{ color: GREEN }}
           className="text-xs font-bold tracking-widest uppercase mb-3"
         >
-          On the line
+          {t("journey_conveyor_eyebrow")}
         </p>
         <h2 className="text-3xl md:text-5xl font-extrabold">
-          The Prime <span style={{ color: GREEN }}>Conveyor Line</span>
+          {t("journey_conveyor_title_pre")}{" "}
+          <span style={{ color: GREEN }}>
+            {t("journey_conveyor_title_accent")}
+          </span>
         </h2>
       </div>
 
@@ -239,7 +222,7 @@ const ConveyorConcept = ({ dark }) => {
         <div
           style={{
             border: `1px solid ${rgba(GREEN, 0.5)}`,
-            background: t.panel,
+            background: th.panel,
             borderRadius: 10,
           }}
           className="relative px-6 py-6 text-center"
@@ -248,13 +231,13 @@ const ConveyorConcept = ({ dark }) => {
             style={{ color: GREEN }}
             className="font-mono text-xs tracking-wider"
           >
-            {stories[active].year}
+            {t(`journey_story_${active}_year`)}
           </span>
           <h3 className="text-xl md:text-2xl font-bold mt-1 mb-2">
-            {stories[active].title}
+            {t(`journey_story_${active}_title`)}
           </h3>
-          <p style={{ color: t.muted6 }} className="text-sm leading-relaxed">
-            {stories[active].text}
+          <p style={{ color: th.muted6 }} className="text-sm leading-relaxed">
+            {t(`journey_story_${active}_text`)}
           </p>
         </div>
       </div>
@@ -264,14 +247,14 @@ const ConveyorConcept = ({ dark }) => {
           style={{
             height: 12,
             borderRadius: 9999,
-            background: t.trackBg,
-            border: `1px solid ${t.border}`,
-            backgroundImage: `repeating-linear-gradient(90deg, ${t.stripe2} 0 2px, transparent 2px 20px)`,
+            background: th.trackBg,
+            border: `1px solid ${th.border}`,
+            backgroundImage: `repeating-linear-gradient(90deg, ${th.stripe2} 0 2px, transparent 2px 20px)`,
             animation: "rollerSpin 1.2s linear infinite",
           }}
         />
         <div className="flex justify-between mt-4">
-          {stories.map((s, i) => {
+          {Array.from({ length: STORY_COUNT }).map((_, i) => {
             const isActive = i === active;
             return (
               <button
@@ -289,8 +272,8 @@ const ConveyorConcept = ({ dark }) => {
                     width: 40,
                     height: 40,
                     borderRadius: 4,
-                    border: `1px solid ${isActive ? GREEN : t.borderStrong}`,
-                    background: isActive ? rgba(GREEN, 0.1) : t.subtleBg2,
+                    border: `1px solid ${isActive ? GREEN : th.borderStrong}`,
+                    background: isActive ? rgba(GREEN, 0.1) : th.subtleBg2,
                     transform: isActive ? "translateY(-4px)" : "none",
                     transition: "all .3s",
                     display: "flex",
@@ -298,13 +281,13 @@ const ConveyorConcept = ({ dark }) => {
                     justifyContent: "center",
                   }}
                 >
-                  <Package size={16} color={isActive ? GREEN : t.muted1} />
+                  <Package size={16} color={isActive ? GREEN : th.muted1} />
                 </div>
                 <span
-                  style={{ color: isActive ? GREEN : t.muted1 }}
+                  style={{ color: isActive ? GREEN : th.muted1 }}
                   className="text-xs font-mono"
                 >
-                  {s.year}
+                  {t(`journey_story_${i}_year`)}
                 </span>
               </button>
             );
@@ -317,22 +300,23 @@ const ConveyorConcept = ({ dark }) => {
 
 /* ---------------- Concept 3: Shipping Route ---------------- */
 const RouteConcept = ({ dark }) => {
-  const t = getTheme(dark);
+  const { t } = useTranslation();
+  const th = getTheme(dark);
   const [active, setActive] = useState(0);
   useEffect(() => {
     const timer = setInterval(
-      () => setActive((p) => (p + 1) % stories.length),
+      () => setActive((p) => (p + 1) % STORY_COUNT),
       4500,
     );
     return () => clearInterval(timer);
   }, []);
 
-  const n = stories.length;
+  const n = STORY_COUNT;
   const pad = 8;
 
   return (
     <div
-      style={{ background: t.bg, color: t.text }}
+      style={{ background: th.bg, color: th.text }}
       className="px-6 md:px-16 py-16 md:py-20"
     >
       <style>{keyframes}</style>
@@ -341,10 +325,13 @@ const RouteConcept = ({ dark }) => {
           style={{ color: GREEN }}
           className="text-xs font-bold tracking-widest uppercase mb-3"
         >
-          Manifest · Route 001
+          {t("journey_route_eyebrow")}
         </p>
         <h2 className="text-3xl md:text-5xl font-extrabold">
-          Charting the <span style={{ color: GREEN }}>Route</span>
+          {t("journey_route_title_pre")}{" "}
+          <span style={{ color: GREEN }}>
+            {t("journey_route_title_accent")}
+          </span>
         </h2>
       </div>
 
@@ -362,7 +349,7 @@ const RouteConcept = ({ dark }) => {
             strokeDasharray="2 2"
             style={{ animation: "dashMove 1.5s linear infinite" }}
           />
-          {stories.map((s, i) => {
+          {Array.from({ length: STORY_COUNT }).map((_, i) => {
             const x = pad + (i * (100 - pad * 2)) / (n - 1);
             const y = 12 + Math.sin((i / (n - 1)) * Math.PI) * -6;
             const isActive = i === active;
@@ -372,7 +359,7 @@ const RouteConcept = ({ dark }) => {
                 cx={x}
                 cy={y}
                 r={isActive ? 2.4 : 1.4}
-                fill={isActive ? GREEN : t.dotInactive}
+                fill={isActive ? GREEN : th.dotInactive}
                 onClick={() => setActive(i)}
                 style={{
                   cursor: "pointer",
@@ -384,50 +371,51 @@ const RouteConcept = ({ dark }) => {
         </svg>
 
         <div className="flex justify-between px-1 mb-10">
-          {stories.map((s, i) => (
+          {Array.from({ length: STORY_COUNT }).map((_, i) => (
             <button
               key={i}
               onClick={() => setActive(i)}
               style={{
-                color: i === active ? GREEN : t.muted1,
+                color: i === active ? GREEN : th.muted1,
                 background: "none",
                 border: "none",
                 cursor: "pointer",
               }}
               className="font-mono text-xs tracking-wider"
             >
-              {s.year}
+              {t(`journey_story_${i}_year`)}
             </button>
           ))}
         </div>
 
         <div
           style={{
-            border: `1px solid ${t.border}`,
+            border: `1px solid ${th.border}`,
             borderRadius: 10,
             overflow: "hidden",
           }}
         >
           <div
             style={{
-              borderBottom: `1px solid ${t.border}`,
-              background: t.subtleBg,
+              borderBottom: `1px solid ${th.border}`,
+              background: th.subtleBg,
             }}
             className="flex items-center justify-between px-5 py-2.5"
           >
             <span
-              style={{ color: t.muted2 }}
+              style={{ color: th.muted2 }}
               className="flex items-center gap-2 font-mono text-xs tracking-wider"
             >
               <MapPin size={12} color={GREEN} />
-              WAYPOINT {String(active + 1).padStart(2, "0")} /{" "}
+              {t("journey_route_waypoint")}{" "}
+              {String(active + 1).padStart(2, "0")} /{" "}
               {String(n).padStart(2, "0")}
             </span>
             <div className="flex gap-2">
               <button
                 onClick={() => setActive((active - 1 + n) % n)}
                 style={{
-                  color: t.muted2,
+                  color: th.muted2,
                   background: "none",
                   border: "none",
                   cursor: "pointer",
@@ -438,7 +426,7 @@ const RouteConcept = ({ dark }) => {
               <button
                 onClick={() => setActive((active + 1) % n)}
                 style={{
-                  color: t.muted2,
+                  color: th.muted2,
                   background: "none",
                   border: "none",
                   cursor: "pointer",
@@ -450,13 +438,13 @@ const RouteConcept = ({ dark }) => {
           </div>
           <div className="px-6 py-6 md:px-8 md:py-7">
             <h3 className="text-xl md:text-2xl font-bold mb-2">
-              {stories[active].title}
+              {t(`journey_story_${active}_title`)}
             </h3>
             <p
-              style={{ color: t.muted6 }}
+              style={{ color: th.muted6 }}
               className="text-sm md:text-base leading-relaxed max-w-2xl"
             >
-              {stories[active].text}
+              {t(`journey_story_${active}_text`)}
             </p>
           </div>
         </div>
@@ -467,11 +455,12 @@ const RouteConcept = ({ dark }) => {
 
 /* ---------------- Concept 4: Loading Dock ---------------- */
 const DockConcept = ({ dark }) => {
-  const t = getTheme(dark);
+  const { t } = useTranslation();
+  const th = getTheme(dark);
   const [active, setActive] = useState(0);
   useEffect(() => {
     const timer = setInterval(
-      () => setActive((p) => (p + 1) % stories.length),
+      () => setActive((p) => (p + 1) % STORY_COUNT),
       4500,
     );
     return () => clearInterval(timer);
@@ -479,7 +468,7 @@ const DockConcept = ({ dark }) => {
 
   return (
     <div
-      style={{ background: t.bg, color: t.text }}
+      style={{ background: th.bg, color: th.text }}
       className="px-6 md:px-16 py-16 md:py-20"
     >
       <style>{keyframes}</style>
@@ -488,15 +477,16 @@ const DockConcept = ({ dark }) => {
           style={{ color: GREEN }}
           className="text-xs font-bold tracking-widest uppercase mb-3"
         >
-          Bay by bay
+          {t("journey_dock_eyebrow")}
         </p>
         <h2 className="text-3xl md:text-5xl font-extrabold">
-          Docking Our <span style={{ color: GREEN }}>Milestones</span>
+          {t("journey_dock_title_pre")}{" "}
+          <span style={{ color: GREEN }}>{t("journey_dock_title_accent")}</span>
         </h2>
       </div>
 
       <div className="max-w-4xl mx-auto grid grid-cols-5 gap-3 md:gap-4 mb-10">
-        {stories.map((s, i) => {
+        {Array.from({ length: STORY_COUNT }).map((_, i) => {
           const isActive = i === active;
           return (
             <button
@@ -511,23 +501,22 @@ const DockConcept = ({ dark }) => {
             >
               <div
                 style={{
-                  border: `1px solid ${isActive ? GREEN : t.borderStrong}`,
+                  border: `1px solid ${isActive ? GREEN : th.borderStrong}`,
                   borderRadius: "6px 6px 2px 2px",
-                  background: t.panelAlt,
+                  background: th.panelAlt,
                   overflow: "hidden",
                   position: "relative",
                   height: 110,
                 }}
               >
-                {/* dock door slats, rolled up when active */}
                 <div
                   style={{
                     position: "absolute",
                     inset: 0,
-                    background: isActive ? rgba(GREEN, 0.12) : t.trackBg,
+                    background: isActive ? rgba(GREEN, 0.12) : th.trackBg,
                     backgroundImage: isActive
                       ? "none"
-                      : `repeating-linear-gradient(0deg, ${t.stripe} 0 6px, transparent 6px 12px)`,
+                      : `repeating-linear-gradient(0deg, ${th.stripe} 0 6px, transparent 6px 12px)`,
                     transform: isActive ? "translateY(-70%)" : "translateY(0%)",
                     transition: "transform .5s ease",
                   }}
@@ -542,14 +531,14 @@ const DockConcept = ({ dark }) => {
                     paddingBottom: 8,
                   }}
                 >
-                  <Truck size={18} color={isActive ? GREEN : t.muted25} />
+                  <Truck size={18} color={isActive ? GREEN : th.muted25} />
                 </div>
               </div>
               <div
-                style={{ color: isActive ? GREEN : t.muted35 }}
+                style={{ color: isActive ? GREEN : th.muted35 }}
                 className="mt-2 text-[10px] md:text-xs font-mono tracking-wider text-center"
               >
-                BAY {String(i + 1).padStart(2, "0")}
+                {t("journey_dock_bay")} {String(i + 1).padStart(2, "0")}
               </div>
             </button>
           );
@@ -559,146 +548,26 @@ const DockConcept = ({ dark }) => {
       <div
         className="max-w-2xl mx-auto text-center"
         style={{
-          border: `1px solid ${t.border}`,
+          border: `1px solid ${th.border}`,
           borderRadius: 10,
           padding: "24px 28px",
-          background: t.subtleBg,
+          background: th.subtleBg,
         }}
       >
         <span
           style={{ color: GREEN }}
           className="font-mono text-xs tracking-wider"
         >
-          {stories[active].year}
+          {t(`journey_story_${active}_year`)}
         </span>
         <h3 className="text-xl md:text-2xl font-bold mt-1 mb-2">
-          {stories[active].title}
+          {t(`journey_story_${active}_title`)}
         </h3>
         <p
-          style={{ color: t.muted6 }}
+          style={{ color: th.muted6 }}
           className="text-sm md:text-base leading-relaxed"
         >
-          {stories[active].text}
-        </p>
-      </div>
-    </div>
-  );
-};
-
-/* ---------------- Concept 5: Blueprint Facility Plan (currently unused, kept for reference) ---------------- */
-const BlueprintConcept = () => {
-  const [active, setActive] = useState(0);
-  const NAVY = "#0B1F3A";
-  const BLUE = "#6FA8DC";
-  const AMBER = "#F5A623";
-
-  useEffect(() => {
-    const t = setInterval(
-      () => setActive((p) => (p + 1) % stories.length),
-      4500,
-    );
-    return () => clearInterval(t);
-  }, []);
-
-  return (
-    <div
-      style={{
-        background: NAVY,
-        backgroundImage:
-          "linear-gradient(rgba(111,168,220,0.09) 1px, transparent 1px), linear-gradient(90deg, rgba(111,168,220,0.09) 1px, transparent 1px)",
-        backgroundSize: "32px 32px",
-        color: "#E8EDF2",
-      }}
-      className="px-6 md:px-16 py-16 md:py-20"
-    >
-      <style>{keyframes}</style>
-      <div className="text-center mb-14">
-        <p
-          style={{ color: AMBER }}
-          className="text-xs font-bold tracking-widest uppercase mb-3"
-        >
-          Facility plan — PSI-{active + 1}
-        </p>
-        <h2 className="text-3xl md:text-5xl font-extrabold">
-          Blueprint of Our <span style={{ color: BLUE }}>Growth</span>
-        </h2>
-      </div>
-
-      <div className="max-w-4xl mx-auto flex flex-wrap items-stretch gap-1 mb-10 justify-center">
-        {stories.map((s, i) => {
-          const isActive = i === active;
-          return (
-            <button
-              key={i}
-              onClick={() => setActive(i)}
-              style={{
-                border: `1px solid ${isActive ? AMBER : "rgba(111,168,220,0.35)"}`,
-                background: isActive ? "rgba(245,166,35,0.08)" : "transparent",
-                color: isActive ? AMBER : BLUE,
-                cursor: "pointer",
-                padding: "14px 18px",
-                minWidth: 110,
-                fontFamily: "monospace",
-                fontSize: 11,
-                letterSpacing: "0.06em",
-                textAlign: "left",
-              }}
-            >
-              <div>ZONE {String(i + 1).padStart(2, "0")}</div>
-              <div
-                style={{
-                  color: isActive ? "#E8EDF2" : "rgba(232,237,242,0.5)",
-                  marginTop: 4,
-                  fontSize: 10,
-                }}
-              >
-                {s.year}
-              </div>
-            </button>
-          );
-        })}
-      </div>
-
-      <div
-        className="max-w-2xl mx-auto relative"
-        style={{
-          border: "1px solid rgba(111,168,220,0.4)",
-          padding: "24px 28px",
-        }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            top: -1,
-            left: -1,
-            width: 12,
-            height: 12,
-            borderTop: `1px solid ${AMBER}`,
-            borderLeft: `1px solid ${AMBER}`,
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            bottom: -1,
-            right: -1,
-            width: 12,
-            height: 12,
-            borderBottom: `1px solid ${AMBER}`,
-            borderRight: `1px solid ${AMBER}`,
-          }}
-        />
-        <h3
-          className="text-xl md:text-2xl font-bold mb-2"
-          style={{ fontFamily: "sans-serif" }}
-        >
-          {stories[active].title}
-        </h3>
-        <p
-          style={{ color: "#A9B7C9" }}
-          className="text-sm md:text-base leading-relaxed"
-        >
-          {stories[active].text}
+          {t(`journey_story_${active}_text`)}
         </p>
       </div>
     </div>
@@ -707,13 +576,14 @@ const BlueprintConcept = () => {
 
 /* ---------------- Concept 6: Barcode Scan ---------------- */
 const BarcodeConcept = ({ dark }) => {
-  const t = getTheme(dark);
+  const { t } = useTranslation();
+  const th = getTheme(dark);
   const [active, setActive] = useState(0);
   const widths = [3, 1, 2, 1, 4, 1, 2, 3, 1, 2, 4, 1, 3, 2, 1, 4, 2, 1, 3, 1];
 
   useEffect(() => {
     const timer = setInterval(
-      () => setActive((p) => (p + 1) % stories.length),
+      () => setActive((p) => (p + 1) % STORY_COUNT),
       4500,
     );
     return () => clearInterval(timer);
@@ -721,7 +591,7 @@ const BarcodeConcept = ({ dark }) => {
 
   return (
     <div
-      style={{ background: t.bg, color: t.text }}
+      style={{ background: th.bg, color: th.text }}
       className="px-6 md:px-16 py-16 md:py-20"
     >
       <style>{keyframes}</style>
@@ -730,18 +600,21 @@ const BarcodeConcept = ({ dark }) => {
           style={{ color: GREEN }}
           className="text-xs font-bold tracking-widest uppercase mb-3"
         >
-          Scan the timeline
+          {t("journey_barcode_eyebrow")}
         </p>
         <h2 className="text-3xl md:text-5xl font-extrabold">
-          Our History, <span style={{ color: GREEN }}>Logged</span>
+          {t("journey_barcode_title_pre")}{" "}
+          <span style={{ color: GREEN }}>
+            {t("journey_barcode_title_accent")}
+          </span>
         </h2>
       </div>
 
       <div
         className="max-w-3xl mx-auto relative mb-3"
         style={{
-          background: t.panelAlt,
-          border: `1px solid ${t.border}`,
+          background: th.panelAlt,
+          border: `1px solid ${th.border}`,
           borderRadius: 8,
           padding: "20px 16px",
           overflow: "hidden",
@@ -755,7 +628,7 @@ const BarcodeConcept = ({ dark }) => {
               key={i}
               style={{
                 width: w * 3,
-                background: t.barcodeBars,
+                background: th.barcodeBars,
                 borderRadius: 1,
               }}
             />
@@ -775,7 +648,7 @@ const BarcodeConcept = ({ dark }) => {
       </div>
 
       <div className="max-w-3xl mx-auto flex justify-between mb-10 px-1">
-        {stories.map((s, i) => (
+        {Array.from({ length: STORY_COUNT }).map((_, i) => (
           <button
             key={i}
             onClick={() => setActive(i)}
@@ -783,11 +656,11 @@ const BarcodeConcept = ({ dark }) => {
               background: "none",
               border: "none",
               cursor: "pointer",
-              color: i === active ? GREEN : t.muted1,
+              color: i === active ? GREEN : th.muted1,
             }}
             className="text-xs font-mono tracking-wider"
           >
-            {s.year}
+            {t(`journey_story_${i}_year`)}
           </button>
         ))}
       </div>
@@ -795,33 +668,35 @@ const BarcodeConcept = ({ dark }) => {
       <div
         className="max-w-xl mx-auto"
         style={{
-          border: `1px dashed ${t.dashedBorder}`,
+          border: `1px dashed ${th.dashedBorder}`,
           borderRadius: 6,
           padding: "20px 24px",
           fontFamily: "monospace",
-          background: t.subtleBg,
+          background: th.subtleBg,
         }}
       >
         <div
           style={{
-            color: t.muted2,
+            color: th.muted2,
             fontSize: 11,
             marginBottom: 8,
           }}
         >
-          *** SCAN RECEIPT — ENTRY {String(active + 1).padStart(3, "0")} ***
+          {t("journey_barcode_receipt_prefix")}{" "}
+          {String(active + 1).padStart(3, "0")}{" "}
+          {t("journey_barcode_receipt_suffix")}
         </div>
         <div style={{ color: GREEN, fontSize: 13, marginBottom: 4 }}>
-          {stories[active].year}
+          {t(`journey_story_${active}_year`)}
         </div>
         <h3
           className="text-lg md:text-xl font-bold mb-2"
           style={{ fontFamily: "sans-serif" }}
         >
-          {stories[active].title}
+          {t(`journey_story_${active}_title`)}
         </h3>
-        <p style={{ color: t.muted6 }} className="text-sm leading-relaxed">
-          {stories[active].text}
+        <p style={{ color: th.muted6 }} className="text-sm leading-relaxed">
+          {t(`journey_story_${active}_text`)}
         </p>
       </div>
     </div>
@@ -830,25 +705,25 @@ const BarcodeConcept = ({ dark }) => {
 
 /* ---------------- Picker ---------------- */
 const concepts = [
-  { id: "rack", label: "Rack Timeline", Comp: RackConcept },
-  { id: "conveyor", label: "Conveyor Line", Comp: ConveyorConcept },
-  { id: "route", label: "Shipping Route", Comp: RouteConcept },
-  { id: "dock", label: "Loading Dock", Comp: DockConcept },
-  // { id: "blueprint", label: "Blueprint Plan", Comp: BlueprintConcept },
-  { id: "barcode", label: "Barcode Scan", Comp: BarcodeConcept },
+  { id: "rack", labelKey: "journey_tab_rack", Comp: RackConcept },
+  { id: "conveyor", labelKey: "journey_tab_conveyor", Comp: ConveyorConcept },
+  { id: "route", labelKey: "journey_tab_route", Comp: RouteConcept },
+  { id: "dock", labelKey: "journey_tab_dock", Comp: DockConcept },
+  { id: "barcode", labelKey: "journey_tab_barcode", Comp: BarcodeConcept },
 ];
 
 const JourneyConcepts = ({ dark = false }) => {
-  const t = getTheme(dark);
+  const { t } = useTranslation();
+  const th = getTheme(dark);
   const [tab, setTab] = useState("rack");
   const Active = concepts.find((c) => c.id === tab).Comp;
 
   return (
-    <div style={{ minHeight: "100vh", background: t.bg }}>
+    <div style={{ minHeight: "100vh", background: th.bg }}>
       <div
         style={{
-          background: t.tabBar,
-          borderBottom: `1px solid ${t.border}`,
+          background: th.tabBar,
+          borderBottom: `1px solid ${th.border}`,
         }}
         className="sticky top-0 z-10 flex flex-wrap gap-2 p-3"
       >
@@ -859,14 +734,14 @@ const JourneyConcepts = ({ dark = false }) => {
               key={c.id}
               onClick={() => setTab(c.id)}
               style={{
-                background: isActive ? GREEN : t.subtleBg1,
-                color: isActive ? "#000" : t.muted3,
+                background: isActive ? GREEN : th.subtleBg1,
+                color: isActive ? "#000" : th.muted3,
                 border: "none",
                 cursor: "pointer",
               }}
               className="flex-1 py-2.5 rounded-md text-xs md:text-sm font-semibold transition-colors"
             >
-              {c.label}
+              {t(c.labelKey)}
             </button>
           );
         })}

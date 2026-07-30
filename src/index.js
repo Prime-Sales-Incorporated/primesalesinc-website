@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { initDarkMode } from "./utils/darkMode";
-
+import "./i18n";
 // ✅ Only set default darkMode if not already set
 if (localStorage.getItem("darkMode") === null) {
   localStorage.setItem("darkMode", "true"); // Default mode only on first load
@@ -15,7 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // 🧹 Unregister any existing service workers

@@ -1,57 +1,27 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
+// icon stays fixed (Material Icons name); everything else is looked up via
+// translation keys why_<i>_title / why_<i>_highlight / why_<i>_stat / why_<i>_unit / why_<i>_body
 const FEATURES = [
-  {
-    icon: "star_outline",
-    title: "50+ Years of",
-    highlight: "Experience",
-    stat: "50+",
-    unit: "years",
-    body: "Leveraging decades of industry expertise to deliver proven and reliable solutions.",
-  },
-  {
-    icon: "support_agent",
-    title: "After Sales",
-    highlight: "Service",
-    stat: "24/7",
-    unit: "care",
-    body: "We build long-term relationships through consistent, high-quality after-sales service and dedicated customer care.",
-  },
-  {
-    icon: "verified_user",
-    title: "Trusted",
-    highlight: "Global Partners",
-    stat: "12+",
-    unit: "partners",
-    body: "Collaborating with world-renowned partners to bring you cutting-edge technology.",
-  },
-  {
-    icon: "engineering",
-    title: "Customized",
-    highlight: "Solutions",
-    stat: "100%",
-    unit: "tailored",
-    body: "Designing and implementing tailored intralogistics systems to fit your unique operational needs.",
-  },
-  {
-    icon: "settings",
-    title: "End-to-End",
-    highlight: "Support",
-    stat: "1",
-    unit: "partner, full lifecycle",
-    body: "From consultation and design to installation and maintenance, we provide complete lifecycle support to ensure long-term performance.",
-  },
+  { icon: "star_outline" },
+  { icon: "support_agent" },
+  { icon: "verified_user" },
+  { icon: "engineering" },
+  { icon: "settings" },
 ];
 
 const WhyChooseUs = () => {
+  const { t } = useTranslation();
   const [active, setActive] = useState(0);
-  const current = FEATURES[active];
+  const currentIcon = FEATURES[active].icon;
 
   return (
     <section className="py-16 px-4 lg:px-16 bg-background-light dark:bg-background-dark mb-0">
       <div className="container mx-auto">
         <h2 className="text-center text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-12">
-          Why choose <span className="text-[#75C043]">Prime</span>
+          {t("why_heading_pre")}{" "}
+          <span className="text-[#75C043]">{t("why_heading_accent")}</span>
         </h2>
 
         <div className="flex flex-col lg:flex-row gap-12 items-center justify-center">
@@ -72,20 +42,17 @@ const WhyChooseUs = () => {
           {/* Text + Stepper Section */}
           <div className="lg:w-1/2 w-full">
             <h3 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Unlocking Efficiency in Your Supply Chain
+              {t("why_intro_title")}
             </h3>
             <p className="text-gray-600 text-sm md:text-base dark:text-gray-300 mb-8">
-              We are dedicated to providing innovative and reliable
-              intralogistics solutions. Our commitment to excellence ensures
-              that we deliver tailored systems that meet your specific needs,
-              enhancing productivity and driving growth.
+              {t("why_intro_desc")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               {/* Step list */}
               <div className="sm:w-[46%] flex sm:flex-col gap-1 overflow-x-auto sm:overflow-visible">
                 {FEATURES.map((f, i) => (
-                  <React.Fragment key={f.title}>
+                  <React.Fragment key={i}>
                     <button
                       type="button"
                       onClick={() => setActive(i)}
@@ -114,7 +81,7 @@ const WhyChooseUs = () => {
                               : "text-gray-500 dark:text-gray-400"
                           }`}
                       >
-                        {f.title} {f.highlight}
+                        {t(`why_${i}_title`)} {t(`why_${i}_highlight`)}
                       </span>
                     </button>
                     {i < FEATURES.length - 1 && (
@@ -133,47 +100,32 @@ const WhyChooseUs = () => {
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center gap-3">
                       <span className="material-icons text-[#75C043] text-2xl">
-                        {current.icon}
+                        {currentIcon}
                       </span>
                       <h4 className="text-base font-semibold text-gray-900 dark:text-white">
-                        {current.title}{" "}
+                        {t(`why_${active}_title`)}{" "}
                         <span className="text-[#75C043]">
-                          {current.highlight}
+                          {t(`why_${active}_highlight`)}
                         </span>
                       </h4>
                     </div>
                     <div className="text-right shrink-0 pl-3">
                       <p className="text-lg font-bold text-[#75C043] leading-none">
-                        {current.stat}
+                        {t(`why_${active}_stat`)}
                       </p>
                       <p className="text-[10px] text-gray-400 dark:text-gray-500 mt-1">
-                        {current.unit}
+                        {t(`why_${active}_unit`)}
                       </p>
                     </div>
                   </div>
                   <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {current.body}
+                    {t(`why_${active}_body`)}
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        {/* Photo band */}
-        {/* <div className="mt-10 relative rounded-lg overflow-hidden h-40 md:h-56">
-          <img
-            src="/logo2.png"
-            alt="Prime Sales facility"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-          <div className="absolute left-4 bottom-4 bg-black/50 backdrop-blur-sm rounded-md px-3 py-2">
-            <p className="text-white text-sm font-medium">
-              See our systems in action
-            </p>
-          </div>
-        </div> */}
       </div>
 
       <style jsx>{`

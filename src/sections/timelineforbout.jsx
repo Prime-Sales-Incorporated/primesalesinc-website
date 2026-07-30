@@ -1,99 +1,24 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { Play, Pause, ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
+// year and image stay fixed; tag/short/text are looked up via translation keys
+// timeline_<i>_tag / timeline_<i>_short / timeline_<i>_text
 const timelineData = [
-  {
-    year: "1976",
-    tag: "Origins",
-    short: "Foil insulation",
-    text: "Prime Sales Inc. was founded using aluminium foil insulation products — the very first stop on a five-decade journey.",
-    image: "/timeline/1.png",
-  },
-  {
-    year: "1978",
-    tag: "Products",
-    short: "Sandwich panels",
-    text: "Transitioned to insulated sandwich panels, opening doors into cold storage and industrial construction across the Philippines.",
-    image: "/timeline/2.png",
-  },
-  {
-    year: "1986",
-    tag: "Storage",
-    short: "Racking systems",
-    text: 'Introduced the "Racking System" as a dedicated warehouse storage solution — a major step into logistics infrastructure.',
-    image: "/timeline/3.png",
-  },
-  {
-    year: "1988",
-    tag: "Handling",
-    short: "Battery lift trucks",
-    text: "Added Battery Operated Lift Truck to the portfolio, marking PSI's entry into full-service materials handling.",
-    image: "/timeline/4.png",
-  },
-  {
-    year: "2008",
-    tag: "Loading",
-    short: "Loading tech & doors",
-    text: "Strengthened the product portfolio with loading technology and doors for various industrial applications.",
-    image: "/timeline/5.png",
-  },
-  {
-    year: "2009",
-    tag: "Handling",
-    short: "IC engine forklifts",
-    text: "Completed the materials handling line by adding Internal Combustion Engine Forklifts — a full fleet for any warehouse scale.",
-    image: "/timeline/6.png",
-  },
-  {
-    year: "2013",
-    tag: "Automation",
-    short: "Automation distributor",
-    text: "PSI ventured as an exclusive distributor of warehouse automation technology in the country.",
-    image: "/timeline/7.png",
-  },
-  {
-    year: "2015",
-    tag: "Software",
-    short: "Warehouse mgmt. software",
-    text: "Launched Warehouse Management Software for better supply chain visibility and performance.",
-    image: "/timeline/8.png",
-  },
-  {
-    year: "2017",
-    tag: "Milestone",
-    short: "New HQ, Parañaque",
-    text: "Moved to our new headquarters at Prime Corporate Center, East Service Road, Parañaque.",
-    image: "/timeline/9.png",
-  },
-  {
-    year: "2019",
-    tag: "Expansion",
-    short: "Optichain Solutions Inc.",
-    text: "Prime Sales Inc. established its sister company, Optichain Solutions Inc., to offer material handling and industrial storage solutions to the booming midrange market.",
-    image: "/6.png",
-  },
-  {
-    year: "2022",
-    tag: "Scanning",
-    short: "Printers, barcode scanners",
-    text: "Comprehensive solutions for printers and barcode scanners to support operational accuracy.",
-    image: "/timeline/10.png",
-  },
-  {
-    year: "2025",
-    tag: "AutoStorage",
-    short: "VLM & carousel systems",
-    text: "Automated storage solutions featuring Vertical Lift Modules (VLM) and Carousel Systems.",
-    image: "/timeline/11.png",
-  },
-  {
-    year: "2026",
-    tag: "Services",
-    short: "Rental solutions",
-    text: "Business Solutions offering rental services for pallets, racking, and MHE.",
-    image: "/timeline/12.png",
-  },
+  { year: "1976", image: "/timeline/1.png" },
+  { year: "1978", image: "/timeline/2.png" },
+  { year: "1986", image: "/timeline/3.png" },
+  { year: "1988", image: "/timeline/4.png" },
+  { year: "2008", image: "/timeline/5.png" },
+  { year: "2009", image: "/timeline/6.png" },
+  { year: "2013", image: "/timeline/7.png" },
+  { year: "2015", image: "/timeline/8.png" },
+  { year: "2017", image: "/timeline/9.png" },
+  { year: "2019", image: "/6.png" },
+  { year: "2022", image: "/timeline/10.png" },
+  { year: "2025", image: "/timeline/11.png" },
+  { year: "2026", image: "/timeline/12.png" },
 ];
 
 const CARD_W = 176;
@@ -106,14 +31,14 @@ function code(i) {
 }
 
 // ─── Rack Bay Card ─────────────────────────────────────────────────────────
-const RackBay = ({ data, index, isActive, dark, onClick }) => {
+const RackBay = ({ data, index, isActive, dark, onClick, tag, short }) => {
   const tier = index % 3;
   return (
     <button
       onClick={onClick}
       className="flex-shrink-0 flex flex-col items-center cursor-pointer group focus:outline-none"
       style={{ width: CARD_W }}
-      aria-label={`${data.year}: ${data.short}`}
+      aria-label={`${data.year}: ${short}`}
     >
       <div
         className="w-40 rounded-xl border p-3 mb-3 text-left"
@@ -159,7 +84,7 @@ const RackBay = ({ data, index, isActive, dark, onClick }) => {
             color: isActive ? "#4a8a24" : dark ? "#8b929a" : "#6b7178",
           }}
         >
-          {data.tag}
+          {tag}
         </span>
 
         {/* mini 3-tier shelf, pallet block sits at this item's tier */}
@@ -200,7 +125,7 @@ const RackBay = ({ data, index, isActive, dark, onClick }) => {
           className="text-[11px] leading-snug"
           style={{ color: dark ? "#8b929a" : "#6b7178" }}
         >
-          {data.short}
+          {short}
         </p>
       </div>
       <div
@@ -225,6 +150,7 @@ const RackBay = ({ data, index, isActive, dark, onClick }) => {
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 const TimelineforAbout = ({ dark, onEndReached }) => {
+  const { t } = useTranslation();
   const [active, setActive] = useState(0);
   const [prevActive, setPrev] = useState(0);
   const [isMoving, setIsMoving] = useState(false);
@@ -269,15 +195,11 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [active]);
 
-  // keep a ref in sync with the latest active index so intervals/closures
-  // never act on a stale value (this was the source of the freezing)
   const activeRef = useRef(active);
   useEffect(() => {
     activeRef.current = active;
   }, [active]);
 
-  // single timeout handle — cleared before a new one is set so rapid
-  // navigation (fast clicks, autoplay + manual nav) never stacks timers
   const moveTimeoutRef = useRef(null);
   useEffect(() => {
     return () => {
@@ -295,8 +217,6 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
     moveTimeoutRef.current = setTimeout(() => setIsMoving(false), 520);
   };
 
-  // keyboard nav — reads activeRef so the listener doesn't need to be
-  // torn down and rebuilt on every step
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "ArrowRight") goTo(activeRef.current + 1);
@@ -307,18 +227,16 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // autoplay — always reads the current index via activeRef and goes
-  // through the same goTo path as everything else, no duplicated logic
   useEffect(() => {
     if (!playing) return;
-    const t = setInterval(() => {
+    const timer = setInterval(() => {
       const next =
         activeRef.current + 1 >= timelineData.length
           ? 0
           : activeRef.current + 1;
       goTo(next);
     }, 2400);
-    return () => clearInterval(t);
+    return () => clearInterval(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playing]);
 
@@ -367,7 +285,10 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
       >
         <div className="flex items-center justify-center gap-4 mb-2 px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center">
-            Our <span className="text-[#75C043]">Timeline</span>
+            {t("timeline_heading_pre")}{" "}
+            <span className="text-[#75C043]">
+              {t("timeline_heading_accent")}
+            </span>
           </h2>
         </div>
         <div className="flex items-center justify-center mb-8">
@@ -382,11 +303,10 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
             }}
           >
             {playing ? <Pause size={12} /> : <Play size={12} />}
-            {playing ? "Pause" : "Auto-play"}
+            {playing ? t("timeline_pause") : t("timeline_autoplay")}
           </button>
         </div>
 
-        {/* ── Shared wrapper: viewport + rails in one stacking context ── */}
         <div ref={wrapperRef} className="relative w-full">
           <div
             ref={viewportRef}
@@ -408,12 +328,13 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
                   isActive={i === active}
                   dark={dark}
                   onClick={() => goTo(i)}
+                  tag={t(`timeline_${i}_tag`)}
+                  short={t(`timeline_${i}_short`)}
                 />
               ))}
             </div>
           </div>
 
-          {/* Hazard-tape rail (replaces plain green rail) */}
           <div className="relative mx-0 mt-0">
             <div
               className="h-2.5 rounded-sm mb-[5px]"
@@ -429,10 +350,6 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
             />
           </div>
 
-          {/* ── FORKLIFT (user's own image asset) ──
-              Positioned once at (0,0) and moved purely with `transform`.
-              Animating left/bottom forces layout on every frame; translate()
-              is compositor-only, which is what keeps this at 60fps. */}
           <div
             className="absolute pointer-events-none"
             style={{
@@ -478,9 +395,7 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
             )}
           </div>
         </div>
-        {/* end shared wrapper */}
 
-        {/* Progress */}
         <div
           className="mx-0 mt-3 h-[3px] rounded-full overflow-hidden"
           style={{ background: dark ? "#232527" : "#e4e6e8" }}
@@ -491,7 +406,6 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
           />
         </div>
 
-        {/* Detail panel — compact row: icon, year/tag/description, inline prev/next */}
         <div
           key={active}
           className="detail-anim mx-4 md:mx-16 mt-6 border rounded-xl p-5 flex items-center gap-4"
@@ -523,13 +437,15 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
             <p className="text-sm md:text-base font-semibold">
               <span style={{ color: ink }}>{d.year}</span>
               <span style={{ color: muted }}> · </span>
-              <span style={{ color: "#75C043" }}>{d.tag}</span>
+              <span style={{ color: "#75C043" }}>
+                {t(`timeline_${active}_tag`)}
+              </span>
             </p>
             <p
               className="text-sm leading-relaxed mt-1"
               style={{ color: dark ? "#c3c7cb" : "#41454b" }}
             >
-              {d.text}
+              {t(`timeline_${active}_text`)}
             </p>
           </div>
 
@@ -557,7 +473,6 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
           </div>
         </div>
 
-        {/* mobile-only prev/next (panel arrows are hidden below sm) */}
         <div className="flex sm:hidden items-center justify-center gap-3 mt-4">
           <button
             onClick={() => goTo(Math.max(0, active - 1))}
@@ -565,7 +480,7 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
             className="flex items-center gap-1 px-4 py-1.5 text-sm border rounded-lg transition-colors disabled:opacity-30"
             style={{ borderColor: dark ? "#2d3136" : "#d1d5d8", color: muted }}
           >
-            ← Prev
+            ← {t("timeline_prev")}
           </button>
           <button
             onClick={() => goTo(Math.min(timelineData.length - 1, active + 1))}
@@ -573,11 +488,10 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
             className="flex items-center gap-1 px-4 py-1.5 text-sm border rounded-lg transition-colors disabled:opacity-30"
             style={{ borderColor: dark ? "#2d3136" : "#d1d5d8", color: muted }}
           >
-            Next →
+            {t("timeline_next")} →
           </button>
         </div>
 
-        {/* progress ticks */}
         <div className="flex items-center justify-center gap-1.5 mt-5 px-4 flex-wrap">
           {timelineData.map((item, i) => (
             <button

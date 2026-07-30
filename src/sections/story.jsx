@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const styles = `
   .rg-section {
@@ -63,6 +64,8 @@ const styles = `
 `;
 
 const OurStoryHome = () => {
+  const { t } = useTranslation();
+
   return (
     <section className=" md:py-0 mb-0 overflow-hidden">
       <link
@@ -76,31 +79,24 @@ const OurStoryHome = () => {
             <div>
               <div className="rg-eyebrow">
                 <span className="rg-dot"></span>
-                <span>Our story</span>
+                <span>{t("story_eyebrow")}</span>
               </div>
               <h1 className="rg-h1">
-                Pioneering <span className="accent">intralogistics</span> since
-                1976.
+                {t("story_title_pre")}{" "}
+                <span className="accent">{t("story_title_accent")}</span>{" "}
+                {t("story_title_post")}
               </h1>
-              <p className="rg-p">
-                Prime Sales Inc. (PSI) is a premier Philippine provider of
-                intelligent intralogistics solutions, bridging global innovation
-                and local industrial excellence in every warehouse we touch.
-              </p>
+              <p className="rg-p">{t("story_desc")}</p>
               <div className="rg-rail">
                 <div className="rg-point">
-                  <div className="y">1976</div>
-                  <div className="n">The beginning</div>
-                  <div className="d">
-                    A small team, a bold idea to reshape supply chains.
-                  </div>
+                  <div className="y">{t("story_point1_year")}</div>
+                  <div className="n">{t("story_point1_title")}</div>
+                  <div className="d">{t("story_point1_desc")}</div>
                 </div>
                 <div className="rg-point">
-                  <div className="y">Today</div>
-                  <div className="n">50 years, 500+ projects</div>
-                  <div className="d">
-                    Trusted across dry and cold chain facilities nationwide.
-                  </div>
+                  <div className="y">{t("story_point2_year")}</div>
+                  <div className="n">{t("story_point2_title")}</div>
+                  <div className="d">{t("story_point2_desc")}</div>
                 </div>
               </div>
             </div>
@@ -112,8 +108,8 @@ const OurStoryHome = () => {
                 alt="Modern high-tech warehouse facility with organized racking"
               />
               <div className="rg-caption">
-                <p>Excellence in every square foot.</p>
-                <p>Manila logistics hub project</p>
+                <p>{t("story_caption_title")}</p>
+                <p>{t("story_caption_sub")}</p>
               </div>
             </div>
           </div>

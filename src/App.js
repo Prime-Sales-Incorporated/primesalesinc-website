@@ -36,6 +36,7 @@ import PalletStackersDetail from "./website pages/solutions-pages/forklift-detai
 import ElectricPalletTrucksDetail from "./website pages/solutions-pages/forklift-detail-pages/pallet-truck-details";
 import ReachTrucksDetail from "./website pages/solutions-pages/forklift-detail-pages/reach-truck-detail";
 import VNADetail from "./website pages/solutions-pages/forklift-detail-pages/vna-forklift-detail";
+import SplashScreen from "./utils/Splash";
 
 // 🌟 Floating Chat Button
 function FloatingChatButton() {
@@ -118,6 +119,7 @@ function ScrollUpButton() {
 function App() {
   return (
     <HelmetProvider>
+      <SplashScreen />
       <Router>
         <Toaster position="top-right" />
         <ScrollToTop />

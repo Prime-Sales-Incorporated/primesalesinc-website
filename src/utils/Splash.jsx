@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 /**
- * Full-screen loading splash shown until the page (images, video, fonts)
+ * Full-screen loading splash shown until the page (hero video, images, fonts)
  * has actually finished loading. Sits above everything else in App.js.
  *
  * Usage (in App.js):
@@ -11,6 +11,10 @@ import React, { useEffect, useState } from "react";
  *     <SplashScreen />
  *     <Router>...</Router>
  *   </HelmetProvider>
+ *
+ * Drop your generated clip in /public as splash2.mp4. Keep it short (3-6s),
+ * it loops. A poster frame (splash-poster.jpg) shows instantly while the
+ * video itself is still downloading, so there's never a blank flash.
  */
 const MIN_DISPLAY_MS = 1400; // splash stays visible at least this long, avoids a flash
 const FADE_MS = 600; // must match the duration-[600ms] class below
@@ -49,22 +53,32 @@ const SplashScreen = () => {
       aria-live="polite"
       aria-label="Loading"
     >
-      <div className="flex flex-col items-center">
-        <div className="w-24 h-24 md:w-28 md:h-28 animate-splash-pulse">
-          <img
-            src="/logo1.png"
-            alt="Prime Sales Inc."
-            className="w-full h-full object-contain"
+      <div className="flex flex-col items-center px-4">
+        {/* Wordmark first — establishes the brand before anything else */}
+        <img
+          src="/logo1.png"
+          alt="Prime Sales Inc."
+          className="h-9 md:h-11 w-auto object-contain"
+        />
+
+        {/* Illustration card — tied to brand green so it doesn't feel dropped-in */}
+        <div className="mt-10 w-72 md:w-[420px] aspect-video rounded-xl overflow-hidden ">
+          <video
+            src="/splash2.mp4"
+            poster="/splash-poster.jpg"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
           />
         </div>
 
-        <div className="mt-8 w-40 md:w-48 h-[3px] rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
-          <div className="h-full w-1/3 rounded-full bg-[#75C043] animate-splash-bar" />
-        </div>
-
-        <div className="mt-4 text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-gray-400 dark:text-gray-500">
-          Loading
-        </div>
+        {/* The racking build carries the visual metaphor — this caption just
+            gives it in words too, for anyone who wants the plain-text version. */}
+        <p className="mt-8 text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-gray-400 dark:text-gray-500">
+          Loading in progress
+        </p>
       </div>
     </div>
   );

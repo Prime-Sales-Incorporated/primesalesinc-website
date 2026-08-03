@@ -280,7 +280,7 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
       `}</style>
 
       <div
-        className="relative w-full py-12 mb-8 overflow-hidden"
+        className="relative w-full overflow-hidden"
         style={{ background: bgMain, color: ink }}
       >
         <div className="flex items-center justify-center gap-4 mb-2 px-4">

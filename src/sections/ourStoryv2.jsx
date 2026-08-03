@@ -719,7 +719,7 @@ const JourneyConcepts = ({ dark = false }) => {
   const Active = concepts.find((c) => c.id === tab).Comp;
 
   return (
-    <div style={{ minHeight: "100vh", background: th.bg }}>
+    <div style={{ minHeight: "80vh", background: th.bg }}>
       <div
         style={{
           background: th.tabBar,

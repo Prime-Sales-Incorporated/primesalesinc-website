@@ -263,7 +263,7 @@ const WebsiteMain = () => {
 
           <div
             ref={timelineRef}
-            className={`transition-all duration-700 ease-out mt-8 md:mt-8 ${
+            className={`transition-all duration-700 ease-out  ${
               timelineVisible
                 ? "opacity-100 translate-y-0 animate-fadeInUp"
                 : "opacity-0 translate-y-10"

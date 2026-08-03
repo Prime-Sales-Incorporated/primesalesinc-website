@@ -90,7 +90,7 @@ const WebsiteMain = () => {
         {/* Hero Section */}
         <div className="relative w-full h-screen overflow-hidden">
           <video
-            src="/bg4.mp4"
+            src="/bg7.mp4"
             autoPlay
             loop
             muted

@@ -1,23 +1,14 @@
 import React, { useEffect, useState } from "react";
 
 /**
- * Full-screen loading splash shown until the page (hero video, images, fonts)
- * has actually finished loading. Sits above everything else in App.js.
- *
- * Usage (in App.js):
- *   import SplashScreen from "./components/SplashScreen";
- *   ...
- *   <HelmetProvider>
- *     <SplashScreen />
- *     <Router>...</Router>
- *   </HelmetProvider>
- *
- * Drop your generated clip in /public as splash2.mp4. Keep it short (3-6s),
- * it loops. A poster frame (splash-poster.jpg) shows instantly while the
- * video itself is still downloading, so there's never a blank flash.
+ * Full-screen loading splash. Stays up until the actual hero video asset
+ * has loaded (not just until window.load fires, which doesn't reliably
+ * track assets that React mounts after the initial script runs).
  */
-const MIN_DISPLAY_MS = 1400; // splash stays visible at least this long, avoids a flash
-const FADE_MS = 600; // must match the duration-[600ms] class below
+const MIN_DISPLAY_MS = 1400; // splash stays up at least this long
+const FADE_MS = 600; // must match duration-[600ms] below
+const MAX_WAIT_MS = 8000; // hard ceiling — never block forever on a slow/broken asset
+const HERO_VIDEO_SRC = "/bg9.mp4"; // the actual asset WebsiteMain renders
 
 const SplashScreen = () => {
   const [mounted, setMounted] = useState(true);
@@ -25,8 +16,11 @@ const SplashScreen = () => {
 
   useEffect(() => {
     const start = Date.now();
+    let settled = false;
 
     const finish = () => {
+      if (settled) return;
+      settled = true;
       const remaining = Math.max(MIN_DISPLAY_MS - (Date.now() - start), 0);
       setTimeout(() => {
         setFadeOut(true);
@@ -34,12 +28,49 @@ const SplashScreen = () => {
       }, remaining);
     };
 
-    if (document.readyState === "complete") {
-      finish();
+    // 1. Preload the ACTUAL hero video the page will render.
+    //    Browsers cache this, so when WebsiteMain's <video> mounts it
+    //    plays instantly instead of restarting the download.
+    const preloadVideo = document.createElement("video");
+    preloadVideo.src = HERO_VIDEO_SRC;
+    preloadVideo.preload = "auto";
+    preloadVideo.muted = true;
+
+    let videoReady = false;
+    let pageLoaded = document.readyState === "complete";
+
+    const maybeFinish = () => {
+      if (videoReady && pageLoaded) finish();
+    };
+
+    const onVideoReady = () => {
+      videoReady = true;
+      maybeFinish();
+    };
+    // canplaythrough = enough buffered to play without stalling
+    preloadVideo.addEventListener("canplaythrough", onVideoReady);
+    preloadVideo.addEventListener("error", onVideoReady); // don't block forever if it 404s
+
+    // 2. Still track window.load too (fonts, css, other static assets)
+    const onWindowLoad = () => {
+      pageLoaded = true;
+      maybeFinish();
+    };
+    if (pageLoaded) {
+      maybeFinish();
     } else {
-      window.addEventListener("load", finish);
-      return () => window.removeEventListener("load", finish);
+      window.addEventListener("load", onWindowLoad);
     }
+
+    // 3. Hard safety net — never leave the user staring at a splash forever
+    const safetyTimer = setTimeout(finish, MAX_WAIT_MS);
+
+    return () => {
+      preloadVideo.removeEventListener("canplaythrough", onVideoReady);
+      preloadVideo.removeEventListener("error", onVideoReady);
+      window.removeEventListener("load", onWindowLoad);
+      clearTimeout(safetyTimer);
+    };
   }, []);
 
   if (!mounted) return null;
@@ -54,14 +85,11 @@ const SplashScreen = () => {
       aria-label="Loading"
     >
       <div className="flex flex-col items-center px-4">
-        {/* Wordmark first — establishes the brand before anything else */}
         <img
           src="/logo1.png"
           alt="Prime Sales Inc."
           className="h-9 md:h-11 w-auto object-contain"
         />
-
-        {/* Illustration card — tied to brand green so it doesn't feel dropped-in */}
         <div className="mt-10 w-72 md:w-[420px] aspect-video rounded-xl overflow-hidden ">
           <video
             src="/splash2.mp4"
@@ -73,9 +101,6 @@ const SplashScreen = () => {
             className="w-full h-full object-cover"
           />
         </div>
-
-        {/* The racking build carries the visual metaphor — this caption just
-            gives it in words too, for anyone who wants the plain-text version. */}
         <p className="mt-8 text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-gray-400 dark:text-gray-500">
           Loading in progress
         </p>

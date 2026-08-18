@@ -280,7 +280,7 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
       `}</style>
 
       <div
-        className="relative w-full overflow-hidden"
+        className="relative w-full overflow-hidden mb-16  "
         style={{ background: bgMain, color: ink }}
       >
         <div className="flex items-center justify-center gap-4 mb-2 px-4">
@@ -299,7 +299,7 @@ const TimelineforAbout = ({ dark, onEndReached }) => {
             style={{
               background: playing ? "#75C043" : panelBg,
               border: `1px solid ${playing ? "#75C043" : panelBorder}`,
-              color: playing ? "#0e0f11" : ink,
+              color: playing ? "#0e0f11" : ink, 
             }}
           >
             {playing ? <Pause size={12} /> : <Play size={12} />}

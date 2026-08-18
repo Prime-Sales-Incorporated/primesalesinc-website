@@ -54,7 +54,7 @@ const About = () => {
               ></div>
 
               {/* Text on Top */}
-              <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute inset-0 flex items-center justify-center mt-8">
                 <h2 className="text-4xl sm:text-5xl font-bold text-black dark:text-white z-10">
                   About <span className="text-[#75C043]">Us</span>
                 </h2>

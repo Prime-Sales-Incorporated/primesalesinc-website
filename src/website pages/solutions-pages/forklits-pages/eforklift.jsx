@@ -92,12 +92,12 @@ export default function ElectricForkliftProductListing() {
         {/* ── HERO BANNER ── */}
         <section className="relative w-full h-[620px] md:h-[700px] overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1440&q=80&fm=webp"
+            src="/linde/eforklift-cover.png"
             alt="Electric Forklift Banner"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-black/50 z-[1]" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1a0e00]/90 via-[#1a0e00]/65 to-transparent" />
+          <div className="flex  lg:bg-black/20 absolute inset-0 bg-black/50 z-[1]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1a0e00]/80 via-[#1a0e00]/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent" />
           <div
             className="absolute inset-0 opacity-[0.04]"

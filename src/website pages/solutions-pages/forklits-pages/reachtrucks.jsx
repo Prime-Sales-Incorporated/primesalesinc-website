@@ -74,13 +74,8 @@ export default function ReachTrucksProductListing() {
             alt="Reach Trucks Banner"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(to right, rgba(45,5,10,0.94) 0%, rgba(45,5,10,0.62) 50%, transparent 100%)",
-            }}
-          />
+          <div className="flex  lg:bg-black/30 absolute inset-0 bg-black/50 z-[1]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1a0e00]/65 via-[#1a0e00]/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent" />
           <div
             className="absolute inset-0"

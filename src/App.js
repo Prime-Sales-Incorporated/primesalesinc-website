@@ -37,6 +37,7 @@ import ElectricPalletTrucksDetail from "./website pages/solutions-pages/forklift
 import ReachTrucksDetail from "./website pages/solutions-pages/forklift-detail-pages/reach-truck-detail";
 import VNADetail from "./website pages/solutions-pages/forklift-detail-pages/vna-forklift-detail";
 import SplashScreen from "./utils/Splash";
+import Showroom from "./sections/showroom";
 
 // 🌟 Floating Chat Button
 function FloatingChatButton() {
@@ -131,6 +132,7 @@ function App() {
           <Route path="/services" element={<UnderConstruction />} />
           {/* <Route path="/solutions" element={<UnderConstruction />} /> */}
 
+          <Route path="/showroom" element={<Showroom />} />
           <Route path="/news" element={<UnderConstruction />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<ContactPage />} />

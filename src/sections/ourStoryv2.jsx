@@ -32,7 +32,7 @@ const rgba = (hex, a) => {
 
 /* ---------------- Theme ---------------- */
 const getTheme = (dark) => ({
-  bg: dark ? "#0A0C0A" : "#F6F7F4",
+  bg: dark ? "#030a0e" : "#F6F7F4",
   panel: dark ? "#0f120f" : "#FFFFFF",
   panelAlt: dark ? "#111311" : "#FFFFFF",
   tabBar: dark ? "#0d0e10" : "#FFFFFF",

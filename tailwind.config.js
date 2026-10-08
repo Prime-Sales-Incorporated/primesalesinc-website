@@ -7,7 +7,7 @@ module.exports = {
       colors: {
         primary: "#1173d4",
         "background-light": "#f6f7f8",
-        "background-dark": "#0A0C0A",
+        "background-dark": "#030a0e",
       },
       fontFamily: {
         display: ["Inter", "sans-serif"],

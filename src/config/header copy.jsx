@@ -89,50 +89,51 @@ const solutionItems = [
   },
   {
     label: "Material Handling Equipment",
-    photo:
-      "https://images.unsplash.com/photo-1553413077-190dd305871c?w=480&q=75&fm=webp",
+    photo: "/linde/cover1.png",
     description:
       "Reliable electric and manual equipment for every stage of warehouse goods movement.",
     products: [
       {
         name: "Electric Forklifts",
-        photo:
-          "https://logisticsinside.eu/wp-content/uploads/2021/06/Linde-X20-X35-5-700x466.jpg",
+        photo: "/linde/forklift/5.png",
         desc: "3–5 tonne capacity, zero-emission, ergonomic cab design.",
         link: "/solutions/mhe/electric-forklift",
       },
       {
-        name: " Internal Combustion Counterbalance   Truck",
-        photo:
-          "https://www.linde-mh.com/media/Global-Content/Landingpage-Forklift-Truck/LMH_Range_Portfolio_02_002_Small_16x9w1920.jpg",
+        name: " Internal Combustion Counterbalance Truck",
+        photo: "/linde/iccb/2.png",
         desc: "Durable forklifts designed for outdoor and heavy-duty lifting operations.",
         link: "/solutions/mhe/ice-forklift",
       },
       {
         name: "Reach Trucks",
         photo:
-          "https://www.linde-mh.com/media/Global-Content/03_Solutions_Loesungen/Applications/reach_truck-loading-retail-3959_4003_1x1w320.jpg",
+          "https://www.linde-mh.co.uk/media/3D_Product/turntables/06_Reach-Trucks/BR1120_R20G/BR1120_R20G_00017_1x1w640.png",
         desc: "Lift heights up to 12 m for narrow-aisle operations.",
         link: "/solutions/mhe/reach-trucks",
       },
       {
         name: "Pallet Stackers",
-        photo:
-          "https://www.allmachines.com/_next/image?url=https%3A%2F%2Fassets.allmachines.com%2Fforklifts%2Fimages%2Flinde%2F4ec77dd0bfeddf1fd58b9880a5dbd2ea_1_Im1.jpg&w=3840&q=60",
+        photo: "/linde/palletstackers/5.png",
         desc: "Pedestrian or rider stacker for light to medium loads.",
         link: "/solutions/mhe/pallet-stackers",
       },
       {
         name: "Hand Pallet Trucks",
-        photo:
-          "https://www.linde-mh.com/media/Global-Content/04-About-Linde/Press_Releases/2014/22_2014/pm_22-2014_4196_490_B_16x9w1920.jpg",
+        photo: "/linde/pallettrucks/2.png",
         desc: "Ergonomic hydraulic trucks, 2,500 kg standard capacity.",
         link: "/solutions/mhe/pallet-trucks",
       },
       {
         name: "Order Pickers",
-        photo:
-          "https://www.allmachines.com/_next/image?url=https%3A%2F%2Fassets.allmachines.com%2Fforklifts%2Fimages%2Flinde%2F4ec77dd0bfeddf1fd58b9880a5dbd2ea_1_Im1.jpg&w=3840&q=60",
+        photo: "/linde/orderpickers/5.png",
+        desc: "Platform lifts operators to pick face height for accuracy.",
+        link: "/solutions/mhe/order-pickers",
+      },
+
+      {
+        name: "VNA Trucks",
+        photo: "/linde/VNA/2.png",
         desc: "Platform lifts operators to pick face height for accuracy.",
         link: "/solutions/mhe/order-pickers",
       },
@@ -428,7 +429,7 @@ const CatTile = memo(({ item, onClick }) => (
       decoding="async"
       className="hh-img absolute inset-0 w-full h-full object-cover"
     />
-    <div className="absolute inset-0 bg-black/40  "></div>
+    <div className="absolute inset-0 bg-black/20  "></div>
     <div className="hh-grad absolute inset-0" />
     <div className="absolute bottom-0 left-0 right-0 px-3 pb-3 flex items-end justify-between">
       <span className="text-white text-[12.5px] font-medium leading-snug pr-1">
@@ -446,35 +447,27 @@ const ProdTile = memo(({ prod, categoryLabel, onClick }) => {
   const linkState = prod.link
     ? undefined
     : { selectedTab: categoryLabel, selectedProduct: prod.name };
+  const name = prod.name.replace(/\s+/g, " ").trim();
 
   return (
     <Link
       to={destination}
       state={linkState}
       onClick={onClick}
-      className="hh-tile group relative rounded-xl overflow-hidden block focus:outline-none"
-      style={{ aspectRatio: "3/2" }}
+      className="hh-tile group flex flex-col items-center text-center gap-3 focus:outline-none"
     >
-      <img
-        src={prod.photo}
-        alt={prod.name}
-        loading="lazy"
-        decoding="async"
-        className="hh-img absolute inset-0 w-full h-full object-cover"
-      />
-      <div className="hh-grad absolute inset-0" />
-      <div className="absolute bottom-0 left-0 right-0 px-3 pb-3">
-        <div className="flex items-end justify-between gap-1">
-          <div>
-            <p className="text-white text-[11.5px] font-semibold leading-snug">
-              {prod.name}
-            </p>
-          </div>
-          <span className="hh-arrow text-white/60 flex-shrink-0 mb-0.5">
-            <ArrowRight size={12} />
-          </span>
-        </div>
+      <div className="h-28 w-full flex items-center justify-center">
+        <img
+          src={prod.photo}
+          alt={name}
+          loading="lazy"
+          decoding="async"
+          className="hh-img max-h-full max-w-[75%] object-contain"
+        />
       </div>
+      <span className="text-white text-[13px] leading-snug transition-colors duration-200 group-hover:text-[#75C043]">
+        {name}
+      </span>
     </Link>
   );
 });
@@ -576,7 +569,7 @@ function HeaderHome({ dark, setDark }) {
   const megaOpen = megaView !== null;
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 bg-black/10 backdrop-blur-sm py-4 px-6">
+    <nav className="absolute top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-sm py-4 px-6">
       <div className="flex justify-between items-center">
         <Link to="/">
           <img
@@ -590,13 +583,13 @@ function HeaderHome({ dark, setDark }) {
         <div className="hidden md:flex items-center gap-8 text-white/90 font-sans text-sm font-light">
           <a
             href="/"
-            className="hover:text-black hover:scale-105 transition-all duration-300 text-black dark:text-white dark:hover:text-white"
+            className="hover:  hover:scale-105 transition-all duration-300   dark:text-white dark:hover:text-white"
           >
             Home
           </a>
           <a
             href="about"
-            className="hover:text-white dark:text-white hover:scale-105 transition-all duration-300 text-black"
+            className="hover:text-white dark:text-white hover:scale-105 transition-all duration-300  "
           >
             About Us
           </a>
@@ -605,9 +598,9 @@ function HeaderHome({ dark, setDark }) {
           <div className="relative" ref={solutionsRef}>
             <button
               onClick={() => (megaOpen ? closeMega() : openMega())}
-              className="hover:text-black dark:text-white dark:hover:text-white transition-colors duration-200 flex items-center gap-1 text-black"
+              className="hover:  dark:text-white dark:hover:text-white transition-colors duration-200 flex items-center gap-1  "
             >
-              Solutions
+              Products
               <ChevronDown
                 size={14}
                 className={`transition-transform duration-200 ${megaOpen ? "rotate-180" : ""}`}
@@ -616,7 +609,7 @@ function HeaderHome({ dark, setDark }) {
 
             {megaOpen && (
               <div
-                className="hh-mega fixed left-1/2 w-[min(980px,94vw)] bg-[#050301] border border-white/[0.09] rounded- shadow-[0_20px_60px_rgba(0,0,0,0.7)] z-50 overflow-hidden"
+                className="hh-mega fixed left-1/2 w-[80em] bg-[#030a0e] border border-white/[0.09] rounded- shadow-[0_20px_60px_rgba(0,0,0,0.7)] z-50 overflow-hidden"
                 style={{ top: "72px", transform: "translateX(-50%)" }}
               >
                 <div className="flex items-center gap-3 px-6 py-4 border-b border-white/[0.08]">
@@ -695,17 +688,17 @@ function HeaderHome({ dark, setDark }) {
                         decoding="async"
                         className="absolute inset-0 w-full h-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-black/70  "></div>
+                      <div className="absolute inset-0 bg-black/20  "></div>
                       <div className="absolute bottom-0 left-0 right-0 p-5">
-                        <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-white/40 mb-1">
+                        {/* <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-white/40 mb-1">
                           Category
-                        </p>
-                        <h3 className="text-white text-base font-semibold leading-snug mb-2">
+                        </p> */}
+                        {/* <h3 className="text-white text-base font-semibold leading-snug mb-2">
                           {megaActive.label}
-                        </h3>
-                        <p className="text-white/50 text-[11px] leading-relaxed">
+                        </h3> */}
+                        {/* <p className="text-white/50 text-[11px] leading-relaxed">
                           {megaActive.description}
-                        </p>
+                        </p> */}
 
                         <Link
                           to="/solutions"
@@ -741,25 +734,25 @@ function HeaderHome({ dark, setDark }) {
 
           <a
             href="/news"
-            className="text-black hover:text-white hover:scale-105 transition-all duration-300 dark:text-white dark:hover:text-white"
+            className="  hover:text-white hover:scale-105 transition-all duration-300 dark:text-white dark:hover:text-white"
           >
             News
           </a>
           <a
             href="/gallery"
-            className="text-black hover:text-white hover:scale-105 transition-all duration-300 dark:text-white dark:hover:text-white"
+            className="  hover:text-white hover:scale-105 transition-all duration-300 dark:text-white dark:hover:text-white"
           >
             Gallery
           </a>
           <a
             href="/contact"
-            className="text-black hover:text-black hover:scale-105 transition-all duration-300 dark:text-white dark:hover:text-white"
+            className="  hover:  hover:scale-105 transition-all duration-300 dark:text-white dark:hover:text-white"
           >
             Contact Us
           </a>
           <a
             href="/careers"
-            className="text-black hover:text-white hover:scale-105 transition-all duration-300 dark:text-white dark:hover:text-white"
+            className="  hover:text-white hover:scale-105 transition-all duration-300 dark:text-white dark:hover:text-white"
           >
             Careers
           </a>
@@ -768,7 +761,7 @@ function HeaderHome({ dark, setDark }) {
           <div className="relative" ref={langRef}>
             <button
               onClick={() => setLangOpen((o) => !o)}
-              className="flex items-center gap-1 hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer text-black dark:text-white"
+              className="flex items-center gap-1 hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer   dark:text-white"
             >
               {i18n.language.toUpperCase()}{" "}
               <ChevronDown

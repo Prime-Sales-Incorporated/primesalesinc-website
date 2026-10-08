@@ -65,18 +65,12 @@ export default function OrderPickersProductList() {
         {/* ── HERO BANNER ── */}
         <section className="relative w-full h-[620px] md:h-[700px] overflow-hidden">
           <img
-            src="https://www.lindemh-cn.com/wp-content/uploads/2017/10/v-1920x800.jpg"
+            src="/linde/orderpickers-cover.png"
             alt="Order Pickers Banner"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-black/50 z-[1]" />
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(to right, rgba(0,17,43,0.92) 0%, rgba(0,17,43,0.65) 50%, transparent 100%)",
-            }}
-          />
+          <div className="flex  lg:bg-black/20 absolute inset-0 bg-black/50 z-[1]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1a0e00]/65 via-[#1a0e00]/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent" />
           <div
             className="absolute inset-0 opacity-[0.04]"

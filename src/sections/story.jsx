@@ -21,7 +21,7 @@ const styles = `
   }
 
   .dark .rg-section {
-    --rg-bg: #0A0C0A;
+    --rg-bg: #030a0e;
     --rg-bg-soft: rgba(117,192,67,0.08);
     --rg-border: rgba(117,192,67,0.25);
     --rg-heading: #F2F3EF;

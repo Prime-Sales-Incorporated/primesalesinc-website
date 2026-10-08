@@ -23,6 +23,8 @@ import HeroCarousel from "../sections/hercarousel";
 import TimelineforAbout from "../sections/timelineforbout";
 import JourneyConcepts from "../sections/ourStoryv2";
 import OurSolutionsv2 from "../sections/solutionsv2";
+import HeaderHomeV3 from "../config/header-revamp copy";
+import HeaderHomeV2 from "../config/header-revamp";
 
 const WebsiteMain = () => {
   const { t } = useTranslation(); // NEW
@@ -76,7 +78,10 @@ const WebsiteMain = () => {
 
   return (
     <div className="bg-background-light  dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 min-h-screen flex flex-col">
-      <HeaderHome dark={dark} setDark={setDark} />
+      {/* <HeaderHome dark={dark} setDark={setDark} /> */}
+      <HeaderHomeV3 />
+      {/* <HeaderHomeV2 /> */}
+
       <Helmet>
         <title>{t("meta_title")}</title>
         <meta name="description" content={t("meta_description")} />
